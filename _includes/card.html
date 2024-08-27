@@ -1,0 +1,33 @@
+<div class="card" id="article-card">
+    {% if filtered==1 %}
+    <div class="card-header"> 
+
+        {% if article.filter == "1" or article.filter == 1 %} Generic title: Not a research article 
+        {% elsif article.filter == "2" %} GPT-4o mini: Non-social science research article
+        {% elsif article.filter == "3" %} Science abstract < 200 char.: Not a research article
+        {% elsif article.filter == "4" %} Nature DOI suffix ≠ "/s...": Not a research article
+        {% else %}
+        {% endif %}
+
+    </div>
+    {% endif %}
+    <div class="card-body">
+    <h5 class="card-title">{{ article.title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ article.authors }}</h6>
+    {% if article.abstract != nil %}
+    <button class="btn btn-light btn-sm rounded-pill" type="button" data-bs-toggle="collapse"
+        data-bs-target="#{{ article.doi }}" aria-expanded="false"
+        aria-controls="{{ article.doi }}">Abstract</button>
+    {% else %}
+    <button class="btn btn-light btn-sm rounded-pill" type="button" data-bs-toggle="collapse"
+        data-bs-target="#{{ article.doi }}" aria-expanded="false" aria-controls="{{ article.doi }}"
+        disabled>Abstract</button>
+    {% endif %}
+    <a href="{{ article.url }}" target="_blank" class="btn btn-light btn-sm rounded-pill">Full text</a>
+    <div class="collapse collapse-article" id="{{ article.doi }}">
+        <div class="card-text">
+        {{ article.abstract }}
+        </div>
+    </div>
+    </div>
+</div>

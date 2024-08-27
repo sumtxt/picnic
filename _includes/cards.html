@@ -1,0 +1,125 @@
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+{% assign total_count = 0 %}
+{% for items in data_crawl.content %}
+{% assign journal_total = items.articles | size %}
+{% assign total_count = total_count | plus: journal_total %}
+{% endfor %}
+
+<main class="container fluid">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="bg-light p-4 rounded">
+        <p class="lead">We checked {{ data_journals | size }} {{ page.title | downcase }} journals on {{ data_crawl.update | date: "%A,
+          %B %d, %Y"}} using the Crossref API. For the period {{ data_crawl.update | date: '%s' | minus: 604800 | date: "%B
+          %d" }} to {{ data_crawl.update | date: '%s' | minus: 86400 | date: "%B %d" }}, we retrieved {{ total_count }} new
+          paper(s) in {{ data_crawl.content | size }} journal(s).</p>
+      </div>
+    </div>
+  <div class="col-md-2">
+    <div class="d-grid p-1 gap-2">
+    <button type="button" class="align-items-center btn btn-light btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#filter">
+      Filter journals
+    </button>
+    <button class="align-items-center btn btn-light btn-sm rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target=".collapse-article" aria-expanded="false">
+      Expand abstracts
+    </button>  
+    </div>
+  </div>
+</div>
+</main>
+
+
+
+{% for journal in data_crawl.content %}
+{% assign total_hidden = journal.articles_hidden | size %}
+
+<p></p>
+<div class="container" id="{{journal.journal_short}}">
+  <div class="row">
+    <div class="col-10">
+    <h2>{{journal.journal_full}}</h2>
+    <p></p>
+    </div>
+    <div class="col-2">
+      {% if total_hidden > 0 %}
+      <div class="float-end">
+      <span data-bs-toggle="tooltip" data-bs-placement="bottom"  title="Number of less relevant items hidden. Click to show.">
+      <button type="button" class="btn btn-light" data-bs-toggle="collapse" data-bs-target="#collapse-{{journal.journal_short}}" aria-expanded="false" aria-controls="collapseExample">
+        +{{ total_hidden  }}
+      </button>
+      </span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-11">
+
+      <div class="collapse" id="collapse-{{journal.journal_short}}">
+      {% assign filtered = 1 %}
+      {% for article in journal.articles_hidden %}
+      {% include card.html %}
+      {% endfor %}
+      </div>
+
+      {% assign filtered = 0 %}
+      {% for article in journal.articles %}
+      {% include card.html %}
+      {% endfor %}
+
+    </div>
+  </div>  
+</div>
+{% endfor %}
+
+
+<div class="modal fade" id="filter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="filterLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="filterLabel">{{ site.data.modal.title }}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{ site.data.modal.text |  markdownify }}
+
+        <hr>
+
+        <strong>Available journal tags</strong>
+        {% for journal in site.data.politics_journals %}
+        <li> {{ journal.journal_short }}: {{ journal.journal_full }} </li>
+        {% endfor %}
+        {% for journal in site.data.economics_journals %}
+        <li> {{ journal.journal_short }}: {{ journal.journal_full }} </li>
+        {% endfor %}
+        {% for journal in site.data.sociology_journals %}
+        <li> {{ journal.journal_short }}: {{ journal.journal_full }} </li>
+        {% endfor %}
+        {% for journal in site.data.multidisciplinary_journals %}
+        <li> {{ journal.journal_short }}: {{ journal.journal_full }} </li>
+        {% endfor %}
+        {% for journal in site.data.migration_journals %}
+        <li> {{ journal.journal_short }}: {{ journal.journal_full }} </li>
+        {% endfor %}
+
+        <hr>
+
+        <strong>Available bunde tags</strong>
+
+        {% for bundle in site.data.bundles %}
+        <li> {{ bundle | first }}: {{ bundle | last | join: ", " }} </li>
+        {% endfor %}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
