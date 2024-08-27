@@ -1,0 +1,57 @@
+name: Crawl
+
+on: 
+   workflow_dispatch:
+   schedule:
+     - cron: "0 2 * * 5"
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Install packages
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::httr 
+            any::jsonlite
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          path: main_folder
+          ref: main
+
+      - name: Create and populate credentials file with secrets
+        working-directory: ./main_folder
+        run: |
+          echo 'scopus_apikey="'"$MAPPED_SCOPUS_APIKEY"'"' >> credentials.R
+          echo 'scopus_insttoken="'"$MAPPED_SCOPUS_INSTTOKEN"'"' >> credentials.R
+          echo 'openai_apikey="'"$MAPPED_OPENAI_APIKEY"'"' >> credentials.R
+          echo 'crossref_email="'"$MAPPED_CROSSREF_EMAIL"'"' >> credentials.R
+        shell: bash
+        env:
+          MAPPED_SCOPUS_APIKEY: ${{ secrets.SCOPUS_APIKEY }}
+          MAPPED_SCOPUS_INSTTOKEN : ${{ secrets.SCOPUS_INSTTOKEN }}
+          MAPPED_OPENAI_APIKEY : ${{ secrets.OPENAI_APIKEY }}
+          MAPPED_CROSSREF_EMAIL : ${{ secrets.CROSSREF_EMAIL }}
+
+      - name: Get data and produce JSON
+        working-directory: ./main_folder
+        run: |
+          Rscript crawl.R "politics"
+          Rscript crawl.R "economics"
+          Rscript crawl.R "sociology"
+          Rscript crawl.R "multidisciplinary"
+          Rscript crawl.R "migration"
+
+      - name: Commit results main branch 
+        working-directory: ./main_folder
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add . && git commit -m "Data updated"
+          git push origin

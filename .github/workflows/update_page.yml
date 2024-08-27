@@ -1,0 +1,33 @@
+name: Update
+
+on: 
+   workflow_dispatch:
+   workflow_run:
+     workflows: [ Crawl ]
+     types: [ completed ]
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          path: main_folder
+          ref: main
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          path: gh_pages_folder
+          ref: gh-pages
+
+      - name: Commit to gh-pages branch 
+        working-directory: ./gh_pages_folder
+        run: |
+          cp -f ../main_folder/output/* ./_data/
+          cp -f ./_data/* ./json/
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add . && git commit -m "Data updated"
+          git push origin
