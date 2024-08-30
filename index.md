@@ -40,9 +40,11 @@ When the title is generic, e.g., when it includes the word "Errata", "Frontmatte
 
 1. Find and fix bugs or add new features to the crawler/web page. All code is available in the GitHub repository: [github.com/sumtxt/paper-picnic](https://github.com/sumtxt/picnic).
 
-2. Build a better (and equally open source) version of this web page. 
+2. Use the crawled data for your own tool: <button type="button" class="align-items-center btn btn-primary btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#jsonlist">All JSON Files</button>
 
-3. Support [The Initiative for Open Abstracts](https://i4oa.org/).
+3. Build a better (and equally open source) version of this page. 
 
-4. <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="mmarbach" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+4. Support [The Initiative for Open Abstracts](https://i4oa.org/).
+
+5. <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="mmarbach" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
 
