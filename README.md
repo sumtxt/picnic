@@ -1,6 +1,6 @@
 # Paper Picnic
 
-A weekly basket with the latest published research in political science. On Fridays 2 AM UTC, we query the Crossref API for new research articles that appeared in the previous 7 days across 56 journals in political science and adjacent fields. [paper-picnic.com/](https://paper-picnic.com/)
+A weekly basket with the latest published research in political science. On Fridays at 2 AM UTC, we query the Crossref API for new research articles that appeared in the previous 7 days across 56 journals in political science and adjacent fields. [paper-picnic.com/](https://paper-picnic.com/)
 
 The crawler lives in the `main` branch of the backend while the website is rendered from the `gh-pages` branch.
 
