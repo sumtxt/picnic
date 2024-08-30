@@ -28,14 +28,10 @@ jobs:
       - name: Create and populate credentials file with secrets
         working-directory: ./main_folder
         run: |
-          echo 'scopus_apikey="'"$MAPPED_SCOPUS_APIKEY"'"' >> credentials.R
-          echo 'scopus_insttoken="'"$MAPPED_SCOPUS_INSTTOKEN"'"' >> credentials.R
           echo 'openai_apikey="'"$MAPPED_OPENAI_APIKEY"'"' >> credentials.R
           echo 'crossref_email="'"$MAPPED_CROSSREF_EMAIL"'"' >> credentials.R
         shell: bash
         env:
-          MAPPED_SCOPUS_APIKEY: ${{ secrets.SCOPUS_APIKEY }}
-          MAPPED_SCOPUS_INSTTOKEN : ${{ secrets.SCOPUS_INSTTOKEN }}
           MAPPED_OPENAI_APIKEY : ${{ secrets.OPENAI_APIKEY }}
           MAPPED_CROSSREF_EMAIL : ${{ secrets.CROSSREF_EMAIL }}
 
