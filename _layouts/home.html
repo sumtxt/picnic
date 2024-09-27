@@ -116,7 +116,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <ul class="list-group list-group mt-3"></ul>
+          <ul class="list-group list-group mt-3">
           {% for file in site.static_files %}
           {% if file.extname == ".json" -%}
             <li class="list-group-item"><a href="{{ site.baseurl }}{{ file.path }}">{{ file.path }}</a></li>
