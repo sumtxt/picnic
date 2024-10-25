@@ -37,7 +37,11 @@
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://preprint.paper-picnic.com/">Preprint Picnic 🔥</a>
+                    <a {% if page.url=="/notifications.html" %}class="nav-link active" {% else %}class="nav-link" {%
+                        endif %} href="./notifications"><span class="text-nowrap">📨 Notifications</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://preprint.paper-picnic.com/"><span class="text-nowrap">🔥 Preprints</span></a>
                 </li>
             </ul>
         </div>

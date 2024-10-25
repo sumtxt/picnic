@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body class="d-flex flex-column min-vh-100"></body>
+{% include nav.html %}
+
+<div class="container my-1">
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <h1>Picnic Notifications 📨</h1>
+      <p class="col-lg-8 mx-auto fs-5 text-muted">
+        To subscribe to weekly email notifications, write to <span class="text-nowrap"><a href="mailto:polsci-paperpicnic-join@ucl.ac.uk?subject=Please subscribe me" class="link-dark link-underline-opacity-0">polsci-paperpicnic-join@ucl.ac.uk</a></span>. You will receive an automated email asking you to confirm the subscription request. Once you confirm, you are subscribed. 
+      </p>
+    </div>
+</div>
+
+<div class="container">
+<div class="col-lg-6 mx-auto p-4 py-md-5">
+    {{ content }}
+</div>
+</div>
+
+{% include foot.html %}
+</body>
+</html>
+
