@@ -62,7 +62,7 @@
 
 
   <div class="container px-4">
-    <h3 class="text-center mt-5">Covered Journals</h3>
+    <h3 class="text-center mt-5">Main Journals</h3>
     <div class="row row-cols-1 row-cols-md-2 align-items-md-start g-5">
       <div class="col">
         <ul class="list-group list-group">
@@ -90,13 +90,7 @@
           <li class="list-group-item"> {{ journal.journal_full }} </li>
           {% endfor %}
         </ul>
-
-        <ul class="list-group list-group mt-3">
-          {% for journal in site.data.migration_journals %}
-          <li class="list-group-item"> {{ journal.journal_full }} </li>
-          {% endfor %}
-        </ul>
-
+        
       </div>
     </div>
   </div>
