@@ -10,13 +10,11 @@
   {% assign count_economics = site.data.economics_journals | size %}
   {% assign count_sociology = site.data.sociology_journals | size %}
   {% assign count_multidisciplinary = site.data.multidisciplinary_journals | size %}
-  {% assign count_migration = site.data.migration_journals | size %}
 
   {% assign count_total = count_total | plus: count_politics %}
   {% assign count_total = count_total | plus: count_economics %}
+  {% assign count_total = count_total | plus: count_sociology %}
   {% assign count_total = count_total | plus: count_multidisciplinary %}
-  {% assign count_total = count_total | plus: count_migration %}
-
 
   {% include nav.html %}
 
@@ -25,7 +23,7 @@
       <h1>Paper Picnic 🧺</h1>
       <p class="col-lg-8 mx-auto fs-5 text-muted">
         A weekly basket with the latest published research in political science. On Fridays at 2 AM UTC, we query the
-        Crossref API for new research articles that appeared in the previous 7 days across {{count_total}} journals in
+        Crossref API for new research articles that appeared in the previous 7 days across more than {{count_total}} journals in
         political science and adjacent fields.
       </p>
 
@@ -40,6 +38,10 @@
             <li><a class="dropdown-item" href="./economics">Economics</a></li>
             <li><a class="dropdown-item" href="./sociology">Sociology</a></li>
             <li><a class="dropdown-item" href="./multidisciplinary">Multidisciplinary</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="./migration">Migration Studies</a></li>
+            <li><a class="dropdown-item" href="./communication">Communication Studies</a></li>
+            <li><a class="dropdown-item" href="./public_administration_and_policy">Public Admin. & Policy Studies</a></li>
           </ul>
         </div>
         
@@ -65,8 +67,15 @@
     <h3 class="text-center mt-5">Main Journals</h3>
     <div class="row row-cols-1 row-cols-md-2 align-items-md-start g-5">
       <div class="col">
+
         <ul class="list-group list-group">
           {% for journal in site.data.politics_journals %}
+          <li class="list-group-item"> {{ journal.journal_full }} </li>
+          {% endfor %}
+        </ul>
+
+        <ul class="list-group list-group mt-3">
+          {% for journal in site.data.public_administration_and_policy_journals %}
           <li class="list-group-item"> {{ journal.journal_full }} </li>
           {% endfor %}
         </ul>
@@ -87,6 +96,12 @@
 
         <ul class="list-group list-group mt-3">
           {% for journal in site.data.multidisciplinary_journals %}
+          <li class="list-group-item"> {{ journal.journal_full }} </li>
+          {% endfor %}
+        </ul>
+
+        <ul class="list-group list-group mt-3">
+          {% for journal in site.data.migration_journals %}
           <li class="list-group-item"> {{ journal.journal_full }} </li>
           {% endfor %}
         </ul>
