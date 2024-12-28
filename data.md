@@ -4,7 +4,7 @@ layout: main
 ---
 
 <div class="container">
-<p>The table below shows the number of retrieved articles without a filter tag for the last two months and across all journals. For the complete dataset covering all weeks since the launch on 2024-08-23, click here: [stats.csv](./_data/stats.csv)</p>
+<p>The table below shows the number of retrieved articles without a filter tag for the last two months and across all journals. For the complete dataset covering all weeks since the launch on 2024-08-23, click here: <a href="./json/stats.csv">stats.csv</a></p>
 
 {% assign table_rows = site.data.stats %}
 
