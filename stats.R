@@ -23,24 +23,31 @@ df <- do.call(rbind, lst)
 rownames(df) <- NULL
 colnames(df) <- c("journal", update)
 
-# Merge with existing data 
-df <- merge(
-    x=read.csv("./output/stats.csv", check.names=FALSE),
-    y=df, 
-    by.x="Journal Name", 
-    by.y="journal", 
-    sort=FALSE, all=TRUE)
+# Load existing data
+data <- read.csv("./output/stats.csv", check.names=FALSE)
 
-# Set missings to zero
-df[[update]] <- ifelse(is.na(df[[update]]), 0, df[[update]])
+if(!(update %in% colnames(data))){
 
-# Sort: Rows 
-df <- df[order(df$Sort), ]
+    # Merge with existing data 
+    df <- merge(
+        x=data,
+        y=df, 
+        by.x="Journal Name", 
+        by.y="journal", 
+        sort=FALSE, all=TRUE)
 
-# Sort: Cols 
-labs <- as.Date(colnames(df)[-c(1:3)])
-labs <- labs[order(labs, decreasing = TRUE)]
-labs <- c("Sort", "Field", "Journal Name", as.character(labs))
-df <- df[,labs]
+    # Set missings to zero
+    df[[update]] <- ifelse(is.na(df[[update]]), 0, df[[update]])
 
-write.csv(df, file="./output/stats.csv", na="", row.names=FALSE)
+    # Sort: Rows 
+    df <- df[order(df$Sort), ]
+
+    # Sort: Cols 
+    labs <- as.Date(colnames(df)[-c(1:3)])
+    labs <- labs[order(labs, decreasing = TRUE)]
+    labs <- c("Sort", "Field", "Journal Name", as.character(labs))
+    df <- df[,labs]
+
+    write.csv(df, file="./output/stats.csv", na="", row.names=FALSE)
+
+    }
