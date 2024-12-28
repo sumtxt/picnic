@@ -32,6 +32,8 @@ Once an article has been crawled, its unique identifier (the DOI) is added to a 
 
 When the title is generic, e.g., when it includes the word "Errata", "Frontmatter" or "Backmatter", the crawler adds a filter tag. For articles from multidisciplinary journals, the crawler prompts GPT-4o mini: "You are given content from a new issue of a multidisciplinary scientific journal. Respond 'Yes' if the content is a research article in any social science discipline and 'No' otherwise". All content that includes this filter tag is hidden in the default view but can be displayed by clicking on the +N button at the top left for every journal.
 
+Data on the number of retrieved articles per week and journal is available [here](./data).
+
 <br>
 
 <hr>
