@@ -14,12 +14,14 @@ crawl_end_date <- as.Date(now) - 1
 journals <- read.csv(paste0("./parameters/", field, "_journals.csv"))
 past_urls <- read.csv(paste0("./memory/", field, "_urls.csv"))
 
+use_polite <- crossref_endpoint_polite_faster(crawl_start_date,crawl_end_date)
+
 # Crawl Crossref API 
 out <- retrieve_crossref_issn_data(
     issn_list=journals$issn, 
     start_date=crawl_start_date, 
     end_date=crawl_end_date, 
-    verbose=TRUE)
+    verbose=TRUE, polite_endpoint=use_polite)
 
 # Remove duplicates
 out <- out[!duplicated(out$url),] 

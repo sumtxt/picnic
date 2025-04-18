@@ -1,7 +1,7 @@
 # Main 
 ########
 
-retrieve_crossref_issn_data <- function(issn_list, start_date, end_date, verbose=FALSE){
+retrieve_crossref_issn_data <- function(issn_list, start_date, end_date, verbose=FALSE, polite_endpoint=TRUE){
 
     K <- length(issn_list)
     out <- list()
@@ -18,7 +18,8 @@ retrieve_crossref_issn_data <- function(issn_list, start_date, end_date, verbose
                 type="issn", 
                 start=start_date, 
                 end=end_date, 
-                date_type=type)
+                date_type=type, 
+                polite_endpoint=polite_endpoint)
         }
         tmp <- rbind(
                 get_crossref_articles(tmp[[1]]), 
@@ -153,7 +154,7 @@ read.csv2_check <- function(file, ...){
 }
 
 # Crossref 
-call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows=1000){
+call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows=1000, polite_endpoint){
     if( sum(type %in% c("issn", "doi"))!=1 ) stop("type must be either 'issn' or 'doi'")
     if( sum(date_type %in% c("created", "published"))!=1 ) stop("date_type must be either 'created' or 'published'")
     if(type=="issn"){
@@ -171,8 +172,10 @@ call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows
     param = list(
         "filter"=filter, 
         "select"="title,author,abstract,URL,created", 
-        #"mailto"=crossref_email, 
         rows=rows)
+    if(polite_endpoint==TRUE){
+        param$mailto <- crossref_email
+    }
     res = GET(endpoint,query=param)
     return(content(res))
     }
@@ -235,6 +238,76 @@ get_crossref_api_limits <- function(response){
     return(c("limit"=limit, "interval"=interval))
     }
 
+# Crossref API response time 
+httr_get_timed <- function(url, timout, query) {
+    start_time <- Sys.time()
+
+    result <- tryCatch(
+        {
+            response <- GET(url,
+                timeout(timout),
+                query = query
+            )
+
+            end_time <- Sys.time()
+            time_taken <- as.numeric(difftime(end_time, start_time, units = "secs"))
+
+            list(success = TRUE, time = time_taken)
+        },
+        error = function(e) {
+            list(success = FALSE, error = as.character(e))
+        }
+    )
+
+    return(result)
+}
+
+is_crossref_endpoint_polite_faster <- function(start, end, timeout) {
+
+    issn <- sample(c("1476-4989", "0048-5829", "1554-0626", "0010-4159", "1460-3667", "0962-6298", 
+                     "0043-8871", "1545-1577", "0140-2382", "1743-9655", "0020-8833", "1047-1987", 
+                     "0362-9805", "1537-5943", "1469-2112"), size=1)
+
+    url <- paste0("https://api.crossref.org/journals/",issn,"/works")
+    filter <- paste0("from-created-date:", start, ",until-created-date:", end)
+
+    query <- list(
+        "filter" = filter,
+        "select" = "title,author,abstract,URL,created",
+        rows = 1000
+    )
+
+    result1 <- httr_get_timed(url, timeout, query)
+
+    query$mailto <- crossref_email
+    result2 <- httr_get_timed(url, timeout, query)
+
+    cat("\tPublic API response time:", result1$time, "seconds\n")
+    cat("\tPolite API response time:", result2$time, "seconds\n")
+
+    if (result1$success && !result2$success) {
+        return(1) 
+    } else if (!result1$success && result2$success) {
+        return(2) 
+    } else if (!result1$success && !result2$success) {
+        return(0)
+    } else {
+        return(ifelse(result1$time < result2$time, 1, 2))
+    }
+}
+
+crossref_endpoint_polite_faster <- function(crawl_start_date, crawl_end_date) {
+    res <- 0
+    timeout <- 1
+    while (res == 0) {
+        cat("Testing crossref API with timeout:", timeout, "seconds\n")
+        res <- is_crossref_endpoint_polite_faster(crawl_start_date, crawl_end_date, timeout = timeout)
+        if (res != 0) break
+        timeout <- timeout + 5
+    }
+    return(ifelse(res == 2, TRUE, FALSE))
+    }
+
 
 
 # Open AI 
@@ -268,3 +341,5 @@ get_openai_finish_reason <- function(response){
 get_openai_usage <- function(response){
     return(unlist(response$usage$total_tokens))
 }
+
+
