@@ -171,7 +171,7 @@ call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows
     param = list(
         "filter"=filter, 
         "select"="title,author,abstract,URL,created", 
-        "mailto"=crossref_email, 
+        #"mailto"=crossref_email, 
         rows=rows)
     res = GET(endpoint,query=param)
     return(content(res))
