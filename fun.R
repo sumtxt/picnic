@@ -176,7 +176,7 @@ call_crossref_api <- function(id,type="issn",start,end,date_type="created", rows
     if(polite_endpoint==TRUE){
         param$mailto <- crossref_email
     }
-    res = GET(endpoint,query=param)
+    res = RETRY("GET", url=endpoint, query=param, pause_base=5)
     return(content(res))
     }
 
