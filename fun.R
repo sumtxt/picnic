@@ -61,7 +61,7 @@ add_multidisciplinary_filter <- function(row){
 
 dispatch_special_filter <- function(data){
     FUN <- unique(data$filter_function)
-    if(FUN=="") return(data)
+    if(FUN=="" | FUN=="none") return(data)
     else {
         filter_fun <- match.fun(FUN)
         return(filter_fun(data))
