@@ -22,13 +22,11 @@ All data comes from the Crossref API. [Crossref](https://www.crossref.org/commun
 
 The backend is a crawler written in R living in a GitHub repository. Every Friday, GitHub Actions executes the crawler. Once the crawler finishes, the crawled data is put in a JSON file and rendered into a HTML file using GitHub Pages. 
 
-For each journal, the crawler retrieves all articles added to a journal in the previous week. To that end, it requests all articles for which the field "created" or "published" in the Crossref database is within the last seven days. 
+For each journal, the crawler retrieves all articles added in the previous week. It does this by fetching all articles from the Crossref database where the "created" or "published" field is within the last 14 days. The generous overlap across weekly crawls is due to the occasional delay between when a record is created and when it becomes available to the crawler via the API. Once an article is crawled, its unique identifier (the DOI) is added to a list. This list is checked by the crawler at every runtime. Only articles that the crawler has not seen before are included in the data update. This ensures that articles from the previous week's crawl are not included again, despite the overlap in the crawl period. It also ensures that articles appearing first online and then in print are only included once on Paper Picnic.
 
 The crawler retrieves title, authors, full-text link, and abstract. Unfortunately, not all publishers add abstracts. Examples include the publisher Elsevier or Taylor & Francis, which for all of their journals never include abstracts (see [this](https://www.crossref.org/blog/i4oa-hall-of-fame-2023-edition/) Crossref Blog for details). 
 
 Since journals typically have two ISSN numbers (one for print and one for electronic, see [here](https://en.wikipedia.org/wiki/ISSN)), the crawler retrieves articles for both ISSN numbers and deduplicates the results. The ISSN numbers used for the crawler come from the Crossref lookup [tool](https://www.crossref.org/titleList/). 
-
-Once an article has been crawled, its unique identifier (the DOI) is added to a list. This list is checked by the crawler at every runtime. Only articles that the crawler has not seen before are included in the data update. This ensures that articles appearing first online and then again in print are only included once on Paper Picnic.
 
 When the title is generic, e.g., when it includes the word "Errata", "Frontmatter" or "Backmatter", the crawler adds a filter tag. For articles from multidisciplinary journals, the crawler prompts GPT-4o mini: "You are given content from a new issue of a multidisciplinary scientific journal. Respond 'Yes' if the content is a research article in any social science discipline and 'No' otherwise". All content that includes this filter tag is hidden in the default view but can be displayed by clicking on the +N button at the top left for every journal.
 
