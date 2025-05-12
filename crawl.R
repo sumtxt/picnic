@@ -8,7 +8,7 @@ source("credentials.R")
 source("./parameters/prompts.R")
 
 now <- Sys.time()
-crawl_start_date <- as.Date(now) - 7
+crawl_start_date <- as.Date(now) - 14
 crawl_end_date <- as.Date(now) - 1
 
 journals <- read.csv(paste0("./parameters/", field, "_journals.csv"))
