@@ -3,9 +3,9 @@
     <div class="card-header"> 
 
         {% if article.filter == "1" or article.filter == 1 %} Generic title: Not a research article 
-        {% elsif article.filter == "2" %} GPT-4o mini: Non-social science research article
-        {% elsif article.filter == "3" %} Science abstract < 200 char.: Not a research article
-        {% elsif article.filter == "4" %} Nature DOI suffix ≠ "/s...": Not a research article
+        {% elsif article.filter == "2" or article.filter == 2 %} GPT-4o mini: Non-social science research article
+        {% elsif article.filter == "3" or article.filter == 3 %} Science abstract < 200 char.: Not a research article
+        {% elsif article.filter == "4" or article.filter == 4 %} Nature DOI suffix ≠ "/s...": Not a research article
         {% else %}
         {% endif %}
 
