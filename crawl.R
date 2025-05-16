@@ -47,7 +47,7 @@ out <- merge(out, journals, by="issn")
 out <- add_standard_filter(out) 
 
 # Filter flags: Multidisciplinary journals 
-if(field=="multidisciplinary"){
+if(field %in% c("multidisciplinary", "environmental_and_climate_politics_studies") ){
     out_lst <- split(out, out$filter_function) 
     out_lst <- lapply(out_lst, dispatch_special_filter ) 
     out <- do.call(rbind, out_lst)
