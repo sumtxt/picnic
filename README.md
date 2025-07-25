@@ -9,3 +9,5 @@ After forking the repository, you need to make some changes to the repository se
 1. Go to Settings > Actions > General. Scroll down to Workflow permissions and allow workflows to read and write in the repository.
 
 2. Go to Security > Secrets and Variables > Actions. Set `CROSSREF_EMAIL` and `OPENOPENAI_APIKEY` in as a repository secret.  The latter is used to query the OpenAI API while the former is to politely identify yourself to the Crossref API.
+
+3. After each crawl, a notification is sent out via [resend.com](https://resend.com). For this to work, you need to set `RESEND_API_KEY` as repository secret as well as `RESEND_EMAIL_FROM` and `RESEND_EMAIL_TO`.

@@ -1,5 +1,9 @@
 # picnic
 
+### Version 1.0.3 (2025-07-25)
+
+* Migrated email notification workflow to GitHub Actions
+
 ### Version 1.0.2 (2025-05-12)
 
 * Added overlap period for weekly crawls
