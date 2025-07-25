@@ -1,6 +1,7 @@
 const axios = require('axios');
 const fs = require('fs');
 const Mustache = require('mustache');
+const { convert } = require('html-to-text');
 
 // Load environment variables for local testing
 if (fs.existsSync('.env')) {
@@ -80,15 +81,31 @@ function generateEmailHtml(data) {
 }
 
 /**
+ * Convert HTML to plain text
+ */
+function generatePlainText(htmlBody) {
+  const options = {
+    wordwrap: 80
+  };
+  
+  return convert(htmlBody, options);
+}
+
+/**
  * Send email via Resend API
  */
 async function sendEmail(subject, htmlBody, textBody = '') {
+  // Generate plain text version if not provided
+  if (!textBody) {
+    textBody = generatePlainText(htmlBody);
+  }
+
   const emailData = {
     from: process.env.RESEND_EMAIL_FROM,
     to: [process.env.RESEND_EMAIL_TO],
     subject: subject,
     html: htmlBody,
-    text: textBody || 'Please view this email in HTML format.'
+    text: textBody
   };
 
   try {
