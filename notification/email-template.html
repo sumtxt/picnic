@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Picnic - New Baskets</title>
+</head>
+
+<body>
+    <p>New baskets with the latest published research in political science and adjacent fields are available on <a
+            href="https://www.paper-picnic.com?utm_source=email">paper-picnic.com</a>:</p>
+
+    <ul>
+        <li><a href="https://paper-picnic.com/politics?utm_source=email">Politics</a>: {{pol_n.1}} new papers in
+            {{pol_n.0}} journals</li>
+        <li><a href="https://paper-picnic.com/economics?utm_source=email">Economics</a>: {{eco_n.1}} new papers in
+            {{eco_n.0}} journals</li>
+        <li><a href="https://paper-picnic.com/sociology?utm_source=email">Sociology</a>: {{soc_n.1}} new papers in
+            {{soc_n.0}} journals</li>
+        <li><a href="https://paper-picnic.com/multidisciplinary?utm_source=email">Multidisciplinary</a>: {{mul_n.1}} new
+            papers in {{mul_n.0}} journals</li>
+        <li>More: <a href="https://paper-picnic.com/public_administration_and_policy?utm_source=email">Public
+                Administration and Policy Studies</a>, <a
+                href="https://paper-picnic.com/communication?utm_source=email">Communication Studies</a>, <a
+                href="https://paper-picnic.com/migration?utm_source=email">Migration Studies</a>, <a
+                href="https://paper-picnic.com/environmental_and_climate_politics_studies?utm_source=email">Environmental/Climate
+                Politics Studies</a></li>
+    </ul>
+
+    <p>We list the {{pol_n.1}} new papers published in {{pol_n.0}} political science journals below. Abstracts are
+        included whenever available.</p>
+
+    {{#content}}
+    <div>
+        <h3>{{journal_full}}</h3>
+        {{#articles}}
+        <div>
+            <div id="title"><a href="{{url}}">{{title}}</a></div>
+            <div id="authors">{{authors}}</div>
+            {{#abstract}}
+            <div id="abstract">{{abstract}}</div>
+            {{/abstract}}
+            <p></p>
+        </div>
+        {{/articles}}
+    </div>
+    {{/content}}
+
+    <div class="footer">
+        <p>Annoyed by these emails? Don't send them to spam but unsubscribe by sending an email to <a
+                href="mailto:polsci-paperpicnic-leave@ucl.ac.uk">polsci-paperpicnic-leave@ucl.ac.uk</a>. The subject and
+            the body of your message are irrelevant and you will be unsubscribed immediately. For all comments and
+            concerns, please write to <a href="mailto:hello@paper-picnic.com">hello@paper-picnic.com</a></p>
+    </div>
+</body>
+
+</html>

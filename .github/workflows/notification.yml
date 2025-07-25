@@ -1,20 +1,31 @@
-name: Notification
+name: Paper Picnic Email Notification
 
-on: 
-   workflow_dispatch:
+on:
+  workflow_dispatch:
 
 jobs:
-  crawl:
+  send-notification:
     runs-on: ubuntu-latest
     steps:
-      - name: Send email via Resend
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
         run: |
-          curl -X POST 'https://api.resend.com/emails' \
-            -H 'Authorization: Bearer ${{ secrets.RESEND_API_KEY }}' \
-            -H 'Content-Type: application/json' \
-            -d '{
-              "from": "${{ secrets.RESEND_EMAIL_FROM }}",
-              "to": ["${{ secrets.RESEND_EMAIL_TO }}"],
-              "subject": "Data Collection Complete",
-              "text": "Your data collection workflow has finished successfully."
-            }'
+          cd notification
+          npm init -y
+          npm install axios mustache
+
+      - name: Generate and send email
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_EMAIL_FROM: ${{ secrets.RESEND_EMAIL_FROM }}
+          RESEND_EMAIL_TO: ${{ secrets.RESEND_EMAIL_TO }}
+        run: |
+          cd notification
+          node send-notification.js
