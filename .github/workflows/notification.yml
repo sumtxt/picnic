@@ -1,0 +1,20 @@
+name: Notification
+
+on: 
+   workflow_dispatch:
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send email via Resend
+        run: |
+          curl -X POST 'https://api.resend.com/emails' \
+            -H 'Authorization: Bearer ${{ secrets.RESEND_API_KEY }}' \
+            -H 'Content-Type: application/json' \
+            -d '{
+              "from": "${{ secrets.RESEND_EMAIL_FROM }}",
+              "to": ["${{ secrets.RESEND_EMAIL_TO }}"],
+              "subject": "Data Collection Complete",
+              "text": "Your data collection workflow has finished successfully."
+            }'
