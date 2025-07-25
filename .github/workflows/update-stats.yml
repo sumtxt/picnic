@@ -1,4 +1,4 @@
-name: Update stats
+name: Update stats.csv
 
 on: 
    workflow_dispatch:
@@ -7,7 +7,7 @@ on:
      types: [ completed ]
 
 jobs:
-  crawl:
+  update-stats:
     runs-on: ubuntu-latest
     steps:
       - name: Set up R
