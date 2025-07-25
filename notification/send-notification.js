@@ -1,5 +1,6 @@
 const axios = require('axios');
 const fs = require('fs');
+const path = require('path');
 const Mustache = require('mustache');
 const { convert } = require('html-to-text');
 
@@ -9,30 +10,35 @@ if (fs.existsSync('.env')) {
 }
 
 // Configuration
-const BASE_URL = 'https://paper-picnic.com/json';
+const OUTPUT_DIR = '../output';
 const RESEND_API_URL = 'https://api.resend.com/emails';
 
 // Data sources
 const DATA_SOURCES = {
-  politics: `${BASE_URL}/politics.json`,
-  economics: `${BASE_URL}/economics.json`,
-  sociology: `${BASE_URL}/sociology.json`,
-  multidisciplinary: `${BASE_URL}/multidisciplinary.json`,
-  public_administration_and_policy: `${BASE_URL}/public_administration_and_policy.json`,
-  communication: `${BASE_URL}/communication.json`,
-  migration: `${BASE_URL}/migration.json`,
-  environmental_and_climate_politics_studies: `${BASE_URL}/environmental_and_climate_politics_studies.json`
+  politics: path.join(OUTPUT_DIR, 'politics.json'),
+  economics: path.join(OUTPUT_DIR, 'economics.json'),
+  sociology: path.join(OUTPUT_DIR, 'sociology.json'),
+  multidisciplinary: path.join(OUTPUT_DIR, 'multidisciplinary.json'),
+  public_administration_and_policy: path.join(OUTPUT_DIR, 'public_administration_and_policy.json'),
+  communication: path.join(OUTPUT_DIR, 'communication.json'),
+  migration: path.join(OUTPUT_DIR, 'migration.json'),
+  environmental_and_climate_politics_studies: path.join(OUTPUT_DIR, 'environmental_and_climate_politics_studies.json')
 };
 
 /**
- * Fetch and parse JSON data from URL
+ * Read and parse JSON data from local file
  */
-async function parseJson(url) {
+async function parseJson(filePath) {
   try {
-    const response = await axios.get(url);
-    return response.data;
+    const fullPath = path.resolve(__dirname, filePath);
+    if (!fs.existsSync(fullPath)) {
+      console.error(`File not found: ${fullPath}`);
+      return null;
+    }
+    const data = fs.readFileSync(fullPath, 'utf8');
+    return JSON.parse(data);
   } catch (error) {
-    console.error(`Error fetching data from ${url}:`, error.message);
+    console.error(`Error reading data from ${filePath}:`, error.message);
     return null;
   }
 }

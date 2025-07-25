@@ -7,8 +7,11 @@ jobs:
   send-notification:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout main branch
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
