@@ -144,6 +144,8 @@ async function main() {
     //  process.exit(1);
     //}
 
+    console.log('Today:', today);
+
     console.log('Update found for today, generating email...');
 
     // Fetch data for all categories
