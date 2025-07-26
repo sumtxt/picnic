@@ -137,7 +137,7 @@ async function main() {
     }
 
     // Check if there's an update today
-    const today = getTodayDate();
+    // const today = getTodayDate();
     
     if (today !== politicsData.update) {
       console.error('No update found for today');
