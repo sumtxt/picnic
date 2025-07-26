@@ -4,11 +4,6 @@ const path = require('path');
 const Mustache = require('mustache');
 const { convert } = require('html-to-text');
 
-// Load environment variables for local testing
-if (fs.existsSync('.env')) {
-  require('dotenv').config();
-}
-
 // Configuration
 const OUTPUT_DIR = '../output';
 const RESEND_API_URL = 'https://api.resend.com/emails';
@@ -73,9 +68,7 @@ function formatDate(dateString) {
  */
 function getTodayDate() {
   const today = new Date();
-  // Adjust for London timezone (UTC+1)
-  const londonTime = new Date(today.getTime() + (1 * 60 * 60 * 1000));
-  return londonTime.toISOString().split('T')[0];
+  return today.toISOString().split('T')[0];
 }
 
 /**
@@ -100,11 +93,9 @@ function generatePlainText(htmlBody) {
 /**
  * Send email via Resend API
  */
-async function sendEmail(subject, htmlBody, textBody = '') {
-  // Generate plain text version if not provided
-  if (!textBody) {
-    textBody = generatePlainText(htmlBody);
-  }
+async function sendEmail(subject, htmlBody) {
+  
+  textBody = generatePlainText(htmlBody);
 
   const emailData = {
     from: process.env.RESEND_EMAIL_FROM,
@@ -142,25 +133,15 @@ async function main() {
     
     if (!politicsData) {
       console.error('Failed to fetch politics data');
-      await sendEmail(
-        'Paper Picnic Notification: Error fetching data',
-        '<p>There was an error fetching the latest data from Paper Picnic.</p>'
-      );
-      return;
+      process.exit(1);
     }
 
     // Check if there's an update today
     const today = getTodayDate();
-    console.log(`Today's date: ${today}`);
-    console.log(`Data update date: ${politicsData.update}`);
     
     if (today !== politicsData.update) {
-      console.log('No update found for today');
-      await sendEmail(
-        'Paper Picnic Notification: No update found',
-        '<p>No new papers were found for today\'s date.</p>'
-      );
-      return;
+      console.error('No update found for today');
+      process.exit(1);
     }
 
     console.log('Update found for today, generating email...');
