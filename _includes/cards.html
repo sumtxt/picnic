@@ -42,19 +42,27 @@
     <p></p>
     </div>
     <div class="col-2">
-      {% if total_hidden > 0 %}
       <div class="float-end">
-      <span data-bs-toggle="tooltip" data-bs-placement="bottom"  title="Number of less relevant items hidden. Click to show.">
-      <button type="button" class="btn btn-light" data-bs-toggle="collapse" data-bs-target="#collapse-{{journal.journal_short}}" aria-expanded="false" aria-controls="collapseExample">
-        +{{ total_hidden  }}
-      </button>
-      </span>
+        <button type="button" 
+                class="btn btn-outline-secondary btn-sm journal-toggle-btn me-2" 
+                data-journal="{{journal.journal_short}}" 
+                onclick="toggleJournalVisibility('{{journal.journal_short}}')"
+                style="display: none;">
+          Hide
+        </button>
+        
+        {% if total_hidden > 0 %}
+        <span data-bs-toggle="tooltip" data-bs-placement="bottom"  title="Number of less relevant items hidden. Click to show.">
+        <button type="button" class="btn btn-light" data-bs-toggle="collapse" data-bs-target="#collapse-{{journal.journal_short}}" aria-expanded="false" aria-controls="collapseExample">
+          +{{ total_hidden  }}
+        </button>
+        </span>
+        {% endif %}
       </div>
-      {% endif %}
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" id="articles-{{journal.journal_short}}">
     <div class="col-1"></div>
     <div class="col-11">
 
@@ -65,10 +73,12 @@
       {% endfor %}
       </div>
 
+      <div class="collapse show" id="main-articles-{{journal.journal_short}}">
       {% assign filtered = 0 %}
       {% for article in journal.articles %}
       {% include card.html %}
       {% endfor %}
+      </div>
 
     </div>
   </div>  

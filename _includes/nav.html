@@ -44,6 +44,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="https://preprint.paper-picnic.com/"><span class="text-nowrap">🔥 Preprints</span></a>
                 </li>
+                
+                <li class="nav-item" id="login-section" style="display: none;">
+                    <button class="btn btn-outline-light btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
+                    </button>
+                </li>
+                <li class="nav-item dropdown" id="user-section" style="display: none;">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <span id="user-email">user@example.com</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><button class="dropdown-item" onclick="signOut()">Sign Out</button></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

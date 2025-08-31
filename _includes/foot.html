@@ -1,3 +1,29 @@
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login to Paper Picnic</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" required>
+            <div class="form-text">We'll send you a magic link to login without a password.</div>
+          </div>
+          <div id="loginMessage" style="display: none;"></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="handleLogin()">Send Magic Link</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer class="mt-auto">
 <div class="mt-auto py-3 text-center">
 <small>Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" class="link-dark">Cabin</a></small>
