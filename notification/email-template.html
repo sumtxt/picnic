@@ -7,7 +7,8 @@
     <title>Paper Picnic - New Baskets</title>
 </head>
 
-<body>    
+<body>
+
     <p>New baskets with the latest published research in political science and adjacent fields are available on <a
             href="https://www.paper-picnic.com?utm_source=email">paper-picnic.com</a>:</p>
 
@@ -29,20 +30,11 @@
     </ul>
 
     <p>We list the {{pol_n.1}} new papers published in {{pol_n.0}} political science journals below. Abstracts are
-        included whenever available.</p>
-
-    <div class="table-of-contents">
-        <h3>Table of Contents</h3>
-        <ul>
-            {{#content}}
-            <li><a href="#journal-{{@index}}">{{journal_full}}</a></li>
-            {{/content}}
-        </ul>
-    </div>
+        included whenever available from Crossref.</p>
 
     {{#content}}
     <div>
-        <h3 id="journal-{{@index}}">{{journal_full}}</h3>
+        <h3>{{journal_full}}</h3>
         {{#articles}}
         <div>
             <div id="title"><a href="{{url}}">{{title}}</a></div>
