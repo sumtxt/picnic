@@ -139,10 +139,10 @@ async function main() {
     // Check if there's an update today
     const today = getTodayDate();
     
-    if (today !== politicsData.update) {
-      console.error('No update found for today');
-      process.exit(1);
-    }
+    // if (today !== politicsData.update) {
+    //  console.error('No update found for today');
+    //  process.exit(1);
+    // }
 
     console.log('Update found for today, generating email...');
 
