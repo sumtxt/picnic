@@ -1,0 +1,39 @@
+{%- assign doi_id = article.doi | replace: "https://doi.org/", "" | replace: "/", "-" | replace: ".", "-" -%}
+<article class="article-card preprint-card" id="{{ doi_id }}" role="article" data-subjects="{% for subject in article.subjects %}{{ subject.id }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+    {%- if article.subjects.size > 0 %}
+    <div class="article-card__subjects mb-2 text-muted small">
+        {%- for subject in article.subjects -%}
+        <span data-subject-id="{{ subject.id }}">{{ subject.name }}</span>
+        {%- unless forloop.last %} | {% endunless -%}
+        {%- endfor %}
+    </div>
+    {%- endif %}
+    <h3 class="article-card__title">{{ article.title }}</h3>
+    <p class="article-card__authors">{{ article.authors }}</p>
+    <div class="article-card__actions">
+        {%- if article.abstract != nil %}
+        <button class="btn btn-secondary btn-sm" type="button" data-bs-toggle="collapse"
+            data-bs-target="#abstract-{{ doi_id }}" aria-expanded="false" aria-controls="abstract-{{ doi_id }}"
+            aria-label="Toggle abstract">
+            Abstract
+        </button>
+        {%- else %}
+        <button class="btn btn-secondary btn-sm" type="button" disabled aria-label="Abstract not available">
+            Abstract
+        </button>
+        {%- endif %}
+        <a href="{{ article.doi }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"
+            aria-label="Open full text in new tab">
+            Full text
+        </a>
+        <button class="btn btn-secondary btn-sm btn-bibtex" type="button" data-doi="{{ article.doi }}"
+            aria-label="Get BibTeX citation">
+            BibTeX
+        </button>
+    </div>
+    {%- if article.abstract != nil %}
+    <div class="article-card__abstract collapse collapse-article" id="abstract-{{ doi_id }}">
+        {{ article.abstract }}
+    </div>
+    {%- endif %}
+</article>

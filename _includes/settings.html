@@ -1,0 +1,62 @@
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="settingsOffcanvas"
+    aria-labelledby="settingsOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="row mb-4 g-3">
+            <div class="col-12">
+                <div class="p-3 rounded bg-light shadow-sm d-flex align-items-center">
+                    <div class="form-check form-switch flex-grow-1">
+                        <input class="form-check-input" type="checkbox" id="global-expand-abstracts">
+                        <label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+                        Only available when provided by the publisher to CrossRef.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <h6>Journals</h6>
+
+        <div id="journal-settings-list" class="row g-2 mt-2">
+            {%- assign sorted_journals = data_journals | sort: "category_rank" -%}
+            {%- for journal in sorted_journals %}
+            <div class="col-12 mb-2 draggable-item" data-id="{{ journal.id }}">
+                <div class="journal-setting-item p-1 rounded d-flex align-items-center bg-light shadow-sm">
+                    <div class="drag-handle me-3 text-muted" style="cursor: grab;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="5" r="1" />
+                            <circle cx="9" cy="12" r="1" />
+                            <circle cx="9" cy="19" r="1" />
+                            <circle cx="15" cy="5" r="1" />
+                            <circle cx="15" cy="12" r="1" />
+                            <circle cx="15" cy="19" r="1" />
+                        </svg>
+                    </div>
+                    <div class="form-check form-switch flex-grow-1">
+                        <input class="form-check-input journal-visibility" type="checkbox" id="switch-{{ journal.id }}"
+                            checked>
+                        <label class="form-check-label text-truncate" for="switch-{{ journal.id }}" title="{{ journal.name }}" style="max-width: 300px;">
+                            {{ journal.name }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            {%- endfor %}
+        </div>
+        
+        <div class="row mb-4 g-3">
+            <div class="col-12">
+                <button id="reset-to-default"
+                    class="btn w-100 p-3 rounded bg-light shadow-sm d-flex align-items-center justify-content-start border-0"
+                    type="button" style="text-align: left; color: inherit;">
+                    <span class="me-2">🔄</span> Reset to default
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

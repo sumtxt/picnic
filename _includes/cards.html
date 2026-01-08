@@ -1,0 +1,45 @@
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+{% include settings.html %}
+
+<div id="articles-view" class="container mt-5">
+  {%- for journal in data_crawl %}
+  {%- assign total_hidden = journal.articles_hidden | size %}
+  <p></p>
+  <div class="container" id="{{journal.journal_id}}">
+    <div class="row">
+      <div class="col-10">
+        <h2>{{journal.journal_name}}</h2>
+        <p></p>
+      </div>
+      <div class="col-2">
+        {%- if total_hidden > 0 %}
+        <div class="float-end">
+          <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+            title="Number of less relevant items hidden. Click to show.">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="collapse"
+              data-bs-target="#collapse-{{journal.journal_id}}" aria-expanded="false" aria-controls="collapseExample">
+              +{{ total_hidden }}
+            </button>
+          </span>
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="collapse" id="collapse-{{journal.journal_id}}">
+          {%- assign filtered = 1 -%}
+          {%- for article in journal.articles_hidden -%}
+          {%- include card.html -%}
+          {%- endfor %}
+        </div>
+        {%- assign filtered = 0 -%}
+        {%- for article in journal.articles -%}
+        {%- include card.html -%}
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+  {%- endfor %}
+</div>

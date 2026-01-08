@@ -1,0 +1,11 @@
+{% include preprints_settings.html %}
+
+<script type="application/json" id="osf-subjects-data">
+{{ site.data.osf_subjects | jsonify }}
+</script>
+
+<div id="preprints-view" class="container mt-5">
+  {%- for article in site.data.preprints.content.articles %}
+    {%- include preprints_card.html -%}
+  {%- endfor %}
+</div>

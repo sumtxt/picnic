@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+
+<body class="d-flex flex-column min-vh-100">
+  {% include nav.html %}
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="display-4 fw-bold mb-3">{{ page.title }}</h1>
+        {% if page.tagline %}
+        <p class="lead text-muted mb-4">
+          {{ page.tagline }}
+        </p>
+        {% endif %}
+        <hr class="my-4">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="col-lg-6 mx-auto">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include foot.html %}
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+{%- assign all_groups = site.data.osf_subjects.groups -%}
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="settingsOffcanvas"
+    aria-labelledby="settingsOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="row mb-4 g-3">
+            <div class="col-12">
+                <div class="p-3 rounded bg-light shadow-sm d-flex align-items-center">
+                    <div class="form-check form-switch flex-grow-1">
+                        <input class="form-check-input" type="checkbox" id="global-expand-abstracts">
+                        <label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <h6>OSF Subject Categories</h6>
+
+        <div id="subject-settings-list" class="row g-2 mt-2">
+            {%- for group in all_groups %}
+            <div class="col-12 mb-2">
+                <div class="subject-setting-item p-1 rounded d-flex align-items-center bg-light shadow-sm">
+                    <div class="form-check form-switch flex-grow-1">
+                        <input class="form-check-input subject-visibility" type="checkbox" id="group-{{ group.id }}"
+                            data-group-id="{{ group.id }}">
+                        <label class="form-check-label text-truncate" for="group-{{ group.id }}" title="{{ group.name }}" style="max-width: 300px;">
+                            {{ group.name }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            {%- endfor %}
+        </div>
+        
+        <div class="row mb-4 g-3">
+            <div class="col-12">
+                <button id="reset-to-default"
+                    class="btn w-100 p-3 rounded bg-light shadow-sm d-flex align-items-center justify-content-start border-0"
+                    type="button" style="text-align: left; color: inherit;">
+                    <span class="me-2">🔄</span> Reset to default
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

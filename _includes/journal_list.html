@@ -1,0 +1,25 @@
+<div class="accordion p-3" id="accordionCategories">
+  {%- for cat_info in include.categories_list -%}
+    {%- assign category_journals = site.data.journals | where: "category", cat_info.category | sort: "category_rank" -%}
+    {%- assign category_id = cat_info.category | slugify -%}
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ category_id }}" aria-expanded="false" aria-controls="collapse-{{ category_id }}" data-bs-parent="#accordionCategories">
+          {{ cat_info.category }}
+        </button>
+      </h2>
+      <div id="collapse-{{ category_id }}" class="accordion-collapse collapse" data-bs-parent="#accordionCategories">
+        <div class="accordion-body">
+            {%- for journal in category_journals -%}
+            {{ journal.name }}{% unless forloop.last %}, {% endunless %}
+          {%- endfor -%}
+          {%- if cat_info.notes -%}
+          <hr>
+          <small><strong>Notes:</strong> {{ cat_info.notes }}</small>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+

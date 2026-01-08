@@ -1,0 +1,44 @@
+{%- assign doi_id = article.doi | replace: "https://doi.org/", "" | replace: "/", "-" | replace: ".", "-" -%}
+<article class="article-card" id="{{ doi_id }}" role="article">
+    {%- if filtered==1 %}
+    <div class="article-card__header mb-2">
+        <small class="text-muted">
+            {%- if article.filter == "1" or article.filter == 1 %} Generic title: Not a research article
+            {%- elsif article.filter == "2" or article.filter == 2 %} GPT-4o mini: Non-social science research article
+            {%- elsif article.filter == "3" or article.filter == 3 %} Science abstract < 200 char.: Not a research
+                article {%- elsif article.filter=="4" or article.filter==4 %} Nature DOI suffix ≠ "/s..." : Not a
+                research article {%- else -%} {%- endif %} </small>
+    </div>
+    {%- endif %}
+    {%- if journal_short %}
+    <div class="article-card__badge">{{ journal_short }}</div>
+    {%- endif %}
+    <h3 class="article-card__title">{{ article.title }}</h3>
+    <p class="article-card__authors">{{ article.authors }}</p>
+    <div class="article-card__actions">
+        {%- if article.abstract != nil %}
+        <button class="btn btn-secondary btn-sm" type="button" data-bs-toggle="collapse"
+            data-bs-target="#abstract-{{ doi_id }}" aria-expanded="false" aria-controls="abstract-{{ doi_id }}"
+            aria-label="Toggle abstract">
+            Abstract
+        </button>
+        {%- else %}
+        <button class="btn btn-secondary btn-sm" type="button" disabled aria-label="Abstract not available">
+            Abstract
+        </button>
+        {%- endif %}
+        <a href="{{ article.doi }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"
+            aria-label="Open full text in new tab">
+            Full text
+        </a>
+        <button class="btn btn-secondary btn-sm btn-bibtex" type="button" data-doi="{{ article.doi }}"
+            aria-label="Get BibTeX citation">
+            BibTeX
+        </button>
+    </div>
+    {%- if article.abstract != nil %}
+    <div class="article-card__abstract collapse collapse-article" id="abstract-{{ doi_id }}">
+        {{ article.abstract }}
+    </div>
+    {%- endif %}
+</article>
