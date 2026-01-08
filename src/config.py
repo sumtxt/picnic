@@ -15,8 +15,8 @@ CROSSREF_EMAIL = os.environ.get("CROSSREF_EMAIL", "")
 # Crawl Configuration
 CRAWL_WINDOW_START = 14  # days ago
 CRAWL_WINDOW_END = 1     # days ago
-UPDATE_MEMORY = False  # whether to update memory/doi.csv and memory/osf_ids.csv
-UPDATE_STATS = False  # whether to update output/stats.csv after crawl
+UPDATE_MEMORY = True  # whether to update memory/doi.csv and memory/osf_ids.csv
+UPDATE_STATS = True  # whether to update output/stats.csv after crawl
 LIMIT_JOURNALS = None  # limit number of journals to crawl (None = all journals, or set to int like 5)
 
 # Enable/Disable Crawlers
@@ -24,7 +24,7 @@ ENABLE_CROSSREF_CRAWL = True   # Set to False to skip Crossref journal crawl
 ENABLE_OSF_CRAWL = True        # Set to False to skip OSF preprints crawl
 
 # Filter Configuration
-ENABLE_AI_FILTER = False        # Set to False to skip OpenAI classification for Crossref articles
+ENABLE_AI_FILTER = True        # Set to False to skip OpenAI classification for Crossref articles
 
 # OpenAI Configuration
 OPENAI_MODEL = "gpt-4o-mini"
