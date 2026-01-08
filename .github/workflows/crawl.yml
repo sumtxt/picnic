@@ -1,0 +1,45 @@
+name: Crawl
+
+on:
+  workflow_dispatch
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          path: main_folder
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        working-directory: ./main_folder
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Create .env file with secrets
+        working-directory: ./main_folder
+        run: |
+          echo "OPENAI_APIKEY=${{ secrets.OPENAI_APIKEY }}" >> .env
+          echo "CROSSREF_EMAIL=${{ secrets.CROSSREF_EMAIL }}" >> .env
+
+      - name: Run crawl
+        working-directory: ./main_folder
+        run: |
+          python main.py
+
+      - name: Commit results to main branch
+        working-directory: ./main_folder
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add . && git commit -m "Data updated" || echo "No changes to commit"
+          git push origin
