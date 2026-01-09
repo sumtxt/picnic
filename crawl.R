@@ -27,7 +27,7 @@ out <- retrieve_crossref_issn_data(
 out <- out[!duplicated(out$url),] 
 # Remove past paers
 out <- out[!(out$url %in% past_urls$url), ]
-if(is.null(out)) {
+if(is.null(out) | nrow(out)==0) {
     json <- toJSON(list("update"=as.Date(now), "content"=list()), 
         pretty=TRUE, auto_unbox=TRUE)
     write(json, paste0("./output/", field, ".json"))
