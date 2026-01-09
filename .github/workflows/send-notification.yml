@@ -1,0 +1,36 @@
+name: Paper Picnic Email Notification
+
+on:
+   workflow_dispatch:
+   workflow_run:
+     workflows: [ Crawl ]
+     types: [ completed ]
+
+jobs:
+  send-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd notification
+          npm install
+
+      - name: Generate and send email
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_EMAIL_FROM: ${{ secrets.RESEND_EMAIL_FROM }}
+          RESEND_EMAIL_TO: ${{ secrets.RESEND_EMAIL_TO }}
+        run: |
+          cd notification
+          node send-notification.js

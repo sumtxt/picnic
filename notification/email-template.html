@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Picnic (beta) - New Baskets</title>
+</head>
+
+<body>
+
+    <p>New baskets with the latest published research in political science and adjacent fields are available on <a
+            href="https://beta.paper-picnic.com">beta.paper-picnic.com</a>:</p>
+
+    <ul>
+        <li><a href="https://beta.paper-picnic.com/political_science">Political Science</a>: {{polsci_n.1}} new papers in
+            {{polsci_n.0}} journals</li>
+        <li><a href="https://beta.paper-picnic.com/international_relations">International Relations</a>: {{ir_n.1}} new papers in
+            {{ir_n.0}} journals</li>
+        <li><a href="https://beta.paper-picnic.com/public_administration">Public Administration</a>: {{pa_n.1}} new papers in
+            {{pa_n.0}} journals</li>
+        <li><a href="https://beta.paper-picnic.com/economics">Economics</a>: {{eco_n.1}} new papers in
+            {{eco_n.0}} journals</li>
+        <li><a href="https://beta.paper-picnic.com/sociology">Sociology</a>: {{soc_n.1}} new papers in
+            {{soc_n.0}} journals</li>
+        <li><a href="https://beta.paper-picnic.com/multidisciplinary">Multidisciplinary</a>: {{mul_n.1}} new
+            papers in {{mul_n.0}} journals</li>
+        <li>More: <a
+                href="https://beta.paper-picnic.com/migration_studies">Migration Studies</a>, <a
+                href="https://beta.paper-picnic.com/communication_studies">Communication Studies</a>, <a
+                href="https://beta.paper-picnic.com/environmental_studies">Environmental Studies</a></li>
+    </ul>
+
+    <p>We list the new papers published in political science, international relations, and public administration journals below. Abstracts are
+        included whenever available from Crossref.</p>
+
+    {{#polsci_content}}
+    <h2>Political Science</h2>
+    {{#journals}}
+    <div>
+        <h3>{{journal_name}}</h3>
+        {{#articles}}
+        <div>
+            <div id="title"><a href="{{doi}}">{{title}}</a></div>
+            <div id="authors">{{authors}}</div>
+            {{#abstract}}
+            <div id="abstract">{{abstract}}</div>
+            {{/abstract}}
+            <p></p>
+        </div>
+        {{/articles}}
+    </div>
+    {{/journals}}
+    {{/polsci_content}}
+
+    {{#ir_content}}
+    <h2>International Relations</h2>
+    {{#journals}}
+    <div>
+        <h3>{{journal_name}}</h3>
+        {{#articles}}
+        <div>
+            <div id="title"><a href="{{doi}}">{{title}}</a></div>
+            <div id="authors">{{authors}}</div>
+            {{#abstract}}
+            <div id="abstract">{{abstract}}</div>
+            {{/abstract}}
+            <p></p>
+        </div>
+        {{/articles}}
+    </div>
+    {{/journals}}
+    {{/ir_content}}
+
+    {{#pa_content}}
+    <h2>Public Administration</h2>
+    {{#journals}}
+    <div>
+        <h3>{{journal_name}}</h3>
+        {{#articles}}
+        <div>
+            <div id="title"><a href="{{doi}}">{{title}}</a></div>
+            <div id="authors">{{authors}}</div>
+            {{#abstract}}
+            <div id="abstract">{{abstract}}</div>
+            {{/abstract}}
+            <p></p>
+        </div>
+        {{/articles}}
+    </div>
+    {{/journals}}
+    {{/pa_content}}
+
+    <div class="footer">
+        <p>Annoyed by these emails? Don't send them to spam but unsubscribe by sending an email to <a
+                href="mailto:polsci-paperpicnic-leave@ucl.ac.uk">polsci-paperpicnic-leave@ucl.ac.uk</a>. The subject and
+            the body of your message are irrelevant and you will be unsubscribed immediately. For all comments and
+            concerns, please write to <a href="mailto:hello@paper-picnic.com">hello@paper-picnic.com</a></p>
+    </div>
+</body>
+
+</html>
