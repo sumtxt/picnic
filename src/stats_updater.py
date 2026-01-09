@@ -101,7 +101,7 @@ def update_stats_csv() -> None:
         file_exists = os.path.exists(stats_file)
 
         with open(stats_file, 'a', encoding='utf-8', newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=["id", "journal_name", "crawl_date", "paper_count"])
+            writer = csv.DictWriter(f, fieldnames=["id", "journal_name", "crawl_date", "paper_count"], lineterminator='\n')
 
             # Write header only if file doesn't exist
             if not file_exists:
