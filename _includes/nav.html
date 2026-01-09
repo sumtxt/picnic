@@ -21,17 +21,15 @@
 <div class="secondary-nav-bar">
     <div class="container-fluid d-flex justify-content-between align-items-center">
         <div class="secondary-nav-links">
-            <a {% if page.url=="/about.html" %}class="active" {% endif %} href="{{ site.baseurl }}/about">👋
-                About</a>
+            <a {% if page.url=="/about.html" %}class="active" {% endif %} href="{{ site.baseurl }}/about"><span class="d-none d-md-inline">👋 </span>About</a>
             <span class="mx-1">|</span>
-            <a {% if page.url=="/news.html" %}class="active" {% endif %} href="https://paperpicnic.substack.com/" target="_blank">📢 Substack</a>
+            <a {% if page.url=="/news.html" %}class="active" {% endif %} href="https://paperpicnic.substack.com/" target="_blank"><span class="d-none d-md-inline">📢 </span>Substack</a>
             <span class="mx-1">|</span>
-            <a {% if page.url=="/data.html" %}class="active" {% endif %} href="{{ site.baseurl }}/data">📈
-                Data</a>
+            <a {% if page.url=="/data.html" %}class="active" {% endif %} href="{{ site.baseurl }}/data"><span class="d-none d-md-inline">📈 </span>Data</a>
         </div>
         <div class="d-flex align-items-center">
             <div class="me-3">
-                Updated on {{ site.data.publications.update | date: "%A, %b %d"}} with last week's publisher data.
+                Updated on {{ site.data.publications.update | date: "%A, %b %d"}}<span class="d-none d-md-inline"> with last week's publisher data</span>.
             </div>
             <button class="btn btn-link p-0" id="bd-theme" type="button" aria-label="Toggle theme"
                 style="color: var(--color-text-primary);">
