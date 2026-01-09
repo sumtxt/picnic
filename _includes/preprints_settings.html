@@ -9,7 +9,7 @@
     <div class="offcanvas-body">
         <div class="row mb-4 g-3">
             <div class="col-12">
-                <div class="p-3 rounded bg-light shadow-sm d-flex align-items-center">
+                <div class="settings-item">
                     <div class="form-check form-switch flex-grow-1">
                         <input class="form-check-input" type="checkbox" id="global-expand-abstracts">
                         <label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
@@ -24,7 +24,7 @@
         <div id="subject-settings-list" class="row g-2 mt-2">
             {%- for group in all_groups %}
             <div class="col-12 mb-2">
-                <div class="subject-setting-item p-1 rounded d-flex align-items-center bg-light shadow-sm">
+                <div class="subject-setting-item">
                     <div class="form-check form-switch flex-grow-1">
                         <input class="form-check-input subject-visibility" type="checkbox" id="group-{{ group.id }}"
                             data-group-id="{{ group.id }}">
@@ -40,7 +40,7 @@
         <div class="row mb-4 g-3">
             <div class="col-12">
                 <button id="reset-to-default"
-                    class="btn w-100 p-3 rounded bg-light shadow-sm d-flex align-items-center justify-content-start border-0"
+                    class="btn w-100 settings-item justify-content-start border-0"
                     type="button" style="text-align: left; color: inherit;">
                     <span class="me-2">🔄</span> Reset to default
                 </button>

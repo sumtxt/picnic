@@ -7,7 +7,7 @@
     <div class="offcanvas-body">
         <div class="row mb-4 g-3">
             <div class="col-12">
-                <div class="p-3 rounded bg-light shadow-sm d-flex align-items-center">
+                <div class="settings-item">
                     <div class="form-check form-switch flex-grow-1">
                         <input class="form-check-input" type="checkbox" id="global-expand-abstracts">
                         <label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
@@ -23,7 +23,7 @@
             {%- assign sorted_journals = data_journals | sort: "category_rank" -%}
             {%- for journal in sorted_journals %}
             <div class="col-12 mb-2 draggable-item" data-id="{{ journal.id }}">
-                <div class="journal-setting-item p-1 rounded d-flex align-items-center bg-light shadow-sm">
+                <div class="journal-setting-item">
                     <div class="drag-handle me-3 text-muted" style="cursor: grab;">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -50,7 +50,7 @@
         <div class="row mb-4 g-3">
             <div class="col-12">
                 <button id="reset-to-default"
-                    class="btn w-100 p-3 rounded bg-light shadow-sm d-flex align-items-center justify-content-start border-0"
+                    class="btn w-100 settings-item justify-content-start border-0"
                     type="button" style="text-align: left; color: inherit;">
                     <span class="me-2">🔄</span> Reset to default
                 </button>

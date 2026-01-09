@@ -204,7 +204,7 @@ a:hover {
   color: var(--color-text-secondary);
   font-weight: var(--font-weight-medium);
   transition: color 0.15s ease;
-  margin: 0 8px;
+  margin: 0 var(--space-xs);
 }
 
 .navbar-custom .nav-link:hover,
@@ -276,7 +276,7 @@ a:hover {
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
-  margin-left: 8px;
+  margin-left: var(--space-xs);
   padding: 0;
 }
 
@@ -309,11 +309,6 @@ a:hover {
   display: none;
 }
 
-/* Dark Mode Toggle Button */
-#bd-theme:hover {
-  transform: none !important;
-}
-
 /* Article Cards */
 .article-card {
   background: var(--color-bg-primary);
@@ -322,7 +317,7 @@ a:hover {
   padding: var(--space-md);
   margin-bottom: var(--space-sm);
   box-shadow: var(--shadow-sm);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .article-card:hover {
@@ -394,7 +389,7 @@ a:hover {
 .btn {
   font-weight: var(--font-weight-medium);
   border-radius: var(--radius-pill);
-  padding: 8px 20px;
+  padding: var(--space-xs) 20px;
   font-size: var(--font-size-sm);
   transition: all 0.15s ease;
   border: none;
@@ -419,13 +414,15 @@ a:hover {
   box-shadow: 0 2px 8px rgba(230, 57, 70, 0.25);
 }
 
-.btn-secondary {
+.btn-secondary,
+.btn-light {
   background: var(--color-bg-secondary) !important;
   color: var(--color-text-primary) !important;
   border: 1px solid var(--color-border) !important;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-light:hover {
   background: var(--color-bg-tertiary) !important;
   border-color: var(--color-accent) !important;
 }
@@ -437,12 +434,6 @@ a:hover {
 
 .btn-dark:hover {
   background: var(--color-text-secondary) !important;
-}
-
-.btn-light {
-  background: var(--color-bg-secondary) !important;
-  color: var(--color-text-primary) !important;
-  border: 1px solid var(--color-border) !important;
 }
 
 .btn-sm {
@@ -506,7 +497,7 @@ a:hover {
 .dropdown-item {
   color: var(--color-text-secondary);
   border-radius: var(--radius-sm);
-  padding: 8px 16px;
+  padding: var(--space-xs) 16px;
   transition: all 0.15s ease;
 }
 
@@ -531,18 +522,13 @@ a:hover {
 .journal-list-scrollable {
   max-height: 400px;
   overflow-y: auto;
-  margin-bottom: 1rem;
-  /* Custom Scrollbar for better aesthetics */
+  margin-bottom: var(--space-sm);
   scrollbar-width: thin;
   scrollbar-color: var(--color-text-muted) transparent;
 }
 
 .journal-list-scrollable::-webkit-scrollbar {
   width: 6px;
-}
-
-.journal-list-scrollable::-webkit-scrollbar-track {
-  background: transparent;
 }
 
 .journal-list-scrollable::-webkit-scrollbar-thumb {
@@ -616,11 +602,6 @@ a:hover {
   max-width: 1280px;
 }
 
-.container-narrow {
-  max-width: 768px;
-  margin: 0 auto;
-}
-
 .bg-accent {
   background-color: var(--color-accent) !important;
 }
@@ -637,45 +618,19 @@ a:hover {
   background-color: var(--color-bg-secondary) !important;
 }
 
-.bg-dark {
-  background-color: var(--color-bg-tertiary) !important;
+/* Reusable Hover Effects */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.rounded-lg {
-  border-radius: var(--radius-md) !important;
-}
-
-.rounded-xl {
-  border-radius: var(--radius-lg) !important;
-}
-
-.shadow-sm-custom {
-  box-shadow: var(--shadow-sm) !important;
-}
-
-.shadow-md-custom {
-  box-shadow: var(--shadow-md) !important;
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 /* ==================== */
-/* 5. Animations */
+/* 5. Transitions */
 /* ==================== */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.3s ease-out;
-}
 
 /* Collapse transitions - Bootstrap handles this */
 .collapse {
@@ -689,23 +644,7 @@ a:hover {
 *:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
-  border-radius: 4px;
-}
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--color-accent);
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  z-index: 100;
-  border-radius: 0 0 var(--radius-sm) 0;
-}
-
-.skip-link:focus {
-  top: 0;
+  border-radius: var(--radius-sm);
 }
 
 /* ==================== */
@@ -751,52 +690,34 @@ a:hover {
 }
 
 /* ==================== */
-/* 9. Legacy Styles (Preserved) */
+/* 9. Settings View */
 /* ==================== */
 
-.feature-icon {
-  width: 4rem;
-  height: 4rem;
-  border-radius: .75rem;
-}
-
-.icon-square {
-  width: 3rem;
-  height: 3rem;
-  border-radius: .75rem;
-}
-
-.text-shadow-1 {
-  text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25);
-}
-
-.text-shadow-2 {
-  text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25);
-}
-
-.text-shadow-3 {
-  text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25);
-}
-
-.card-cover {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.feature-icon-small {
-  width: 3rem;
-  height: 3rem;
-}
-
-/* Journal Settings View */
-.journal-setting-item {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: none !important;
+/* Settings Items - Base */
+.settings-item {
+  display: flex;
+  align-items: center;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-secondary);
   box-shadow: var(--shadow-sm);
 }
 
-.journal-setting-item:hover {
+/* Journal & Subject Settings View */
+.journal-setting-item,
+.subject-setting-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none !important;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-secondary);
+}
+
+.journal-setting-item:hover,
+.subject-setting-item:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
@@ -813,12 +734,6 @@ a:hover {
 .journal-setting-item:hover .btn-group {
   opacity: 1;
 }
-
-[data-theme="dark"] .journal-setting-item {
-  background-color: var(--color-bg-secondary) !important;
-}
-
-
 
 /* Drag & Drop Styles (SortableJS) */
 .sortable-ghost {
@@ -845,45 +760,7 @@ a:hover {
 }
 
 /* ==================== */
-/* 10. Blog Styles */
-/* ==================== */
-
-.blog-post {
-  color: var(--color-text-secondary);
-}
-
-.blog-post h2 {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-}
-
-.blog-post h3 {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-primary);
-}
-
-.blog-post .lead {
-  font-size: var(--font-size-md);
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-relaxed);
-}
-
-.blog-post code {
-  background: var(--color-bg-secondary);
-  color: var(--color-accent);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.9em;
-}
-
-.blog-post .border-bottom {
-  border-color: var(--color-border) !important;
-}
-
-/* ==================== */
-/* 11. Preprints Styles */
+/* 10. Preprints Styles */
 /* ==================== */
 
 .article-card__subjects {
@@ -909,31 +786,13 @@ a:hover {
   color: var(--color-accent);
 }
 
-.subject-setting-item {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: none !important;
-  box-shadow: var(--shadow-sm);
-}
-
-.subject-setting-item:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
+[data-theme="dark"] .journal-setting-item,
 [data-theme="dark"] .subject-setting-item {
   background-color: var(--color-bg-secondary) !important;
 }
 
 [data-theme="dark"] .subject-tag {
   background-color: var(--color-bg-tertiary);
-  border-color: var(--color-border);
-  color: var(--color-text-muted);
-}
-
-[data-theme="dark"] .subject-tag:hover {
-  background-color: var(--color-bg-secondary);
-  border-color: var(--color-accent);
-  color: var(--color-accent);
 }
 
 /* ==================== */
@@ -967,7 +826,7 @@ a:hover {
 }
 
 .filter-banner-icon {
-  margin-right: 8px;
+  margin-right: var(--space-xs);
   opacity: 0.8;
 }
 
@@ -989,7 +848,7 @@ a:hover {
   font-size: 18px;
   line-height: 1;
   padding: 0;
-  margin-left: 8px;
+  margin-left: var(--space-xs);
   cursor: pointer;
   opacity: 0.6;
   transition: opacity 0.15s ease;
