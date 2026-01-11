@@ -5,7 +5,7 @@ Tests for OSF data processing functions
 import pytest
 from src.data_processor import (
     strip_whitespace,
-    extract_doi_id,
+    extract_doi,
     extract_osf_id_and_version,
     deduplicate_osf_versions,
     remove_past_osf_preprints,
@@ -22,12 +22,14 @@ def test_strip_whitespace():
     assert strip_whitespace("   ") is None
 
 
-def test_extract_doi_id():
+def test_extract_doi_osf():
     """Test DOI extraction from OSF URLs"""
-    assert extract_doi_id("https://doi.org/10.31219/osf.io/abc123") == "10.31219/osf.io/abc123"
-    assert extract_doi_id("http://doi.org/10.31219/osf.io/xyz789") == "10.31219/osf.io/xyz789"
-    assert extract_doi_id("10.31219/osf.io/test") == "10.31219/osf.io/test"
-    assert extract_doi_id(None) is None
+    assert extract_doi("https://doi.org/10.31219/osf.io/abc123") == "10.31219/osf.io/abc123"
+    assert extract_doi("http://doi.org/10.31219/osf.io/xyz789") == "10.31219/osf.io/xyz789"
+    assert extract_doi("https://dx.doi.org/10.31219/osf.io/abc123") == "10.31219/osf.io/abc123"
+    assert extract_doi("http://dx.doi.org/10.31219/osf.io/xyz789") == "10.31219/osf.io/xyz789"
+    assert extract_doi("10.31219/osf.io/test") == "10.31219/osf.io/test"
+    assert extract_doi(None) is None
 
 
 def test_extract_osf_id_and_version():

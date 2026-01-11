@@ -45,6 +45,8 @@ def extract_doi(url: Optional[str]) -> Optional[str]:
     """
     Extract DOI from URL
 
+    Supports both https://dx.doi.org/ and https://doi.org/ prefixes
+
     Ported from fun.R:122-124
 
     Args:
@@ -56,8 +58,8 @@ def extract_doi(url: Optional[str]) -> Optional[str]:
     if url is None:
         return None
 
-    # Remove http(s)://dx.doi.org/ prefix
-    doi = re.sub(r'https?://dx\.doi\.org/', '', url)
+    # Remove http(s)://dx.doi.org/ or http(s)://doi.org/ prefix
+    doi = re.sub(r'https?://(dx\.)?doi\.org/', '', url)
 
     return doi
 
@@ -319,25 +321,6 @@ def strip_whitespace(text: Optional[str]) -> Optional[str]:
     return text if text else None
 
 
-def extract_doi_id(url: Optional[str]) -> Optional[str]:
-    """
-    Extract DOI from OSF URL (removes http(s)://doi.org/ prefix)
-
-    Ported from picnic_preprints/fun.R:42-44
-
-    Args:
-        url: DOI URL
-
-    Returns:
-        DOI string without URL prefix
-    """
-    if url is None:
-        return None
-
-    # Remove http(s)://doi.org/ prefix (note: different from dx.doi.org)
-    doi = re.sub(r'https?://doi\.org/', '', url)
-
-    return doi
 
 
 def load_past_osf_ids() -> Set[str]:
@@ -523,6 +506,6 @@ def clean_osf_data(articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
         # Extract DOI
         if "url" in article:
-            article["doi"] = extract_doi_id(article["url"])
+            article["doi"] = extract_doi(article["url"])
 
     return articles

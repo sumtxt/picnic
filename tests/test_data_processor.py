@@ -43,9 +43,17 @@ class TestExtractDoi:
         url = "http://dx.doi.org/10.1234/example"
         assert extract_doi(url) == "10.1234/example"
 
-    def test_extract_doi_already_clean(self):
+    def test_extract_doi_with_doi_org(self):
         url = "https://doi.org/10.1234/example"
-        assert extract_doi(url) == "https://doi.org/10.1234/example"
+        assert extract_doi(url) == "10.1234/example"
+
+    def test_extract_doi_http_doi_org(self):
+        url = "http://doi.org/10.1234/example"
+        assert extract_doi(url) == "10.1234/example"
+
+    def test_extract_doi_already_clean(self):
+        url = "10.1234/example"
+        assert extract_doi(url) == "10.1234/example"
 
     def test_extract_doi_none(self):
         assert extract_doi(None) is None
