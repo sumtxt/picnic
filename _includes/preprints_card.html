@@ -1,4 +1,4 @@
-{%- assign doi_id = article.doi | replace: "https://doi.org/", "" | replace: "/", "-" | replace: ".", "-" -%}
+{%- assign doi_id = article.doi | replace: "https://dx.doi.org/", "" | replace: "https://doi.org/", "" | replace: "http://dx.doi.org/", "" | replace: "http://doi.org/", "" | replace: "/", "-" | replace: ".", "-" -%}
 <article class="article-card preprint-card" id="{{ doi_id }}" role="article" data-subjects="{% for subject in article.subjects %}{{ subject.id }}{% unless forloop.last %},{% endunless %}{% endfor %}">
     {%- if article.subjects.size > 0 %}
     <div class="article-card__subjects mb-2 text-muted small">

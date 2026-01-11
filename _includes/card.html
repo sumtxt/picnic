@@ -1,4 +1,4 @@
-{%- assign doi_id = article.doi | replace: "https://doi.org/", "" | replace: "/", "-" | replace: ".", "-" -%}
+{%- assign doi_id = article.doi | replace: "https://dx.doi.org/", "" | replace: "https://doi.org/", "" | replace: "http://dx.doi.org/", "" | replace: "http://doi.org/", "" | replace: "/", "-" | replace: ".", "-" -%}
 <article class="article-card" id="{{ doi_id }}" role="article">
     {%- if filtered==1 %}
     <div class="article-card__header mb-2">
