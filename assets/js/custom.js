@@ -477,7 +477,7 @@ function applyGroupFiltering(visibleGroupIds) {
 
     const subjectToGroupMap = buildSubjectToGroupMap();
     const visibleGroupSet = new Set(visibleGroupIds);
-    const showNotClassified = visibleGroupSet.has('584240da54be81056cXXXXXX');
+    const showNotClassified = visibleGroupSet.has('xxx');
 
     $('.preprint-card').each(function () {
         const $card = $(this);
@@ -505,9 +505,9 @@ function buildSubjectToGroupMap() {
     if (dataElement) {
         try {
             const data = JSON.parse(dataElement.textContent);
-            data.groups?.forEach(group => {
-                group.osf_subjects?.forEach(subject => {
-                    map[subject.id] = group.id;
+            data.subgroups?.forEach(subgroup => {
+                subgroup.osf?.forEach(subject => {
+                    map[subject.id] = subgroup.id;
                 });
             });
         } catch (e) {
