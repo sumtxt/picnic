@@ -1,6 +1,6 @@
 ---
 title: "👋 About"
-tagline: "Paper Picnic is a tool to keep up with newly published research in Political Science."
+tagline: "Paper Picnic is a tool to keep up with research in Political Science."
 layout: page
 
 journals:
@@ -28,7 +28,7 @@ journals:
 
 ### Overview ###
 
-Keeping up with new research shouldn't mean drowning in email alerts. Paper Picnic is a free, open-source tool that aggregates newly published research papers from {{ count_total }} academic journals in political science and adjacent fields, plus working papers from Open Science Framework (OSF) repositories. 
+Keeping up with new research shouldn't mean drowning in email alerts. Paper Picnic is a free, open-source tool that aggregates new research papers from {{ count_total }} academic journals in political science (and adjacent fields) as well as working papers from SocArXiv and OSF Preprints.
 
 The tool is built around three principles:
 
@@ -66,13 +66,13 @@ Every Friday at 2 AM UTC, we automatically retrieve newly published papers acros
 
 ### Working Papers from OSF ###
 
-Beyond journal articles, we include working papers from all Open Science Framework (OSF) repositories, in particular SocArXiv. Every week, we collect papers that authors classified under "Social and Behavioral Sciences" and added to a repository in the previous 14 days. 
+Beyond journal articles, we include working papers from two Open Science Framework (OSF) repositories: [SocArXiv](https://osf.io/preprints/socarxiv) and [OSF Preprints](https://osf.io/preprints/). Every week, we collect papers that authors classified under "Social and Behavioral Sciences" and added to a repository in the previous 14 days. 
 
 As with journal articles, the 14-day window helps catch papers that were posted late in the previous week. We maintain a list of previously retrieved working paper IDs to filter out revisions—if a paper appeared in an earlier edition, we don't show it again when the authors post an updated version.
 
 **What we retrieve:** In addition to title, authors, abstract, and link, we also collect the subject tags that authors provide. Not all authors tag their papers, so some working papers appear without subject classifications but are still included in the working paper basket.
 
-**Why not SSRN?** Many authors still post working papers to SSRN, and we'd have liked to include them. Unfortunately, SSRN's Terms of Use (owned by Elsevier) prohibit reformatting, reposting, or redisplaying "a significant part of the SSRN eLibrary." This restriction prevents us from incorporating SSRN papers into Paper Picnic.
+**Why not SSRN?** Many authors still post working papers to SSRN, and we'd have liked to include them. Unfortunately, SSRN's Terms of Use (which is owned by Elsevier) prohibit reformatting, reposting, or redisplaying "a significant part of the SSRN eLibrary." This restriction prevents us from incorporating SSRN papers into Paper Picnic.
 
 <br>
 
