@@ -20,29 +20,32 @@ from .config import (
 logger = logging.getLogger(__name__)
 
 
-def load_osf_subject_filter() -> Optional[str]:
+def load_osf_subject_filters() -> List[Dict[str, str]]:
     """
-    Load OSF subject filter ID from osf_subjects.json
+    Load OSF subject filter IDs from osf_subjects.json
 
     Returns:
-        Subject filter ID or None if file not found
+        List of subject filter dictionaries with 'osf_id', 'osf_name', and 'osf_taxonomy' keys
+        Returns empty list if file not found or error occurs
     """
     filepath = os.path.join(PARAMETERS_DIR, "osf_subjects.json")
 
     if not os.path.exists(filepath):
         logger.warning(f"OSF subjects file not found: {filepath}")
-        return None
+        return []
 
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
-            category_id = data.get("category_id")
-            if category_id:
-                logger.info(f"Loaded OSF subject filter: {category_id} ({data.get('category_name', 'Unknown')})")
-            return category_id
+            groups = data.get("groups", [])
+            if groups:
+                logger.info(f"Loaded {len(groups)} OSF subject filter(s)")
+                for group in groups:
+                    logger.info(f"  - {group.get('osf_name')} ({group.get('osf_taxonomy')}): {group.get('osf_id')}")
+            return groups
     except (IOError, json.JSONDecodeError) as e:
         logger.error(f"Error loading OSF subjects file {filepath}: {e}")
-        return None
+        return []
 
 
 def create_osf_session() -> requests.Session:
@@ -140,14 +143,15 @@ def retrieve_osf_preprints(start_date: datetime, end_date: datetime) -> List[Dic
 
     logger.info(f"Retrieving OSF preprints from {start_date.date()} to {end_date.date()}")
 
-    # Load subject filter from osf_subjects.json
-    subject_filter = load_osf_subject_filter()
-    if not subject_filter:
-        logger.error("No OSF subject filter found. Please run make_osf_subjects.py first.")
+    # Load subject filters from osf_subjects.json
+    subject_filters = load_osf_subject_filters()
+    if not subject_filters:
+        logger.error("No OSF subject filters found. Please run make_osf_subjects.py first.")
         return []
 
     session = create_osf_session()
     all_items = []
+    seen_ids = set()  # Track unique preprint IDs to avoid duplicates
 
     # Generate date range
     current_date = start_date
@@ -155,35 +159,49 @@ def retrieve_osf_preprints(start_date: datetime, end_date: datetime) -> List[Dic
         date_str = current_date.strftime("%Y-%m-%d")
         logger.info(f"Processing OSF preprints for {date_str}")
 
-        try:
-            # Get first page to determine total pages
-            first_response = call_osf_api(session, date_str, subject_filter, page=1)
-            total_pages = get_total_pages(first_response)
+        # Iterate through all subject filters
+        for subject_filter in subject_filters:
+            subject_id = subject_filter.get("osf_id")
+            subject_name = subject_filter.get("osf_name")
+            subject_taxonomy = subject_filter.get("osf_taxonomy")
 
-            if total_pages == 0:
-                logger.info(f"No preprints found for {date_str}")
-                current_date = current_date + timedelta(days=1)
-                continue
+            logger.info(f"  Using filter: {subject_name} ({subject_taxonomy})")
 
-            logger.info(f"Found {total_pages} page(s) for {date_str}")
+            try:
+                # Get first page to determine total pages
+                first_response = call_osf_api(session, date_str, subject_id, page=1)
+                total_pages = get_total_pages(first_response)
 
-            # Collect items from all pages
-            for page in range(1, total_pages + 1):
-                if page == 1:
-                    # Use first response we already fetched
-                    response = first_response
-                else:
-                    response = call_osf_api(session, date_str, subject_filter, page=page)
+                if total_pages == 0:
+                    logger.info(f"  No preprints found for {date_str} with {subject_taxonomy}")
+                    continue
 
-                items = response.get("data", [])
-                all_items.extend(items)
-                logger.debug(f"Retrieved {len(items)} items from page {page}/{total_pages}")
+                logger.info(f"  Found {total_pages} page(s) for {date_str} with {subject_taxonomy}")
 
-        except requests.RequestException as e:
-            logger.error(f"Error retrieving preprints for {date_str}: {e}")
+                # Collect items from all pages
+                for page in range(1, total_pages + 1):
+                    if page == 1:
+                        # Use first response we already fetched
+                        response = first_response
+                    else:
+                        response = call_osf_api(session, date_str, subject_id, page=page)
+
+                    items = response.get("data", [])
+
+                    # Filter out duplicates based on preprint ID
+                    for item in items:
+                        item_id = item.get("id")
+                        if item_id and item_id not in seen_ids:
+                            seen_ids.add(item_id)
+                            all_items.append(item)
+
+                    logger.debug(f"  Retrieved {len(items)} items from page {page}/{total_pages}")
+
+            except requests.RequestException as e:
+                logger.error(f"  Error retrieving preprints for {date_str} with {subject_taxonomy}: {e}")
 
         # Move to next day
         current_date = current_date + timedelta(days=1)
 
-    logger.info(f"Retrieved total of {len(all_items)} preprint items")
+    logger.info(f"Retrieved total of {len(all_items)} unique preprint items")
     return all_items
