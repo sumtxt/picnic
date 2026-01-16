@@ -7,7 +7,7 @@ layout: page
 
 ### What you will get ###
 
-When subscribed, you will receive exactly one email per week on Fridays, shortly after 4 AM UTC. The notification includes a list of all new articles published in political science journals. Grouped by journal, the email lists new articles with titles, authors, full text link, and, if available, abstracts. New articles from adjacent fields are not included. 
+When subscribed, you will receive exactly one email per week on Friday morning UTC. The notification includes a list of all new articles published in political science journals. Grouped by journal, the email lists new articles with titles, authors, full text link, and, if available, abstracts. New articles from adjacent fields are not included. 
 
 ##### Example 
 

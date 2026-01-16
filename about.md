@@ -32,7 +32,7 @@ Keeping up with new research shouldn't mean drowning in email alerts. Paper Picn
 
 The tool is built around three principles:
 
-1. Updates once a week at a known time. Every Friday morning at 2 AM UTC, the site refreshes with papers published in the previous two weeks.
+1. Updates once a week at a known time. Every Friday morning UTC, the site refreshes with papers published in the previous two weeks.
 2. Displays everything on a single page without clutter. Browse all new papers in a clean, customizable, ad-free interface.
 3. No registration, no ads, no tracking. Access the site immediately without handing over your email address or personal data.
 
