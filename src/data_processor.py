@@ -223,9 +223,9 @@ def clean_article_data(articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         if "title" in article:
             article["title"] = strip_html(article["title"])
 
-        # Extract DOI
+        # Store full DOI URL (with https:// prefix)
         if "url" in article:
-            article["doi"] = extract_doi(article["url"])
+            article["doi"] = article["url"]
 
     return articles
 
@@ -504,8 +504,8 @@ def clean_osf_data(articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         if "title" in article:
             article["title"] = strip_whitespace(article["title"])
 
-        # Extract DOI
+        # Store full DOI URL (with https:// prefix)
         if "url" in article:
-            article["doi"] = extract_doi(article["url"])
+            article["doi"] = article["url"]
 
     return articles

@@ -101,7 +101,7 @@ def render_osf_json(articles: List[Dict[str, Any]], update_date: date) -> str:
             "title": article.get("title"),
             "authors": article.get("authors"),
             "abstract": article.get("abstract"),
-            "doi": article.get("url"),  # Rename url to doi
+            "doi": article.get("doi"),
             "subjects": article.get("subjects", []),  # Keep as array
             "id": article.get("id"),
             "version": article.get("version")
