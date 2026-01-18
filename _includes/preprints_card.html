@@ -3,7 +3,7 @@
     {%- if article.subjects.size > 0 %}
     <div class="article-card__subjects mb-2 text-muted small">
         {%- for subject in article.subjects -%}
-        <span data-subject-id="{{ subject.id }}">{{ subject.name }}</span>
+        {{ subject.name }}
         {%- unless forloop.last %} | {% endunless -%}
         {%- endfor %}
     </div>
