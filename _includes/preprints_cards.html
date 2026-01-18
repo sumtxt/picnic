@@ -5,7 +5,8 @@
 </script>
 
 <div id="preprints-view" class="container mt-5">
+  {%- assign card_type = 'preprint' -%}
   {%- for article in site.data.preprints.content.articles %}
-    {%- include preprints_card.html -%}
+    {%- include card.html -%}
   {%- endfor %}
 </div>

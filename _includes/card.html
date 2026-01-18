@@ -1,5 +1,15 @@
 {%- assign doi_id = article.doi | replace: "https://dx.doi.org/", "" | replace: "https://doi.org/", "" | replace: "http://dx.doi.org/", "" | replace: "http://doi.org/", "" | replace: "/", "-" | replace: ".", "-" -%}
-<article class="article-card" id="{{ doi_id }}" role="article">
+<article class="article-card{% if card_type == 'preprint' %} preprint-card{% endif %}" id="{{ doi_id }}" role="article"{% if card_type == 'preprint' %} data-subjects="{% for subject in article.subjects %}{{ subject.id }}{% unless forloop.last %},{% endunless %}{% endfor %}"{% endif %}>
+    {%- if card_type == 'preprint' %}
+    {%- if article.subjects.size > 0 %}
+    <div class="article-card__subjects mb-2 text-muted small">
+        {%- for subject in article.subjects -%}
+        {{ subject.name }}
+        {%- unless forloop.last %} | {% endunless -%}
+        {%- endfor %}
+    </div>
+    {%- endif %}
+    {%- else %}
     {%- if filtered==1 %}
     <div class="article-card__header mb-2">
         <small class="text-muted">
@@ -12,6 +22,7 @@
     {%- endif %}
     {%- if journal_short %}
     <div class="article-card__badge">{{ journal_short }}</div>
+    {%- endif %}
     {%- endif %}
     <h3 class="article-card__title">{{ article.title }}</h3>
     <p class="article-card__authors">{{ article.authors }}</p>
