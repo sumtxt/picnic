@@ -4,9 +4,21 @@
 {{ site.data.osf_subjects | jsonify }}
 </script>
 
+
 <div id="preprints-view" class="container mt-5">
-  {%- assign card_type = 'preprint' -%}
-  {%- for article in site.data.preprints.content.articles %}
-    {%- include card.html -%}
-  {%- endfor %}
+  <div class="container my-3">
+    <div class="row">
+      <div class="col-12">
+        <small class="text-muted">SocArXiv/OSF Preprints</small>
+        <h2>🔥 Working Papers</h2>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-12 ps-4">
+        {%- assign card_type = 'preprint' -%}
+        {%- for article in site.data.preprints.content.articles %}
+          {%- include card.html -%}
+        {%- endfor %}
+      </div>
+  </div>
 </div>
