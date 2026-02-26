@@ -1,8 +1,8 @@
-# Paper Picnic
+# Paper Picnic 2.0
 
 A weekly basket with the latest published research in political science. On Fridays at 2 AM UTC, we query the Crossref API for new research articles that appeared in the previous 7 days across many journals in political science and adjacent fields. [paper-picnic.com/](https://paper-picnic.com/)
 
-The crawler lives in the `main` branch of the backend while the website is rendered from the `gh-pages` branch.
+The crawler lives in the `main` branch of the backend while the website is rendered from the `gh-pages` branch. 
 
 ## Setup
 
@@ -140,3 +140,7 @@ The crawler ([main.py](main.py)) runs two parallel workflows:
   - [Update Website workflow](.github/workflows/update_website.yml) syncs outputs to `gh-pages` branch
 
 Behavior is configurable via [src/config.py](src/config.py) (crawl window, memory updates, filter toggles, etc.)
+
+## History 
+
+The first version of the crawler went live in August 2024. Paper Picnic 2.0, rewritten in Python by Claude Code based on the original R version, launched in February 2025 after running side-by-side since January. The legacy R crawler remains available in the `main_v0` branch, and the original website in `gh-pages_v0`.
