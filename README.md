@@ -143,4 +143,4 @@ Behavior is configurable via [src/config.py](src/config.py) (crawl window, memor
 
 ## History 
 
-The first version of the crawler went live in August 2024. Paper Picnic 2.0, rewritten in Python by Claude Code based on the original R version, launched in February 2025 after running side-by-side since January. The legacy R crawler remains available in the `main_v0` branch, and the original website in `gh-pages_v0`.
+The first version of the crawler went live in August 2024. Paper Picnic 2.0, rewritten in Python by Claude Code based on the original R version, launched in February 2026 after running side-by-side since January. The legacy R crawler remains available in the `main_v0` branch, and the original website in `gh-pages_v0`.
