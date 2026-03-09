@@ -56,6 +56,15 @@ CROSSREF_RETRY_BACKOFF = 5  # seconds
 OSF_API_BASE = "https://api.osf.io/v2"
 OSF_TIMEOUT = 30  # seconds
 
+# Springer API Configuration
+SPRINGER_API_KEY = os.environ.get("SPRINGER_API_KEY", "")
+SPRINGER_API_BASE = "https://api.springernature.com/meta/v2/jats"
+SPRINGER_BATCH_SIZE = 25
+SPRINGER_BATCH_DELAY = 1    # seconds between batch calls (user-configurable)
+SPRINGER_MAX_RETRIES = 3     # retry attempts for incomplete batches
+SPRINGER_RETRY_BACKOFF = 5   # backoff factor for HTTP retries (same as Crossref)
+SPRINGER_TIMEOUT = 60        # seconds
+
 # File Paths
 PARAMETERS_DIR = "./parameters"
 MEMORY_DIR = "./memory"

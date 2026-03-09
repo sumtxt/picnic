@@ -13,9 +13,12 @@ from .config import (
     FILTER_STANDARD,
     FILTER_SCIENCE,
     FILTER_NATURE,
-    ENABLE_AI_FILTER
+    ENABLE_AI_FILTER,
+    SPRINGER_BATCH_DELAY,
 )
 from .openai_client import classify_article, create_openai_client
+from .springer_client import fetch_springer_metadata_with_retry
+from .data_processor import extract_doi
 
 
 def apply_standard_filter(article: Dict[str, Any]) -> Dict[str, Any]:
@@ -105,6 +108,37 @@ def apply_nature_filter(article: Dict[str, Any]) -> Dict[str, Any]:
     return article
 
 
+def apply_springer_filter(
+    article: Dict[str, Any],
+    springer_metadata: Dict[str, Dict[str, str]]
+) -> Dict[str, Any]:
+    """
+    Apply Springer API filter based on article_type.
+
+    Passes articles with article_type = "OriginalArticle", "ReviewPaper",
+    OR if no metadata was returned (fail-open behavior).
+    Filters out all others with FILTER_NATURE.
+
+    Args:
+        article: Article dictionary
+        springer_metadata: Dict mapping DOI -> metadata dict from Springer API
+
+    Returns:
+        Article with 'filter' field updated
+    """
+    doi = extract_doi(article.get("url", ""))
+    metadata = springer_metadata.get(doi, {})
+    article_type = metadata.get("article_type", "")
+
+    # Pass if: OriginalArticle, ReviewPaper, or no metadata returned (fail-open)
+    if article_type in ["OriginalArticle", "ReviewPaper", ""]:
+        article["filter"] = FILTER_PASS
+    else:
+        article["filter"] = FILTER_NATURE
+
+    return article
+
+
 def apply_filter_by_name(
     article: Dict[str, Any],
     filter_name: str,
@@ -179,50 +213,80 @@ def apply_multidisciplinary_filter(
 
 def apply_all_filters(
     articles: List[Dict[str, Any]],
-    openai_client: Optional[Any] = None
+    openai_client: Optional[Any] = None,
+    springer_batch_delay: float = SPRINGER_BATCH_DELAY
 ) -> List[Dict[str, Any]]:
     """
-    Apply all appropriate filters to articles
+    Apply all appropriate filters to articles in three phases:
 
-    Filters are applied in this order:
-    1. Standard filter (ToC, editorial, erratum detection) - applied to ALL articles
-    2. Journal-specific filters from 'filters' array - applied in order: nature, science, then ai
+    Phase 1: Per-article filters (standard, nature, science)
+    Phase 2: Batch filters (nature2 - Springer API)
+    Phase 3: AI filter (per-article, runs last)
 
     Args:
         articles: List of article dictionaries
         openai_client: OpenAI client for AI filtering
+        springer_batch_delay: Seconds to wait between Springer API batch calls
 
     Returns:
         Filtered articles
     """
-    # Step 1: Apply standard filter to all articles
+    # Phase 1: Apply standard filter to all articles
     articles = [apply_standard_filter(article) for article in articles]
 
-    # Step 2: Apply journal-specific filters in order
-    # Check if any articles need AI filtering
-    needs_ai = any("ai" in article.get("filters", []) for article in articles)
-    if needs_ai and ENABLE_AI_FILTER and openai_client is None:
-        openai_client = create_openai_client()
-
-    # Apply filters to each article
+    # Phase 1 continued: Apply per-article journal-specific filters (nature, science)
     for article in articles:
         filters_to_apply = article.get("filters", [])
 
         if not filters_to_apply:
             continue
 
-        # Apply filters in the correct order: nature, science, then ai
-        # This ensures nature/science filters run before AI filter
-        filter_order = ["nature", "science", "ai"]
-
-        for filter_name in filter_order:
+        # Apply per-article filters in order: nature, science
+        for filter_name in ["nature", "science"]:
             if filter_name in filters_to_apply:
-                # Skip AI filter if disabled in config
-                if filter_name == "ai" and not ENABLE_AI_FILTER:
-                    logging.info("AI filter disabled in config (ENABLE_AI_FILTER=False)")
-                    continue
-                # Apply the filter
-                # Note: The AI filter has built-in logic to skip if already filtered
                 article = apply_filter_by_name(article, filter_name, openai_client)
+
+    # Phase 2: Batch filters (nature2/Springer API)
+    # Collect articles needing Springer lookup that haven't been filtered yet
+    springer_articles = [
+        a for a in articles
+        if "nature2" in a.get("filters", [])
+        and a.get("filter", FILTER_PASS) == FILTER_PASS
+    ]
+
+    if springer_articles:
+        # Extract DOIs from articles
+        dois = [extract_doi(a.get("url", "")) for a in springer_articles]
+        dois = [d for d in dois if d]  # Remove empty DOIs
+
+        if dois:
+            logging.info(f"Applying nature2 filter: {len(dois)} DOIs to check")
+
+            # Batch fetch metadata from Springer API
+            springer_metadata = fetch_springer_metadata_with_retry(
+                dois=dois,
+                batch_delay=springer_batch_delay
+            )
+
+            # Apply filter to each article based on retrieved metadata
+            for article in springer_articles:
+                apply_springer_filter(article, springer_metadata)
+
+    # Phase 3: AI filter (per-article, runs last)
+    # Check if any articles need AI filtering
+    needs_ai = any(
+        "ai" in article.get("filters", [])
+        and article.get("filter", FILTER_PASS) == FILTER_PASS
+        for article in articles
+    )
+
+    if needs_ai and ENABLE_AI_FILTER and openai_client is None:
+        openai_client = create_openai_client()
+
+    for article in articles:
+        if "ai" in article.get("filters", []) and ENABLE_AI_FILTER:
+            # Only apply AI filter if article hasn't been filtered yet
+            if article.get("filter", FILTER_PASS) == FILTER_PASS:
+                article = apply_filter_by_name(article, "ai", openai_client)
 
     return articles
