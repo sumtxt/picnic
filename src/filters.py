@@ -57,6 +57,11 @@ def apply_standard_filter(article: Dict[str, Any]) -> Dict[str, Any]:
     ):
         flag = FILTER_STANDARD
 
+    # Check for missing authors
+    authors = article.get("authors")
+    if not authors:
+        flag = FILTER_STANDARD
+
     article["filter"] = flag
     return article
 
