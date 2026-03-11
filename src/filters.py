@@ -13,10 +13,13 @@ from .config import (
     FILTER_STANDARD,
     FILTER_SCIENCE,
     FILTER_NATURE,
+    FILTER_OPENALEX,
     ENABLE_AI_FILTER,
+    ENABLE_OPENALEX_FILTER,
     SPRINGER_BATCH_DELAY,
 )
 from .openai_client import classify_article, create_openai_client
+from .openalex_client import query_openalex_all
 from .springer_client import fetch_springer_metadata_with_retry
 from .data_processor import extract_doi
 
@@ -139,6 +142,69 @@ def apply_springer_filter(
     return article
 
 
+def apply_openalex_filter(
+    articles: List[Dict[str, Any]],
+) -> List[Dict[str, Any]]:
+    """
+    Apply OpenAlex domain filter to articles in batch.
+
+    Queries OpenAlex API for domain classification. Articles with domain_name
+    not equal to "Social Sciences" are flagged as FILTER_OPENALEX.
+    Articles with missing domain_name pass through unchanged.
+
+    Only processes articles that:
+    - Have "openalex" in their filters array
+    - Have not already been filtered (filter == FILTER_PASS)
+    - Have a DOI
+
+    Args:
+        articles: List of article dictionaries
+
+    Returns:
+        Articles with 'filter' field updated where applicable
+    """
+    # Identify articles that need OpenAlex filtering
+    articles_to_filter = []
+    for article in articles:
+        filters_to_apply = article.get("filters", [])
+        current_filter = article.get("filter", FILTER_PASS)
+
+        if (
+            "openalex" in filters_to_apply
+            and current_filter == FILTER_PASS
+            and article.get("doi")
+        ):
+            articles_to_filter.append(article)
+
+    if not articles_to_filter:
+        logging.info("No articles need OpenAlex filtering")
+        return articles
+
+    logging.info(f"OpenAlex filtering {len(articles_to_filter)} articles")
+
+    # Collect DOIs and query OpenAlex in batches
+    dois = [article["doi"] for article in articles_to_filter]
+    doi_to_domain = query_openalex_all(dois)
+
+    # Apply filter results
+    for article in articles_to_filter:
+        doi = article["doi"]
+        domain_name = doi_to_domain.get(doi)
+
+        if domain_name is None:
+            # Domain not found - let article pass
+            logging.debug(f"OpenAlex: no domain found for {doi}, passing")
+        elif domain_name == "Social Sciences":
+            # Social Sciences - let article pass
+            logging.debug(f"OpenAlex: {doi} is Social Sciences, passing")
+        else:
+            # Not Social Sciences - filter out
+            logging.info(f"OpenAlex filtering: {doi} domain is '{domain_name}'")
+            article["filter"] = FILTER_OPENALEX
+
+    return articles
+
+
 def apply_filter_by_name(
     article: Dict[str, Any],
     filter_name: str,
@@ -217,11 +283,12 @@ def apply_all_filters(
     springer_batch_delay: float = SPRINGER_BATCH_DELAY
 ) -> List[Dict[str, Any]]:
     """
-    Apply all appropriate filters to articles in three phases:
+    Apply all appropriate filters to articles in four phases:
 
     Phase 1: Per-article filters (standard, nature, science)
-    Phase 2: Batch filters (nature2 - Springer API)
-    Phase 3: AI filter (per-article, runs last)
+    Phase 2: Batch filters (openalex - OpenAlex API)
+    Phase 3: Batch filters (nature2 - Springer API)
+    Phase 4: AI filter (per-article, runs last)
 
     Args:
         articles: List of article dictionaries
@@ -244,9 +311,16 @@ def apply_all_filters(
         # Apply per-article filters in order: nature, science
         for filter_name in ["nature", "science"]:
             if filter_name in filters_to_apply:
-                article = apply_filter_by_name(article, filter_name, openai_client)
+                article = apply_filter_by_name(article, filter_name, None)
 
-    # Phase 2: Batch filters (nature2/Springer API)
+    # Phase 2: Apply OpenAlex filter (batch operation)
+    needs_openalex = any("openalex" in article.get("filters", []) for article in articles)
+    if needs_openalex and ENABLE_OPENALEX_FILTER:
+        articles = apply_openalex_filter(articles)
+    elif needs_openalex and not ENABLE_OPENALEX_FILTER:
+        logging.info("OpenAlex filter disabled in config (ENABLE_OPENALEX_FILTER=False)")
+
+    # Phase 3: Batch filters (nature2/Springer API)
     # Collect articles needing Springer lookup that haven't been filtered yet
     springer_articles = [
         a for a in articles
@@ -272,7 +346,7 @@ def apply_all_filters(
             for article in springer_articles:
                 apply_springer_filter(article, springer_metadata)
 
-    # Phase 3: AI filter (per-article, runs last)
+    # Phase 4: AI filter (per-article, runs last)
     # Check if any articles need AI filtering
     needs_ai = any(
         "ai" in article.get("filters", [])
