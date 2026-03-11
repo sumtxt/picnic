@@ -1,0 +1,24 @@
+# Working Papers
+
+Source: SocArXiv/OSF Preprints
+
+Last updated: {{ site.data.preprints.update | date: "%Y-%m-%d" }}
+
+{% for article in site.data.preprints.content.articles %}
+## {{ article.title }}
+
+Authors: {{ article.authors }}
+
+DOI: {{ article.doi }}
+{% if article.subjects.size > 0 %}
+
+Subjects: {% for subject in article.subjects %}{{ subject.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+{% endif %}
+{% if article.abstract %}
+
+Abstract: {{ article.abstract }}
+{% endif %}
+
+---
+
+{% endfor %}

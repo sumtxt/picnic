@@ -1,0 +1,22 @@
+# {{ page.title }}
+
+Last updated: {{ site.data.publications.update | date: "%Y-%m-%d" }}
+
+{% for journal in data_crawl %}
+## {{ journal.journal_name }}
+
+{% for article in journal.articles %}
+### {{ article.title }}
+
+Authors: {{ article.authors }}
+
+DOI: {{ article.doi }}
+{% if article.abstract %}
+
+Abstract: {{ article.abstract }}
+{% endif %}
+
+---
+
+{% endfor %}
+{% endfor %}
