@@ -1,5 +1,5 @@
 ---
-name: Paper Picnic Assistant
+name: paper-picnic-assistant
 description: >
   Helps users discover relevant new research from the Paper Picnic weekly digest,
   which retrieve new research articles that appeared in the previous 7 days across 141 
