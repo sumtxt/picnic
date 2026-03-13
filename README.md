@@ -136,8 +136,9 @@ The crawler ([main.py](main.py)) runs two parallel workflows:
 
 - **Stats**: Counts articles per journal, updates [output/stats.csv](output/stats.csv)
 - **GitHub Actions**:
-  - [Crawl workflow](.github/workflows/crawl.yml) runs [main.py](main.py) (manual trigger)
   - [Update Website workflow](.github/workflows/update_website.yml) syncs outputs to `gh-pages` branch
+  - [Send Notification workflow](.github/workflows/send-notification.yml) triggers after the Crawl workflow completes
+    - Sends an email with a subset of publications via Resend.com
 
 Behavior is configurable via [src/config.py](src/config.py) (crawl window, memory updates, filter toggles, etc.)
 
