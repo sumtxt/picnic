@@ -22,7 +22,7 @@ LIMIT_JOURNALS = None  # limit number of journals to crawl (None = all journals,
 
 # Enable/Disable Crawlers
 ENABLE_CROSSREF_CRAWL = True   # Set to False to skip Crossref journal crawl
-ENABLE_OSF_CRAWL = False        # Set to False to skip OSF preprints crawl
+ENABLE_OSF_CRAWL = True        # Set to False to skip OSF preprints crawl
 
 # Filter Configuration
 ENABLE_AI_FILTER = True        # Set to False to skip OpenAI classification for Crossref articles
