@@ -27,14 +27,12 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Create .env file with secrets
-        working-directory: ./main_folder
-        run: |
-          echo "OPENAI_APIKEY=${{ secrets.OPENAI_APIKEY }}" >> .env
-          echo "CROSSREF_EMAIL=${{ secrets.CROSSREF_EMAIL }}" >> .env
-
       - name: Run crawl
         working-directory: ./main_folder
+        env:
+          OPENAI_APIKEY: ${{ secrets.OPENAI_APIKEY }}
+          CROSSREF_EMAIL: ${{ secrets.CROSSREF_EMAIL }}
+          OPENALEX_APIKEY: ${{ secrets.OPENALEX_APIKEY }}
         run: |
           python main.py
 
