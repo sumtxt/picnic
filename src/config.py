@@ -11,7 +11,7 @@ load_dotenv()
 # API Credentials
 OPENAI_API_KEY = os.environ.get("OPENAI_APIKEY", "")
 CROSSREF_EMAIL = os.environ.get("CROSSREF_EMAIL", "")
-OPENALEX_API_KEY = os.environ.get("OPENALEX_API", "")
+OPENALEX_API_KEY = os.environ.get("OPENALEX_APIKEY", "")
 
 # Crawl Configuration
 CRAWL_WINDOW_START = 14  # days ago
