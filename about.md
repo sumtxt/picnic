@@ -60,7 +60,7 @@ Every Friday at 2 AM UTC, we automatically retrieve newly published papers acros
 
 **What we retrieve:** For each paper, we collect the title, authors, abstract, and a link to the full text. Unfortunately, not all publishers include abstracts in their Crossref metadata. Major publishers like Elsevier and Taylor & Francis don't provide abstracts for any of their journals. (Learn more from [The Initiative for Open Abstracts](https://i4oa.org/).)
 
-**Filtering non-relevant content:** For multidisciplinary journals like Science or Nature, we use GPT-4o mini to identify social science content. Non-relevant papers are hidden by default but remain accessible via the "+N" button. We also filter generic content like errata to reduce clutter.
+**Filtering non-relevant content:** For multidisciplinary journals like Science or Nature, we use OpenAlex to filter out articles outside the Social Sciences domain, then GPT-4o mini to identify social science content among the rest. Non-relevant papers are hidden by default but remain accessible via the "+N" button. We also filter generic content like errata.
 
 <br>
 
