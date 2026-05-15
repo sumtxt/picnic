@@ -300,35 +300,6 @@ def merge_journal_info(
 
 # OSF-specific processing functions
 # Ported from picnic_preprints/crawl.R
-
-def strip_whitespace(text: Optional[str]) -> Optional[str]:
-    """
-    Collapse multiple whitespaces and trim
-
-    Ported from picnic_preprints/fun.R:56-62
-
-    Args:
-        text: Text with potential extra whitespace
-
-    Returns:
-        Cleaned text or None
-    """
-    if text is None:
-        return None
-
-    # Remove YAML-disallowed characters (C0/C1 controls, surrogates, non-characters)
-    text = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\x80-\x84\x86-\x9f\ud800-\udfff￾￿]', '', text)
-
-    # Collapse multiple whitespaces
-    text = re.sub(r'\s+', ' ', text)
-    # Trim
-    text = text.strip()
-
-    return text if text else None
-
-
-
-
 def load_past_osf_ids() -> Set[str]:
     """
     Load all previously crawled OSF preprint IDs from plain text file
@@ -504,11 +475,11 @@ def clean_osf_data(articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     for article in articles:
         # Strip whitespace from abstract
         if "abstract" in article:
-            article["abstract"] = strip_whitespace(article["abstract"])
+            article["abstract"] = strip_html(article["abstract"])
 
         # Strip whitespace from title
         if "title" in article:
-            article["title"] = strip_whitespace(article["title"])
+            article["title"] = strip_html(article["title"])
 
         # Store full DOI URL (with https:// prefix)
         if "url" in article:

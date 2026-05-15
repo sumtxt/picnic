@@ -4,22 +4,12 @@ Tests for OSF data processing functions
 
 import pytest
 from src.data_processor import (
-    strip_whitespace,
     extract_doi,
     extract_osf_id_and_version,
     deduplicate_osf_versions,
     remove_past_osf_preprints,
     clean_osf_data
 )
-
-
-def test_strip_whitespace():
-    """Test whitespace stripping"""
-    assert strip_whitespace("  test  ") == "test"
-    assert strip_whitespace("test   multiple   spaces") == "test multiple spaces"
-    assert strip_whitespace("\n\t test \n") == "test"
-    assert strip_whitespace(None) is None
-    assert strip_whitespace("   ") is None
 
 
 def test_extract_doi_osf():
