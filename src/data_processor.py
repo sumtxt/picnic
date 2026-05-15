@@ -29,6 +29,9 @@ def strip_html(text: Optional[str]) -> Optional[str]:
     if text is None:
         return None
 
+    # Remove YAML-disallowed characters (C0/C1 controls, surrogates, non-characters)
+    text = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\x80-\x84\x86-\x9f\ud800-\udfff￾￿]', '', text)
+
     # Remove HTML tags
     text = re.sub(r'<.*?>', ' ', text)
 
@@ -312,6 +315,9 @@ def strip_whitespace(text: Optional[str]) -> Optional[str]:
     """
     if text is None:
         return None
+
+    # Remove YAML-disallowed characters (C0/C1 controls, surrogates, non-characters)
+    text = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\x80-\x84\x86-\x9f\ud800-\udfff￾￿]', '', text)
 
     # Collapse multiple whitespaces
     text = re.sub(r'\s+', ' ', text)
