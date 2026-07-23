@@ -17,7 +17,7 @@ from .config import (
     ENABLE_AI_FILTER,
     ENABLE_OPENALEX_FILTER,
 )
-from .openai_client import classify_article, create_openai_client
+from .openrouter_client import classify_article, create_openrouter_client
 from .openalex_client import query_openalex_all
 
 
@@ -179,7 +179,7 @@ def apply_openalex_filter(
 def apply_filter_by_name(
     article: Dict[str, Any],
     filter_name: str,
-    openai_client: Optional[Any] = None
+    openrouter_client: Optional[Any] = None
 ) -> Dict[str, Any]:
     """
     Apply a single filter to an article by filter name
@@ -187,7 +187,7 @@ def apply_filter_by_name(
     Args:
         article: Article dictionary
         filter_name: Name of filter to apply ('science', 'nature', or 'ai')
-        openai_client: OpenAI client for AI filtering
+        openrouter_client: OpenRouter client for AI filtering
 
     Returns:
         Article with filter applied
@@ -197,7 +197,7 @@ def apply_filter_by_name(
     elif filter_name == "nature":
         return apply_nature_filter(article)
     elif filter_name == "ai":
-        return apply_multidisciplinary_filter(article, openai_client)
+        return apply_multidisciplinary_filter(article, openrouter_client)
     else:
         logging.warning(f"Unknown filter name: {filter_name}")
         return article
@@ -205,7 +205,7 @@ def apply_filter_by_name(
 
 def apply_multidisciplinary_filter(
     article: Dict[str, Any],
-    openai_client: Optional[Any] = None
+    openrouter_client: Optional[Any] = None
 ) -> Dict[str, Any]:
     """
     Apply AI-powered multidisciplinary filter
@@ -214,7 +214,7 @@ def apply_multidisciplinary_filter(
 
     Args:
         article: Article dictionary
-        openai_client: OpenAI client (creates new one if None)
+        openrouter_client: OpenRouter client (creates new one if None)
 
     Returns:
         Article with 'filter' field updated
@@ -228,7 +228,7 @@ def apply_multidisciplinary_filter(
     url = article.get("url", "unknown")
     logging.info(f"AI classifying: {url}")
 
-    # Classify using OpenAI
+    # Classify using OpenRouter
     journal = article.get("journal_name", "")
     title = article.get("title", "")
     abstract = article.get("abstract", "")
@@ -238,7 +238,7 @@ def apply_multidisciplinary_filter(
             journal=journal,
             title=title,
             abstract=abstract,
-            client=openai_client
+            client=openrouter_client
         )
         article["filter"] = filter_result
     except Exception as e:
@@ -250,7 +250,7 @@ def apply_multidisciplinary_filter(
 
 def apply_all_filters(
     articles: List[Dict[str, Any]],
-    openai_client: Optional[Any] = None
+    openrouter_client: Optional[Any] = None
 ) -> List[Dict[str, Any]]:
     """
     Apply all appropriate filters to articles
@@ -264,7 +264,7 @@ def apply_all_filters(
 
     Args:
         articles: List of article dictionaries
-        openai_client: OpenAI client for AI filtering
+        openrouter_client: OpenRouter client for AI filtering
 
     Returns:
         Filtered articles
@@ -294,13 +294,13 @@ def apply_all_filters(
     # Step 4: Apply AI filter (per-article)
     needs_ai = any("ai" in article.get("filters", []) for article in articles)
     if needs_ai and ENABLE_AI_FILTER:
-        if openai_client is None:
-            openai_client = create_openai_client()
+        if openrouter_client is None:
+            openrouter_client = create_openrouter_client()
 
         for article in articles:
             filters_to_apply = article.get("filters", [])
             if "ai" in filters_to_apply:
-                article = apply_filter_by_name(article, "ai", openai_client)
+                article = apply_filter_by_name(article, "ai", openrouter_client)
     elif needs_ai and not ENABLE_AI_FILTER:
         logging.info("AI filter disabled in config (ENABLE_AI_FILTER=False)")
 
