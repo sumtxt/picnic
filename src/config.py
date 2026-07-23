@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # API Credentials
-OPENAI_API_KEY = os.environ.get("OPENAI_APIKEY", "")
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_APIKEY", "")
 CROSSREF_EMAIL = os.environ.get("CROSSREF_EMAIL", "")
 OPENALEX_API_KEY = os.environ.get("OPENALEX_APIKEY", "")
 
@@ -25,13 +25,14 @@ ENABLE_CROSSREF_CRAWL = True   # Set to False to skip Crossref journal crawl
 ENABLE_OSF_CRAWL = True        # Set to False to skip OSF preprints crawl
 
 # Filter Configuration
-ENABLE_AI_FILTER = True        # Set to False to skip OpenAI classification for Crossref articles
+ENABLE_AI_FILTER = True        # Set to False to skip OpenRouter classification for Crossref articles
 ENABLE_OPENALEX_FILTER = True  # Set to False to skip OpenAlex domain filtering
 
-# OpenAI Configuration
-OPENAI_MODEL = "gpt-4o-mini"
-OPENAI_TIMEOUT = 30  # seconds
-OPENAI_RETRY_BACKOFF = 5  # seconds
+# OpenRouter Configuration
+OPENROUTER_API_BASE = "https://openrouter.ai/api/v1"
+OPENROUTER_MODEL = "gpt-4o-mini"
+OPENROUTER_TIMEOUT = 30  # seconds
+OPENROUTER_RETRY_BACKOFF = 5  # seconds
 
 # OpenAI System Prompt (ported from parameters/prompts.R)
 PROMPT_SOCSCI_CLASSIFIER = (
