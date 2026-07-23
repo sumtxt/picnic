@@ -30,7 +30,7 @@ ENABLE_OPENALEX_FILTER = True  # Set to False to skip OpenAlex domain filtering
 
 # OpenRouter Configuration
 OPENROUTER_API_BASE = "https://openrouter.ai/api/v1"
-OPENROUTER_MODEL = "openai/gpt-4o-mini"  # Model to use for classification (configurable)
+OPENROUTER_MODEL = "gpt-4o-mini"
 OPENROUTER_TIMEOUT = 30  # seconds
 OPENROUTER_RETRY_BACKOFF = 5  # seconds
 
