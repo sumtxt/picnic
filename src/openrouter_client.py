@@ -13,11 +13,11 @@ from .config import (
     OPENROUTER_API_BASE,
     OPENROUTER_MODEL,
     OPENROUTER_TIMEOUT,
+    OPENROUTER_RETRY_BACKOFF,
     PROMPT_SOCSCI_CLASSIFIER,
     FILTER_PASS,
     FILTER_ERROR,
     FILTER_AI_REJECT,
-    CROSSREF_RETRY_BACKOFF
 )
 
 
@@ -43,7 +43,7 @@ def classify_article(
     system_prompt: str = PROMPT_SOCSCI_CLASSIFIER,
     model: str = OPENROUTER_MODEL,
     max_retries: int = 5,
-    backoff_factor: int = CROSSREF_RETRY_BACKOFF
+    backoff_factor: int = OPENROUTER_RETRY_BACKOFF
 ) -> int:
     """
     Classify article as social science using OpenRouter API with exponential backoff
