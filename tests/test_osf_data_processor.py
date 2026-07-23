@@ -100,4 +100,4 @@ def test_clean_osf_data():
 
     assert result[0]["title"] == "Test Title"
     assert result[0]["abstract"] == "Test abstract"
-    assert result[0]["doi"] == "10.31219/osf.io/abc123"
+    assert result[0]["doi"] == "https://doi.org/10.31219/osf.io/abc123"

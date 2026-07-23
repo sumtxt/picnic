@@ -13,9 +13,17 @@ from src.config import FILTER_PASS, FILTER_STANDARD, FILTER_SCIENCE, FILTER_NATU
 
 class TestStandardFilter:
     def test_pass_normal_article(self):
-        article = {"title": "Democracy in the 21st Century"}
+        article = {
+            "title": "Democracy in the 21st Century",
+            "authors": ["Jane Doe"],
+        }
         result = apply_standard_filter(article)
         assert result["filter"] == FILTER_PASS
+
+    def test_filter_missing_authors(self):
+        article = {"title": "Democracy in the 21st Century"}
+        result = apply_standard_filter(article)
+        assert result["filter"] == FILTER_STANDARD
 
     def test_filter_editorial_board(self):
         article = {"title": "Editorial Board"}
