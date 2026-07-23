@@ -36,7 +36,7 @@ The crawler lives in the `main` branch of the backend while the website is rende
    Create a `.env` file in the project root:
 
    ```bash
-   OPENAI_APIKEY=your_openai_api_key
+   OPENROUTER_APIKEY=your_openrouter_api_key
    CROSSREF_EMAIL=your_email@example.com
    ```
 
@@ -52,7 +52,7 @@ After forking the repository, you need to configure repository settings:
 2. **Set Repository Secrets**
    - Go to Security > Secrets and Variables > Actions
    - Add the following secrets:
-     - `OPENAI_APIKEY` - OpenAI API key for article classification
+     - `OPENROUTER_APIKEY` - OpenRouter API key for article classification
      - `CROSSREF_EMAIL` - Your email for polite Crossref API requests
      - `RESEND_API_KEY` - Resend.com API key for email notifications
      - `RESEND_EMAIL_FROM` - Sender email address
@@ -91,7 +91,7 @@ picnic/
 ├── src/                      # Source code modules
 │   ├── config.py             # Configuration and constants
 │   ├── crossref_client.py    # Crossref API client
-│   ├── openai_client.py      # OpenAI API integration
+│   ├── openrouter_client.py  # OpenRouter API integration
 |   ├── osf_client.py         # OSF API client
 │   ├── parsers.py            # Response parsing
 │   ├── filters.py            # Article filtering logic
