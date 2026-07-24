@@ -26,7 +26,14 @@
     {%- endif %}
     {%- endif %}
     <h3 class="article-card__title">{{ article.title }}</h3>
-    <p class="article-card__authors">{{ article.authors }}</p>
+    {%- assign author_list = article.authors | split: ", " | where_exp: "a", "a != ''" -%}
+    {%- assign author_shown_count = 10 -%}
+    {%- assign authors_display = author_list | slice: 0, author_shown_count | join: ", " -%}
+    {%- if author_list.size > author_shown_count -%}
+    {%- assign author_remaining_count = author_list.size | minus: author_shown_count -%}
+    {%- assign authors_display = authors_display | append: ", ... (+" | append: author_remaining_count | append: " authors)" -%}
+    {%- endif -%}
+    <p class="article-card__authors" title="{{ article.authors }}">{{ authors_display }}</p>
     <div class="article-card__actions">
         {%- if article.abstract != nil %}
         <button class="btn btn-secondary btn-sm" type="button" data-bs-toggle="collapse"
