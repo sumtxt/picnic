@@ -1,5 +1,17 @@
 {%- assign doi_id = article.doi | replace: "https://dx.doi.org/", "" | replace: "https://doi.org/", "" | replace: "http://dx.doi.org/", "" | replace: "http://doi.org/", "" | replace: "/", "-" | replace: ".", "-" -%}
 <article class="article-card{% if card_type == 'preprint' %} preprint-card{% endif %}" id="{{ doi_id }}" role="article"{% if card_type == 'preprint' %} data-subjects="{% for subject in article.subjects %}{{ subject.id }}{% unless forloop.last %},{% endunless %}{% endfor %}"{% endif %}>
+    {%- if filtered==1 %}
+    <div class="article-card__header mb-2">
+        <small class="text-muted">
+            {%- if article.filter == "1" or article.filter == 1 %} Generic title: Not a research article
+            {%- elsif article.filter == "2" or article.filter == 2 %} GPT-4o mini: Non-social science research article
+            {%- elsif article.filter == "3" or article.filter == 3 %} Science abstract < 200 char.: Not a research
+                article {%- elsif article.filter=="4" or article.filter==4 %} Nature DOI suffix ≠ "/s..." : Not a
+                research article {%- elsif article.filter=="5" or article.filter==5 %} OpenAlex: Domain is not Social
+                Sciences {%- elsif article.filter=="6" or article.filter==6 %} fastText classification: Not written
+                in English {%- else -%} {%- endif %} </small>
+    </div>
+    {%- endif %}
     {%- if card_type == 'preprint' %}
     {%- if article.subjects.size > 0 %}
     <div class="article-card__subjects mb-2 text-muted small">
@@ -10,17 +22,6 @@
     </div>
     {%- endif %}
     {%- else %}
-    {%- if filtered==1 %}
-    <div class="article-card__header mb-2">
-        <small class="text-muted">
-            {%- if article.filter == "1" or article.filter == 1 %} Generic title: Not a research article
-            {%- elsif article.filter == "2" or article.filter == 2 %} GPT-4o mini: Non-social science research article
-            {%- elsif article.filter == "3" or article.filter == 3 %} Science abstract < 200 char.: Not a research
-                article {%- elsif article.filter=="4" or article.filter==4 %} Nature DOI suffix ≠ "/s..." : Not a
-                research article {%- elsif article.filter=="5" or article.filter==5 %} OpenAlex: Domain is not Social
-                Sciences {%- else -%} {%- endif %} </small>
-    </div>
-    {%- endif %}
     {%- if journal_short %}
     <div class="article-card__badge">{{ journal_short }}</div>
     {%- endif %}

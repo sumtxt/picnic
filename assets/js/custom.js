@@ -479,7 +479,7 @@ function applyGroupFiltering(visibleGroupIds) {
     const visibleGroupSet = new Set(visibleGroupIds);
     const showNotClassified = visibleGroupSet.has('xxx');
 
-    $('.preprint-card').each(function () {
+    $('.preprint-card').not('#collapse-preprints-hidden .preprint-card').each(function () {
         const $card = $(this);
         const subjectsAttr = $card.attr('data-subjects');
 

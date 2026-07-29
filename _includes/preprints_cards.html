@@ -31,10 +31,12 @@
       <div class="col-12 ps-4">
         <div class="collapse" id="collapse-preprints-hidden">
           {%- assign card_type = 'preprint' -%}
+          {%- assign filtered = 1 -%}
           {%- for article in hidden_articles -%}
           {%- include card.html -%}
           {%- endfor %}
         </div>
+        {%- assign filtered = 0 -%}
         {%- for article in site.data.preprints.content.articles -%}
         {%- include card.html -%}
         {%- endfor %}
