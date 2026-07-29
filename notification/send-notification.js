@@ -52,7 +52,7 @@ function buildJournalCategoryMap(journalsData) {
 function filterJournalsByCategory(publications, journalMap, categoryName) {
   const filtered = publications.filter(pub => {
     const journalInfo = journalMap[pub.journal_id];
-    return journalInfo && journalInfo.category === categoryName;
+    return journalInfo && journalInfo.category === categoryName && pub.articles && pub.articles.length > 0;
   });
 
   // Sort by category_rank
