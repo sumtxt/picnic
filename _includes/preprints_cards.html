@@ -14,10 +14,29 @@
       </div>
   </div>
   <div class="row">
+      {%- assign hidden_articles = site.data.preprints.content.articles_hidden -%}
+      {%- assign total_hidden = hidden_articles | size -%}
+      <div class="col-10 ps-4">
+      </div>
+      <div class="col-2">
+        {%- if total_hidden > 0 %}
+        <div class="float-end">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="collapse"
+            data-bs-target="#collapse-preprints-hidden" aria-expanded="false" aria-controls="collapse-preprints-hidden">
+            +{{ total_hidden }}
+          </button>
+        </div>
+        {%- endif %}
+      </div>
       <div class="col-12 ps-4">
-        {%- assign card_type = 'preprint' -%}
-        {%- for article in site.data.preprints.content.articles %}
+        <div class="collapse" id="collapse-preprints-hidden">
+          {%- assign card_type = 'preprint' -%}
+          {%- for article in hidden_articles -%}
           {%- include card.html -%}
+          {%- endfor %}
+        </div>
+        {%- for article in site.data.preprints.content.articles -%}
+        {%- include card.html -%}
         {%- endfor %}
       </div>
   </div>
