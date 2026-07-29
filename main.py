@@ -19,7 +19,8 @@ from src.config import (
     UPDATE_STATS,
     LIMIT_JOURNALS,
     ENABLE_CROSSREF_CRAWL,
-    ENABLE_OSF_CRAWL
+    ENABLE_OSF_CRAWL,
+    VISIBLE_FILTER_CODES,
 )
 from src.crossref_client import select_best_endpoint, retrieve_crossref_issn_data_bulk
 from src.osf_client import retrieve_osf_preprints
@@ -36,6 +37,7 @@ from src.data_processor import (
     deduplicate_osf_versions,
     remove_past_osf_preprints,
     clean_osf_data,
+    apply_osf_language_filter,
     update_osf_id_memory
 )
 from src.filters import apply_all_filters
@@ -229,6 +231,21 @@ def main():
                     # Clean OSF data
                     osf_articles = clean_osf_data(osf_articles)
                     logging.info("Cleaned OSF article data")
+
+                    # Hide non-English OSF preprints
+                    osf_articles = apply_osf_language_filter(osf_articles)
+                    osf_visible_count = sum(
+                        1 for a in osf_articles
+                        if a.get("filter") in VISIBLE_FILTER_CODES
+                    )
+                    osf_hidden_count = sum(
+                        1 for a in osf_articles
+                        if a.get("filter") not in VISIBLE_FILTER_CODES
+                    )
+                    logging.info(
+                        f"Applied OSF language filter: {osf_visible_count} visible, "
+                        f"{osf_hidden_count} hidden"
+                    )
 
                     # No categorization - subjects remain as raw level 2 categories
                     logging.info(f"Keeping {len(osf_articles)} preprints with raw subjects")

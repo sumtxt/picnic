@@ -8,7 +8,7 @@ import json
 from typing import List, Dict, Any
 from datetime import date
 
-from .config import FILTER_PASS, FILTER_ERROR
+from .config import FILTER_PASS, FILTER_ERROR, VISIBLE_FILTER_CODES
 
 
 def render_json_by_journal(
@@ -94,23 +94,35 @@ def render_osf_json(articles: List[Dict[str, Any]], update_date: date) -> str:
         JSON string containing OSF preprints
     """
     article_list = []
+    hidden_article_list = []
 
     for article in articles:
-        # Extract relevant fields for output
+        filter_value = article.get("filter", FILTER_PASS)
+        is_visible = filter_value in VISIBLE_FILTER_CODES
+
         article_data = {
             "title": article.get("title"),
             "authors": article.get("authors"),
-            "abstract": article.get("abstract"),
             "doi": article.get("doi"),
             "subjects": article.get("subjects", []),  # Keep as array
             "id": article.get("id"),
-            "version": article.get("version")
+            "version": article.get("version"),
+            "filter": filter_value
         }
-        article_list.append(article_data)
 
-    # Build content structure (no hidden/visible separation)
+        if is_visible:
+            article_data["abstract"] = article.get("abstract")
+            article_list.append(article_data)
+        else:
+            hidden_article_list.append(article_data)
+
+    # Sort hidden preprints by numeric filter code so similar hidden reasons are grouped together
+    hidden_article_list.sort(key=lambda x: x["filter"])
+
+    # Build content structure with hidden/visible separation
     content = {
-        "articles": article_list
+        "articles": article_list,
+        "articles_hidden": hidden_article_list
     }
 
     # Build final output structure

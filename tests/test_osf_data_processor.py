@@ -8,8 +8,10 @@ from src.data_processor import (
     extract_osf_id_and_version,
     deduplicate_osf_versions,
     remove_past_osf_preprints,
-    clean_osf_data
+    clean_osf_data,
+    apply_osf_language_filter
 )
+from src.config import FILTER_PASS, FILTER_OSF_NON_ENGLISH
 
 
 def test_extract_doi_osf():
@@ -101,3 +103,25 @@ def test_clean_osf_data():
     assert result[0]["title"] == "Test Title"
     assert result[0]["abstract"] == "Test abstract"
     assert result[0]["doi"] == "https://doi.org/10.31219/osf.io/abc123"
+
+
+def test_apply_osf_language_filter(monkeypatch):
+    """Test language filtering for OSF preprints"""
+    articles = [
+        {"title": "English title", "abstract": "English abstract"},
+        {"title": "Titre français", "abstract": "Résumé en français"},
+    ]
+
+    def mock_detect(text):
+        if "français" in text:
+            return {"lang": "fr", "score": 0.99}
+        return {"lang": "en", "score": 0.98}
+
+    monkeypatch.setattr("src.data_processor.fasttext_detect", mock_detect)
+
+    result = apply_osf_language_filter(articles)
+
+    assert result[0]["filter"] == FILTER_PASS
+    assert result[0]["language"] == "en"
+    assert result[1]["filter"] == FILTER_OSF_NON_ENGLISH
+    assert result[1]["language"] == "fr"

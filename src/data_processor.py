@@ -11,7 +11,17 @@ import json
 from typing import List, Dict, Any, Set, Optional, Tuple
 from collections import defaultdict
 
-from .config import PARAMETERS_DIR, MEMORY_DIR
+from .config import (
+    PARAMETERS_DIR,
+    MEMORY_DIR,
+    FILTER_PASS,
+    FILTER_OSF_NON_ENGLISH,
+)
+
+try:
+    from ftlangdetect import detect as fasttext_detect
+except ImportError:  # pragma: no cover - dependency is expected at runtime
+    fasttext_detect = None
 
 
 def strip_html(text: Optional[str]) -> Optional[str]:
@@ -484,5 +494,55 @@ def clean_osf_data(articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         # Store full DOI URL (with https:// prefix)
         if "url" in article:
             article["doi"] = article["url"]
+
+    return articles
+
+
+def _detect_osf_language(text: Optional[str]) -> Tuple[Optional[str], Optional[float]]:
+    """
+    Detect language using fasttext-langdetect.
+
+    Args:
+        text: Input text for language detection
+
+    Returns:
+        Tuple of (language_code, confidence_score)
+    """
+    if not text or not text.strip() or fasttext_detect is None:
+        return None, None
+
+    try:
+        result = fasttext_detect(text)
+        return result.get("lang"), result.get("score")
+    except Exception as e:
+        logging.warning(f"OSF language detection failed: {e}")
+        return None, None
+
+
+def apply_osf_language_filter(articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Hide non-English OSF preprints using fasttext-langdetect.
+
+    Args:
+        articles: List of OSF article dictionaries
+
+    Returns:
+        Articles with language metadata and filter codes
+    """
+    for article in articles:
+        article["filter"] = article.get("filter", FILTER_PASS)
+
+        text_for_detection = ". ".join(
+            part for part in [article.get("title"), article.get("abstract")] if part
+        )
+        language, score = _detect_osf_language(text_for_detection)
+
+        if language:
+            article["language"] = language
+        if score is not None:
+            article["language_score"] = score
+
+        if language and language != "en":
+            article["filter"] = FILTER_OSF_NON_ENGLISH
 
     return articles

@@ -130,7 +130,8 @@ The crawler ([main.py](main.py)) runs two parallel workflows:
 1. Loads subject filter from [parameters/osf_subjects.json](parameters/osf_subjects.json) ("Social and Behavioral Sciences")
 2. Queries OSF API date-by-date within crawl window
 3. Parses metadata, deduplicates versions (keeps latest), removes past preprints using [memory/osf_ids.csv](memory/osf_ids.csv)
-4. Outputs to [output/preprints.json](output/preprints.json)
+4. Detects language with fasttext-langdetect and hides non-English papers by default (revealable in UI)
+5. Outputs to [output/preprints.json](output/preprints.json)
 
 ### 3. Statistics & Automation
 

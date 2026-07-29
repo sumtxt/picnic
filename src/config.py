@@ -49,6 +49,8 @@ FILTER_AI_REJECT = 2      # AI rejected as non-social-science
 FILTER_SCIENCE = 3        # Science filter (abstract too short)
 FILTER_NATURE = 4         # Nature filter (URL pattern)
 FILTER_OPENALEX = 5       # OpenAlex filter (domain not Social Sciences)
+FILTER_OSF_NON_ENGLISH = 6  # OSF preprint language is not English
+VISIBLE_FILTER_CODES = (FILTER_PASS, FILTER_ERROR)
 
 # Crossref API Configuration
 CROSSREF_API_BASE = "https://api.crossref.org"
