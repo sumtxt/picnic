@@ -33,10 +33,17 @@ INTERNAL_PATHS = {
 }
 
 
+LOCAL_ASSETS = {
+    "/assets/css/custom.css",
+    "/assets/js/custom.js",
+    "/assets/js/storage.js",
+}
+
+
 def rewrite_links(soup, archive_prefix):
     for tag in soup.find_all(href=True):
         href = tag["href"]
-        if href.startswith("/assets/"):
+        if href in LOCAL_ASSETS:
             tag["href"] = "." + href
         elif href in INTERNAL_PATHS or any(
             href == p or href.startswith(p + "?") or href.startswith(p + "#")
@@ -45,14 +52,14 @@ def rewrite_links(soup, archive_prefix):
             if href == "/" or href == "/index.html":
                 tag["href"] = archive_prefix + "/"
             else:
-                clean = href.rstrip(".html")
+                clean = href.replace(".html", "")
                 tag["href"] = archive_prefix + clean
         elif href == "/":
             tag["href"] = archive_prefix + "/"
 
     for tag in soup.find_all(src=True):
         src = tag["src"]
-        if src.startswith("/assets/"):
+        if src in LOCAL_ASSETS:
             tag["src"] = "." + src
 
 
