@@ -1,0 +1,90 @@
+name: "Archive Snapshot"
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main (for scripts)
+        uses: actions/checkout@v4
+        with:
+          path: main_folder
+          ref: main
+
+      - name: Check out gh-pages (for writing archive)
+        uses: actions/checkout@v4
+        with:
+          path: gh_pages_folder
+          ref: gh-pages
+
+      - name: Install Python dependencies
+        run: pip install beautifulsoup4
+
+      - name: Fetch and archive current live site
+        working-directory: ./gh_pages_folder
+        run: |
+          PREV_DATE=$(python3 -c "import json; d=json.load(open('_data/publications.json')); print(d['update'])")
+          echo "PREV_DATE=${PREV_DATE}" >> $GITHUB_ENV
+
+          if [ -f "archive/${PREV_DATE}/index.html" ]; then
+            echo "Archive for ${PREV_DATE} already exists — skipping."
+            exit 0
+          fi
+
+          mkdir -p "archive/${PREV_DATE}/assets/css" \
+                   "archive/${PREV_DATE}/assets/js"
+
+          BASE="https://www.paper-picnic.com"
+
+          for PAGE in "" political_science economics sociology \
+                      international_relations public_administration \
+                      multidisciplinary migration_studies \
+                      communication_studies environmental_studies working_papers; do
+            FILENAME="${PAGE:-index}.html"
+            curl -sf --retry 3 "${BASE}/${PAGE}" -o "archive/${PREV_DATE}/${FILENAME}"
+          done
+
+          curl -sf --retry 3 "${BASE}/assets/css/custom.css" \
+               -o "archive/${PREV_DATE}/assets/css/custom.css"
+          curl -sf --retry 3 "${BASE}/assets/js/custom.js" \
+               -o "archive/${PREV_DATE}/assets/js/custom.js"
+          curl -sf --retry 3 "${BASE}/assets/js/storage.js" \
+               -o "archive/${PREV_DATE}/assets/js/storage.js"
+
+          python3 ../main_folder/scripts/archive_postprocess.py \
+            "archive/${PREV_DATE}" "${PREV_DATE}"
+
+          python3 - <<PYEOF
+import json
+
+date = "${PREV_DATE}"
+pub = json.load(open("_data/publications.json"))
+count = sum(len(j.get("articles", [])) for j in pub.get("content", []))
+
+idx_path = "_data/archive_index.json"
+try:
+    idx = json.load(open(idx_path))
+except Exception:
+    idx = []
+
+if not any(e["date"] == date for e in idx):
+    idx.insert(0, {"date": date, "count": count})
+    idx.sort(key=lambda x: x["date"], reverse=True)
+    json.dump(idx, open(idx_path, "w"), indent=2)
+    print(f"Added {date} ({count} articles) to archive index.")
+else:
+    print(f"Entry for {date} already in archive index.")
+PYEOF
+
+      - name: Commit archive to gh-pages
+        working-directory: ./gh_pages_folder
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add archive/ _data/archive_index.json
+          git diff --staged --quiet && echo "Nothing to commit." || \
+            git commit -m "Archive snapshot ${PREV_DATE}"
+          git push origin gh-pages
