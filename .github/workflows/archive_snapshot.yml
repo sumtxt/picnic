@@ -26,7 +26,8 @@ jobs:
       - name: Fetch and archive current live site
         working-directory: ./gh_pages_folder
         run: |
-          PREV_DATE=$(python3 -c "import json; d=json.load(open('_data/publications.json')); print(d['update'])")
+          PREV_DATE=$(curl -sf --retry 3 "https://www.paper-picnic.com/data/publications.json" \
+            | python3 -c "import sys, json; print(json.load(sys.stdin)['update'])")
           echo "PREV_DATE=${PREV_DATE}" >> $GITHUB_ENV
 
           if [ -f "archive/${PREV_DATE}/index.html" ]; then
@@ -57,27 +58,7 @@ jobs:
           python3 ../main_folder/scripts/archive_postprocess.py \
             "archive/${PREV_DATE}" "${PREV_DATE}"
 
-          python3 - <<PYEOF
-import json
-
-date = "${PREV_DATE}"
-pub = json.load(open("_data/publications.json"))
-count = sum(len(j.get("articles", [])) for j in pub.get("content", []))
-
-idx_path = "_data/archive_index.json"
-try:
-    idx = json.load(open(idx_path))
-except Exception:
-    idx = []
-
-if not any(e["date"] == date for e in idx):
-    idx.insert(0, {"date": date, "count": count})
-    idx.sort(key=lambda x: x["date"], reverse=True)
-    json.dump(idx, open(idx_path, "w"), indent=2)
-    print(f"Added {date} ({count} articles) to archive index.")
-else:
-    print(f"Entry for {date} already in archive index.")
-PYEOF
+          python3 ../main_folder/scripts/archive_update_index.py "${PREV_DATE}"
 
       - name: Commit archive to gh-pages
         working-directory: ./gh_pages_folder
