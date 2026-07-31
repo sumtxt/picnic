@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Public Administration</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · March 13, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-03-13/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="15206688">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15206688" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15206688" style="max-width: 300px;" title="Journal of Policy Analysis and Management">
+                            Journal of Policy Analysis and Management
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10531858">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10531858" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10531858" style="max-width: 300px;" title="Journal of Public Administration Research and Theory">
+                            Journal of Public Administration Research and Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333352">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333352" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333352" style="max-width: 300px;" title="Public Administration Review">
+                            Public Administration Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14494035">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14494035" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14494035" style="max-width: 300px;" title="Policy and Society">
+                            Policy and Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13501763">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13501763" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13501763" style="max-width: 300px;" title="Journal of European Public Policy">
+                            Journal of European Public Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0190292X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0190292X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0190292X" style="max-width: 300px;" title="Policy Studies Journal">
+                            Policy Studies Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333298">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333298" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333298" style="max-width: 300px;" title="Public Administration">
+                            Public Administration
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03055736">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03055736" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03055736" style="max-width: 300px;" title="Policy and Politics">
+                            Policy and Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09521895">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09521895" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09521895" style="max-width: 300px;" title="Governance">
+                            Governance
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17485983">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17485983" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17485983" style="max-width: 300px;" title="Regulation &amp; Governance">
+                            Regulation &amp; Governance
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="15206688">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Policy Analysis and Management</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-15206688">
+</div><article class="article-card" id="10-1002-pam-70086" role="article">
+<h3 class="article-card__title">Transaction Costs and the Take‐Up of Social Safety Net Programs: Evidence From the Combined Application Project</h3>
+<p class="article-card__authors">Rosa Kleinman</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70086" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70086" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70086" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70086" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70086">
+        This paper studies the effect of transaction costs on the take‐up and targeting of social safety net programs in the context of multi‐program enrollment by exploiting the Combined Application Project (CAP), a widespread state‐level policy designed to encourage enrollment in the Supplemental Nutrition Assistance Program (SNAP) among elderly recipients of Supplemental Security Income. I show that the CAP increased SNAP take‐up by 8–13 percentage points, or about 17%–24%. The increase was suggestively larger among those with a higher probability of being food insecure. Exploiting heterogeneity in the format of the CAP across states, I find that “auto‐enrollment” most effectively increased SNAP take‐up.
+    </div>
+</article><article class="article-card" id="10-1002-pam-70092" role="article">
+<h3 class="article-card__title">Can Crime Be Deterred at Low Cost? Evidence From a Randomized Experiment in New York</h3>
+<p class="article-card__authors">Oludamilare Aboaba, Aaron Chalfin, Michael LaForest‐Tucker, Lucie Parker, Patrick Sharkey</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70092" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70092" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70092" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70092" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70092">
+        Can crime be deterred at low cost? We report the results of a randomized experiment of a messaging intervention designed to deter offending among individuals under parole supervision with a prior violent felony conviction or firearm arrest. The intervention consisted of a group meeting in which high‐risk paroled individuals were notified of the sanction they would face upon reoffending while being offered community resources to support re‐integration into the community. The program did not lead to a notable reduction in future arrests or create community spillover effects but did reduce parole violations by 15%. Potential mechanisms and implications for similar programs are discussed.
+    </div>
+</article><article class="article-card" id="10-1002-pam-70094" role="article">
+<h3 class="article-card__title">Incentive‐Based Compensation in Police Forces</h3>
+<p class="article-card__authors">Sandro Cabral, Marcelo Marchesini da Costa, Sergio Firpo, Joana Monteiro, Leonardo T. Viotti</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70094" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70094" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70094" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70094" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70094">
+        Governments worldwide are increasingly applying management principles to policing, including performance management systems and financial incentives. We study whether eligibility for performance‐based bonuses tied to crime reduction improves police outcomes. Using a quasi‐experimental design and administrative data from Brazil, we evaluate an incentive‐based compensation program that conditioned bonuses on reductions in violent deaths, vehicle robberies, and street robberies. Our results show that police districts eligible for bonuses experienced significant reductions in both targeted and nontargeted crimes, with stronger effects at the end of semester when incentives are steeper. While there is some evidence of gaming in the reclassification of street robberies, this behavior does not undermine the program's overall effectiveness. Overall, our findings highlight the potential of financial incentives to reshape police behavior and reduce crime.
+    </div>
+</article><article class="article-card" id="10-1002-pam-70091" role="article">
+<h3 class="article-card__title">Can Pollution Cause Poverty? The Effects of Pollution on Educational, Health, and Economic Outcomes</h3>
+<p class="article-card__authors">Claudia Persico</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70091" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70091" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70091" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70091" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70091">
+        Although pollution is widespread, there is little evidence on how it affects children's long‐run outcomes. Using detailed, geocoded longitudinal data, we compare siblings who were gestating before versus after a Toxic Release Inventory site opened or closed within one mile of their home. We find that children who were exposed prenatally to industrial pollution have lower wages, are more likely to live in poverty as adults, have fewer years of completed education, and score lower on a summary index of long‐run outcomes than their unexposed siblings.
+    </div>
+</article><article class="article-card" id="10-1002-pam-70090" role="article">
+<h3 class="article-card__title">Estimating Self‐Selection in Medicare Advantage</h3>
+<p class="article-card__authors">Moiz Bhai, Danny R. Hughes</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70090" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70090" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70090" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70090" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70090">
+        We explore the fundamental question of selection in Medicare Advantage by exploiting quasi‐experimental variation from the Initial Enrollment Period for Medicare eligibility to evaluate and describe participation in Medicare Advantage. Using administrative claims data between 2007 and 2017, we investigate the transition from commercial insurance to Medicare Advantage for a comprehensive subset of commercially insured enrollees. We use the sharp cutoff at age 65 in one of the largest commercial and Medicare Advantage databases in the United States to implement a “positive correlation” test. Our findings using baseline characteristics at age 64 reveal that enrollees in Medicare Advantage are advantageously selected on multiple measures of health status such as Charlson Comorbidity Index (CCI) scores, out‐of‐pocket costs, utilization, while differentially selected on demographic characteristics. Furthermore, using predicted Medicare Advantage utilization based on observable characteristics, we find even stronger evidence of advantageous selection, suggesting that observable characteristics at age 64 systematically predict which enrollees would benefit most from Medicare Advantage's features, indicating forward‐looking selection behavior.
+    </div>
+</article><article class="article-card" id="10-1002-pam-70093" role="article">
+<h3 class="article-card__title">Understanding High Schools’ Effects on Longer‐Term Outcomes</h3>
+<p class="article-card__authors">Preeya P. Mbekeani, John P. Papay, Ann Mantil, Richard J. Murnane</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70093" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70093" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70093" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70093" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70093">
+        Improving education and labor market outcomes for low‐income students is critical for advancing socioeconomic mobility in the United States. We use longitudinal data on five cohorts of ninth‐grade students to explore how Massachusetts public high schools affect the longer term outcomes of students, with a special focus on students from low‐income families. Using detailed administrative and student survey data, we estimate school value‐added impacts on college outcomes and earnings. Observationally similar students who attend a school at the 80th percentile of the value‐added distribution instead of a school at the 20th percentile are 11% more likely to enroll in college, are 31% more likely to graduate from a 4‐year college, and earn 25% (or $10,500) more annually at age 30. On average, schools that improve students’ longer run outcomes the most are those that improve their 10th‐grade test scores and increase their college plans the most.
+    </div>
+</article><article class="article-card" id="10-1002-pam-70088" role="article">
+<h3 class="article-card__title">How Early Morning Classes Change Academic Trajectories: Evidence From a Natural Experiment</h3>
+<p class="article-card__authors">Anthony Yim</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70088" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70088" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70088" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70088" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70088">
+        Using a natural experiment which randomized class times to students, this study reveals that enrolling in early morning classes lowers students’ course grades and the likelihood of future STEM course enrollment. There is a 29% reduction in pursuing the major within the same college and a 21% rise in choosing a low‐earning major, predominantly influenced by early morning STEM classes. To understand the mechanism, I conducted a survey of undergraduate students enrolled in an introductory course, some of whom were assigned to a 7:30 a.m. section. I find evidence of a decrease in human capital accumulation and learning quality for early morning sections.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333352">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333352">
+</div><article class="article-card" id="10-1111-puar-70109" role="article">
+<h3 class="article-card__title">Time Matters: Under/Overperformance Duration and Performance Improvements in the Public Sector</h3>
+<p class="article-card__authors">Shaowei Chen, Jianxia Wu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70109" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70109" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70109" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70109" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70109">
+        Prior research on public organizations' strategic responses to performance feedback has focused solely on the intensity of performance feedback while neglecting its temporal dimensions. This study aims to fill this gap by incorporating the lens of time and investigating how performance feedback duration affects performance improvements in the public sector. Drawing on various theoretical perspectives, we theorize an inverted U‐shaped relationship between underperformance (negative performance feedback) duration and public organizations' subsequent performance improvements, and a U‐shaped relationship for overperformance (positive performance feedback) duration. Empirical analyses using the case of China's official city air quality ranking provide evidence supporting our theory. Our findings reveal that “time” (duration) can shape public organizations' responses to performance feedback in nonlinear ways and help reconcile inconsistencies in the existing literature, highlighting the importance of incorporating temporal dimensions of performance to advance performance feedback theory in the public sector.
+    </div>
+</article><article class="article-card" id="10-1111-puar-70105" role="article">
+<h3 class="article-card__title">Beyond Psychological Costs: How Negative Bureaucratic Encounters Influence Citizens' General Psychological Well‐Being</h3>
+<p class="article-card__authors">Hanchen Jiang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70105" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70105" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70105" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70105" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70105">
+        The administrative burden framework suggests that citizens experience psychological costs when interacting with the state. Previous research has primarily focused on context‐specific psychological costs, such as stress and loss of autonomy related to particular policies or encounters. This study expands the framework by integrating it with the relational model of authority and the stress and coping theory, and proposes that negative bureaucratic encounters have an adverse impact on citizens' general psychological well‐being, with cognitive human capital serving as a mitigating factor. Using a large‐scale representative longitudinal survey dataset from China, we test relevant hypotheses. The empirical analysis demonstrates that exposure to negative bureaucratic encounters is associated with poorer mental health, while formal education helps mitigate the impact. These findings underscore the significant influence of bureaucratic encounters on citizens' well‐being.
+    </div>
+</article><article class="article-card" id="10-1111-puar-70107" role="article">
+<h3 class="article-card__title">Regulatory Offsetting Schemes as Effective Governmental Self‐Binding Device? Lessons From the German Experience</h3>
+<p class="article-card__authors">Xavier Fernández‐i‐Marín, Markus Hinterleitner, Christoph Knill, Yves Steinebach</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70107" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70107" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70107" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70107" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70107">
+        Governments in advanced democracies often implement self‐binding mechanisms like regulatory offsetting schemes to counteract short‐term political incentives. This paper evaluates the effectiveness of Germany's offsetting scheme by analyzing over 3000 legal acts for restrictive clauses and passages related to replacing or repealing existing regulations. Despite Germany being a “least likely” case for failure, our analysis indicates that the scheme has not reduced regulatory burdens. These findings suggest that self‐binding measures struggle to override political incentives for rule production, especially with inadequate monitoring. We contribute to the literature by systematically assessing governmental self‐binding effectiveness, introducing a novel methodological approach based on large language models, and employing a robust difference‐in‐differences design to estimate counterfactual effects. Our study highlights the challenges of implementing effective self‐binding mechanisms in democratic governance.
+    </div>
+</article><article class="article-card" id="10-1111-puar-70106" role="article">
+<h3 class="article-card__title">Behavioral Charity: Third‐Party Ratings of Nonprofits as Salience and Heuristics</h3>
+<p class="article-card__authors">Ashraf Haque</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70106" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70106" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70106" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70106" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70106">
+        Financial disclosure through tax returns is the primary regulatory mechanism for holding nonprofits accountable to donors in the USA. The assumption that donors will make rational decisions using disclosed information when giving to nonprofits is central to this regulation. But what if they rely on mental shortcuts instead? This study examines how donors respond to a third‐party nonprofit rating that is simple, unverified, and based on self‐reported data. Using a five‐year panel dataset covering over a million nonprofit‐year records, we find that even these basic ratings have a significant impact on donation behavior. Donors use ratings via two mental shortcuts. First, ratings increase a nonprofit's salience, boosting donations by 7%. Second, donors process higher ratings as a mental accounting shortcut, giving up to 34% more to the top‐rated nonprofits. The findings suggest the limits of information disclosure alone in making nonprofits accountable to donors.
+    </div>
+</article><article class="article-card" id="10-1111-puar-70104" role="article">
+<h3 class="article-card__title">From the Editors</h3>
+<p class="article-card__authors">Katherine Willoughby, Jos Raadschelders, Hongtao Yi</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70104" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70104" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1111-puar-70111" role="article">
+<h3 class="article-card__title">Biased by Design? Case Managers' Multidimensional Preferences Toward the Design of Algorithmic Decision Support Systems</h3>
+<p class="article-card__authors">Martin Dietz, Christopher Osiander, Mareike Sirman‐Winkler, Markus Tepe</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70111" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70111" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70111" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70111" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70111">
+        This study examines whether street‐level bureaucrats' preferences toward algorithmic decision support (ADS) induce a unilateral shift of technology‐related risks onto clients of the public employment service. Expanding on public value theory and research on moral agency in public service work, we argue that case managers' choices of ADS designs are shaped by a plurality of professional, service, and efficiency values. To test this argument, we conducted a conjoint experiment on a representative sample of German Federal Employment Agency case managers. Respondents compared pairs of hypothetical ADS systems that differed in their design features, reflecting varying degrees of the realization of public values. The empirical results indicate that case managers' choices do not result in biased design. Instead, case managers balance design features reflecting professional and service values while maintaining administrative efficiency. Case managers appreciate ADS support but firmly reject the mandatory use of such advice.
+    </div>
+</article><article class="article-card" id="10-1111-puar-70114" role="article">
+<h3 class="article-card__title">Practice Without Theory? The Wonder of Bethpage Black</h3>
+<p class="article-card__authors">Odd J. Stalebrink</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70114" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70114" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70114" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70114" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70114">
+        Bethpage State Park's Black Course offers a rare historical case of administrative capacity emerging under conditions of uncertainty, fiscal constraint, and urgent public purpose during the Great Depression. Built with relief labor and without the benefit of fully developed public administration or budgeting doctrines, the project required administrators to invent workable practices as construction unfolded. Drawing on extensive archival records, this article reconstructs Bethpage as a historical case of administrative capacity emerging through practice rather than formal design. The analysis identifies four interrelated mechanisms through which capacity developed: alignment of ambition and necessity, coordination through routine budgeting and reporting, discipline embedded in oversight, and endurance through institutional memory. Together, these mechanisms show how effective governance can arise from improvisation, constraint, and learning under pressure. The case demonstrates that administrative discipline and creativity need not be opposites and offers practical insights for contemporary public managers facing complex, uncertain, and time‐sensitive challenges.
+    </div>
+</article><article class="article-card" id="10-1111-puar-70110" role="article">
+<h3 class="article-card__title">Connected Yet Distinct: The Evolution and Role of Korean Public Administration in Bridging Theory and Practice</h3>
+<p class="article-card__authors">Jinsol Park, Hyungjo Hur, Sangmook Kim, Keon‐Hyung Lee, Donwe Choi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70110" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70110" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70110" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70110" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70110">
+        Over the past seven decades, South Korea has developed a distinctive trajectory in its public administration (PA) through balancing the domains of research, education, and engagement with government. Our analysis shows that it embodies a connected yet distinct character, closely linked to Western administrative science and global PA scholarship, yet continually reshaped by Korea's bureaucratic culture, Confucian legacies, and pragmatic governance needs. To map this evolution systematically, we examine the entire Korean PA ecosystem by (1) analyzing 4447 scholarly articles published in four leading domestic and international journals over the past two decades, (2) reviewing PA curricula across Korean universities, and (3) tracing government‐funded research projects and faculty appointments to senior public positions over the same period. The findings suggest that the strong institutional linkages between research, education, and government have enhanced Korea's administrative capacity and responsiveness, while also highlighting the need for greater intellectual independence and theoretical inquiry.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14494035">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14494035">
+</div><article class="article-card" id="10-1093-polsoc-puag004" role="article">
+<h3 class="article-card__title">Sustaining collaborations after a crisis: Australian disability and health policy and practice</h3>
+<p class="article-card__authors">Helen Dickinson, Samia Badji, Gwynnyth Llewellyn, Hannah Badland, Dennis Petrie, Anne Kavanagh</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-polsoc-puag004" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-polsoc-puag004" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/polsoc/puag004" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/polsoc/puag004" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-polsoc-puag004">
+        It is well established within the public management literature that times of crisis can facilitate collaboration across government sectors and external stakeholders due to factors such as a clear task focus and the relaxation of some organisational and institutional constraints. However, what has been less explored are the mechanisms and conditions for sustaining these collaborations in a post-crisis context. In such contexts there is a need to move institutions and their processes from episodic, urgent networks to enduring governance regimes. This paper uses a case study to explore the challenges and potential solutions discussed at two policy workshops held with stakeholders from the Australian Commonwealth government, statutory agencies and Disability Representative Organisations. The policy workshops explored the experience of collaborative working over the emergency phase of the COVID-19 pandemic in terms of contributing to health outcomes of people with disability and desirable institutional changes needed for collaboration to be sustained post-crisis. We outline several practice-based recommendations that combine different governance capacities and mechanisms and seek to address the distinct challenges to collaborative government experienced during the COVID-19 context. Implementing and monitoring the collaboratively-derived solutions for the post-crisis period is likely to assist in sustaining the successes of collaborative gains in the initial phases of the COVID-19 pandemic to better support people with disability.
+    </div>
+</article><article class="article-card" id="10-1093-polsoc-puag001" role="article">
+<h3 class="article-card__title">Policy termination revisited: theories, processes, and political dynamics</h3>
+<p class="article-card__authors">Vandna Bhatia, Carsten Daugbjerg, Frank Ohemeng</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-polsoc-puag001" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-polsoc-puag001" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/polsoc/puag001" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/polsoc/puag001" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-polsoc-puag001">
+        This article revisits the concept of policy termination, a largely overlooked yet critical phase in the policy process. While early policy cycle models included termination as a distinct stage, contemporary frameworks often omit it, reflecting its marginalization in policy scholarship. This article argues for the renewed relevance of policy termination, distinguishing it from related concepts like policy dismantling, and framing it as a specific form of policy change—namely, cessation. Drawing on foundational and contemporary literature, the article explores the conditions under which termination occurs, the actors and coalitions involved, the role of institutions and ideas, and the feedback effects that shape both the process and aftermath of termination. It highlights the inherently political nature of termination, emphasizing the influence of ideologies, strategic framing, and institutional constraints. The article also addresses the underexplored post-termination phase, considering the durability of termination decisions and their broader impacts. By integrating insights from policy change theories, the article lays the groundwork for a more robust research agenda on policy termination. It introduces the contributions of a special issue dedicated to advancing this field.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13501763">
+<div class="row">
+<div class="col-10">
+<h2>Journal of European Public Policy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13501763">
+</div><article class="article-card" id="10-1080-13501763-2026-2639415" role="article">
+<h3 class="article-card__title">Punctuated politics: the rise and fall of politicization in the EU's refugee crisis</h3>
+<p class="article-card__authors">Chendi Wang</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2639415" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2639415" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13501763-2026-2640170" role="article">
+<h3 class="article-card__title">The European Commission’s response to national emergency regimes within the EU’s asylum policy: from rejection to accommodation</h3>
+<p class="article-card__authors">Florian Trauner, Federica Zardo</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2640170" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2640170" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0190292X">
+<div class="row">
+<div class="col-10">
+<h2>Policy Studies Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0190292X">
+</div><article class="article-card" id="10-1111-psj-70103" role="article">
+<h3 class="article-card__title">Unpacking Welfare Deservingness Theory: Evidence From the Perceived Deservingness of Gig Workers</h3>
+<p class="article-card__authors">Juhyun Bae</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70103" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70103" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70103" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70103" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70103">
+        The theory of welfare deservingness provides valuable insights into the social legitimacy of welfare programs and the principles underlying policy design. In examining the question of who deserves what and why, established deservingness criteria emphasize that individuals demonstrating motivation to work (“reciprocity”) are typically perceived as more deserving. However, little is known about how the nature of work might affect perceived deservingness. This study addresses this gap by investigating the perceived deservingness of gig workers, a rapidly growing segment of the labor force characterized by distinctive work arrangements. The flexibility and autonomy inherent in gig jobs are argued to amplify perceptions of personal responsibility and control, thereby reducing public support for benefits for gig workers. Through preregistered survey experiments conducted as part of the 2022 Cooperative Election Study, this research identifies a significant “gig work deservingness penalty,” where gig workers are perceived as less deserving of welfare benefits compared to traditional workers, even when demonstrating motivation to work. This penalty is especially pronounced for immigrant gig workers. These findings uncover the established criterion of “job searching” is not homogeneous, offering critical insights into the challenges of building consensus for policy reforms aimed at creating security systems for emerging precarious groups.
+    </div>
+</article><article class="article-card" id="10-1111-psj-70109" role="article">
+<h3 class="article-card__title">Repeated Modifications in Policy Diffusion: Evidence From River Management Regulations in China's Cities</h3>
+<p class="article-card__authors">Hu Xi, Hongtao Yi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70109" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70109" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70109" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70109" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70109">
+        Why do local governments repeatedly modify policies after their initial adoption? While policy diffusion research has focused on adoption, far less is known about why and how policies are revised over time. This study analyzes a city–year dataset of 293 Chinese prefecture‐level cities from 1986 to 2022, tracking both the adoption and subsequent modifications of River Management Regulations (RMR). A two‐stage modeling strategy combining a Probit model and a Prentice–Williams–Peterson Cox model is employed to analyze repeated modifications. The findings reveal three patterns. First, policy modifications at the provincial level and amendments to superior laws significantly increase the likelihood of local RMR revisions, whereas central‐level modifications do not exert a direct effect. Second, while neighboring jurisdictions' policy modifications do not significantly affect local revisions, adoption by neighboring late adopters generates a positive effect, indicating a form of “reverse diffusion.” Third, policies issued by local legislative branches are more likely to be modified than those issued by executive agencies, highlighting the role of institutional structure and procedural constraints. By shifting attention from adoption to repeated modification, this study extends policy diffusion theory and contributes to a broader understanding of post‐adoption policy dynamics in hierarchical and decentralized political systems.
+    </div>
+</article><article class="article-card" id="10-1111-psj-70107" role="article">
+<h3 class="article-card__title">There Is Always a Bigger Fish. Determinants of Power Perceptions in Swiss Biodiversity Policy</h3>
+<p class="article-card__authors">Alix d'Agostino, Jascha Egli, Daniel Kübler</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70107" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70107" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70107" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70107" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70107">
+        The Advocacy Coalition Framework (ACF) views power as crucial in policy processes, but the nature of coalition power, its determinants, and how to empirically measure it remain understudied. In this article, we use a mixed method approach and social network analysis to explore power relationships in the biodiversity policy subsystem in Switzerland. We find that power, measured as influence reputation, is highly fragmented, and that actors' power reflects both structural and institutional factors, as well as subjective heuristics. Adversaries and allies are consistently perceived as more influential than neutral actors, supporting the presence of devil and angel shifts. Formal authority does not uniformly translate into influence reputation, but varies by actor type. Policy expertise does not systematically predict perceived influence, as experts in agriculture tend to be viewed as more powerful than biodiversity experts. These findings highlight how entrenched coalitions and perception biases reinforce policy inertia, helping to explain the limited change in Swiss biodiversity policy despite rising ecological pressure.
+    </div>
+</article><article class="article-card" id="10-1111-psj-70111" role="article">
+<h3 class="article-card__title">Cities Creating Citizens: Policy Feedback and the Effects of Local Naturalization Support on Immigrant Civic Engagement</h3>
+<p class="article-card__authors">Megan Dias</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70111" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70111" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70111" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70111" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70111">
+        Despite an increasingly hostile federal stance towards immigrants, cities across the United States have passed policies and implemented programs that help eligible immigrants on their path to citizenship. This paper examines the effects of these local policies on immigrants' political behavior and sense of civic efficacy. Using a multi‐method approach combining national survey data with qualitative interviews and a survey of participants from the City of San Francisco's Pathways to Citizenship Initiative, it finds that receiving local naturalization support affects the way immigrants behave and understand themselves as citizens. Immigrants who received support from their city government through the naturalization process have higher levels of political engagement and civic efficacy than those who navigated the process alone. These findings extend policy feedback to the local level, showing how local policies produce effects for target populations within a conflicting federal context. They have implications for our understanding of policy feedback more broadly, and the role local governments play in helping immigrants become full citizens and political actors.
+    </div>
+</article><article class="article-card" id="10-1111-psj-70106" role="article">
+<h3 class="article-card__title">Education and the Unequal Costs of Voting: Administrative Burdens and Democratic Participation</h3>
+<p class="article-card__authors">Cameron J. Arnzen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70106" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70106" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70106" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70106" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70106">
+        Administrative burdens are an inherent feature of citizen–state interactions, shaping who can access public programs and exercise fundamental rights. These burdens are not distributed evenly; instead, they tend to exacerbate inequality by imposing disproportionate costs on individuals with fewer resources or skills. Given that some administrative burdens exacerbate complexity, this paper investigates an understudied dimension upon which burdens may have disproportionate impacts: education. Using the case of U.S. elections, this paper explores how administrative burdens interact with education to shape democratic participation. Drawing on validated voter data from the Cooperative Election Study (2008–2024) linked with the Cost of Voting Index, I show that increases in the administrative complexity of voting disproportionately deter participation among individuals with less education. By highlighting education as a critical but understudied dimension of inequality in navigating burdens, this study demonstrates how the design of onerous public policies, such as election laws, can systematically advantage some citizens over others.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333298">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333298">
+</div><article class="article-card" id="10-1111-padm-70053" role="article">
+<h3 class="article-card__title">How Do Strikes and Lockouts Affect Applications to Danish Public Service Professional Education Programs? A Synthetic Control Analysis</h3>
+<p class="article-card__authors">Christian Heide, Florian Keppeler</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70053" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70053" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70053" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70053" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70053">
+        With fewer young people entering public service, public employers and the corresponding trade unions aim at signaling that they offer attractive working conditions. However, in the struggle for attractive conditions, labor market conflicts occur between public employers and public sector unions when bargains fail. According to signaling theory, such conflicts could serve as negative signals and thus decrease attraction to the profession. We investigate the signaling effects of two large‐scale labor market conflicts in Denmark, a nurse strike and a teacher lockout, on applications to the respective nursing and teacher education programs. For both conflicts, we employ a synthetic control design to estimate that each conflict resulted in 17%–23% fewer first‐priority applications. The findings suggest that labor market conflicts function as negative signals that decrease attraction to the given career and highlight that there are hidden costs to labor market conflicts for policymakers, public employers, and public sector unions.
+    </div>
+</article><article class="article-card" id="10-1111-padm-70052" role="article">
+<h3 class="article-card__title">Social Equity Through Women's Empowerment: Women's Participation in Local Politics, Budgeting and Decision‐Making in Bangladesh</h3>
+<p class="article-card__authors">Md Salah Uddin Rajib, Khandakar Shahadat, Pawan Adhikari, Ileana Steccolini</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70052" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70052" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70052" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70052" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70052">
+        The paper explores the gender dimensions of social equity and social equity budgeting (SEB) by investigating women's inclusion in local politics, budgeting and decision‐making in Bangladesh. Quotas for women representatives are reserved at each successive level of local government in Bangladesh, and their active participation in local politics and budgeting is encouraged. The data for the paper were derived from in‐depth interviews with local actors and direct observations, while the findings were analyzed using the four dimensions of social equity. The findings of the study provide insights into the experiences of local community actors with gender quota requirements, the barriers they faced, the enabling strategies and agencies that female politicians have adopted to counter them, and their outcomes. It thus demonstrates how social equity can be achieved through partial empowerment in developing country contexts. In addition, the findings highlight the importance of considering the “intersectional perspective” in the study of SEB in developing country contexts, given that women's access, participation, and outcomes are contingent upon both their individual status and the status of their families within their communities. This suggests the potential relevance of an intersectional interpretation of the results, wherein social status interacts with gender to shape women's lived experiences in different ways. Recognizing the structural dynamics is, therefore, essential to current debates on SEB and how its principles can be meaningfully embedded into local governance.
+    </div>
+</article><article class="article-card" id="10-1111-padm-70051" role="article">
+<h3 class="article-card__title">Understanding Accountability in AI Use Within the Public Sector: Insights From State Governments in the United States</h3>
+<p class="article-card__authors">Tzuhao Chen, Mila Gasco‐Hernandez, J. Ramon Gil‐Garcia</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70051" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70051" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70051" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70051" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70051">
+        Recent research has examined various aspects of the government's use of artificial intelligence (AI), including its implications for accountability as well as the policy and management recommendations proposed to address some related concerns. However, two important gaps remain and need further empirical exploration. First, it is unclear why accountability in AI‐based system use is viewed as such a critical issue. Second, it is uncertain to what extent existing policy and management recommendations from academia are reflected in government policies. This study aims to bridge these gaps by empirically investigating how the public sector addresses accountability in the use of AI‐based systems. Based on an analysis of policy documents related to AI‐based systems from 32 U.S. states, our findings show why accountability matters, who is being held accountable to whom, by what standards, and with what consequences from a practical perspective. Furthermore, we identify several research‐practice gaps that merit further exploration.
+    </div>
+</article><article class="article-card" id="10-1111-padm-70054" role="article">
+<h3 class="article-card__title">Who Is Accountable? How Citizens Attribute Success and Failure in Cross‐Sector Collaborations</h3>
+<p class="article-card__authors">Angela L. Samuel, Mary K. Feeney, Jurgen Willems</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70054" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70054" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70054" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70054" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70054">
+        Cross‐sector collaborations bring together organizations with different values, missions, and goals to achieve shared outcomes. However, how accountability is attributed across sectors remains unclear, particularly given the potential influence of sector bias on citizen perceptions. Recent research suggests that clear information can mitigate such bias. Using a pre‐registered 3 × 2 between‐subjects experiment ( N = 1515), we examine whether information cues about sector contributions (leading vs. non‐leading sector) and performance outcome (success vs. failure) shape perceptions of accountability. Additionally, we assess whether the public sector is held more accountable for failures when leading the collaboration, compared to the private or nonprofit sectors. Consistent with blame attribution theory, citizens attribute accountability for both success and failure primarily to the leading sector. We find no evidence that the public sector is disproportionately blamed. These findings suggest that information on sector contribution, rather than inherent sector bias, plays a crucial role in shaping accountability perceptions.
+    </div>
+</article><article class="article-card" id="10-1111-padm-70050" role="article">
+<h3 class="article-card__title">Do Government Interventions Improve Local Public Service Performance? Evidence From a Synthetic Control Approach</h3>
+<p class="article-card__authors">Rhys Andrews</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70050" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70050" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70050" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70050" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70050">
+        Governments in many democratic countries have the mandate to require local authorities to address failures in the management and performance of the public services that they provide. Such policies often involve the takeover of authorities to implement improvements assumed to result in organizational turnaround. However, critics argue that locally‐directed change remains a more reliable means for achieving service transformation. To cast light on these issues, this paper applies a quasi‐experimental synthetic difference‐in‐differences approach to investigate whether partial takeovers of poorly‐performing education services in four Welsh local authorities in 2013 were effective in turning them around. The findings suggest that the establishment of independent recovery boards to oversee local education policy helped some of them to improve educational outcomes, but that local authorities were not always able to sustain improvements after the recovery boards were decommissioned. The study highlights that government interventions to improve local public service performance need to be focused on supporting long‐term organizational change.
+    </div>
+</article><article class="article-card" id="10-1111-padm-70047" role="article">
+<h3 class="article-card__title">Possibilities for Social Equity Budgeting: Critical Insights From Bentham?</h3>
+<p class="article-card__authors">Laurence Ferry, Jim Haslam, Henry Midgley</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70047" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70047" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70047" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70047" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70047">
+        Considering prior ways of seeing and practical mobilisations of Social Equity Budgeting (SEB), we suggest that prior conceptualisation, research and practice can be advanced by reflecting on insights from the philosophical and political literature on equity and justice. Here, we pursue such an approach and specifically contribute by considering how the writings of the English philosopher Jeremy Bentham (1748–1832) provide critical insights informing possibilities for SEB. Our critical historical perspective, focused on the history of ideas in context, helps reinforce dimensions of today's prescriptive envisioning of SEB and indicate new insights and emphases in this regard around democracy and transparency (or publicity, to use Bentham's term). We here analyze progressive dimensions and possibilities in Bentham but also acknowledge and articulate the need to balance this with appreciation of critique of Bentham and more negative possibilities. Both dimensions have policy implications. Our analysis is facilitated by the notable (relatively) recent work of the Bentham Project at University College London (UCL) in seeking to publish the many previously unpublished writings of Bentham held in the UCL archive. Here, Gallhofer and Haslam's (2003) text, informed in part by detailed archival research into Bentham's then unpublished handwritten manuscripts, was a key starting point.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="03055736">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-03055736">
+</div><article class="article-card" id="10-1332-03055736y2026d000000087" role="article">
+<h3 class="article-card__title">How social reporting put poverty on the agenda in Germany: an interpretive process tracing analysis</h3>
+<p class="article-card__authors">Christopher Smith Ochoa</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1332-03055736y2026d000000087" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1332-03055736y2026d000000087" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1332/03055736y2026d000000087" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1332/03055736y2026d000000087" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1332-03055736y2026d000000087">
+        The existence of poverty in Germany was long denied in politics and media. This problem denial resulted from insufficient research and the pervasive belief that Germany’s comprehensive welfare state had eradicated poverty. This article traces how poverty gradually became a legible policy problem through European-level initiatives, coalitions between civil society and poverty researchers, as well as self-advocacy efforts. Focusing on the institutionalization of the federal government’s Report on Poverty and Wealth ( Armuts- und Reichtumsbericht ), and the integration of marginalized voices through shadow reporting and lived experience workshops, the study examines how actors mobilized new knowledge to (re)configure established political perceptions. Based on qualitative interviews with policy makers, poverty researchers and civil society representatives, the study combines interpretive process tracing with policy feedback theory to identify and analyse key episodes and central mechanisms driving this process. Ultimately, the article proposes an interpretivist framework that sensitizes process tracing and policy feedback theory to reveal how definitional interventions gain institutional traction through underlying mechanisms over time. In this way, it makes two distinct contributions to the field: the explanation of a political process of problem recognition and agenda-setting on poverty and what can be learned from it; and a critical discussion of the use of interpretive process tracing in the analysis of this historical process.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="09521895">
+<div class="row">
+<div class="col-10">
+<h2>Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-09521895">
+</div><article class="article-card" id="10-1111-gove-70121" role="article">
+<h3 class="article-card__title">AI Innovations in Public Services: The Case of National Libraries. By InesMergel and CarstenSchmidt (eds.), Cham: Springer, 2026. 222 pp. Open Access (ebook)</h3>
+<p class="article-card__authors">Salman Bin Habib</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/gove.70121" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/gove.70121" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1111-gove-70119" role="article">
+<h3 class="article-card__title">Feeding the Coalition: How Presidents Use State Banks to Buy Legislative Support for Governability</h3>
+<p class="article-card__authors">Rodrigo B. DeMello, Carlos Pereira</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-gove-70119" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-gove-70119" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/gove.70119" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/gove.70119" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-gove-70119">
+        This paper develops and tests a theory of how presidents use government agencies to manage legislative coalitions in multiparty presidential systems. We argue that agency decisions—particularly subsidized credit from state‐owned development banks—function as retail coalition goods that sustain legislative support. Legislators are more likely to back the president when agency resources benefit subnational politicians who are both partisan allies and vital to their reelection networks. Using a regression discontinuity design based on close mayoral elections in Brazil and loan‐level data from the National Development Bank (BNDES), we find that municipalities governed by coalition‐aligned mayors receive significantly more favorable loan terms. Linking these data to roll‐call votes, we show that legislators become more supportive of the president after loans are granted in their electoral strongholds managed by co‐partisan mayors. These findings reveal how distributive agency decisions translate into legislative support, integrating bureaucratic discretion into theories of coalition management.
+    </div>
+</article><article class="article-card" id="10-1111-gove-70114" role="article">
+<h3 class="article-card__title">Bureaucratic Incentives and Government Responsiveness in China</h3>
+<p class="article-card__authors">Haemin Jee</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-gove-70114" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-gove-70114" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/gove.70114" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/gove.70114" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-gove-70114">
+        Citizen complaints have long been considered an important channel of communication between citizens and officials in authoritarian regimes. Existing explanations for responsiveness to citizen complaints in China, however, do not adequately consider the role of local bureaucratic incentives as a driver of responsiveness. This paper seeks to explain local government responsiveness to citizen demands through this lens. Original data of citizen complaints and government responses from a Chinese prefecture and its subordinate counties demonstrate that lower level officials are more likely to respond to citizen complaints when monitored by their superiors. On the other hand, they are less responsive on unmonitored forums. Thus, oversight by higher level officials may be important in increasing actual government responsiveness; citizen complaints alone may not be enough to spur government action. While recent studies emphasize authoritarian accountability arising through quasi‐democratic institutions, this paper suggests incentives of local political actors may condition the effectiveness of these institutions.
+    </div>
+</article><article class="article-card" id="10-1111-gove-70120" role="article">
+<h3 class="article-card__title">The Fiscal Governance of the European Union: Overcoming the Stability Paradigm?. By Tiziano, Zgaga, Cham: Springer Nature Switzerland. 2025. €145.59 (hardback); €117.69 (ebook)</h3>
+<p class="article-card__authors">Igor Guardiancich</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/gove.70120" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/gove.70120" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="17485983">
+<div class="row">
+<div class="col-10">
+<h2>Regulation &amp; Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-17485983">
+</div><article class="article-card" id="10-1111-rego-70141" role="article">
+<h3 class="article-card__title">Trust in Regulation in a Time of Revolution</h3>
+<p class="article-card__authors">Cristie Ford</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70141" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70141" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70141" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70141" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70141">
+        This article examines trust in regulation as a core value and precondition of the modern liberal democratic regulatory state. It develops a concept of justified trust in regulation, grounded in regulatory trustworthiness—honesty, competence, and reliability—rather than in proxies such as partisan loyalty, blind faith, obedience, or resignation. The article situates this conception of regulatory trustworthiness within liberal democratic rule‐of‐law commitments to equal respect, fairness, and accountability, and shows how it underpinned late‐twentieth‐century imaginings of the “regulatory state.” It then contrasts this model with an emerging illiberal vision, exemplified by the current American President's emphasis on personal loyalty, in‐group allegiance, and zero‐sum politics—all of which actively repudiate the conditions for justified trust. Using regulatory theory and examples from contemporary US governance, the article argues that mutual justified trust between regulators and regulated actors is an indispensable “capital good” for effective, flexible, and fair regulatory regimes. It concludes that rebuilding a functional regulatory state after an illiberal turn requires explicitly naming, protecting, and measuring regulatory trustworthiness as a central liberal value, alongside the rule of law, democratic accountability, and a basic commitment to equality.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70138" role="article">
+<h3 class="article-card__title">Democratic Backsliding, Elite Polarization, and Job Seekers' Pursuit of Government Employment</h3>
+<p class="article-card__authors">Susan M. Miller, Sharon Gilad</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70138" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70138" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70138" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70138" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70138">
+        Recent studies examine the conditions under which citizens in democracies are willing to endorse leaders who promote antidemocratic platforms. Less is known about the downstream ramifications of democratic backsliding on American citizens' attitudes and behaviors toward government. Specifically, no study has examined whether democratic backsliding affects citizens' willingness to engage with, collaborate with, and contribute to government. This article advances this research agenda by employing a conjoint experiment to assess the impact of state‐level democratic backsliding and elite polarization on Americans' attraction to state government employment among those who are actively seeking employment. Findings indicate that democratic backsliding, including political attacks on the state bureaucracy, alongside elite polarization, significantly and negatively affect job seekers' attraction to state government work. These findings suggest democratic backsliding and polarization repel potential job seekers, undermining the government's already limited capacity to compete with businesses over talent and its democratic resilience.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70135" role="article">
+<h3 class="article-card__title">Formal Institutions and Corporate Tax Disclosures: A Cross‐Country Analysis</h3>
+<p class="article-card__authors">Reggy Hooghiemstra, Irene Burgers, Jos Offerein</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70135" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70135" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70135" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70135" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70135">
+        This study examines the impact of tax‐related formal institutions on corporate tax disclosures. Our theorizing, based on voluntary disclosure theory and institutional theory, highlights the cost–benefit analysis firms engage in to decide on corporate tax disclosures, where transparency enhances legitimacy but also entails risks like revealing proprietary information and increased political scrutiny. We argue that tax complexity and the maturity of cooperative compliance programs affect this cost–benefit analysis. We use data on tax disclosure practices for the period 2018 to 2022 for listed firms from 21 countries to test our expectations. After controlling for country‐ and firm‐level differences, we find that tax complexity is positively associated with corporate tax disclosures, suggesting firms want to show they are “good citizens”. The maturity of cooperative compliance programs, programs aiming to create mutual benefits for tax authorities and large firms by fostering collaboration and trust, is also positively associated with corporate tax disclosure levels.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70136" role="article">
+<h3 class="article-card__title">Contestation and Compromise in Shaping the European Union's Corporate Sustainability due Diligence Directive: Implications for Global Value Chain Governance</h3>
+<p class="article-card__authors">Louise Curran, Matthew Alford, Khalid Nadvi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70136" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70136" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70136" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70136" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70136">
+        This paper explores the European Union's Corporate Sustainability Due Diligence Directive (CS3D) in the context of ongoing debates on private and public governance of global value chains (GVCs). Conceptually, it draws on neo‐Gramscian perspectives to analyze how contestation and compromise between distinct stakeholders and dynamics of hegemony and counter‐hegemony shaped the CS3D. It draws on secondary lobbying databases and primary interviews with key actors from civil society, trade unions, industry and European Union institutions to explore two key research questions: First, what were the main key issues of contestation between key actors in the understanding of GVCs within the CS3D? Second, how was the role of existing private governance initiatives in CS3D conceptualized by key actors? We illustrate how contestation shaped compromise on the conceptualization of GVCs and the role of private governance in CS3D. Our findings highlight how this new regime could impact the future of due diligence and GVC governance.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70137" role="article">
+<h3 class="article-card__title">New Labor Governance? The German Supply Chain Act and National Governance Mechanisms in Brazil</h3>
+<p class="article-card__authors">Helena Gräf</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70137" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70137" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70137" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70137" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70137">
+        Due diligence laws respond to labor governance challenges and to a lack of public governance addressing human rights violations in Global Value Chains. Despite ongoing contestation, the German Supply Chain Due Diligence Act seeks to hold German‐based firms accountable for human rights risks in their supply chains. This paper explores how an underrepresented actor, organized labor, leverages this legal mechanism for local labor conflicts within transnational production systems, considering political‐economic specificities of the targeted countries. Drawing on a single case study based on expert interviews and document analysis, it examines the mobilization of a complaint filed under the Act in Brazil. The Act can function as a complementary transnational governance lever to national governance, yet its implementation requires a comprehensive National System of Industrial Relations and broader national labor‐related regulatory frameworks. The Act exemplifies a new form of transnational horizontal‐vertical labor governance while outsourcing sustainability governance to organized labor.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70139" role="article">
+<h3 class="article-card__title">Design‐Based Politicization in Non‐Majoritarian Institutions: The Case of the European Commission's Regulatory Scrutiny Board</h3>
+<p class="article-card__authors">Brigitte Pircher</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70139" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70139" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70139" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70139" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70139">
+        Non‐majoritarian institutions are designed to depoliticize policymaking and enhance the credibility of regulatory decisions. Yet many such bodies have become sites of contestation, exposing the limits of technocratic insulation. While research highlights external and behavioral drivers of politicization, the role of institutional design features in shaping this process remains underexplored. This article develops the concept of design‐based politicization to explain how structural features intended to depoliticize decision‐making can instead generate conflict. Drawing on interview and document material, it examines the European Commission's Regulatory Scrutiny Board as a critical case of technocratic oversight in regulatory governance. The analysis identifies three design‐related mechanisms for politicization: delegation ambiguity, mandate contradictions, and weak throughput legitimacy. Politicization may thus stem not only from external pressures or poor performance but from specific institutional design features, thereby revealing the contradictions of depoliticization and clarifying when and why technocratic oversight bodies become contested within and beyond Europe.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70133" role="article">
+<h3 class="article-card__title">The Goldilocks Effect: How the “Just Right” Writing Styles of Global Corporate Responsibility Frameworks Shapes Their Use by Businesses</h3>
+<p class="article-card__authors">Adam William Chalmers, Robyn Klingler‐Vidra</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70133" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70133" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70133" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70133" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70133">
+        The 21st century has witnessed a surge in the number of global corporate responsibility (GCR) frameworks issued by international organizations (IOs). Our study investigates whether and to what extent these frameworks shape businesses' Corporate Social Responsibility (CSR) communications. Integrating insights from computational linguistics, we propose that the textual characteristics of GCR frameworks, mainly how they are written, play a crucial role in determining their use by businesses. Using natural language processing, we analyze CSR communications from 320 firms, encompassing 4025 documents, to determine the extent of their incorporation of text from GCR frameworks. The study identifies a “Goldilocks effect,” whereby businesses' use of GCR framework is greatest when the language is neither overly simple nor excessively complex.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70132" role="article">
+<h3 class="article-card__title">The Instrumental Value of Private Regulation: Evidence From the Case of Corporate Non‐Financial Reporting</h3>
+<p class="article-card__authors">Matthew Maguire</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70132" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70132" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70132" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70132" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70132">
+        Critics of private regulation argue that voluntary standards often fail to meaningfully improve corporate conduct while simultaneously functioning as a stumbling block that prevents the development of more stringent, mandatory regulation by states. This paper complicates this view by illustrating the instrumental value of private regulation—that is, its potential to act as a building block that facilitates the development of new government regulation that serves the public interest. Through a combination of in‐depth interviews and analysis of publicly available documents, I examine the impact of voluntary corporate non‐financial reporting on public policy over the period 1997–2025. The analysis highlights the critical role that both businesses and civil society organizations have played in (1) expanding the regulatory space by developing voluntary standards in policy areas that state officials have been either unwilling or unable to address, (2) changing expectations for good corporate behavior by popularizing these standards, and (3) sharing responsibility for regulation with public policymakers through interlocking voluntary and mandatory rules. The analysis also demonstrates the importance of institutional complementarity as a scope condition of this three‐stage model.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

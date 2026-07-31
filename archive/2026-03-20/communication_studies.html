@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Communication Studies</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · March 20, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-03-20/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="19312458">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19312458" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19312458" style="max-width: 300px;" title="Communication Methods and Measures">
+                            Communication Methods and Measures
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10584609">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10584609" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10584609" style="max-width: 300px;" title="Political Communication">
+                            Political Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00219916">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00219916" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00219916" style="max-width: 300px;" title="Journal of Communication">
+                            Journal of Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10836101">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10836101" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10836101" style="max-width: 300px;" title="Journal of Computer-Mediated Communication">
+                            Journal of Computer-Mediated Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19401612">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19401612" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19401612" style="max-width: 300px;" title="International Journal of Press-Politics">
+                            International Journal of Press-Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="20563051">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-20563051" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-20563051" style="max-width: 300px;" title="Social Media + Society">
+                            Social Media + Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="21670811">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-21670811" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-21670811" style="max-width: 300px;" title="Digital Journalism">
+                            Digital Journalism
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14614448">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14614448" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14614448" style="max-width: 300px;" title="New Media &amp; Society">
+                            New Media &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00936502">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00936502" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00936502" style="max-width: 300px;" title="Communication Research">
+                            Communication Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19442866">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19442866" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19442866" style="max-width: 300px;" title="Policy and Internet">
+                            Policy and Internet
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="20563051">
+<div class="row">
+<div class="col-10">
+<h2>Social Media + Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-20563051">
+</div><article class="article-card" id="10-1177-20563051261430708" role="article">
+<h3 class="article-card__title">Techno Music and Luxury Yachts: The Misogynesque Audiovisual Affective Codes of TikTok Manfluencers</h3>
+<p class="article-card__authors">Kaarel Lott</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261430708" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261430708" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261430708" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261430708" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261430708">
+        The manosphere has rapidly moved from anonymous forum-based communities to mainstream contexts, generating manfluencers with mass followings. While popular and networked misogyny, together with various parts of the manosphere have been well studied, manfluencers as key agents in the mainstreaming of the manosphere have received relatively little academic attention. This article explores how Estonian TikTok manfluencers signal problematic messages through audiovisual elements with such strong connotations to the manosphere that they embody or reference an ideology without any need to mention it explicitly. By using a mixed-methods approach, the study will employ a combination of standardized content analysis and group exercises with audiences (not fans) of this content to conceptualize and explore what in this article is termed “misogynesque” – a coded style of content unique to the genre of manfluencers that is able to circulate in mainstream settings. The study elaborates on how manfluencers engage in affective racketeering by using audiovisual elements to evoke affective responses in their audiences. Results indicate that the misogynesque is constructed through the connotations of sounds and visuals, which have become symbols of hypermasculinity. These include luxury yachts, cars, a trained physique and daily routines. Misogynesque is further employed through a process of affective racketeering, which utilizes the sociosemiotic connotations of audio cues and framing styles. For example, close-up framing facilitates sympathy and intimacy, while the use of techno music projects aggression and intimidation. The results of this study are crucial for understanding the processes behind the mainstreaming of the manosphere and networked misogyny.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261427978" role="article">
+<h3 class="article-card__title">Paradox of Laughter: Aggressiveness, Emotional Response, and Political Accountability in Nigerian Social Media Satire</h3>
+<p class="article-card__authors">Michael E. Nwokedi, Ifesinachi Anyaegbunam Ayogu, John Ayodele Oyewole, Joseph Moyinoluwa Talabi, Samson Adedapo Bello, Felix Olajide Talabi, Ayodeji Boluwatife Aiyesimoju, Ozioma Patience Nwokedi, Gever Verlumun Celestine</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261427978" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261427978" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261427978" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261427978" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261427978">
+        This study investigated how the stylistic characteristics of Nigerian satirical skits on social media influence audience engagement, utilizing the Satire as Humorous Discourse theory. A quantitative content analysis was conducted on 106 skits and 10,600 comments from four prominent comedians (Mr. Macaroni, Zady Soko, MC Tagwaye, and Kelvinblak). A multiple regression analysis was used to examine the predictive power of aggressiveness, critique focus, and creator style on various engagement metrics. Findings reveal that aggressiveness exhibits a dual effect: it is a significant negative predictor of direct interactions but a strong positive predictor of emotional reactions, suggesting a trade-off in audience response. Furthermore, a focus on specific policy was found to be a more effective catalyst for emotional engagement than targeting a politician’s character, highlighting the audience’s preference for substantive critique. The study also confirms that a comedian’s unique style can be a significant factor in a skit’s success, as exemplified by one comedian’s superior performance (Kelvinblak) in generating emotional reactions. The results collectively indicate that the form and content of online satire are crucial filters for audience engagement, with different stylistic choices leading to distinct types of audience response. This research’s primary contribution is the empirical quantification of satire’s civic impact on digital platforms. Our findings introduce the “Paradox of Laughter” into the Satire as Humorous Discourse theory, demonstrating that while aggressive content suppresses conversational engagement, it significantly amplifies emotional response, thus clarifying the conditions under which stylistic choices either encourage or suppress measurable engagement with political accountability.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14614448">
+<div class="row">
+<div class="col-10">
+<h2>New Media &amp; Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14614448">
+</div><article class="article-card" id="10-1177-14614448261424889" role="article">
+<h3 class="article-card__title">The Great Sysop: Elon Musk, X, and the emergence of platform illiberalism</h3>
+<p class="article-card__authors">João C. Magalhães, Clara Iglesias Keller, Robert Gorwa</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261424889" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261424889" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261424889" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261424889" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261424889">
+        This article discusses Twitter’s mutation into X under Elon Musk, analyzing its shift from a mainstream platform to a far-right-aligned space. Through a novel conceptualization of institutional change in Trust and Safety, and an analysis of a dataset of over 1500 events related to X’s organizational transformation, we argue that three processes came to characterize X’s approach to content moderation: the political simplification of Twitter’s governance ecosystem, the centralization of power in Musk’s hands, and the repurposing of existing governance mechanisms to enforce Musk’s personal ideology. Together, these processes instantiated what we call platform illiberalism , an emerging regime whereby illiberal-esque logics reshape speech control internally while supporting illiberal actors externally. As such, X represents a unique fusion of social media and authoritarianism, with close ties to and potential implications for democratic erosion in the United States and beyond.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261428630" role="article">
+<h3 class="article-card__title">Linking structural and functional social support to older adults’ online engagement: A longitudinal mediation perspective</h3>
+<p class="article-card__authors">Yujin Kim, Youllee Kim, Chul-joo Lee, Jeong-Yeob Han, Jennifer Ihm, Yena Ko</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261428630" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261428630" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261428630" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261428630" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261428630">
+        While online engagement has emerged as a critical factor in promoting healthy aging, many older adults still face barriers to engaging online. Social support may help address these challenges, yet limited research has examined how structural and functional dimensions of social support relate to older adults’ breadth of online activities. We examined whether structural social support (network size, density, and strength) is associated with breadth of online activities through functional social support and whether socioeconomic status moderates these associations. In 2021, a baseline survey and 6-month follow-up were conducted with 275 South Korean adults aged 65+ years ( M = 69.35, SD = 4.46). Network size and strength had a positive indirect association with the breadth of online activities via functional social support, whereas density did not. Income positively moderated the association between network size and functional social support. These findings inform digital inclusion strategies for older adults by underscoring how structural and functional social support are linked to broader online engagement.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00936502">
+<div class="row">
+<div class="col-10">
+<h2>Communication Research</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00936502">
+</div><article class="article-card" id="10-1177-00936502261425713" role="article">
+<h3 class="article-card__title">From Buttons to Bots: Exploring the Impact of Enhanced Features in Voting Advice Applications on Desktops and Smartphones</h3>
+<p class="article-card__authors">Christine Liebrecht, Naomi Kamoen, Rieke van Lieshout</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00936502261425713" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00936502261425713" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00936502261425713" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00936502261425713" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00936502261425713">
+        Voters using Voting Advice Applications (VAAs) often struggle with comprehension, leading to satisficing behavior. Conversational Agent VAAs (CAVAAs) aim to improve understanding by allowing users to ask a chatbot comprehension questions. While early research shows positive effects, studies have only compared CAVAAs to basic VAAs, not to enhanced VAAs (VAA+s) with clickable information buttons. Current study compares four versions: a basic VAA, a VAA+, a CAVAA, and a CAVAA+, tested on desktop (Study 1) and smartphone (Study 2). Results show that all three information-rich versions reduce non-directional answers and positively impact political and tool evaluation measures, suggesting that added information, regardless of format, improves response quality and user experience. Interestingly, users request more information in the enhanced web-based VAA+ than via the chatbot. We discuss these and other findings in the paper.
+    </div>
+</article><article class="article-card" id="10-1177-00936502261430969" role="article">
+<h3 class="article-card__title">Differential Effects of Counter-Stereotypical Portrayals of Warmth Across Racial Groups: Behavioral and Experimental Evidence</h3>
+<p class="article-card__authors">Xun Zhu, Youllee Kim, Huai-yu Chen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00936502261430969" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00936502261430969" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00936502261430969" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00936502261430969" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00936502261430969">
+        This research examines how counter-stereotypical portrayals influence prosocial behavior across racial groups within the context of medical crowdfunding. Drawing on the stereotype content model and expectancy violation theory, we investigate how messages that contradict stereotypes of racial groups perceived as having low warmth violate expectations about these groups and influence campaign donations. Across two studies—an analysis of over 17,000 crowdfunding campaigns (Studies 1a-c) and an online experiment ( N = 688; Study 2)—counter-stereotypical portrayals of warmth were associated with higher donations for Asian and White beneficiaries but with lower donations for Black beneficiaries. Expectancy violations mediated these effects, with Black beneficiaries experiencing smaller positive expectancy shifts than other groups. The findings highlight the differential effects of warm-based portrayals across racial groups when used to challenge stereotypes. The study advances theoretical frameworks on stereotypes and expectancy violations while offering practical guidance for more effective and equitable messaging strategies.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="19442866">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Internet</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-19442866">
+</div><article class="article-card" id="10-1002-poi3-70034" role="article">
+<h3 class="article-card__title">Location, Location, Reaction: How Mandatory IP Disclosure Silences Critics and Sparks Backlash</h3>
+<p class="article-card__authors">Sirui Li, Ping Xu, Yue Guo</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-poi3-70034" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-poi3-70034" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/poi3.70034" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/poi3.70034" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-poi3-70034">
+        Previous research has identified two competing outcomes of regulatory disclosure for negative online sentiment: chilling effects, which suppress negative online sentiment, and reactance effects, which intensify it. In this study, we apply these theories to examine the impact of mandatory IP location disclosure on citizens' negative online sentiment expressed on Sina Weibo, a leading Chinese social media platform. We argue that the mandatory IP location disclosure can have opposite effects on negative online sentiment depending on the type of social media context. To test this, we use a quasi‐natural experiment and analyze more than 160,000 comments posted before and after the implementation of the mandatory IP location disclosure policy. Employing a regression discontinuity design (RDD), we find that mandatory IP location disclosure reduces negative sentiment under government accounts while amplifying it under non‐government accounts, particularly in the re‐post section. These findings reveal the heterogeneous effects of regulatory disclosure and shed light on how citizens adapt their online expression strategies in response. More broadly, the study advances our understanding of the interplay among citizens, platforms, and governments in regulated social media environments.
+    </div>
+</article><article class="article-card" id="10-1002-poi3-70035" role="article">
+<h3 class="article-card__title">Digital Platforms Categorization: A Theoretical and Empirical Investigation</h3>
+<p class="article-card__authors">Ilyass Zeamari, Wim Laurier</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-poi3-70035" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-poi3-70035" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/poi3.70035" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/poi3.70035" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-poi3-70035">
+        The rapid expansion of digital platforms has reconfigured industries, markets, and regulatory landscapes, creating complex challenges for managers, researchers, and policymakers seeking to understand, govern, and design platform‐based ecosystems. Although platforms have become essential infrastructures that mediate interactions and drive innovation, existing frameworks such as the EU Digital Markets Act (DMA) and Digital Services Act (DSA) struggle to address their structural diversity and evolving nature. Persistent conceptual ambiguities further constrain both research and policy. This study develops an integrative and empirically grounded taxonomy for digital platforms to enhance conceptual clarity and regulatory adaptability. Following the taxonomy development methodology proposed by Nickerson et al. (2013), it combines a systematic review of 46 academic papers with an empirical analysis of 180 platforms across nine sectors. The resulting taxonomy comprises 15 dimensions that capture the structural, operational, economic, and technological characteristics of platforms. By providing a coherent and replicable framework, it supports comparative research and informs proportionate regulatory design. The study advances a taxonomy‐based approach to platform governance suited to contemporary digital ecosystems.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

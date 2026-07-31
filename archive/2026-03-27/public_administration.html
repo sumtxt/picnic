@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Public Administration</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · March 27, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-03-27/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="15206688">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15206688" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15206688" style="max-width: 300px;" title="Journal of Policy Analysis and Management">
+                            Journal of Policy Analysis and Management
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10531858">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10531858" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10531858" style="max-width: 300px;" title="Journal of Public Administration Research and Theory">
+                            Journal of Public Administration Research and Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333352">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333352" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333352" style="max-width: 300px;" title="Public Administration Review">
+                            Public Administration Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14494035">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14494035" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14494035" style="max-width: 300px;" title="Policy and Society">
+                            Policy and Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13501763">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13501763" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13501763" style="max-width: 300px;" title="Journal of European Public Policy">
+                            Journal of European Public Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0190292X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0190292X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0190292X" style="max-width: 300px;" title="Policy Studies Journal">
+                            Policy Studies Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333298">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333298" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333298" style="max-width: 300px;" title="Public Administration">
+                            Public Administration
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03055736">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03055736" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03055736" style="max-width: 300px;" title="Policy and Politics">
+                            Policy and Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09521895">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09521895" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09521895" style="max-width: 300px;" title="Governance">
+                            Governance
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17485983">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17485983" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17485983" style="max-width: 300px;" title="Regulation &amp; Governance">
+                            Regulation &amp; Governance
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="15206688">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Policy Analysis and Management</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-15206688" data-bs-toggle="collapse" type="button">
+              +3
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-15206688"><article class="article-card" id="10-1002-pam-70100" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">APPAM Announcements</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70100" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70100" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1002-pam-70105" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Notes from the Editor</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70105" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70105" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1002-pam-70104" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Issue Information</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70104" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70104" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1002-pam-70101" role="article">
+<h3 class="article-card__title">Impacts of the Four‐Day School Week on Juvenile Crime</h3>
+<p class="article-card__authors">Rafiuddin Najam, Paul N. Thompson</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70101" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70101" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70101" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70101" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70101">
+        Schools are increasingly adopting four‐day school weeks to address financial, attendance, and teacher retention issues, a trend that the COVID‐19 pandemic has amplified. However, little is known about the nonacademic behavioral responses of juveniles to such transitions. We examine the impacts of adopting a four‐day school week on juvenile crime, focusing particularly on disparities across rurality and locale size, using a difference‐in‐differences estimation approach. We find significant upticks in juvenile crime, primarily in property and violent crimes, within non‐rural and large law enforcement agencies. Conversely, we find evidence suggesting a decrease in juvenile drug‐ and alcohol‐related crimes during school hours on weekdays. In addition to changes in juvenile crime on nonschool weekdays, we observe spillover effects on the remaining weekdays and weekends, primarily in non‐rural and large agency settings. Thus, decision‐makers should be cognizant of the potential increase in juvenile crime that may result from the four‐day school week.
+    </div>
+</article><article class="article-card" id="10-1002-pam-70103" role="article">
+<h3 class="article-card__title">“When I Can Make Them Smile”: Cash Transfers and the Joys of Mothering in the Context of Poverty</h3>
+<p class="article-card__authors">Sarah Halpern‐Meekin, Jill Hoiting, Ruby Mendenhall, Michelle Spiegel</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70103" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70103" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70103" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70103" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70103">
+        Poverty researchers focus on whether interventions relieve material hardships and the stresses of financial insecurity. Although these are essential outcomes, a narrow focus on them can limit the evaluation of policy effectiveness. Further, the predominant focus in the field on individual outcomes may miss how policy matters for family relationships. The present study takes a relational perspective and attends to positive policy outcomes such as joy. It uses the case of unconditional cash transfers to show the joys of mothering and the role of such policy interventions in these experiences. From the Baby's First Years study, we analyze interviews with 80 women, who were living below the poverty line at their child's birth; 65% identified as Black. We highlight how mothers use the cash transfer money to create opportunities for joy and bonding in their mutually rewarding relationships with their children. We show how financial resources serve purposes beyond meeting material needs and as human‐capital investments. Financial resources are also conduits for relationship building and family flourishing, including through joy. To holistically assess policy impacts requires a comprehensive picture that allows scholars and policymakers to understand how government programs can help families not just survive but thrive.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333352">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-00333352" data-bs-toggle="collapse" type="button">
+              +4
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333352"><article class="article-card" id="10-1111-puar-70115" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Issue Information</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70115" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70115" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1111-puar-70112" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">American Society for Public Administration Code of Ethics</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70112" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70112" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1111-puar-v86-2" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title"></h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.v86.2" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.v86.2" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1111-puar-70113" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Celebrating 86 Years</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70113" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70113" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1111-puar-70118" role="article">
+<h3 class="article-card__title">The Day the Chariot Moved: How India Grows at the Grassroots. By SubrotoBagchi, New Delhi: Penguin, 2025. xix+371 pp. ₹699.00 (hardcover). ISBN: 978‐0‐14‐347125‐7</h3>
+<p class="article-card__authors">Aaqib Anjum Aafi</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70118" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70118" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1111-puar-70121" role="article">
+<h3 class="article-card__title">Populism as Governmental Practice Spatial, Operational and Temporal DynamicsBy Toygar SinanBaykan, New York: Routledge, 2024. 296 pp. £32.79 (paperback). ISBN: 978‐1‐03‐227914‐5</h3>
+<p class="article-card__authors">V. Kalyani, Fayaz Ahmad Paul, A. Nithyakarpagam</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70121" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70121" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1111-puar-70120" role="article">
+<h3 class="article-card__title">Innovation and Entrepreneurship in the Public Sector. By Wendy D.Chen and David B.Audretsch, New York: Oxford University Press, 2025. 221 pp. $39.95. ISBN: 978‐0‐19‐767944‐9</h3>
+<p class="article-card__authors">Albert N. Link</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70120" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70120" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14494035">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14494035">
+</div><article class="article-card" id="10-1093-polsoc-puag005" role="article">
+<h3 class="article-card__title">The rise of Big Tech as super policy entrepreneurs</h3>
+<p class="article-card__authors">Shaleen Khanal, Hongzhou Zhang, Araz Taeihagh</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-polsoc-puag005" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-polsoc-puag005" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/polsoc/puag005" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/polsoc/puag005" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-polsoc-puag005">
+        Large technology companies (Big Tech) are becoming ever more powerful in modern societies. While concerns have been raised about their political, economic, and social implications, the policy implications of their rise remain underexplored. We utilize Kingdon’s concept of the policy entrepreneur, alongside the broader policy entrepreneurship literature, to examine Big Tech’s expanding role in the policy process. We conceptualize the super policy entrepreneurs as an ideal type capturing a distinctive configuration of roles across streams, stages, and subsystems, and analyses Big Tech as an empirical approximation of this ideal. We argue that Big Tech displays three distinguishing features: they are prominent entrepreneurs across all streams in the multiple streams framework; they exert influence across all stages of the policy cycle; and they operate across multiple policy subsystems and the broader policy universe, thereby able to influence cross-sectoral and transboundary policies. Together, these features enable Big Tech to emerge as super policy entrepreneurs, commanding unprecedented levels of influence in the policy process. We further highlight that Big Tech as super policy entrepreneurs can reconfigure how policy windows emerge and are exploited, while recognizing that the effects of such entrepreneurship remain contingent and mediated by institutional and political constraints.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13501763">
+<div class="row">
+<div class="col-10">
+<h2>Journal of European Public Policy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13501763">
+</div><article class="article-card" id="10-1080-13501763-2026-2642990" role="article">
+<h3 class="article-card__title">Systemic Pensions: The Epistemic Politics of Liability-Driven Investment Strategies</h3>
+<p class="article-card__authors">Mareike Beck, Scott James</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2642990" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2642990" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0190292X">
+<div class="row">
+<div class="col-10">
+<h2>Policy Studies Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-0190292X" data-bs-toggle="collapse" type="button">
+              +2
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0190292X"><article class="article-card" id="10-1111-psj-70117" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Issue Information</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70117" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70117" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1111-psj-v54-1" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title"></h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.v54.1" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.v54.1" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1111-psj-70116" role="article">
+<h3 class="article-card__title">Editorial Introduction: Institutions, Attention, Narratives, and Policy Outcomes in the Policy Process</h3>
+<p class="article-card__authors">Geoboo Song, Gwen Arnold, Saba N. Siddiki, Melissa K. Merry, Holly L. Peterson, Creed Tumlison, Eric Button, Benjamin Galloway, Camille Gilmore, Ryan Ramaker, Rinjisha Roy</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70116" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70116" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1111-psj-70115" role="article">
+<h3 class="article-card__title">Democratic Values in Citizen Participation: What Citizens Prioritize in Participation</h3>
+<p class="article-card__authors">Take Sipma, Frank Hendriks</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70115" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70115" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70115" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70115" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70115">
+        Citizen participation is often initiated to strengthen democracy. While participatory innovations are typically assessed through normative frameworks emphasizing democratic values, little is known about which of these values are prioritized by citizens. This research note presents findings from an original survey conducted in the Netherlands in 2024, investigating which democratic values citizens prioritize in the context of citizen participation. Drawing on Hendriks' (2022) democratic values typology including inclusiveness, process fairness, efficaciousness, resilience and counterbalance, we operationalize five value statements and asked respondents to rank them. Citizens most frequently prioritize efficacious outcomes and fair procedures, while inclusiveness, resilience, and counterbalance receive less emphasis. This pattern highlights the central role of both effective governance and procedural fairness in citizen participation. Value priorities nevertheless vary across citizens: inclusiveness, understood as the inclusion of diverse perspectives, is more strongly emphasized by left‐wing citizens, whereas counterbalance is primarily prioritized by politically dissatisfied citizens, but remains a lower overall priority. These findings offer an exploratory first step in linking normative frameworks on democratic values with how citizens themselves prioritize those values.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333298">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333298">
+</div><article class="article-card" id="10-1111-padm-70057" role="article">
+<h3 class="article-card__title">Academic Experts in Policymaking: Divergent Patterns but Persistent Profiles Across Parliament, Government, and Media</h3>
+<p class="article-card__authors">Janne Ingelbeen, Tessa Haesevoets, Bram Wauters</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70057" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70057" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70057" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70057" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70057">
+        Despite the growing interest in expert involvement in policymaking, we lack a comprehensive and detailed understanding of how experts engage across both direct and indirect arenas, and which experts are most likely to be consulted. This study offers one of the first comparative analyses of academic expert involvement across multiple arenas, offering a unique view on how scientific expertise functions in policymaking. Focusing on three key arenas in Belgium—parliament, government, and the media—we examine (1) the overall patterns of academic expert involvement, including frequency, repeated participation, cross‐arena overlap, and expert profile characteristics, and (2) how arena‐specific logics shape these patterns. Based on a self‐compiled dataset of 17,843 consulted actors in Belgium, including 3,440 academic experts, this study offers an extensive analysis of the inclusion of scientific expertise in policy‐influencing settings. Drawing on interest group literature to guide our analyses, findings reveal that academic expert involvement varies substantially between arenas, with limited repeated participation and cross‐arena overlap. Across arenas, senior male professors from the social sciences and humanities are consistently overrepresented relative to the academic population. However, distinct arena‐specific logics, such as supply and demand dynamics, gatekeeper mechanisms, and mandate structures, play a critical role in shaping academic involvement in each arena. By mapping when, where, and which academics are involved, this study offers insights into whose voices shape evidence‐informed policymaking and how arena‐specific dynamics structure this.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="09521895">
+<div class="row">
+<div class="col-10">
+<h2>Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-09521895">
+</div><article class="article-card" id="10-1111-gove-70117" role="article">
+<h3 class="article-card__title">Challenging Conventional Wisdom on Administrative Capacity With Open Data: Could ‘Administrative Throughput’ Be the Missing Link Between Administrative Inputs and Outputs?</h3>
+<p class="article-card__authors">Ugo Fratesi, Felipe Livert, Laura Polverari, Cristina Zerbinati</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-gove-70117" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-gove-70117" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/gove.70117" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/gove.70117" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-gove-70117">
+        Despite the popularity of the concept, the measurement and the conceptualization of administrative capacity remain ambiguous, based on proxies, and overlook the local level. Conceptualization is weakened by the conflation of exogenous variables. Quantitative and qualitative perspectives are rarely reconciled, leading to fragmentation and to an overestimation of the effect of administrative capacity on policy performance. We tackle these shortcomings through the elaboration of novel indicators derived from open project data to build new measures of administrative capacity at the municipal level. In so doing, we first demonstrate the feasibility and value of open‐data‐based indicators to generate much‐needed local data on administrative capacity. Further, we show that municipalities with similar resources can exhibit significantly different performance, challenging established assumptions of linearity between inputs and outputs in administrative performance. Finally, we introduce the concept of ‘administrative throughput’ as a possible explanation for the mismatch between administrative inputs and outputs, and provide a first theorization of this concept to allow for a more nuanced understanding of administrative capacity and open new avenues for public administration theory, research and practice.
+    </div>
+</article><article class="article-card" id="10-1111-gove-70122" role="article">
+<h3 class="article-card__title">Responsive to What? Explaining the Information Quality of Public Comments on Bureaucratic Policymaking Using a Text‐as‐Data Approach</h3>
+<p class="article-card__authors">Adriana Bunea, Sergiu Lipcean, Christian Rauh</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-gove-70122" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-gove-70122" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/gove.70122" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/gove.70122" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-gove-70122">
+        What drives the quality of information that public comments on bureaucratic policymaking provide? We address this question along a text‐as‐data approach, develop and validate four measures capturing the multidimensional concept of information quality, and apply it to an original dataset covering more than 20,000 public comments across 1036 policy acts issued by the European Commission between 2016 and 2021. We argue that the interplay of information demand and supply and institutional factors matter in particular for varying information quality of public comments. Our results show only mixed evidence regarding the claim that high‐quality comments are more likely during the policy formulation stage. Counterintuitively, we find that more informationally dense and syntactically complex EC policy documents generate public comments of higher quality. Regarding policy areas, information quality is unrelated to the age of European policy while more technical fields receive public comments of lower quality on average. Based on developing and validating an innovative empirical strategy, we thus provide novel insights into how the design of public commenting procedures and crafting of policy acts shape the information quality provided through public consultations.
+    </div>
+</article><article class="article-card" id="10-1111-gove-70126" role="article">
+<h3 class="article-card__title">A Certain Set of Skills? Pre‐Appointment Careers of Danish Ministerial Advisors</h3>
+<p class="article-card__authors">Harald Brønd</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-gove-70126" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-gove-70126" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/gove.70126" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/gove.70126" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-gove-70126">
+        Ministerial advisors are politically appointed civil servants who serve at the intersection of politics and public administration. Drawing on the Public Service Bargain (PSB) framework, this article argues that the competencies associated with ministerial advisors reflect a dynamic bargain shaped by broader transformations in the political environment. Using a novel dataset covering the pre‐appointment careers of 178 Danish advisors (2001–2024) and applying sequence analysis, the study identifies seven distinct career pathways and traces how their prevalence changes over time. Across all cohorts, ministers consistently recruit advisors with partisan experience, reflecting persistent demand for political‐tactical competencies. Over time, journalist backgrounds decline while policy‐professional backgrounds, drawn from interest groups, public affairs firms, unions, and private companies, increase. These findings suggest a shift in the competency bargain from media handling toward strategic political coordination within an increasingly professionalized landscape of political influence.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="17485983">
+<div class="row">
+<div class="col-10">
+<h2>Regulation &amp; Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-17485983">
+</div><article class="article-card" id="10-1111-rego-70147" role="article">
+<h3 class="article-card__title">Supervising Your In‐Group? How Social Identification Shapes Financial Sector Regulatory Leniency</h3>
+<p class="article-card__authors">Dennis Veltrop, Floor Rink, Jakob de Haan</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70147" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70147" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70147" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70147" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70147">
+        Both practitioners and governance scholars recognize the importance of external oversight, especially in regulated industries like the financial sector. However, the failure of financial sector regulators and enforcement officials (supervisors) to act is often cited as a primary cause of ineffective governance. Drawing on social identity theory, we hypothesize that social identities influence how supervisors perform their supervisory duties. We tested our predictions using a unique experimental design and survey of supervisors working at two Dutch financial sector supervisory agencies. Consistent with our main argument, we find that supervisors' social identification with the financial sector leads to lenient supervision. Additionally, we demonstrate that prior experience in the financial sector indirectly fosters leniency through sector identification and that this pathway is weaker for supervisors with a strong professional identity. These results clarify how and when sector identification impacts financial sector supervision.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70149" role="article">
+<h3 class="article-card__title">The Many Shades of Clouds: How Law Fails (Us) in Seeing Power in the Digital Economy</h3>
+<p class="article-card__authors">Petros Terzis, Anushka Mittal, Joris van Hoboken</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70149" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70149" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70149" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70149" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70149">
+        Cloud infrastructures form the backbone of our contemporary (digital) production environment. Despite their centrality, legal and scholarly practice have not been treating cloud infrastructures as single objects of/for study. In other words, we have laws for regulating services and products that flow from (within) cloud infrastructures, but we have yet to grapple with their operators' ability to: (1) render things administratively calculable and legible; and (2) to dictate the global tempo of innovation by orchestrating technological trajectories. This is a problem and a consequence of a fragmented legal epistemology that has been constantly searching for gaps to fill in what has been perceived as a linear continuum of legal and technological development. Alas, this paper argues that we (legal scholars and practitioners) have been looking too closely to these developments to be able to see them. In this direction, the paper explains what we have missed in the (non‐)regulation of cloud infrastructures, why, and what we can do to start seeing, learning, and talking about them in a way that better reflects their nature and power in modern economies and societies. And, at a time when various jurisdictions around the world are fragmenting the world of cloud infrastructures into lands of “sovereignty” ordered and monitored by multinational corporations, we find this legal and policy endeavor to be as necessary as ever.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70146" role="article">
+<h3 class="article-card__title">Strengthening Trust by Design: A QCA Study of Design Choices in Regulatory Regimes</h3>
+<p class="article-card__authors">Koen Verhoest, Martino Maggetti, Bastiaan Redert, Dominika Latusek, Jacint Jordana</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70146" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70146" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70146" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70146" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70146">
+        How can the design of regulatory regimes foster trust in those regimes? In food safety, finance, and data protection regulation, regulatory frameworks have been reformed to restore trust after regulatory failures. Using fuzzy‐set qualitative comparative analysis, this paper seeks to identify how key design choices—centralization of competencies in one versus multiple regulatory agencies, agency independence, mandated interactions, and rules perceived as appropriate—combine in fostering both trust in the regime itself and between its actors. Rule appropriateness is found to be a necessary condition for trust, while the combination of centralized regulatory competencies with dense information sharing is particularly effective in building regime trust. Alternatively, trust can emerge in regimes with multiple independent agencies under specific configurations. By integrating diverse data sources and adopting a cross‐sectoral, cross‐national approach, this paper provides a fine‐grained understanding of how design elements shape trust, offering lessons to scholars and policymakers on crafting resilient and trusted regulatory frameworks.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70148" role="article">
+<h3 class="article-card__title">The Fragility of Trust: Interpersonal Encounters, Institutional Distrust, and Conditional Spillovers in the Area of Social Service Delivery</h3>
+<p class="article-card__authors">Christian Lahusen, Jelena Ceriman, Anastasia Kafe</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70148" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70148" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70148" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70148" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70148">
+        This paper examines social assistance for vulnerable families at the frontline level of service delivery, exploring how citizens' trust and distrust are shaped within this administrative context. It addresses three questions: Do citizens distinguish between trust and distrust in frontline workers and public institutions when reporting on their encounters with welfare services? Which key attributes of trustworthiness emerge from their experiences at each of these levels? And most importantly, to what extent does interpersonal trust‐building repair institutional trustworthiness and spill over into institutional trust? The analysis is based on interviews with vulnerable citizens accessing the social assistance system in seven European countries (Czech Republic, Denmark, Germany, Greece, Italy, Poland, and Serbia). The findings show that trust is situational and bounded, and that trust spillovers are conditional: while openness in face‐to‐face interactions can temporarily mitigate bureaucratic opacity, these effects seldom translate into broader perceptions of institutional trustworthiness, thus mirroring the relevance of various mediating factors. Conceptually, the paper frames trust and distrust in welfare governance as multi‐level phenomena shaped by the administrative context and constrained by the asymmetries that characterize social service delivery in situations of vulnerability.
+    </div>
+</article><article class="article-card" id="10-1111-rego-70150" role="article">
+<h3 class="article-card__title">Does the European Union ‘Rule the World’? Competition Law Diffusion to Singapore and Hong Kong</h3>
+<p class="article-card__authors">Yannis Karagiannis</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70150" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70150" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70150" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70150" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70150">
+        This article examines why Singapore and Hong Kong adopted competition law by testing four diffusion mechanisms: coercion, competition, learning, and the Brussels Effect. Using structured process tracing and extensive archival evidence, it evaluates the distinct observable implications of each mechanism. Singapore—often cited as a most‐likely case for the Brussels Effect—adopted competition law only when the United States made it a requirement of the USSFTA. Hong Kong, despite its greater exposure to EU competition enforcement, resisted reform for nearly 15 years and shifted only when Beijing signaled support for a general competition law. In both jurisdictions, firms did not internalize EU standards or lobby for EU‐style rules, and neither regime adopted EU‐type merger control. Competitive interdependence receives no empirical support, while learning operates mainly as an adaptive tool once external pressure is present. The findings refine the scope conditions of market‐driven regulatory diffusion and highlight the political foundations of ‘economic constitutions.’
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

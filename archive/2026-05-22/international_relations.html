@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: International Relations</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · May 22, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-05-22/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00208183">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00208183" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00208183" style="max-width: 300px;" title="International Organization">
+                            International Organization
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="01622889">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-01622889" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-01622889" style="max-width: 300px;" title="International Security">
+                            International Security
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="15597431">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15597431" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15597431" style="max-width: 300px;" title="Review of International Organizations">
+                            Review of International Organizations
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00438871">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00438871" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00438871" style="max-width: 300px;" title="World Politics">
+                            World Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00223433">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00223433" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00223433" style="max-width: 300px;" title="Journal of Peace Research">
+                            Journal of Peace Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00157120">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00157120" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00157120" style="max-width: 300px;" title="Foreign Affairs">
+                            Foreign Affairs
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09692290">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09692290" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09692290" style="max-width: 300px;" title="Review of International Political Economy">
+                            Review of International Political Economy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00220027">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00220027" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00220027" style="max-width: 300px;" title="Journal of Conflict Resolution">
+                            Journal of Conflict Resolution
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="15219488">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15219488" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15219488" style="max-width: 300px;" title="International Studies Review">
+                            International Studies Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00323217">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00323217" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00323217" style="max-width: 300px;" title="Political Studies">
+                            Political Studies
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13563467">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13563467" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13563467" style="max-width: 300px;" title="New Political Economy">
+                            New Political Economy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13523260">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13523260" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13523260" style="max-width: 300px;" title="Contemporary Security Policy">
+                            Contemporary Security Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17529719">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17529719" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17529719" style="max-width: 300px;" title="International Theory">
+                            International Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00208833">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00208833" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00208833" style="max-width: 300px;" title="International Studies Quarterly">
+                            International Studies Quarterly
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17495679">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17495679" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17495679" style="max-width: 300px;" title="International Political Sociology">
+                            International Political Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13691481">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13691481" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13691481" style="max-width: 300px;" title="British Journal of Politics &amp; International Relations">
+                            British Journal of Politics &amp; International Relations
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="15597431">
+<div class="row">
+<div class="col-10">
+<h2>Review of International Organizations</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-15597431">
+</div><article class="article-card" id="10-1007-s11558-026-09620-y" role="article">
+<h3 class="article-card__title">Using LLMs for measurement in diplomatic speeches: The evolving politics of UN sanctions in Security Council debates</h3>
+<p class="article-card__authors">Anton Peez, Johannes Scherzinger</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1007-s11558-026-09620-y" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1007-s11558-026-09620-y" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1007/s11558-026-09620-y" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1007/s11558-026-09620-y" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1007-s11558-026-09620-y">
+        UN sanctions are an important tool for maintaining international peace and have shaped the global security order since the end of the Cold War. However, given contemporary UN Security Council (UNSC) dynamics, new sanctions regimes have become rare, and policymakers are pessimistic about the future of the tool. We evaluate this pessimism by offering a long-term perspective, analyzing all UNSC members’ positions on UN-mandated and unilateral sanctions from 1992 to 2023, introducing the UNSC Sanctions Stance Dataset. We examine 5,984 sanctions-related Council speeches using a large language model for measurement, and validate this procedure with hand coding, descriptive analyses, and expert interviews. Our description of the construction process and guidance on using LLMs for measurement serve as a template for creating LLM-coded and manually and substantively verified datasets from IO speech data. The analysis focuses on Russia, China, and the Global South, and traces their positions in detail. We find that Russia turned from limited support of UN sanctions in the 2000s to total opposition in the mid-2010s, while China has persistently been opposed, offering at most begrudging tolerance. The P3 (France, UK, US) have consistently been supportive. Meanwhile, states from the Global South hold a distinct intermediate position, opposing unilateral sanctions while cautiously but consistently supporting UN-mandated sanctions. This finding cuts against an assumption of Global South opposition to sanctions in general.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00223433">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Peace Research</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00223433">
+</div><article class="article-card" id="10-1093-jopres-xjag035" role="article">
+<h3 class="article-card__title">Introducing the War-Related Protests data</h3>
+<p class="article-card__authors">Kirssa Cline Ryckman, Chaelin Kwon</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopres-xjag035" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopres-xjag035" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopres/xjag035" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopres/xjag035" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopres-xjag035">
+        This article introduces the War-Related Protests (WRP) data, a cross-national dataset covering WRP events in Africa from 1990 to 2017. To better understand civilian agency during civil war, the WRP provides insight into the specific demands of demonstrators, the targets of those demands, and the actors who repress them. This provides insight into protester demands and civilian sentiment during times of war, allowing for a more nuanced assessment of both the causes and effects of civilian actions. This article presents the rationale for the project, the typology of wartime demands and collection procedures, a descriptive exploration of the data, and an illustrative example of how the data can be used, focusing on the size of protest events. Our data suggest that pro-peace goals are present in only about 14% of events, but that they are larger on average than other events and thus may have an outsized impact on a conflict’s trajectory.
+    </div>
+</article><article class="article-card" id="10-1093-jopres-xjag030" role="article">
+<h3 class="article-card__title">Defense demands in NATO and Europe: further spatiotemporal analysis</h3>
+<p class="article-card__authors">Justin George, Todd Sandler</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopres-xjag030" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopres-xjag030" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopres/xjag030" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopres/xjag030" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopres-xjag030">
+        The overriding research questions addressed here involve to what extent alternative samples of North Atlantic Treaty Organization (NATO) and European allies free ride on other allies' military expenditure (ME) during the post–Cold War era. In so doing, we indicate how spatial and spatiotemporal considerations affect this free riding. For 1992–2023, the article estimates NATO defense demands under four spatial-weighting ME spillin schemes and finds that free riding was prevalent. Those findings are then contrasted with the case in which both spatial and temporal lags on ME are allowed, leading to much reduced short-run, spatial-based free riding, followed by increasing free riding over time as defense-spending bureaucratic inertia dissipated. With spatial and spatiotemporal spillins, the first Trump administration's term was associated with reduced NATO free riding. We then focus on two alternative European samples to address the counterfactual of how greater European defense self-reliance is apt to impact European free riding in the absence of a US and Canadian defense commitment. When the NATO sample excludes the United States and Canada, NATO European allies' free riding was much reduced, disappearing for three spatial-weighting schemes. Notably, free riding disappeared altogether for a pan-European sample of NATO and non-NATO countries. Those results suggest that, if the European countries succeed in raising their defense spending during Trump's second term, free riding within Europe will not likely undo their efforts. Finally, for the post-Crimean period (2014–2023), we find that NATO defense spending did not display short- or long-run free riding.
+    </div>
+</article><article class="article-card" id="10-1093-jopres-xjag041" role="article">
+<h3 class="article-card__title">Misreading the public? Rethinking surveys in interstate disputes</h3>
+<p class="article-card__authors">Yasuki Kudo, Sohei Shigemura, Makito Takei</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopres-xjag041" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopres-xjag041" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopres/xjag041" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopres/xjag041" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopres-xjag041">
+        Do surveys provide reliable information on public opinion in interstate disputes? Politicians and critics frequently rely on surveys to understand public policy preferences in disputes. We provide empirical evidence that casts doubt on the reliability of such surveys: respondents may falsify their preferences when they favor contentious approaches, such as aggressive military activities and concessions to adversaries. Concessions are often perceived as anti-societal, as they sacrifice national interests for the benefit of an adversary, while aggressive military options conflict with widely shared anti-war norms prevalent across many societies. These approaches are therefore deemed socially undesirable, and the members of society feel pressure to conform their expressed preferences accordingly, even in anonymous online settings. A list experiment evaluating Japanese voters’ opinions on the territorial dispute with China shows that the use of a direct question format underestimates support for territorial concessions and military base construction on the disputed territories by 16–20 percentage points compared to the list format. These findings carry important implications for scholars, policymakers, and practitioners. Democratic elites who rely on survey data to gauge public preferences may systematically misread their constituents, potentially missing both opportunities for peaceful resolution and risks of unexpected public support for escalation.
+    </div>
+</article><article class="article-card" id="10-1093-jopres-xjag003" role="article">
+<h3 class="article-card__title">From reformists to revolutionaries: how past experience with dissent shapes demands for democratization in resistance campaigns</h3>
+<p class="article-card__authors">Christoph Dworschak, Charles Butcher, Jessica Maves Braithwaite</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopres-xjag003" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopres-xjag003" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopres/xjag003" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopres/xjag003" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopres-xjag003">
+        Civil society organizations are drivers of revolutionary regime change. They are pivotal for maximalist anti-government campaigns by coordinating communication, facilitating mobilization, and fostering democratization. However, many such organizations long predate maximalist campaigns, having been formed around non-maximalist, “reformist” policy goals. Why do some reformist organizations escalate their demands to maximalist goals, while others do not? We argue that organizations take cues about the risks and opportunities of demand escalation from their “history of contention,” and escalate when their prior experience with anti-regime activity is diverse and sizable in its interconnectedness. We test our expectations with new data on 1,281 organizations participating in reformist dissent in Africa and Central America from 1990 to 2017. Our results suggest that histories of and organizations’ experiences with dissent are associated with shifts from reformist to revolutionary demands. Specifically, demand escalation is more likely when organizations can draw on a larger network of other organizations that they have cooperated with previously (network size) and when that network includes a more diverse set of organization types (network diversity). These associations are robust across a number of model specifications. Our findings have important implications for theories of regime change, conflict escalation, and the micro-dynamics of contentious politics.
+    </div>
+</article><article class="article-card" id="10-1093-jopres-xjag037" role="article">
+<h3 class="article-card__title">Dissent at the edge: ambiguous contention and collective performances on university campuses during the COVID-19 lockdowns</h3>
+<p class="article-card__authors">Yuhan Hu, Ruijie Liu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopres-xjag037" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopres-xjag037" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopres/xjag037" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopres/xjag037" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopres-xjag037">
+        How do citizens express dissent in highly repressive authoritarian regimes? Building on scholarship on covert contention, this article theorizes ambiguous contention, in which participants express dissent in dramatic and unconventional ways while disguising their actions as apolitical and nondefiant. Similar to other forms of covert contention, ambiguous contention relies on indirect expressions of dissent but differs by combining high visibility with strategic ambiguity. Drawing on social media posts and in-depth interviews, the study analyzes collective eccentric performances, such as petting cardboard dogs and group crawling, by Chinese university students during COVID-19 lockdowns. These performances, as forms of ambiguous contention, allow dissenters to express their grievances in a highly visible manner while enabling participants to frame their actions as playful and nonpolitical, thereby avoiding harsh repression. This tactical innovation helps participants identify like-minded individuals and foster trust-based ties that can gradually facilitate coordination toward more overt forms of contention. In theorizing this repertoire, the study underscores how microlevel tactical innovations sustain contestation in constrained political environments. The findings contribute to a growing body of literature on creative contention and the adaptation of dissent in autocratic contexts.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="09692290">
+<div class="row">
+<div class="col-10">
+<h2>Review of International Political Economy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-09692290">
+</div><article class="article-card" id="10-1080-09692290-2026-2667945" role="article">
+<h3 class="article-card__title">Sanction-busting shoppers: consumer ‘buycotts’ as defensive economic statecraft</h3>
+<p class="article-card__authors">Victor A. Ferguson, Christina Lai</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/09692290.2026.2667945" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/09692290.2026.2667945" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00220027">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Conflict Resolution</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00220027">
+</div><article class="article-card" id="10-1177-00220027261451771" role="article">
+<h3 class="article-card__title">From Training to Influence: The Role of U.S. Military Training in Turkish Officers’ Decisions</h3>
+<p class="article-card__authors">Ilker Kalin, Carla Martínez Machain</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00220027261451771" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00220027261451771" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00220027261451771" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00220027261451771" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00220027261451771">
+        How does U.S. military education build influence among foreign officers? This study proposes two theoretical pathways from training to influence. The extrinsic pathway is based on material incentives for cooperation and acceptance of the U.S.-led hierarchy. In contrast, the intrinsic pathway relies on interpersonal networks based on trust and reciprocity expectations. The study argues for the latter: Cooperation by U.S.-trained officers occurs not out of subordination, but because they view themselves as part of a network with the U.S. The empirical analysis focuses on the case of Turkey: a NATO ally that nevertheless has a history of anti-American sentiment among the military ranks. Through both interviews and a survey experiment with Turkish officers, we provide individual-level evidence showing that U.S.-trained officers are more likely to both grant and make informal requests when dealing with U.S. counterparts, and that this effect is larger for those officers who participate in longer programs.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13563467">
+<div class="row">
+<div class="col-10">
+<h2>New Political Economy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13563467">
+</div><article class="article-card" id="10-1080-13563467-2026-2672500" role="article">
+<h3 class="article-card__title">The depoliticisation of money: specifying the loss of political designability</h3>
+<p class="article-card__authors">Anton Harms, Florian Schmidt</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2672500" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2672500" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2672497" role="article">
+<h3 class="article-card__title">Populist strategy revisited: toward a coalitional framework of populist mobilisation</h3>
+<p class="article-card__authors">Assaf S. Bondy, Asaf Yakir</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2672497" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2672497" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2673550" role="article">
+<h3 class="article-card__title">Knowledge regulation and US centrality in the semiconductor production network</h3>
+<p class="article-card__authors">Yan Xu</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2673550" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2673550" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2672498" role="article">
+<h3 class="article-card__title">The only game in town: central bank politicisation management and macroeconomic policy discourse at the zero-lower-bound</h3>
+<p class="article-card__authors">José Tomás Labarca, Inga Rademacher</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2672498" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2672498" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2669574" role="article">
+<h3 class="article-card__title">Infrastructure failure in times of development as derisking: Is failing early the best we can hope for?</h3>
+<p class="article-card__authors">Lela Rekhviashvili, Evelina Gambino</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2669574" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2669574" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2672494" role="article">
+<h3 class="article-card__title">Capitalists’ power and the collaborative struggle against the anti-democratic reform in Israel</h3>
+<p class="article-card__authors">Or Dar</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2672494" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2672494" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13523260">
+<div class="row">
+<div class="col-10">
+<h2>Contemporary Security Policy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13523260">
+</div><article class="article-card" id="10-1080-13523260-2026-2675025" role="article">
+<h3 class="article-card__title">The fragile coherence of Russia’s international order</h3>
+<p class="article-card__authors">Olena Snigyr</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13523260.2026.2675025" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13523260.2026.2675025" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13523260-2026-2662220" role="article">
+<h3 class="article-card__title">Re-ordering accountability: The significance of joint public attribution in a fragmented cyberspace</h3>
+<p class="article-card__authors">Gil Baram</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13523260.2026.2662220" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13523260.2026.2662220" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="17529719">
+<div class="row">
+<div class="col-10">
+<h2>International Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-17529719">
+</div><article class="article-card" id="10-1017-s1752971926100219" role="article">
+<h3 class="article-card__title">Hype cycles or norm cascades? Making sense of the Glasgow Financial Alliance for Net Zero</h3>
+<p class="article-card__authors">Christian Elliott</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-s1752971926100219" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-s1752971926100219" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/s1752971926100219" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/s1752971926100219" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-s1752971926100219">
+        In 2021, the Glasgow Financial Alliance for Net Zero (GFANZ), an umbrella organization mobilizing a network of sectoral initiatives for climate action, was launched to ‘transform the global financial system.’ In part due to its efforts, hundreds of global financial companies joined and collectively committed to net-zero emissions reduction targets. But the momentum was short-lived: in the ensuing years, internal and external challenges led to defections, the reconfiguration of GFANZ, and the collapse of affiliate alliances. Such a pattern rests uneasily with theories of change like the norm cascade, which asserts that exponential uptake is a prelude to resilience, not fragility. In this paper, I argue that cases such as GFANZ may be better described as a ‘hype cycle’ rather than a norm cascade, where ambiguity and uncertainty limit normative and calculative reasoning; actors refer to each other’s behavior as an indication of what to do; and time limits incentivize participation to avoid being left behind. I demonstrate the validity of this account through an analysis of three GFANZ-affiliated alliances (the Net-Zero Insurance Alliance, the Net-Zero Banking Alliance, and the Net Zero Asset Managers Initiative), and their episodes of membership growth and decline.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13691481">
+<div class="row">
+<div class="col-10">
+<h2>British Journal of Politics &amp; International Relations</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13691481">
+</div><article class="article-card" id="10-1177-13691481261447631" role="article">
+<h3 class="article-card__title">Grievance forums in autocracies: Surrogates for protest or instruments of control?</h3>
+<p class="article-card__authors">Aidar Zinnatullin</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13691481261447631" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13691481261447631" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13691481261447631" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13691481261447631" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13691481261447631">
+        This article examines Russia’s Regional Governance Centres, state-run regional offices that process citizen complaints via social media, and the conditions under which citizens use these channels to articulate grievances. From an affordance perspective, I argue that citizens view opposition-led protest networks and state-run grievance portals as alternative channels for expressing grievances, choosing between them based on perceived efficacy and risk. Building on theories of collective action and selective incentives, I test whether the full-scale invasion of Ukraine and the resulting rise in the costs of public protest shifted available affordances towards state-managed digital complaint systems offering individualised, lower-risk solutions. Using original dataset of VKontakte messages, I show that regional protest intensity positively correlates with citizen reliance on this digital grievance system. Using an interactive fixed-effects design, I find no statistically significant differences in complaint posting after the 2022 invasion between regions with stronger and weaker pre-war protest records. Overall, the results show that digital grievance platforms and street protest form complementary repertoires of claim-making under ordinary conditions, although the evidence is strongest in cross-regional comparisons rather than in more demanding fixed-effects specifications. The analysis does not provide evidence that digital grievance channels substitute for street protest under harsher repression.
+    </div>
+</article><article class="article-card" id="10-1177-13691481261445754" role="article">
+<h3 class="article-card__title">British strategic defence reviews: The jellyfish model of policymaking</h3>
+<p class="article-card__authors">Jamie Gaskarth, Maeve Ryan, William Reynolds</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13691481261445754" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13691481261445754" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13691481261445754" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13691481261445754" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13691481261445754">
+        Britain’s strategic defence and security reviews are regularly characterised as failures. This article presents original empirical data from UK policymakers and officials about how they account for this perception. Through extensive interviews and focus groups with key participants at every level of the review process, the authors identify seven key pathologies in British defence and security policymaking. Weak central direction, a disconnect between the centre and individual departments, a disconnect between departments across Whitehall, the clustering of decision-making, a lack of alignment between budget and ambition, a lack of attention to implementation, and widespread deception, are all perceived to combine to inhibit effective policymaking. In light of these insights, the authors posit a new analogical framework, the ‘jellyfish model’, in which fluid clusters of decision-makers converge to make important choices separate from supposedly core sites of strategic direction. This captures the policy process more accurately than existing rational, linear models.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: International Relations</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · May 15, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-05-15/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00208183">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00208183" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00208183" style="max-width: 300px;" title="International Organization">
+                            International Organization
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="01622889">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-01622889" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-01622889" style="max-width: 300px;" title="International Security">
+                            International Security
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="15597431">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15597431" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15597431" style="max-width: 300px;" title="Review of International Organizations">
+                            Review of International Organizations
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00438871">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00438871" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00438871" style="max-width: 300px;" title="World Politics">
+                            World Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00223433">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00223433" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00223433" style="max-width: 300px;" title="Journal of Peace Research">
+                            Journal of Peace Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00157120">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00157120" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00157120" style="max-width: 300px;" title="Foreign Affairs">
+                            Foreign Affairs
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09692290">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09692290" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09692290" style="max-width: 300px;" title="Review of International Political Economy">
+                            Review of International Political Economy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00220027">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00220027" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00220027" style="max-width: 300px;" title="Journal of Conflict Resolution">
+                            Journal of Conflict Resolution
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="15219488">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15219488" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15219488" style="max-width: 300px;" title="International Studies Review">
+                            International Studies Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00323217">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00323217" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00323217" style="max-width: 300px;" title="Political Studies">
+                            Political Studies
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13563467">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13563467" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13563467" style="max-width: 300px;" title="New Political Economy">
+                            New Political Economy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13523260">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13523260" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13523260" style="max-width: 300px;" title="Contemporary Security Policy">
+                            Contemporary Security Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17529719">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17529719" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17529719" style="max-width: 300px;" title="International Theory">
+                            International Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00208833">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00208833" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00208833" style="max-width: 300px;" title="International Studies Quarterly">
+                            International Studies Quarterly
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17495679">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17495679" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17495679" style="max-width: 300px;" title="International Political Sociology">
+                            International Political Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13691481">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13691481" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13691481" style="max-width: 300px;" title="British Journal of Politics &amp; International Relations">
+                            British Journal of Politics &amp; International Relations
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="00208183">
+<div class="row">
+<div class="col-10">
+<h2>International Organization</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00208183">
+</div><article class="article-card" id="10-1017-s0020818326101374" role="article">
+<h3 class="article-card__title">Social Movements and International Order Formation</h3>
+<p class="article-card__authors">Alejandro Milcíades Peña, Thomas Davies</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-s0020818326101374" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-s0020818326101374" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/s0020818326101374" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/s0020818326101374" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-s0020818326101374">
+        Through comparative analysis of two historical cases of transition from hierarchical to competitive international orders—from the Han dynasty to the Period of Disunion in third-century China, and from the Abbasid Caliphate to the Islamic Commonwealth in the tenth century—we consider how social movements have long been significant facilitators of international change. With reference to the contributions to these transitions of early Daoist and Sunni movements respectively, we offer a comparative framework for understanding how social movements may undermine established hierarchies and induce legitimacy contests that contribute toward the emergence of new international orders. Moreover, by contrasting these cases against the role of the Reformation movement in the development of European international order, the article both decenters the European experience and illuminates how social movements can be central to crafting fundamental, yet varying, relationships between political authority and society across highly diverse cultural and temporal contexts.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00223433">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Peace Research</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00223433">
+</div><article class="article-card" id="10-1093-jopres-xjag034" role="article">
+<h3 class="article-card__title">The geography of justice: neighborhood dynamics of war crimes trials</h3>
+<p class="article-card__authors">Sam R Bell, Risa Kitagawa</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopres-xjag034" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopres-xjag034" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopres/xjag034" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopres/xjag034" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopres-xjag034">
+        Do attempts at accountability for war crimes in one state affect government behavior in another? A growing scholarship addresses the deterrence potential of human rights prosecutions. We examine whether deterrence extends beyond state borders, and why. We develop a theory of “neighborhood trials”—criminal proceedings against defendants in geographically and socially proximate states—and leaders’ wartime behavior. We find that whereas a trial conducted in a neighboring state’s domestic judiciary predicts reduced civilian killings in an ongoing conflict, an international neighborhood trial increases, rather than deters, violence. We adjudicate causal mechanisms with new fine-grained data on the International Criminal Court’s activities. Early-stage interventions in the neighborhood may reinforce the image of a toothless court, emboldening observing leaders. Our findings suggest that although trials may deter local violence, their cross-border effects are contingent. The study informs broader research on the diffusion of state practices, transitional justice, and backlash against international institutions.
+    </div>
+</article><article class="article-card" id="10-1093-jopres-xjag023" role="article">
+<h3 class="article-card__title">How does recalling violent conflict affect prosocial behaviour? Evidence from a lab-in-the-field experiment in Uganda</h3>
+<p class="article-card__authors">Anouk S Rigterink, Mareike Schomerus</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopres-xjag023" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopres-xjag023" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopres/xjag023" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopres/xjag023" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopres-xjag023">
+        This study investigates how recalling a time of violent conflict affects prosocial behaviour. We study this using a lab-in-the-field experiment (N = 700) in northern Uganda. The experiment advances previous literature by experimentally varying whether participants recall an experience from a time of conflict (the treatment group) or a non-conflict experience (the control group). We find mixed effects across prosocial behaviours, measured through incentivized behavioural games: the treatment increases altruism in a dictator game and demand for fairness in an ultimatum game (by 0.17 and 0.36 standard deviations), but does not affect cooperation in a fragile public goods game. A prominent theoretical explanation states that conflict increases prosociality by strengthening in-group prosocial norms. However, this cannot explain mixed effects across prosocial behaviours, or how conflict can promote prosociality in contexts where conflict has plausibly undermined such norms, including northern Uganda. We offer a new, inductively derived, theoretical explanation: individual prosocial behaviour can serve as a signal that increases in strength as in-group norms are less prosocial. Evidence from qualitative interviews and participants’ classification of their recalled experience—although not conclusive—is consistent with individual prosocial behaviour as a signalling device.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="09692290">
+<div class="row">
+<div class="col-10">
+<h2>Review of International Political Economy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-09692290">
+</div><article class="article-card" id="10-1080-09692290-2026-2664516" role="article">
+<h3 class="article-card__title">Financial markets and mass political attitudes: evidence from the 2022 Brazilian election</h3>
+<p class="article-card__authors">Sarah M. Brooks, Raphael Cunha, Layna Mosley</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/09692290.2026.2664516" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/09692290.2026.2664516" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-09692290-2026-2661898" role="article">
+<h3 class="article-card__title">Unequal mobilities as an investment strategy: esprit entrepreneurial , containment, and the spatial reconfigurations of racial capitalism</h3>
+<p class="article-card__authors">Alexander Jung</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/09692290.2026.2661898" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/09692290.2026.2661898" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-09692290-2026-2666262" role="article">
+<h3 class="article-card__title">Toward an IPE of raced finance</h3>
+<p class="article-card__authors">Ilias Alami, Ali Bhagat, Vincent Guermond</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/09692290.2026.2666262" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/09692290.2026.2666262" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00323217">
+<div class="row">
+<div class="col-10">
+<h2>Political Studies</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00323217">
+</div><article class="article-card" id="10-1177-00323217261429650" role="article">
+<h3 class="article-card__title">Government Information and Popular Reactions in Autocracies: An Information-Correction Experiment on COVID-19 in Kazakhstan</h3>
+<p class="article-card__authors">Susumu Annaka, Masaaki Higashijima, Gento Kato</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00323217261429650" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00323217261429650" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00323217261429650" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00323217261429650" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00323217261429650">
+        How do citizens in autocracies respond to government-provided information? While scholars have explored various forms of information manipulation used by autocrats, we still know little about how the dissemination of government statistics affects public perceptions and behavior in everyday life. In a survey experiment conducted during the COVID-19 pandemic in Kazakhstan, we investigate whether government-provided data and message influence citizens’ risk perceptions and behavioral intentions. After asking respondents to estimate the number of infections and deaths during the pandemic, we corrected their estimates using official statistics or exposed them to a message that optimistically interprets the statistics, with the information source randomly attributed either to the Kazakh government or the World Health Organization. Our findings suggest that government-provided information did not significantly alter respondents’ perceptions of the virus. These results indicate that citizens in autocracies may not always be decisively influenced by government information manipulation.
+    </div>
+</article><article class="article-card" id="10-1177-00323217261429722" role="article">
+<h3 class="article-card__title">The Party Politics of Defense Spending in Western Europe</h3>
+<p class="article-card__authors">Eoin Lazaridis Power</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00323217261429722" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00323217261429722" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00323217261429722" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00323217261429722" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00323217261429722">
+        Analyses of the politics of defense spending have often assumed a guns–butter tradeoff that maps onto the standard left–right political spectrum, with dovish leftists favoring less military spending and hawkish rightists supporting more. But in Europe, plotting parties’ positions on military spending against their left–right position reveals almost nothing. To address this puzzle, I advance three arguments—first, that nationalism should be understood as a separate axis influencing defense spending preferences; second, that party positioning is conditioned by GDP; and third, that the USSR’s role as an external ideological pole played a key role in structuring left party positions on military spending. I use Manifesto Project data to test these hypotheses and find support for the third. In doing so, I shed light on the sources of party positioning in an under-analyzed issue space, and I offer evidence for the international order’s role in constituting the domestic one.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13563467">
+<div class="row">
+<div class="col-10">
+<h2>New Political Economy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13563467">
+</div><article class="article-card" id="10-1080-13563467-2026-2666791" role="article">
+<h3 class="article-card__title">International financialisation in emerging economies: the impact of financial openness, financial inflows, global production networks and global financial centres</h3>
+<p class="article-card__authors">Ewa Karwowski, Jimena Castillo</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2666791" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2666791" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2662987" role="article">
+<h3 class="article-card__title">“Like a pancake on wet pavement”: everyday resonance, asymmetric mobilisation, and the failure of alternatives to neoliberalism in Western Europe, 1973–83</h3>
+<p class="article-card__authors">Neil Warner</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2662987" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2662987" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2669562" role="article">
+<h3 class="article-card__title">The political economy of infrastructure failure</h3>
+<p class="article-card__authors">Samuel Rogers, Giles Mohan</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2669562" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2669562" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2666810" role="article">
+<h3 class="article-card__title">Country platforms and constrained states: the Indonesian JET-P and the twilight of de-risking</h3>
+<p class="article-card__authors">Freddie Daley, Charles Lawrie</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2666810" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2666810" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2669554" role="article">
+<h3 class="article-card__title">Handling the Dragon’s gift: varieties of infrastructure failure in China’s railway projects in mainland Southeast Asia</h3>
+<p class="article-card__authors">Zhaohui Wang</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2669554" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2669554" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2669555" role="article">
+<h3 class="article-card__title">Geopolitics of failure and standardisation: the Budapest-Belgrade railway</h3>
+<p class="article-card__authors">Cristina Pinna, Senka Neuman Stanivukovic</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2669555" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2669555" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2669564" role="article">
+<h3 class="article-card__title">Navigating infrastructure failure: governance challenges in Angola’s Caculo Cabaça and Laúca Hydropower Projects</h3>
+<p class="article-card__authors">Ingrid Aguiar Schlindwein</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2669564" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2669564" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-13563467-2026-2669553" role="article">
+<h3 class="article-card__title">Restructuring of the state-market relations in Turkey: an analysis of infrastructure failures in the transportation sector</h3>
+<p class="article-card__authors">Özgün Sarımehmet Duman, Ágnes Szunomár</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13563467.2026.2669553" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13563467.2026.2669553" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13691481">
+<div class="row">
+<div class="col-10">
+<h2>British Journal of Politics &amp; International Relations</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13691481">
+</div><article class="article-card" id="10-1177-13691481261447632" role="article">
+<h3 class="article-card__title">Perceptions of government performance and collective trauma: The case of the 2023 Turkish earthquakes</h3>
+<p class="article-card__authors">Yaprak Gürsoy, Buğra Güngör</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13691481261447632" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13691481261447632" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13691481261447632" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13691481261447632" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13691481261447632">
+        Research on government evaluations after disasters focuses on democracies and retrospective decision-making theory, where voters either attentively evaluate performance based on experiences or make blind decisions reflecting emotional dispositions. This study examines individuals’ appraisals of government performance across three dimensions following the 2023 earthquakes in Türkiye: disaster management, preparedness, and blame attribution. Using nationally representative survey data, we find that earthquake losses and negative emotions relate to negative evaluations of government preparedness and management. However, these factors show no association with blaming the government, suggesting voters distinguish between different dimensions of government responsibility. Opposition party support and social media trust show significant negative associations across all dimensions, with partisanship being the strongest determinant. These findings highlight the relationship between affective polarisation and divergent government evaluations, suggesting that in polarised contexts with contrasting media, affective polarisation may be a stronger predictor of disaster-related political outcomes than retrospection theory.
+    </div>
+</article><article class="article-card" id="10-1177-13691481261449610" role="article">
+<h3 class="article-card__title">Multicultural nationalism and the White English working class: Minorities within the majority?</h3>
+<p class="article-card__authors">Sam Taylor Hill, John Denham, Tariq Modood</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13691481261449610" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13691481261449610" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13691481261449610" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13691481261449610" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13691481261449610">
+        The rise of national populism across the West – most prominently expressed in England by Reform UK and its predecessors, the UK Independence Party and the Brexit Party – poses a distinct challenge to prevailing models of integration and cohesion. Central to the party’s appeal is its ability to mobilise White working-class voters. While public discourses of multiculturalism rarely refer to the White working class, they may contribute to their alienation by thinking of the ‘majority’ as an inherently privileged group and so not addressing the experiences of the White working class. This neglect can and should be remedied. This article argues that their marginalisation reflects broader limitations within traditional frameworks that conceptualise ‘majority’ and ‘minority’ in rigid terms. Drawing on the evolving demographic and cultural landscape of 21st-century England, we explore the potential of multicultural nationalism to offer a more inclusive account of national identity that recognises both majority and minority cultures and incorporates the White working class as a meaningful part of a diverse nation. While recognising the critiques and political misuse of the term ‘White working class’, we contend that the White working class remains a socially significant group. We conclude that multicultural nationalism offers a cohesive and egalitarian foundation for shared belonging in England and Britain more widely and that it can afford the White working class a genuine political voice or agency that is lacking in the symbolic rhetoric of national populism.
+    </div>
+</article><article class="article-card" id="10-1177-13691481261447625" role="article">
+<h3 class="article-card__title">Genealogy, origins and ontological security</h3>
+<p class="article-card__authors">Christopher S Browning, Brent J Steele</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13691481261447625" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13691481261447625" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13691481261447625" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13691481261447625" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13691481261447625">
+        Genealogical practices uncovering individuals’ ‘roots’ or ancestries have a long heritage but have acquired heightened interest with the advent of genealogical services and DNA testing. When one does a simple inventory of all the ways that genealogy, writ large, gets practised, the desire to find the ‘origins’ of individuals, groups, and national communities seems ubiquitous. This article examines how genealogy relates to the self in Late Modernity. Specifically, it utilises ontological security to understand how finding one’s origins has both transnational implications and ones that relate to an individual and group’s ‘ordering of the Self’. The article explores the evolution of genealogy, highlights the constitutive role of methods in genealogical ontologies, foregrounds the centrality of race in contemporary political contests over genealogy, considers the politics of ‘genealogical ascription’, and posits the ordering features of genealogy expressed through ontological security referents of routines, vicarious identity, narration, and scientific ‘expertise’.
+    </div>
+</article><article class="article-card" id="10-1177-13691481261441982" role="article">
+<h3 class="article-card__title">Populism’s elite-leader problem: From Bukele, Magufuli, and Trump to a theory of popular elitisms</h3>
+<p class="article-card__authors">Dan Paget</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13691481261441982" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13691481261441982" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13691481261441982" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13691481261441982" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13691481261441982">
+        Many theorists agree that populism divides the social field into a struggle of ‘people’ versus ‘elite’. Yet this is not what a series of alleged populists worldwide, from Bukele to Magufuli to Trump, do. Instead, they present themselves in elite terms. They flaunt their highness, rather than their lowness. Thereby, they neither divide the social into two, nor construct the struggle as one of below against above. I review attempts to resolve this contradiction. The only attempts which succeed involve removing the ‘people’/‘elite’ divide from populism’s definition or classifying elite-leader ideologies as non-populist. How instead, then, should such populism-adjacent elite-leader ideologies be analysed? I develop a framework in which to theorise ideologies which divide society into not two, but three. In it, I conceptualise four ideologies which construct the people-as-part alongside a good/moral elite as allies. I argue that they better capture the specificity of these hierarchical and inegalitarian elite-leader ideologies.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

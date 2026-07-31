@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Home</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"><svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · July 3, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-07-03/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container mt-5">
+<div class="hero">
+<h1>Paper Picnic 🧺</h1>
+<p class="col-lg-8 mx-auto fs-5 text-muted">
+        A weekly basket with the latest research in political science. Every Friday morning UTC, we retrieve 
+        new research articles that appeared in the previous 7 days across 141 academic
+        journals in political science and adjacent fields or working papers submitted to SocArXiv/OSF Preprints.
+      </p>
+</div>
+</div>
+<div class="container">
+<div class="col-lg-6 mx-auto pb-5">
+<h3 class="text-center">Journal Coverage</h3>
+<div class="accordion p-3" id="accordionCategories"><div class="accordion-item">
+<h2 class="accordion-header">
+<button aria-controls="collapse-political-science" aria-expanded="false" class="accordion-button collapsed" data-bs-parent="#accordionCategories" data-bs-target="#collapse-political-science" data-bs-toggle="collapse" type="button">
+          Political Science
+        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionCategories" id="collapse-political-science">
+<div class="accordion-body">Annual Review of Political Science, American Political Science Review, Political Analysis, American Journal of Political Science, Comparative Political Studies, British Journal of Political Science, Perspectives on Politics, Journal of Politics, Journal of Democracy, European Journal of Political Research, Political Behavior, Quarterly Journal of Political Science, Public Opinion Quarterly, Political Science Research and Methods, Political Psychology, Philosophy &amp; Public Affairs, Research &amp; Politics, West European Politics, Democratization, Journal of Political Philosophy, Journal of Experimental Political Science, European Political Science Review, Government and Opposition, Political Geography, South European Society and Politics, Electoral Studies, Politics &amp; Gender, Annals of the American Academy of Political and Social Science, Party Politics, New Left Review, Journal of Genocide Research, Political Research Quarterly, East European Politics, Geopolitics, Political Theory, Post-Soviet Affairs, Comparative Politics, Legislative Studies Quarterly, European Union Politics, PS: Political Science &amp; Politics</div>
+</div>
+</div><div class="accordion-item">
+<h2 class="accordion-header">
+<button aria-controls="collapse-international-relations" aria-expanded="false" class="accordion-button collapsed" data-bs-parent="#accordionCategories" data-bs-target="#collapse-international-relations" data-bs-toggle="collapse" type="button">
+          International Relations
+        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionCategories" id="collapse-international-relations">
+<div class="accordion-body">International Organization, International Security, Review of International Organizations, World Politics, Journal of Peace Research, Foreign Affairs, Review of International Political Economy, Journal of Conflict Resolution, International Studies Review, Political Studies, New Political Economy, Contemporary Security Policy, International Theory, International Studies Quarterly, International Political Sociology, British Journal of Politics &amp; International Relations</div>
+</div>
+</div><div class="accordion-item">
+<h2 class="accordion-header">
+<button aria-controls="collapse-public-administration" aria-expanded="false" class="accordion-button collapsed" data-bs-parent="#accordionCategories" data-bs-target="#collapse-public-administration" data-bs-toggle="collapse" type="button">
+          Public Administration
+        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionCategories" id="collapse-public-administration">
+<div class="accordion-body">Journal of Policy Analysis and Management, Journal of Public Administration Research and Theory, Public Administration Review, Policy and Society, Journal of European Public Policy, Policy Studies Journal, Public Administration, Policy and Politics, Governance, Regulation &amp; Governance</div>
+</div>
+</div><div class="accordion-item">
+<h2 class="accordion-header">
+<button aria-controls="collapse-economics" aria-expanded="false" class="accordion-button collapsed" data-bs-parent="#accordionCategories" data-bs-target="#collapse-economics" data-bs-toggle="collapse" type="button">
+          Economics
+        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionCategories" id="collapse-economics">
+<div class="accordion-body">Quarterly Journal of Economics, American Economic Review, Journal of Political Economy, Econometrica, Journal of Economic Literature, Review of Economic Studies, Annual Review of Economics, Journal of Economic Perspectives, AER: Insights, AEJ: Applied Economics, Review of Economics and Statistics, AEJ: Economic Policy, Journal of Econometrics, Journal of the European Economic Association, Journal of Labor Economics, Journal of Human Resources, Quantitative Economics, Journal of Public Economics, Economic Policy, Econometrics Journal, Economic Journal, AEJ: Microeconomics</div>
+</div>
+</div><div class="accordion-item">
+<h2 class="accordion-header">
+<button aria-controls="collapse-sociology" aria-expanded="false" class="accordion-button collapsed" data-bs-parent="#accordionCategories" data-bs-target="#collapse-sociology" data-bs-toggle="collapse" type="button">
+          Sociology
+        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionCategories" id="collapse-sociology">
+<div class="accordion-body">American Sociological Review, Annual Review of Sociology, Sociological Methods &amp; Research, American Journal of Sociology, Population and Development Review, Sociological Theory, Sociological Methodology, Sociological Science, Demography, Social Forces, Politics &amp; Society, European Sociological Review, Social Movement Studies</div>
+</div>
+</div><div class="accordion-item">
+<h2 class="accordion-header">
+<button aria-controls="collapse-multidisciplinary" aria-expanded="false" class="accordion-button collapsed" data-bs-parent="#accordionCategories" data-bs-target="#collapse-multidisciplinary" data-bs-toggle="collapse" type="button">
+          Multidisciplinary
+        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionCategories" id="collapse-multidisciplinary">
+<div class="accordion-body">Nature, Science, Nature Human Behaviour, Nature Communications, Science Advances, PNAS, Scientific Data, Socio-Economic Review</div>
+</div>
+</div><div class="accordion-item">
+<h2 class="accordion-header">
+<button aria-controls="collapse-communication-studies" aria-expanded="false" class="accordion-button collapsed" data-bs-parent="#accordionCategories" data-bs-target="#collapse-communication-studies" data-bs-toggle="collapse" type="button">
+          Communication Studies
+        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionCategories" id="collapse-communication-studies">
+<div class="accordion-body">Communication Methods and Measures, Political Communication, Journal of Communication, Journal of Computer-Mediated Communication, International Journal of Press-Politics, Social Media + Society, Digital Journalism, New Media &amp; Society, Communication Research, Policy and Internet</div>
+</div>
+</div><div class="accordion-item">
+<h2 class="accordion-header">
+<button aria-controls="collapse-environmental-studies" aria-expanded="false" class="accordion-button collapsed" data-bs-parent="#accordionCategories" data-bs-target="#collapse-environmental-studies" data-bs-toggle="collapse" type="button">
+          Environmental Studies
+        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionCategories" id="collapse-environmental-studies">
+<div class="accordion-body">Nature Climate Change, Nature Sustainability, Annual Review of Environment and Resources, One Earth, Wiley Interdisciplinary Reviews: Climate Change, Review of Environmental Economics and Policy, Global Environmental Change: Human and Policy Dimensions, Annual Review of Resource Economics, npj Urban Sustainability, Journal of the Association of Environmental and Resource Economists, Environmental Politics, Global Environmental Politics, Climate Policy, Earth System Governance</div>
+</div>
+</div><div class="accordion-item">
+<h2 class="accordion-header">
+<button aria-controls="collapse-migration-studies" aria-expanded="false" class="accordion-button collapsed" data-bs-parent="#accordionCategories" data-bs-target="#collapse-migration-studies" data-bs-toggle="collapse" type="button">
+          Migration Studies
+        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#accordionCategories" id="collapse-migration-studies">
+<div class="accordion-body">Comparative Migration Studies, Journal of Ethnic and Migration Studies, International Migration Review, Ethnic and Racial Studies, Journal of Refugee Studies, Population, Space and Place, International Migration, Journal of Race, Ethnicity and Politics</div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="container mt-2">
+<div class="text-center p-3">
+<script data-coffee-color="#ffffff" data-color="#FFDD00" data-emoji="☕" data-font="Cookie" data-font-color="#000000" data-name="bmc-button" data-outline-color="#000000" data-slug="mmarbach" data-text="Buy me a coffee" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"></script>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+</body>
+</html>

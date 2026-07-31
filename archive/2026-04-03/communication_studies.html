@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Communication Studies</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · April 3, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-04-03/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="19312458">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19312458" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19312458" style="max-width: 300px;" title="Communication Methods and Measures">
+                            Communication Methods and Measures
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10584609">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10584609" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10584609" style="max-width: 300px;" title="Political Communication">
+                            Political Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00219916">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00219916" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00219916" style="max-width: 300px;" title="Journal of Communication">
+                            Journal of Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10836101">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10836101" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10836101" style="max-width: 300px;" title="Journal of Computer-Mediated Communication">
+                            Journal of Computer-Mediated Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19401612">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19401612" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19401612" style="max-width: 300px;" title="International Journal of Press-Politics">
+                            International Journal of Press-Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="20563051">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-20563051" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-20563051" style="max-width: 300px;" title="Social Media + Society">
+                            Social Media + Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="21670811">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-21670811" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-21670811" style="max-width: 300px;" title="Digital Journalism">
+                            Digital Journalism
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14614448">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14614448" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14614448" style="max-width: 300px;" title="New Media &amp; Society">
+                            New Media &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00936502">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00936502" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00936502" style="max-width: 300px;" title="Communication Research">
+                            Communication Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19442866">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19442866" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19442866" style="max-width: 300px;" title="Policy and Internet">
+                            Policy and Internet
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="10836101">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Computer-Mediated Communication</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10836101">
+</div><article class="article-card" id="10-1093-jcmc-zmag003" role="article">
+<h3 class="article-card__title">Reducing political polarization through conversations with artificial intelligence</h3>
+<p class="article-card__authors">Timon M J Hruschka, Markus Appel</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jcmc-zmag003" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jcmc-zmag003" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jcmc/zmag003" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jcmc/zmag003" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jcmc-zmag003">
+        Political polarization is threatening the welfare of individuals and societies. Connecting insights gained from interpersonal communication to human–machine communication, we hypothesized that positive interactions with artificial intelligence (AI) could reduce polarization between humans. To evaluate this proposition, two experiments were conducted, in which human participants (N = 1,035) communicated with AI chatbots in real time. The bots engaged in different communication styles while opposing the participants’ most polarized political views. Across both experiments, engaging with a counterarguing AI chatbot led to significant issue depolarization. AI chatbots exhibiting high (vs. low) conversational receptiveness and active listening during the AI conversation resulted in stronger affective depolarization toward humans, higher participant intellectual humility, and a greater willingness to engage in future conversations with holders of opposing opinions—AI and humans alike. Our experiments show that large language models are powerful tools for individual depolarization and the promotion of beneficial cognitive processing skills.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="20563051">
+<div class="row">
+<div class="col-10">
+<h2>Social Media + Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-20563051">
+</div><article class="article-card" id="10-1177-20563051261419391" role="article">
+<h3 class="article-card__title">Disconnecting in a Connected World: The Dynamics of Social Media Non-Use in a Platformized Society</h3>
+<p class="article-card__authors">Danbi Kim, Yong-Chan Kim</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261419391" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261419391" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261419391" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261419391" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261419391">
+        This study explored the phenomenon of social media non-use in the current platform-driven media landscape. Through in-depth interviews with young Korean adults in their 20s who have intentionally limited or stopped using Instagram, we examined the motivations, processes, and consequences of social media non-use and its broader implications within a platformized society. The motivations for non-use included multifaceted pressures from both the platform itself and the surrounding culture that promotes connectivity. Despite the strategies for non-use at different levels, participants continuously encountered challenges related to platform-specific resources, user experience, psychological discomfort, and social pressure. These challenges resulted in the renegotiation of disconnective behaviors, making non-use attempts nonlinear and reversible and creating a gap between individuals’ intended outcomes and their actual experiences. We discussed the mechanism of dual ambivalence that creates this cycle of non-use and the situation where non-use becomes captured within the platformization process, thereby being reduced to part of an adaptation process rather than a resistant practice.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261431221" role="article">
+<h3 class="article-card__title">Escaping the Spectacle: Anti-Check-in as an Algorithmic Culture Jamming Strategy on Social Media</h3>
+<p class="article-card__authors">Xiaomin Luo</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261431221" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261431221" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261431221" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261431221" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261431221">
+        Check-in, defined as the social media activity of photographing, tagging, and publicly displaying one’s presence at specific locations, tightly binds the body to space, transforming both self and place into consumable and communicable symbols. In this process, the body gradually becomes alienated as an appendage of the spectacle. Introducing the concept of algorithmic culture jamming, this study explores how anti-check-in, grounded in embodied practices, disrupts and resists the consumerist logic of spectacle. Based on qualitative research, the findings identify three strategies of anti-check-in practices: first, de-standardization, which restores the body’s naturalness and autonomy through atypical images and multisensory narratives; second, low visibility, which rejects platform recognition and categorization through blurred, hidden, or de-tagged content; and third, spatial wandering as an embodied response, which breaks the consumption path dependency reinforced by algorithmic recommendation through the non-instrumental use of routes and places. However, anti-check-in is inevitably reabsorbed into the platform’s visibility regime, thereby revealing an ongoing and unfinished struggle between the body and the algorithmic society of the spectacle. Theoretically, this study extends Debord’s notion of the spectacle by situating it within the algorithmic condition and highlighting the embodied tactics that emerge in response to platformized visibility regimes. By revealing anti-check-in as both a form of resistance and a mechanism of reabsorption within platform capitalism, it provides a nuanced account of how agency and power are continually renegotiated in the algorithmic society of the spectacle.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261433506" role="article">
+<h3 class="article-card__title">The Failure of Play</h3>
+<p class="article-card__authors">Miguel Sicart</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261433506" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261433506" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261433506" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261433506" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261433506">
+        In this essay, I argue that the ludification of culture should be considered as an overall failure. The effects of (digital) play in culture and society have been largely negative, a fact that game studies and media studies have only partially assumed. While there are many positive aspects to play and games in society, it may be time to rethink the importance we give to the ludic in information societies.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261432483" role="article">
+<h3 class="article-card__title">Incentivised Engagement: How Party Characteristics and Individual Factors Shape Politicians’ TikTok Use</h3>
+<p class="article-card__authors">Merle Huber, Sebastian Block, Tomas Ruiz</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261432483" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261432483" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261432483" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261432483" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261432483">
+        TikTok has shifted from a once marginal entertainment platform to an important channel of parliamentary communication, yet we still know little about who uses it intensively and why. We identify three sets of potential drivers: party incentives, behavioural persistence, and individual characteristics. Our analysis builds on a novel data set comprising the complete posting histories of all Members of Parliament (MPs) in Germany and the United Kingdom, covering activity from MPs’ first adoption in 2020 through the end of 2024 and linked to party- and individual-level characteristics. We combine descriptive analyses with zero-inflated negative binomial models with year fixed effects. Three findings stand out: First, party nicheness, a relational measure of the degree to which a party focuses on issues not emphasised by other parties, predicts higher posting volumes, with MPs from such parties producing more content than mainstream parties. Second, TikTok use is path-dependent: once MPs establish high (or low) posting levels, they tend to sustain them over time. Third, individual traits matter unevenly: prior platform experience and gender are associated with higher activity, while age and institutional position show no consistent effects. Our results shift the focus from stylistic repertoires to structural drivers of elite communication on TikTok and demonstrate that sustained activity is concentrated, persistent, and above all shaped by party incentives. The findings suggest that TikTok lowers entry barriers and expands political visibility, potentially re-engaging voters, yet its dynamics may also amplify polarisation by disproportionately incentivising fringe actors to be active on the platform.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261432035" role="article">
+<h3 class="article-card__title">We Have Always Been Machines</h3>
+<p class="article-card__authors">Zizi Papacharissi</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261432035" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261432035" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1177-20563051261437496" role="article">
+<h3 class="article-card__title">Forging Relatability Through Identity Bricolage: Solo Lady Influencers on RedNote</h3>
+<p class="article-card__authors">Siyu Chen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261437496" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261437496" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261437496" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261437496" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261437496">
+        This article offers an updated account of the media portrayals of China’s growing cohort of single women through an analysis of “solo lady influencers” on RedNote. Drawing on netnography, it identifies three archetypes that articulate distinct modes of living single, namely glamorous go-getters, struggling proletariats, and lying-flat nomads. To craft commercially viable personae, solo lady influencers engage in what I term identity bricolage , an affective practice of assembling identity-based resources into curated self-presentations that cultivate relatability. In this process, singlehood functions as a form of identity capital that becomes monetizable when it is braided with class position, gendered selfhood, and lifestyle orientations, producing personae that are both distinctive and resonant. Filtered through postfeminist sensibilities for affective calibration, these strategically differentiated personae speak to segmented audiences within China’s expanding single economy, yet they also idealize singlehood in exclusionary ways that reproduce inequalities and narrow the imaginaries of women’s life possibilities. Identity bricolage thus offers an intersectional lens for understanding influencer self-fashioning on RedNote, revealing the entanglement of cultural expression and market logics under China’s platform capitalism, where monetization increasingly rewards relatability over visibility.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="21670811">
+<div class="row">
+<div class="col-10">
+<h2>Digital Journalism</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-21670811">
+</div><article class="article-card" id="10-1080-21670811-2026-2649018" role="article">
+<h3 class="article-card__title">The Effects of Generative AI in News on Media Credibility and Selectivity: Evidence from a Conjoint Experiment in Chile</h3>
+<p class="article-card__authors">Sebastián Valenzuela, Ingrid Bachmann, Porismita Borah, Natalia Solís Valdés</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/21670811.2026.2649018" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/21670811.2026.2649018" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14614448">
+<div class="row">
+<div class="col-10">
+<h2>New Media &amp; Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14614448">
+</div><article class="article-card" id="10-1177-14614448261430018" role="article">
+<h3 class="article-card__title">Flattening the and news: Platformisation the erosion of topical diversity across news outlet types</h3>
+<p class="article-card__authors">Steen Steensen, Håvard Kiberg, Bente Kalsnes, Gunhild Ring Olsen, Lasha Kavtaradze</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261430018" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261430018" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261430018" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261430018" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261430018">
+        This article examines how platformisation reshapes topical diversity across news outlet types in Norway. Using Latent Dirichlet Allocation (LDA) topic modelling and diversity indices on more than 220,000 articles from 22 national, regional, local and niche outlets, it compares content published on proprietary websites with that on Facebook, Instagram and TikTok. The findings reveal a ‘flattening’ of the news agenda on social media. While distinctions between news outlet types remain clear online, they largely disappear on social media, where engagement-driven logics promote soft topics. The effect is strongest for local outlets, whose civic and community-oriented reporting gives way to sports, human interest and entertainment news. Ownership explains little once editorial type is considered. The study demonstrates how platformisation erodes local journalism’s distinctiveness and challenges media policies designed to safeguard diversity and democratic pluralism in the digital public sphere.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261433605" role="article">
+<h3 class="article-card__title">Beyond the streaming black box: Navigating the textures of access and data secrecy in media industries research</h3>
+<p class="article-card__authors">Daphne Rena Idiz, Karin Van Es, Sandra Becker, Hanna Surma</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261433605" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261433605" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261433605" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261433605" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261433605">
+        Global streaming services have reshaped the media landscape, through their business and distribution models, and their unprecedented collection of and control over data. This article examines how researchers navigate data secrecy and access in contemporary media industries research. Building on critiques of the transparency ideal and black box metaphor, we approach data access as an ongoing, textured, and relational process. Drawing on multi-sited and mixed-method research from previous studies, this study maps the fragmented terrain of data access across research into production, platforms , and policy . By synthesizing these previously siloed approaches, we conceptualize varying levels of data secrecy, identify shared challenges, and discuss innovative hacks as well as tried-and-true methods for circumventing these barriers. We conclude by proposing a framework for streaming research founded on collaboration, industry partnerships, and reciprocity, addressing the infrastructural and ethical limits of open science in the streaming era.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261428632" role="article">
+<h3 class="article-card__title">Affective–discursive ecologies of the far right: Multimodal softening, mobilisation and algorithmic proximity on Instagram</h3>
+<p class="article-card__authors">Benjamin Megarry Nangle, Leen d’Haenens</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261428632" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261428632" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261428632" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261428632" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261428632">
+        This article examines how far-right communication on Instagram uses positively valenced affect and humour to normalise extremist worldviews. Drawing on research on mainstreaming, memetic communication and affective publics, it conceptualises far-right Instagram as an affective–discursive ecology where ideology, emotion and platform logics intersect. Through algorithmic ethnography and multimodal discourse analysis, the study analyses 2603 Reels featuring far-right adjacent themes. The analysis identifies three overlapping modalities: (1) humorous, ironic and meta-reflexive content, framing extremity as playful or self-aware; (2) wholesome and nostalgic aestheticisation that softens exclusionary messaging through sentimental imagery; and (3) inspirational, glorifying and aspirational aestheticisation, casting ideological commitment as awakening or heroic civilisational defence. Algorithmic clustering further politicises ostensibly non-political material, allowing neutral or unrelated posts to reinforce far-right narratives through contextual adjacency. The study argues that effective responses must address these emotional, aesthetic and infrastructural conditions.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261431807" role="article">
+<h3 class="article-card__title">Making creativity governable through dual optimization: Platform operators as cultural intermediaries in China’s social media entertainment</h3>
+<p class="article-card__authors">Shichao Zhang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261431807" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261431807" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261431807" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261431807" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261431807">
+        This study examines platform operators (POs) on Chinese social media entertainment platforms as cultural intermediaries who govern creativity from within the platform. Drawing on interviews with POs and participant observation on a livestreaming platform, the study conceptualizes the POs’ work as “dual optimization,” an operational governance mechanism that renders creators and content measurable and intervenable, thereby making creativity governable. Empirically, POs evaluate creators, implement tiered management, and provide logistical support to sustain productivity, while simultaneously recalibrating content standards, providing stage-specific guidance, allocating traffic, and routinizing production via trend curation, campaign orchestration, and creative tools. Dual optimization is embedded in a deeper orientation toward metric optimization, which standardizes aspects of PO labor. Yet POs retain situated agency. POs manage cultural uncertainty beyond algorithmic control, cultivate creators’ relational dependence, and mediate among regulatory, market, and sociocultural demands. By foregrounding these upstream operational functions, the study highlights how POs institutionalize top-down cultural governance under platformization.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261431808" role="article">
+<h3 class="article-card__title">Negotiating gentleness: Chinese mothers’ affective expression strategies on social media platforms</h3>
+<p class="article-card__authors">Yuanhao Li, Jingxin Xu, Xinyi Chen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261431808" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261431808" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261431808" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261431808" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261431808">
+        This study examines how Chinese mothers adjust their affective expressions on social media under the dual influence of algorithmic governance and gendered norms. Based on semi-structured interviews with 21 active yet pre-commercial mothers across Douyin, Xiaohongshu, and WeChat Channels, and using thematic analysis supported by GPT-4 as an anonymized analytical aid, the study identifies four expressive strategies: tonal softening, indirect articulation, imitation of popular styles, and fragmented expressions of restrained emotion. These strategies sustain visibility while aligning with the “good mother” ideal, revealing ongoing affective calibration between platform logics and cultural expectations. The study proposes the concept of “algorithmically attuned affective labor” (AAL) to describe this adaptive emotional work shaped by predictive interaction with recommendation systems. Findings show that digital motherhood in China is both a site for cultural norm reproduction and a nexus where algorithmic governance intersects with unpaid affective labor, highlighting the need for more transparent, inclusive algorithms that support diverse emotional expression.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261433601" role="article">
+<h3 class="article-card__title">Exploring digital placemaking of queer religiosity: Digital spaces as enabling environments for queer religious practices</h3>
+<p class="article-card__authors">Petronilo D. Figueroa, Mariam Jayne M. Agonos, Jonalou S. Labor</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261433601" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261433601" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261433601" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261433601" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261433601">
+        In a predominantly heteronormative society, queer individuals continue to negotiate social spaces and cultures. In the Philippines, the LGBTS Christian Church is one of the few queer-affirming religious institutions that seek to defuse tensions between sexual and religious identities. Through digital and on-the-ground ethnography, we describe the digital practices and infrastructures that enable the church to create a space for queer religiosity. With limited physical spaces to practice queer religiosity, the LGBTS Christian Church uses online platforms to reclaim their place, enabling them to reconfigure their practices and advance their advocacy. This study uncovers a variety of affordances available to the church that are integrated into their practices and interactions within and outside their congregation. The study contributes to the intersection of queer life, religion, and digital media by examining queer religiosity on digital platforms of a queer-affirming church in the Philippines.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261426380" role="article">
+<h3 class="article-card__title">Displaying family on the DNA platform</h3>
+<p class="article-card__authors">Giselle Newton, Ashley Barnwell, Romy Wilson Gray</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261426380" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261426380" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261426380" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261426380" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261426380">
+        Direct-to-consumer DNA platforms are significant yet overlooked social media platforms through which millions of users worldwide shape their identities. DNA platforms sort and match users using genetic data, creating novel familial ‘networked publics’ and reinforcing ‘genetic thinking’. Drawing on the concept of ‘family display’, we interpret the accounts of 23 Australians who had distinct motivations for engaging with DNA platforms and differing ‘intensities of display’. Our thematic analysis derived three themes: how participants appropriated platform affordances to curate digital displays of family, how the platform enabled participants to foreground multigenerational narratives of familial continuity and how the platform’s focus on genetic relationships led users to reconfigure existing family understandings. Our findings contribute to conceptualisations of how individuals ‘do’ and ‘display’ family through digital platforms and advance theorisation of the ‘digitalisation of family’ and ‘platformised relationality’.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261432606" role="article">
+<h3 class="article-card__title">“The industry is so rotten”: Regulating video game monetisation and divided gaming cultures in China</h3>
+<p class="article-card__authors">Tianyi Zhangshao, Ben Egliston, Marcus Carter</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261432606" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261432606" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261432606" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261432606" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261432606">
+        This study explores how video game monetisation and regulation are debated in China, and what these discussions reveal about the cultural and ideological boundaries of gaming, through public responses to the proposed national regulation, “Measures for the Management of Online Games.” The regulation, currently in draft form, proposes targeting excessive online game spending and design mechanisms like daily logins and random-reward mechanisms (e.g. loot boxes). Drawing on a thematic analysis of public comments, we identify four themes structuring these discussions, showing tensions around modern play, China’s game industry, game communities and the draft regulation. Within each theme, discussions coalesced around two contrasting discursive standpoints, analytically termed premium and freemium, which reflect divergent preferences for monetisation and variations within the four themes. Informed by boundary work theory, we argue that conflicts over the draft’s proposed restrictions are rooted in competing ideologies of play, revealing a fragmented and contested gaming culture in China. To inform the regulation of game spending, we recommend further research to assess the potential harms of the monetisation designs mentioned in the draft regulation before any ban is implemented.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00936502">
+<div class="row">
+<div class="col-10">
+<h2>Communication Research</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00936502">
+</div><article class="article-card" id="10-1177-00936502261425708" role="article">
+<h3 class="article-card__title">Adolescents’ Trust in Political Content From Influencers: The Roles of Motive Attribution and Parental Mediation</h3>
+<p class="article-card__authors">Darian Harff, Ellen Van Houtven, Heleen Dekoninck, Desiree Schmuck</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00936502261425708" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00936502261425708" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00936502261425708" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00936502261425708" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00936502261425708">
+        In today’s fragmented media landscape, social media influencers (SMIs) have emerged as popular political information sources among young audiences—despite often lacking political expertise. However, we have limited knowledge about factors that predict trust in SMIs’ political content during early and middle adolescence, a critical period during which political attitudes are formed. This study proposes two novel theoretical pathways to explain varying trust perceptions between and within adolescents: a source-centered pathway, focusing on observed SMI-audience interactions and motive attribution, and an audience-centered pathway, emphasizing adolescents’ digital literacy and parental mediation. A three-wave panel survey ( N W3 = 799 parent-child dyads) shows that trust in SMIs’ political information is higher among those adolescents who view SMIs as involved with their audiences and altruistically motivated, and among adolescents with high digital literacy and whose parents engage in active mediation. However, changes in these variables do not predict deviations from adolescents’ usual trust levels.
+    </div>
+</article><article class="article-card" id="10-1177-00936502261430977" role="article">
+<h3 class="article-card__title">Responses to Position-Disconfirming Meta-Advice in the Context of Conflicting Vs. Consistent Co-Presenting Messages: The Role of Reactance and Perceived Norms</h3>
+<p class="article-card__authors">Yanmengqian Zhou, Shu Scott Li</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00936502261430977" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00936502261430977" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00936502261430977" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00936502261430977" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00936502261430977">
+        Advice is a vital form of interpersonal influence, and some advice concerns advising others (i.e., meta-advice). In today’s competitive information environment, individuals often encounter both recommendations that support their stance and those that challenge it. Drawing on psychological reactance and normative influence theories, this study examines how people respond to position-disconfirming meta-advice when it is presented in different message contexts—either paired with another position-disconfirming message (consistent) or with a position-confirming message (conflicting). In an experiment, U.S. participants who were either pro- or anti-advising others to get vaccinated received position-disconfirming meta-advice under consistent or conflicting conditions. Results revealed two countervailing effects: pairing position-disconfirming with position-confirming meta-advice mitigated reactance, leading to more favorable responses to the position-disconfirming message, but it also lowered perceived norms, which in turn undermined favorable responses. These findings illuminate how context shapes responses to position-disconfirming meta-advice, with theoretical and practical implications for interpersonal influence in multi-message environments.
+    </div>
+</article><article class="article-card" id="10-1177-00936502251411467" role="article">
+<h3 class="article-card__title">An Analysis of Studies Testing Digital Interventions to Inoculate Against Misinformation: A Systematic Review</h3>
+<p class="article-card__authors">Daniel Loughnan, Aart van Stekelenburg, J. Loes Pouwels, Marieke L. Fransen, Mariska Kleemans</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00936502251411467" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00936502251411467" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00936502251411467" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00936502251411467" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00936502251411467">
+        The proliferation of misinformation has stimulated research into games and videos to reduce susceptibility to misinformation via psychological inoculation. This research field applies several recent extensions of inoculation theory in novel ways, posing the question of whether such interventions are indeed producing inoculation effects. We conducted a systematic review ( k = 72) to establish the strength of the links between inoculation theory and the outcomes of the tests. We found that the studies did not pose hypotheses relating to the core factors of inoculation theory: threat conferral and counterarguing. Moreover, empirical designs and analyses have introduced confounding factors. Therefore, links between psychological inoculation theory and the tests are weak, and the question of whether the interventions inoculate remains unbroached. We recommend that future research include theoretically relevant variables in improved empirical tests and that researchers exercise caution in interpreting the results of existing studies as representative of psychological inoculation effects.
+    </div>
+</article><article class="article-card" id="10-1177-00936502261428553" role="article">
+<h3 class="article-card__title">Using the Theory of Resilience and Relational Load to Examine the Impact of Couples’ Financial Conflict on Relational Load and (Hair and Salivary) Cortisol</h3>
+<p class="article-card__authors">Tamara D. Afifi, Veronica Wilson, Chloe Gonzales, Chantel Haughton, Abdullah S. Salehuddin</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00936502261428553" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00936502261428553" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00936502261428553" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00936502261428553" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00936502261428553">
+        This study examined whether romantic partners’ relationship maintenance and communal orientation predict their financial conflict, and, in turn, their relational load and physiological stress. Eighty-two heterosexual, cohabitating couples participated in a conversation about their financial stress, completed surveys, and provided saliva and hair samples for cortisol. Overall, greater communal orientation and ongoing relationship maintenance were associated with less conflict about financial stress, as well as lower relational load. The findings revealed partner and actor effects. For women, feeling communally oriented was associated with less of their own and their partner’s relational load after the conversation by lessening both of their perceptions of conflict. Even though relationship maintenance and communal orientation did not significantly affect men’s physiological stress, women’s HCC and salivary cortisol (at p &lt; .10) were mediated through their own and their partner’s perceptions of their financial conflict.
+    </div>
+</article><article class="article-card" id="10-1177-00936502261427071" role="article">
+<h3 class="article-card__title">The Role of Relationship Parameters in Emotion Experiences During Interactions Between Romantic Partners: Testing Relational Turbulence Theory in a Dyadic, Lab Study</h3>
+<p class="article-card__authors">Kellie St.Cyr Brisini, Ningyang “Ocean” Wang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00936502261427071" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00936502261427071" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00936502261427071" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00936502261427071" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00936502261427071">
+        Relational turbulence theory explains the mechanisms whereby relationship parameters influence partners’ emotion, cognition, and communication during specific episodes. Using dyadic, collaborative interactions, this study tested three understudied claims proposed by the theory to shed light on the antecedents and consequences of emotion during everyday conversations between romantic partners. Seventy-one couples completed a pre-test survey that included measures of relationship parameters, were video-taped participating in two planning discussions (randomly ordered), and completed post-tests after each discussion. The conversations were then evaluated for communication engagement and valence by outside observers. Results point to relationship uncertainty as a predictor of emotion during communication and add nuance to our understanding of how happiness and annoyance associate with communicative valence and engagement during everyday interactions.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="19442866">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Internet</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-19442866" data-bs-toggle="collapse" type="button">
+              +2
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-19442866"><article class="article-card" id="10-1002-poi3-v18-2" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title"></h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/poi3.v18.2" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/poi3.v18.2" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1002-poi3-70039" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Issue Information</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/poi3.70039" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/poi3.70039" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1002-poi3-70036" role="article">
+<h3 class="article-card__title">Public Opinion, Sentiment, and Policy Feedback: An Exploratory Computational Text Analysis of Debates on Leave Compensation Policies on Chinese Social Media</h3>
+<p class="article-card__authors">Shoukui Cui, Mengting Cheng, Haohan Yuan, Yuhan Deng, Kuan Li</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-poi3-70036" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-poi3-70036" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/poi3.70036" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/poi3.70036" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-poi3-70036">
+        Existing research has predominantly focused on institutionalized feedback mechanisms in democratic systems, leaving insufficient exploration of how public opinion influences policymaking in nondemocratic regimes, especially where formal feedback channels are limited. This study proposes a conceptual framework of informal feedback mechanisms, illustrating how social media functions as a vital tool for public influence within the context of China's consultative authoritarianism. By analyzing 99,924 Weibo comments from 2019 to 2024 related to the Leave Compensation Policy ( tiaoxiu ), we apply BERTopic topic modeling and GPT‐assisted sentiment annotation to identify seven core themes in public discourse, with Optimizing Leave Policy, Rejecting Overtime emerging as the most prominent. All themes exhibit stable and significantly negative sentiment. Furthermore, using text analysis, we identify substantial convergence between government policy texts and public discourse around the core themes, and show that subsequent policy adjustments ultimately responded to the public's central demands. The study also highlights the differentiated discursive strategies adopted by national media, commercial media, and experts in amplifying, filtering, and translating public opinion. By foregrounding the interpretive effects within informal feedback loops, this research extends the theoretical framework of policy feedback pathways and reveals how social media facilitates public mobilization and policy adaptation under authoritarian governance.
+    </div>
+</article><article class="article-card" id="10-1002-poi3-70037" role="article">
+<h3 class="article-card__title">Laws, Enforcement, and Strategy: A Multi‐Layered Qualitative Study of Multinational Enterprise Compliance Under European Union and Chinese Data Protection Regimes</h3>
+<p class="article-card__authors">Yiping Cao</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-poi3-70037" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-poi3-70037" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/poi3.70037" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/poi3.70037" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-poi3-70037">
+        In an era of proliferating but divergent data protection regimes, the European Union's rights‐based approach and China's sovereignty‐centric model have become two dominant poles of global data governance. This article examines how multinational enterprises navigate compliance under these dual systems and how that compliance is shaped through interaction with regulators and courts. Using a multi‐level qualitative framework, we combine macro analysis of legal regimes, meso assessment of enforcement, and micro case studies of TikTok in the EU and Accor in China. We show that both jurisdictions assert extraterritorial control and intensify enforcement through distinct institutional pathways. Confronted with conflicting obligations, firms segment data architectures and embed compliance in technical design, trading interoperability for legal certainty. These dynamics reveal a recursive relationship between law, enforcement, and organisational adaptation, in which the practical meaning of compliance is produced through rules‐in‐use and firms exercise bounded agency rather than full autonomy.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

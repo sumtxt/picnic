@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Sociology</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · April 24, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-04-24/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap active" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00031224">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00031224" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00031224" style="max-width: 300px;" title="American Sociological Review">
+                            American Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03600572">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03600572" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03600572" style="max-width: 300px;" title="Annual Review of Sociology">
+                            Annual Review of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00491241">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00491241" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00491241" style="max-width: 300px;" title="Sociological Methods &amp; Research">
+                            Sociological Methods &amp; Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00029602">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00029602" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00029602" style="max-width: 300px;" title="American Journal of Sociology">
+                            American Journal of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00987921">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00987921" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00987921" style="max-width: 300px;" title="Population and Development Review">
+                            Population and Development Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="07352751">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-07352751" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-07352751" style="max-width: 300px;" title="Sociological Theory">
+                            Sociological Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00811750">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00811750" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00811750" style="max-width: 300px;" title="Sociological Methodology">
+                            Sociological Methodology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="23306696">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-23306696" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-23306696" style="max-width: 300px;" title="Sociological Science">
+                            Sociological Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00703370">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00703370" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00703370" style="max-width: 300px;" title="Demography">
+                            Demography
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00377732">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00377732" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00377732" style="max-width: 300px;" title="Social Forces">
+                            Social Forces
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00323292">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00323292" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00323292" style="max-width: 300px;" title="Politics &amp; Society">
+                            Politics &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="02667215">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-02667215" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-02667215" style="max-width: 300px;" title="European Sociological Review">
+                            European Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14742837">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14742837" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14742837" style="max-width: 300px;" title="Social Movement Studies">
+                            Social Movement Studies
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="03600572">
+<div class="row">
+<div class="col-10">
+<h2>Annual Review of Sociology</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-03600572">
+</div><article class="article-card" id="10-1146-annurev-soc-031324-114207" role="article">
+<h3 class="article-card__title">Discrimination and Health Inequalities</h3>
+<p class="article-card__authors">Martin Aranguren</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-soc-031324-114207" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-soc-031324-114207" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-soc-031324-114207" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-soc-031324-114207" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-soc-031324-114207">
+        Although theory suggests that discrimination generates health inequalities in a variety of ways, research today concentrates almost exclusively on one particular mechanism: the conscious experience of unfair treatment, often termed “perceived discrimination.” To rethink perceived discrimination as one among other mechanisms, this review draws on the social stress model, reinterpreted as a macro-micro-macro sociological explanation. This reframing additionally reveals that the social stress model rests on an implicit theory of the emotional actor that provides no guidance to distinguish psychiatric illness (an individual problem) from nondisordered but painful emotional responses to external adversity (a social problem). To prevent this confusion, the review puts forward an account of the emotions that emphasizes their rootedness in the social world. On the empirical front, the review covers ethnic differences in depression and psychosis, as well as recent studies indicating that only a small portion of discriminatory treatment surfaces in the target's consciousness as perceived discrimination.
+    </div>
+</article><article class="article-card" id="10-1146-annurev-soc-090225-014158" role="article">
+<h3 class="article-card__title">The Making of Meritocratic Status Orders</h3>
+<p class="article-card__authors">Fabien Accominotti, Michael Sauder</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-soc-090225-014158" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-soc-090225-014158" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-soc-090225-014158" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-soc-090225-014158" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-soc-090225-014158">
+        This article surveys a growing body of work examining the concrete consequences of implementing meritocracy in social life. To date, this work remains compartmentalized into the separate subfields of cultural sociology, economic sociology, organizational science, and the sociology of education and stratification. We bring these literatures together by arguing that they describe the consequences of constructing merit-based status orders, or merit orders. Merit orders are status hierarchies—sets of relations of value superiority, equality, or inferiority people perceive among others—based on assessments of others’ merit, achievement, or performance. We explore the nature of merit orders, argue that they exist as cultural objects and cultural schemas, and explain how they can be studied for their shape and for their sharedness. Most importantly, we show that a focus on merit orders enriches our understanding of how meritocracy enters social stratification processes. Meritocracy, this approach highlights, shapes stratification not only by sorting individuals into unequal social positions, but also by creating merit orders that have stratifying effects of their own. In particular, the making of merit orders has a tendency to moralize inequality by framing disparities in social advantage as differences in individual merit, it teaches observers to perceive quality differences among social actors in hierarchical terms that undermine egalitarian beliefs, and it can directly exacerbate inequality in merit-based rewards when the architecture of merit orders is more hierarchy-like.
+    </div>
+</article><article class="article-card" id="10-1146-annurev-soc-011824-031039" role="article">
+<h3 class="article-card__title">Cross-Border Intimate Mobilities Between the Global South and North: Resetting the Research Agenda Beyond Marriage Migration</h3>
+<p class="article-card__authors">Paul Statham, Sirijit Sunanta</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-soc-011824-031039" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-soc-011824-031039" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-soc-011824-031039" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-soc-011824-031039" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-soc-011824-031039">
+        Three decades ago, influential marriage migration perspectives emerged that importantly transformed the agenda for studies on how women from the Global South experience intimate relations with men from the wealthier North. Applying feminist gender perspectives, this field centered on a woman's subjective lived experiences of her asymmetrical, unequal union with a foreign man, focusing on reproductive labor and questions of hypergamy. It remains the dominant analytic lens, but we advocate a rethink. First, we argue for extending the marriage migration frame to cross-border intimate mobilities, so that it includes a fuller range of this type of gendered, sexualized, and unequal intimate social relationship. Second, it is necessary to account for the important contextual backstory—opportunity structures—that facilitates the evolution of significant pathways for intimate mobilities between specific Southern and Northern places over time. We demonstrate by reference to Thailand, one of the largest sources and locations for cross-border intimate mobilities.
+    </div>
+</article><article class="article-card" id="10-1146-annurev-soc-020224-050622" role="article">
+<h3 class="article-card__title">Legacies of Racialized Social Control</h3>
+<p class="article-card__authors">David Cunningham</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-soc-020224-050622" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-soc-020224-050622" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-soc-020224-050622" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-soc-020224-050622" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-soc-020224-050622">
+        Research on legacies of racialized control recognizes and examines how historical violence continues to exert effects on contemporary inequalities. Focused predominantly on histories of enslavement and lynching in the US South, studies have demonstrated the continuing hold of these institutions on a wide range of racialized outcomes, including income inequality and poverty, violent crime, incarceration and other criminal legal consequences, political polarization, residential segregation, and educational and health disparities. Over the past two decades, the literature has matured significantly, evolving from studies demonstrating these durable temporal connections to more recent robust attention to a unified theoretical framework and the mechanisms that enable legacy effects to persist over long time periods. This review emphasizes recent refinements associated with parsing sources of persistent inequalities, accounting for interrelationships among modes of control, and identifying factors that interrupt as well as produce durable legacy effects. It concludes with recommendations to more directly engage the systemic nature of racialized control, take fuller advantage of leverage provided by expanding methodological foci, and thicken connections to parallel work in cognate fields.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00029602">
+<div class="row">
+<div class="col-10">
+<h2>American Journal of Sociology</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00029602">
+</div><article class="article-card" id="10-1086-741817" role="article">
+<h3 class="article-card__title">Shift, Not Stasis: The Geography of Post–Civil Rights Racial Inequality</h3>
+<p class="article-card__authors">Robert Manduca</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/741817" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/741817" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1086-741818" role="article">
+<h3 class="article-card__title">Diversity and Prosociality in NYC Neighborhoods: Evidence from a Lost Wallet Experiment</h3>
+<p class="article-card__authors">Shannon Rieger, Delia Baldassarri, Maria Abascal</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/741818" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/741818" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="07352751">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-07352751">
+</div><article class="article-card" id="10-1177-07352751261436365" role="article">
+<h3 class="article-card__title">Theorist Ignored: Hubert Harrison and the Birth of Racial Capitalism Theory</h3>
+<p class="article-card__authors">Julian Go</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-07352751261436365" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-07352751261436365" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/07352751261436365" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/07352751261436365" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-07352751261436365">
+        Hubert Henry Harrison (1883–1927) was an early twentieth-century writer who engaged Marxist theoreticians and conventional American sociological theory in his writings, but he remains unknown to social theorists and histories of American social science. This article shows that Harrison was a social theorist offering valuable insights into the relationship between racial inequality and capitalism. Across his writings, Harrison developed a nascent theory of racial capitalism that anticipated contemporary debates while offering distinct contributions. He conceptualized capitalist production as racially bifurcated and asserted the relative autonomy of race; he offered a structuration theory of racism and capitalist reproduction, showing how racial capitalism is a system co-constituted by racism and economic imperatives; he theorized the role of imperialism and its different forms, explaining how racism globalizes; and he explained agency and resistance as necessary outcomes of the logic of global racial capitalism.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00703370">
+<div class="row">
+<div class="col-10">
+<h2>Demography</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00703370">
+</div><article class="article-card" id="10-1215-00703370-12553282" role="article">
+<h3 class="article-card__title">Infant Mortality Expectation and Fertility Behavior in Rural Malawi</h3>
+<p class="article-card__authors">Adeline Delavande, Hans-Peter Kohler, Ali Vergili</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12553282" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12553282" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12553282" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12553282" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12553282">
+        For decades, population research has been interested in the complex relationship between child mortality and fertility, with a key focus on identifying hoarding behavior (i.e., fertility response to expected aggregate child mortality). Using unique data from the Malawi Longitudinal Study of Families and Health, we investigate the impact of individual-specific subjective expectations about infant mortality on fertility behavior. We instrument the potentially endogenous infant mortality expectations with the average of parents’ ratings of children's health to address the potential for omitted variable bias, such as parental preference for health. Consistent with the hoarding mechanism, we find that a 10-percentage-point increase in community-level child mortality expectations leads to a 14-percentage-point increase in the propensity to have a child in the next two years from a baseline propensity of 39%.
+    </div>
+</article><article class="article-card" id="10-1215-00703370-12543998" role="article">
+<h3 class="article-card__title">Impaired Cognitive and Behavioral Functioning in Childhood and Economic Outcomes in Adulthood</h3>
+<p class="article-card__authors">Hope Corman, Kelly Noonan, Nancy E. Reichman</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12543998" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12543998" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12543998" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12543998" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12543998">
+        Developmental disabilities are prevalent among U.S. children, child disability rates have been increasing, and the increases have been driven by cognitive and behavioral disorders. This study estimates the effects of low cognitive test scores and high behavior problem scores in childhood on educational attainment, employment, wages, and access to transportation and credit in adulthood. We assess cognitive and behavior scores at multiple time points during childhood and estimate cross-household and household fixed-effects models. We find that individuals with low cognitive scores in childhood are 10% less likely to graduate from high school, 23% less likely to be employed, 31% less likely to own a motor vehicle, and 18% less likely to have a credit card, and they have 51% lower earnings compared with individuals with higher cognitive scores. We also find that individuals with high behavior problem scores in childhood are 7% less likely to graduate from high school, 11% less likely to be employed, and 13% less likely to own a motor vehicle, and they have 14% lower earnings compared with those with lower behavior problem scores. The findings have important implications for well-being over the life course for a nontrivial share of the U.S. population as well as their families and communities.
+    </div>
+</article><article class="article-card" id="10-1215-00703370-12555050" role="article">
+<h3 class="article-card__title">Has Generational Progress Stalled? Income Growth Over Five Generations of Americans</h3>
+<p class="article-card__authors">Kevin Corinth, Jeff Larrimore</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12555050" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12555050" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12555050" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12555050" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12555050">
+        Whether each generation of Americans continues to economically surpass the previous one has recently been called into question. We construct a posttax, posttransfer income measure from 1963 to 2023 based on the Current Population Survey Annual Social and Economic Supplement that allows us to consistently compare the economic well-being of five generations of Americans at ages 36–40. We find that Millennials had a real median household income that was 20% higher than that of the previous generation, a slowdown from the growth rate of the Silent Generation (36%) and Baby Boomers (26%), but similar to that of Generation X (16%). The slowdown for younger generations largely resulted from stalled growth in work hours among women. Progress for Millennials younger than 30 has also remained robust, though largely due to greater reliance on their parents. Additionally, lifetime income gains for younger generations far outweigh their higher educational costs.
+    </div>
+</article><article class="article-card" id="10-1215-00703370-12550847" role="article">
+<h3 class="article-card__title">Nature's Curriculum: Genes Linked to Educational Attainment and Adult Socioeconomic Status Across Birth Cohorts in a Nordic Welfare State</h3>
+<p class="article-card__authors">Henrik Dobewall, Maria Vaalavuo, Petri Böckerman, Jutta Viinikainen, Outi Sirniö, Katri Kantojärvi, Jaakko Pehkonen, Olli Raitakari, Terho Lehtimäki</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12550847" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12550847" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12550847" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12550847" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12550847">
+        Recent research has identified genes linked to educational attainment, but their effects on subsequent socioeconomic outcomes, particularly in egalitarian Nordic welfare states, remain largely unexplored. We analyze two genetically informed Finnish datasets, encompassing longitudinal register information on earnings, employment, unemployment, occupational status, and social assistance receipt (n = 31,622). We examine the role of a polygenic score for educational attainment (EA PGS), achieved level of education, and family socioeconomic background in predicting these outcomes in adulthood. We further study cohort differences around Finland's comprehensive school reform of the 1970s that aimed to promote equality of opportunity. Our results show that in the post-reform generation, EA PGS did not significantly predict adulthood outcomes after controlling for the achieved level of education. A notable exception was for occupational status. In contrast, in the pre-reform generation, EA PGS predicted later socioeconomic outcomes beyond education, indicating relationships not fully explained by schooling. Parental income did not moderate the effect of the EA PGS. Our findings shed additional light on the mechanisms connecting genetic factors and life chances, demonstrating that institutional setting and schooling can shape the influence of genetic endowment for high educational attainment in adult socioeconomic status.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00377732">
+<div class="row">
+<div class="col-10">
+<h2>Social Forces</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00377732">
+</div><article class="article-card" id="10-1093-sf-soag032" role="article">
+<h3 class="article-card__title">Can earned income tax credits earn their keep?: earned income tax credits and in-work poverty in comparative perspective</h3>
+<p class="article-card__authors">Daniel Fredriksson</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag032" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag032" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag032" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag032" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag032">
+        Do earned income tax credits (EITCs) reduce in-work poverty? EITCs are tax instruments that promote income from work over income from transfer systems and is a fiscal policy increasingly used by many welfare states to achieve poverty reduction and increase work incentives. I argue that effects on in-work poverty may depend on how EITCs are organized. Building on previous research on the poverty impact of transfer systems, I develop unique macro-level indicators of EITCs across three dimensions: income targeting, generosity, and universalism. These indicators are combined with individual-level data from the Luxembourg Income Study and show that when EITCs are more generous, in-work poverty risks increase. The latter seems to primarily be the case in systems where EITCs are relatively similar across the income distribution and not low-income targeted. There are indications that poverty risks are lower when EITCs are low-income targeted, but effects are less pronounced. Overall, these results indicate that the “paradox of redistribution”—which suggests that low-income targeting of transfers is less effective at reducing poverty than universal approaches with higher transfer shares—does not hold in the context of fiscal welfare policies like EITCs.
+    </div>
+</article><article class="article-card" id="10-1093-sf-soag033" role="article">
+<h3 class="article-card__title">Review of “Politics and Privilege: How the Status Wars Sustain Inequality”</h3>
+<p class="article-card__authors">Adam Burston</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag033" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag033" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1093-sf-soag030" role="article">
+<h3 class="article-card__title">The spatial logic of racial devaluation in the Home Owners’ Loan Corporation</h3>
+<p class="article-card__authors">Megan Evans</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag030" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag030" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag030" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag030" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag030">
+        While scholars highlight the racial legacy of the Home Owners’ Loan Corporation (HOLC) residential security maps, less is known about how race shaped HOLC appraisers’ perceptions of the neighborhoods they assessed. Drawing on racialized organizations theory, this study examines how racial schemas within the housing industry became institutionalized in appraisal practices. Using the case of Chicago and a mixed-method approach, it interrogates the racialized discourse in HOLC neighborhood area descriptions, revealing how appraisers used a racialized geographic imagination that positioned Black residents as inherent threats to property values, even when they were not physically present in a neighborhood. Content analyses reveal appraisers’ acute spatial awareness of where racialized groups lived and their engagement in anticipatory devaluation. Regression analyses confirm that appraiser discussion of Black residents, rather than actual demographics, primarily shaped risk assessments, underscoring the interpretive role of appraisers as they transformed neighborhood demographics into racialized valuations. This study shows how race structured the institutional habits of thought on which places held value in the city. Findings have broader implications for residential segregation, stigma, and institutional racism, as the racial-spatial ideology around neighborhood value would shape and legitimize decades of racially unjust norms in the US housing market.
+    </div>
+</article><article class="article-card" id="10-1093-sf-soag040" role="article">
+<h3 class="article-card__title">The selectiveness of inclusiveness: exploring the influence of traditional religious visage on contemporary cultural tastes</h3>
+<p class="article-card__authors">Wen Ma, Ying Li, Yunsong Chen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag040" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag040" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag040" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag040" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag040">
+        A substantial body of literature examines the cultural strength of religion, yet there is a scarcity of work exploring how religion exerts an impact on the broader population of a secular society. Focusing on contemporary China, this study examines the relationship between religious visage, measured by the cumulative presence of Buddhist and Taoist temples, and cultural inclusiveness, captured by cultural taste entropy constructed from 749,545,472 search indices related to 38,312 song titles. Panel analyses reveal contrasting effects: Buddhist visages are associated with more selective cultural patterns, whereas Taoist visages are linked to greater diversity in cultural tastes. This demonstrates that despite world religions’ doctrinal emphasis on inclusiveness, an inherent selectiveness can still impact cultural practices in secular lives through the broader cultural environment. By shifting attention from individual religiosity to the spatial presence of religion, this study contributes to a deeper understanding of the interplay between religions and contemporary cultural practices in secular contexts.
+    </div>
+</article><article class="article-card" id="10-1093-sf-soag035" role="article">
+<h3 class="article-card__title">Belonging and blame: cultural and moral correlates of anti-Asian scapegoating for the COVID-19 pandemic</h3>
+<p class="article-card__authors">Christopher Seto</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag035" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag035" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag035" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag035" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag035">
+        Violence and discrimination targeting Asian Americans increased substantially since the beginning of the COVID-19 pandemic, and perpetrators have frequently used scapegoating language (e.g., “China virus”) or otherwise expressed blame for the pandemic as motivation. However, little empirical research has explored these pandemic scapegoating beliefs—or the preexisting beliefs, values, and narratives that support them—which is likely an important step toward understanding and addressing anti-Asian hate. This study began with an exploratory factor analysis of representative, original US survey data (N = 1941) to construct a novel measure of pandemic scapegoating beliefs. Next, drawing on theories of group threat, nationalism, and morality, multivariable regression analyses examined how (1) Christian nationalism and (2) moral foundations were linked to these pandemic scapegoating beliefs and associated language, above and beyond sociodemographic, religious, and political controls. Among non-Asian Americans, endorsement of Christian nationalism tended to be associated with heightened scapegoating, but with some differences across race and ethnicity. Individualizing moral foundations (i.e., care and fairness concerns) were associated with lower scapegoating, while binding moral foundations (i.e., loyalty, authority, and sanctity concerns) were associated with heightened scapegoating. Notably, these measures largely explained differences in scapegoating beliefs and language across political affiliations, highlighting the importance of moral culture to how outgroup scapegoating narratives become politically polarized and resonant. Implications for scholarship on contemporary anti-Asian hate and other instances outgroup scapegoating are discussed.
+    </div>
+</article><article class="article-card" id="10-1093-sf-soag042" role="article">
+<h3 class="article-card__title">Weaving uncertainty: backloaded institutions and calculated improvisation in children’s fashion production</h3>
+<p class="article-card__authors">Linzhuo Li</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag042" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag042" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag042" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag042" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag042">
+        This study examines the cultural logic of uncertainty in China’s children’s fashion industry, and shows why familiar coordination devices, such as Order Fairs, remain peripheral to this market. I identify a “backloaded institution,” a system where post-production exchange provides the footing for production itself. Producers operate under high uncertainty regarding both meaning and relation, making goods without orders or guarantees. Their risk-taking holds because a secondary clearance market emerges to provide massive, culturally grounded liquidity. This study thus identifies an institution that does not function to predict the future, but to create a liquid present in which multiple futures can be tested.
+    </div>
+</article><article class="article-card" id="10-1093-sf-soag031" role="article">
+<h3 class="article-card__title">Explaining gender-specific trends in income mobility: the role of education</h3>
+<p class="article-card__authors">Xiaojie Xu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag031" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag031" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag031" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag031" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag031">
+        Rising income inequality has aroused widespread concern about potential decreases in intergenerational income mobility. Recent research reveals that income mobility has remained stable among men while declining among women, though the reasons for these disparities remain unclear. This study explores whether gender-specific mobility trends can be explained by gender differences in changes in educational inequality and returns to education. Using Swedish register data for cohorts born between 1958 and 1979, this study confirms gender-specific trends: the intergenerational rank association in income has decreased and then stabilized for men while increasing steadily for women. Decomposition analyses of mobility trends indicate that, for men, decreased educational inequality was the primary factor driving increased income mobility, while returns to education were stable and had limited effects. For women, decreased educational inequality also increased mobility, but this was counteracted by rising direct income associations net of education across cohorts and increasing educational returns among younger cohorts. In summary, through rising educational returns, education has increasingly driven women’s intergenerational income persistence but not men’s. These findings offer new insights into the role of education in driving changes in income mobility within the broader context of evolving gender equality.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="02667215">
+<div class="row">
+<div class="col-10">
+<h2>European Sociological Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-02667215">
+</div><article class="article-card" id="10-1093-esr-jcag016" role="article">
+<h3 class="article-card__title">National belonging, ‘official’ memory culture, and the moderating role of ethnic background in Germany</h3>
+<p class="article-card__authors">Jordan B Katz</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-esr-jcag016" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-esr-jcag016" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/esr/jcag016" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/esr/jcag016" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-esr-jcag016">
+        Whereas Jews were previously the target of state persecution, official German remembrance has recast the once ‘negative’ other as a ‘positive’ other—a process through which national belonging is made conditional on holding a favourable orientation to them. Moreover, the notion of Jews as a memory-mediated other features prominently in immigrant integration discussions, especially regarding Muslims. Accordingly, this paper examines the relationship between German national belonging and individual sentiment towards Jews, moderated by migration and religious background. Using a panel survey of students, analyses indicate that, among migrant background respondents, national belonging is positively associated with pro-Jewish sentiment, the effect being uniquely pronounced for Muslims. However, among the ethnic majority, the relationship is null, despite their higher overall levels of belonging and pro-Jewish sentiment. Results underscore the relationship between immigrant conceptualizations of national belonging and state-endorsed memory culture. Further, the intensity of this association systematically varies according to social location vis-à-vis the nation: the ethnic majority situated closest to the ‘core’, followed by non-Muslim minorities, and then Muslims. The paper theorizes how the precarity of one’s national membership informs how individuals cultivate a sense of national belonging in relation to memory-mediated others specifically, and perhaps state-endorsed cultural contents more broadly.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

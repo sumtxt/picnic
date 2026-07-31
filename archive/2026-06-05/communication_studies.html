@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Communication Studies</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · June 5, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-06-05/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="19312458">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19312458" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19312458" style="max-width: 300px;" title="Communication Methods and Measures">
+                            Communication Methods and Measures
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10584609">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10584609" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10584609" style="max-width: 300px;" title="Political Communication">
+                            Political Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00219916">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00219916" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00219916" style="max-width: 300px;" title="Journal of Communication">
+                            Journal of Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10836101">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10836101" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10836101" style="max-width: 300px;" title="Journal of Computer-Mediated Communication">
+                            Journal of Computer-Mediated Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19401612">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19401612" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19401612" style="max-width: 300px;" title="International Journal of Press-Politics">
+                            International Journal of Press-Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="20563051">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-20563051" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-20563051" style="max-width: 300px;" title="Social Media + Society">
+                            Social Media + Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="21670811">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-21670811" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-21670811" style="max-width: 300px;" title="Digital Journalism">
+                            Digital Journalism
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14614448">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14614448" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14614448" style="max-width: 300px;" title="New Media &amp; Society">
+                            New Media &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00936502">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00936502" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00936502" style="max-width: 300px;" title="Communication Research">
+                            Communication Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19442866">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19442866" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19442866" style="max-width: 300px;" title="Policy and Internet">
+                            Policy and Internet
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="10584609">
+<div class="row">
+<div class="col-10">
+<h2>Political Communication</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10584609">
+</div><article class="article-card" id="10-1080-10584609-2026-2681041" role="article">
+<h3 class="article-card__title">Moving Targets, Moving Politics: The State of Play in Social Media Data Access</h3>
+<p class="article-card__authors">Claes H. de Vreese, Rebekah Tromble</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/10584609.2026.2681041" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/10584609.2026.2681041" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00219916">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Communication</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00219916">
+</div><article class="article-card" id="10-1093-joc-jqag006" role="article">
+<h3 class="article-card__title">Modes of dialogic communication, modes of reality</h3>
+<p class="article-card__authors">Boris H J M Brummans</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-joc-jqag006" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-joc-jqag006" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/joc/jqag006" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/joc/jqag006" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-joc-jqag006">
+        What if dialogue didn’t begin with individuals trying to connect, but with a deeper connectedness already unfolding? This theoretical essay explores that question by introducing two modes of dialogic communication, each expressing the ground of experience in a distinct way. Drawing on Buddhist philosophy, particularly Dzogchen, process philosophy, and traditions of dialogic thought, it proposes awaring as the emergent process through which the ground of experience arises. In the dialogue mode, grasping at this unfolding reinforces separation, making reality appear as an exchange between distinct selves seeking understanding. In the dialoguing mode, we recognize the ground’s inherent openness, in which voices, gestures, thoughts, and silences co-arise, making reality appear more spacious, relational, and compassionate. Structured in three spiraling movements (ground: awaring, expression: dialoguing, and fruit: recognizing), the essay culminates in a generative conversation with Arnett, Bencherki and Sénac, Cooren, and Peters, inviting a reimagining of dialogic communication theory and a deepened study of communicative relationality.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="19401612">
+<div class="row">
+<div class="col-10">
+<h2>International Journal of Press-Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-19401612">
+</div><article class="article-card" id="10-1177-19401612261451034" role="article">
+<h3 class="article-card__title">Addressing Media Harm and Community Relationships through an Ethic of Love</h3>
+<p class="article-card__authors">Danielle K. Brown, Perry Parks, Jessica Pettengill, Jung-Hsiang (Eric) Hsieh, Jasmine Snow, Jarrad Henderson</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-19401612261451034" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-19401612261451034" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/19401612261451034" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/19401612261451034" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-19401612261451034">
+        Ethical approaches to address media harm and build more idealized relationships between journalists and marginalized communities have relied heavily on prescriptions for unidirectional journalistic practices, often framed as an ethic of care . In this exploration of relationship development and maintenance through the perspectives of trusted journalists, we identify practices and exchanges that reflect a more reciprocal framework of an ethic of love . We present a case study derived from interviews with seventeen journalists named as trusted by Black community members in Minneapolis, Minnesota, where police murdered George Floyd in 2020. His murder reignited an international movement to address police brutality and systemic racism. Results show that communities and journalists rely on each other to achieve healthy relationships and exchanges. These relationships require both mutual agency and reciprocity, and many dimensions of their exchanges align with Black feminist scholar bell hooks’ ethic of love. Trusted journalists successfully addressed historic media harm through two prominent practices identified in this study: diligence and deference. Findings call upon scholars to craft a more inclusive and internationally relevant understanding of journalistic strategies that repair historic harms by centering vulnerable communities—for the ultimate benefit of all communities. Drawing on design justice principles, which posit that centering the most vulnerable communities creates more inclusive and universal systems, we discuss how the ethic of love framework can strengthen information pathways between journalists and communities.
+    </div>
+</article><article class="article-card" id="10-1177-19401612261438333" role="article">
+<h3 class="article-card__title">Journalistic Roles in Light of Populism: How German Public Service Media Representatives Discuss Their Coverage of Populists and How They Perceive Their Role</h3>
+<p class="article-card__authors">Johanna Wolleschensky, Annika Sehl</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-19401612261438333" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-19401612261438333" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/19401612261438333" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/19401612261438333" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-19401612261438333">
+        Public service media (PSM) face a democratic dilemma when covering right-wing populism: They are expected to be impartial and ensure pluralism in their reporting. This requires them to give visibility to a range of views, including those of far-right parties, while safeguarding democratic principles such as non-discrimination and human dignity. In this context, it is essential to understand how PSM representatives reflect on their reporting of right-wing populism. Drawing on the concept of journalistic roles, this study examines PSM representatives’ narrated role performance and role orientation in reporting on populism. Based on semi-structured interviews with twenty-six German PSM representatives, the findings reveal that journalists perceive past reporting mistakes and partly believe that PSM have contributed to the rise of populism. Regarding their role orientation, PSM representatives emphasize that they do not wish to exclude populist actors from coverage unless they make anti-constitutional statements, a stance they justify by the democratic election of these figures. More broadly, PSM representatives take on three distinct role orientations when reporting on populism: as disseminators, they aim to provide neutral coverage of events; as watchdogs, they seek to critically scrutinize populist actors; and as educators, they strive to inform the public about problematic developments within populist parties. Against the backdrop of the growing support for the German populist party Alternative für Deutschland (AfD), this study contributes to existing research by proposing a conceptual framework for reporting on populism and offering qualitative insights into how PSM representatives navigate their role in covering the AfD.
+    </div>
+</article><article class="article-card" id="10-1177-19401612261452050" role="article">
+<h3 class="article-card__title">Identity–Policy Fusion and Polarization in United States House Campaign Language</h3>
+<p class="article-card__authors">Tenzin Tamang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-19401612261452050" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-19401612261452050" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/19401612261452050" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/19401612261452050" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-19401612261452050">
+        Campaign language in the United States has grown markedly polarized, with candidates increasingly speaking in party-distinctive ways. Yet the mechanisms driving this linguistic divergence remain insufficiently understood. This study proposes identity–policy fusion, a framing strategy in which candidates embed distinctive biographical vocabulary into policy statements, as one factor shaping this divergence. By framing policy as an authentic extension of lived experience, fusion may tie stances to in-group identity and biographical authority, raising the psychological and social costs of disagreement. Using computational text analysis of 41,842 policy statements from 3,343 U.S. House candidates in the 2018, 2020, and 2022 election cycles, the study operationalizes fusion as term frequency–inverse document frequency (TF–IDF)-weighted lexical overlap between biographies and policy texts, and polarization as a statement’s relative similarity to in-party versus out-party linguistic norms within policy domains. Ordinary least squares regression shows that fusion is significantly associated with higher polarization in campaign language, with the association approximately 26 percent stronger for Republicans than Democrats. This partisan asymmetry is consistent with fusion serving as an alternative source of legitimation under conditions of contested institutional authority, illuminating a potential mechanism through which elite messaging may harden partisan boundaries.
+    </div>
+</article><article class="article-card" id="10-1177-19401612261453657" role="article">
+<h3 class="article-card__title">What Is Ethical AI Use in Journalism? Stakeholders’ Perceptions of Ethical Generative Artificial Intelligence (GenAI) Usage in Kenyan Newsrooms</h3>
+<p class="article-card__authors">Bingbing Zhang, Kevin C. Mudavadi, Brian Ekdale, Brett Johnson, Melissa Tully, Nur Hossain, Jonas Nyabor, Shitemi Khamadi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-19401612261453657" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-19401612261453657" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/19401612261453657" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/19401612261453657" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-19401612261453657">
+        The integration of generative artificial intelligence (GenAI) in newsrooms has prompted scholarly examination of its ethical use. While research has examined journalists’ ethical practices and news audiences’ perceptions, few studies have examined the perceptions of other key stakeholders (e.g., journalism educators, policymakers, influencers, and information technology experts) whose perceptions may influence ethical adoption. Rooted in folk theories as an explanatory and normative framework for making sense of complex phenomena, we interviewed 94 stakeholders to examine their folk theories about GenAI and their ethical understanding of its use in Kenyan journalism. Findings show that across stakeholder groups, participants’ folk theories of what GenAI “is” shape how they interpret ethical concerns and perceive its potential consequences for journalism. Specifically, viewing GenAI as a content-creation tool connects to concerns about laziness, de-skilling, plagiarism, and the erosion of journalists’ professional standards, as the technology risks replacing human creativity. Framing GenAI as a data-driven or algorithmic system aligns with concerns about misinformation, bias, and stereotypes against Kenyans stemming from Western data dominance. Understanding GenAI as a human-like partner fosters fear about blurred boundaries around authorship, transparency, and responsibility in newsrooms. Stakeholders’ folk theories are further rooted in their professional identities and relationships to GenAI. Our findings contribute to scholarship on GenAI ethics by underscoring the importance of expanding journalism scholarship to account for stakeholders’ perceptions.
+    </div>
+</article><article class="article-card" id="10-1177-19401612261451950" role="article">
+<h3 class="article-card__title">Ethics First: How Trust and Political Contexts Shape Public Acceptance of AI-Generated News Across Twenty-four Countries</h3>
+<p class="article-card__authors">Jinpeng Wang, Xin Yu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-19401612261451950" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-19401612261451950" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/19401612261451950" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/19401612261451950" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-19401612261451950">
+        As generative artificial intelligence (AI) reshapes news production, understanding what drives global audiences to accept AI-generated news is critical. Existing research largely adopts a competence-based perspective, neglecting the complex role of trust dimensions and macro-political contexts. This study examines how AI self-efficacy interacts with two distinct dimensions of trust (competence trust and ethical trust) to shape acceptance of AI-generated news, and how these relationships vary across political environments. Analyzing survey data from 24,000 respondents across twenty-four countries, we find that ethical trust is a substantially stronger predictor of acceptance than competence trust, while AI self-efficacy promotes acceptance only when ethical trust is high. Multilevel analysis incorporating national-level indicators (press freedom, regime type, and AI readiness) reveals that the relationship between ethical trust and acceptance is stronger in open, liberal democratic, and technologically ready societies. These findings suggest that the legitimacy of AI-generated news is more strongly associated with audiences’ ethical evaluations of AI systems than with perceived technical capability, and that this association is shaped by the normative expectations that different political contexts cultivate.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="20563051">
+<div class="row">
+<div class="col-10">
+<h2>Social Media + Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-20563051">
+</div><article class="article-card" id="10-1177-20563051261452019" role="article">
+<h3 class="article-card__title">We Are Equally Vulnerable? An Examination of the Third-Person Effect in AI-Generated Misinformation</h3>
+<p class="article-card__authors">Baoying Fu, Xueqing Li</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261452019" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261452019" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261452019" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261452019" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261452019">
+        Misinformation is a pervasive problem in the social media era, undermining social trust, while the emergence of AI-generated misinformation further exacerbates this issue and threatens social order. This study employs the third-person effect as a theoretical framework and collected 726 questionnaire responses to examine individuals’ perceptions of AI-generated misinformation. When exploring the relationships among misinformation exposure, social undesirability, perceived realism, and AI literacy with respect to perceived effects on oneself and on others, individuals recognize that they themselves are also easily influenced by AI-generated misinformation. Furthermore, perceived effects on oneself and others are positively correlated with corrective actions, while no significant relationship is observed with restrictive actions, thus providing suggestions for individual involvement in combating AI-generated misinformation.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261452539" role="article">
+<h3 class="article-card__title">Structured Absence</h3>
+<p class="article-card__authors">Alondra Nelson</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261452539" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261452539" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261452539" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261452539" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261452539">
+        This essay argues that while generative artificial intelligence (AI) can be described as a platform, that description is analytically insufficient for understanding where power operates and how it displaces democratic accountability. The platform concept directs attention to the interface—application programming interfaces (APIs), app stores, and developer ecosystems—while the decisive conditions of generative AI lie upstream in compute supply chains, mineral extraction, semiconductor chokepoints, energy and water infrastructures, immigration flows, and corporate-state arrangements that concentrate control. To name this formation, I introduce the concept of structured absence: the organized diminution of democratic institutional capacity in which governance persists while public authorization disappears. Generative AI is not ungoverned; it is extensively governed through export controls, industrial policy, labor regimes, and private infrastructures that remain largely inaccessible to democratic publics. I argue that “predatory inclusion” and authorization are central analytic terms for understanding this shift: communities are incorporated into AI systems on unequal and opaque terms, while the standing to deliberate over those systems is withheld. The essay concludes by calling for democratic infrastructures capable of authorizing technological change.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261452021" role="article">
+<h3 class="article-card__title">Normative White Internet Practices: Performances at the Edge of a Digital Black Community</h3>
+<p class="article-card__authors">William R. Frey</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261452021" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261452021" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261452021" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261452021" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261452021">
+        Following the murder of George Floyd, more than 2,000 White-identifying Reddit users applied to the subreddit, r/BlackPeopleTwitter, in hopes of becoming verified allies. Prior research has argued that White people may seek out digital contexts to learn about and practice race. However, few studies examine why, and none problematize the relationship between normative internet practices and Whiteness—normative White internet practices. In collaboration with r/BlackPeopleTwitter moderators and rooted in a theoretical orientation of race as doings, this ethnographic and qualitative case study aimed to document examples of normative White internet practices through a focus on the performances of White users seeking allyship at the edge of a digital Black community. The study analysis focuses on 3,219 White ally applications sent in the year surrounding George Floyd’s murder—when and where normative Whiteness was actively and openly contested. The findings begin to articulate a repertoire of normative White internet practices as White-identifying users engaged in information seeking, self-differentiation, impression management, and spatial negotiation to center individualistic projects rooted in Whiteness even when obscured as care for others. These unsolicited and normative practices took on distinct capacities for harm when sent to r/BlackPeopleTwitter moderators. Online racism may persist due to more subtle and normalized forms of racialized harm that do not trigger platformed or moderator interventions. As scholars continue to study racism on social media, there remains a need to partner with online communities to name and organize against digital harms enacted through normative White internet practices.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14614448">
+<div class="row">
+<div class="col-10">
+<h2>New Media &amp; Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-14614448" data-bs-toggle="collapse" type="button">
+              +2
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14614448"><article class="article-card" id="10-1177-14614448261458014" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Corrigendum to “Contextualizing the ethics of algorithms: A socio-professional approach”</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261458014" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261458014" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1177-14614448261456083" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Corrigendum to “Pornographic algorithms: Algorithmically mediated pornification and South Korean women’s everyday resistance on social media”</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261456083" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261456083" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1177-14614448261449271" role="article">
+<h3 class="article-card__title">The politics of artificial intelligence alignment: Public reactions to AI moderation in the case of Google’s Gemini</h3>
+<p class="article-card__authors">Adrian Rauchfleisch, Andreas Jungherr</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261449271" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261449271" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261449271" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261449271" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261449271">
+        This study tests how a prominent artificial intelligence (AI) product failure influences public attitudes, focusing on Google Gemini’s generation of controversial images. Drawing on the AI alignment literature, we distinguish three moderation goals that differ in how far they depart from data-driven outputs: safety, bias mitigation, and aspirational imaginaries. We use focusing events research to explain how controversies make governance questions salient. In a preregistered experiment with 1756 participants, we tested responses to two image sets: American Founding Fathers (T1) and German soldiers from 1943 (T2). T1 significantly reduced support for bias-related and aspirational moderation and lowered trust in the company, but did not affect safety-based justifications or perceived political alignment. T2 showed the same directional pattern but did not reach significance; pooled results confirmed the main pattern. These findings show that visible product failures can affect public views on AI governance along dimensions most directly implicated by the controversy.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261451618" role="article">
+<h3 class="article-card__title">Logging off (but leaving the tabs open)</h3>
+<p class="article-card__authors">Steve Jones</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261451618" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261451618" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1177-14614448261449813" role="article">
+<h3 class="article-card__title">Mass shooting narratives on social media: Content moderation and participatory discourse</h3>
+<p class="article-card__authors">Huan Chen, Ye Wang, Seth Fallik, Jasmine McNealy, Yuan Nan, Qingyuan Yang, Emily Perpich</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261449813" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261449813" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261449813" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261449813" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261449813">
+        This study examines how mass shooting narratives emerge on social media through the interaction of platform governance and participatory discourse. Using a two-study design, we first compare moderation policies and enforcement approaches across major platforms, then analyze discourse surrounding five mass shooting events on X as visible outcomes of platform governance. For the two highest-volume events, 24,748 X posts from the Chiefs Parade shooting and 2043 X posts from the Hookah Bar shooting, we employ a retrieval-augmented generation (RAG)-based thematic analysis combining human-guided theme development with embedding-based semantic retrieval. Three lower volume events are examined through human thematic analysis, and 267 Reddit posts from the Chiefs Parade case serve as a qualitative comparative reference. Findings show that users shared breaking news, expressed grief, debated gun violence and media coverage, and interpreted events publicly. Platform governance appears associated with differences in discourse visibility, tone, and persistence.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261452207" role="article">
+<h3 class="article-card__title">Mapping the disinformation industry in Russia</h3>
+<p class="article-card__authors">Serge Poliakoff, Julia Kling</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261452207" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261452207" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261452207" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261452207" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261452207">
+        This article examines disinformation production as a form of media labour and production infrastructure, introducing a novel methodological approach based on large-scale open-source labour data. By systematically analysing the CVs of employees of disinformation production organisations, it demonstrates how CV data can be used to reconstruct organisational structures, technological toolkits, recruitment dynamics, and labour-market embeddedness in contexts where direct fieldwork is constrained or impossible. Drawing on Actor–Network Theory as an analytical lens, the analysis treats CVs as material traces of digital labour infrastructures and organisational alignment. Using case studies of major Russian disinformation organisations, the article shows how workforce dynamics track key political developments, how toolkits reflect shifting organisational priorities, and how disinformation labour has become embedded within state-aligned labour markets. It concludes by outlining the methodological implications of this approach for studying covert or inaccessible organisations and by reflecting on its limitations and further research directions.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="19442866">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Internet</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-19442866">
+</div><article class="article-card" id="10-1002-poi3-70043" role="article">
+<h3 class="article-card__title">Cross‐Border Online Radicalization Among Teenagers: Evidence From a Brazilian Case Study</h3>
+<p class="article-card__authors">Quésia Pereira Cabral, David Décary‐Hétu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-poi3-70043" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-poi3-70043" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/poi3.70043" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/poi3.70043" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-poi3-70043">
+        This article examines the theme of transnationality in online radicalization processes through an empirical case. It focuses on a group called ‘The Kiss’, led by a Portuguese teenager (Micazz) who encouraged individuals to carry out acts of violence in Brazil in 2023. The study sought to answer the following question: What can The Kiss case reveal about the transnationalization of online radicalization processes? To address this question, we conducted a qualitative study, combining semi‐structured interviews with three police officers who took an active part in the investigations into The Kiss digital community, together with official information from the criminal case in Portugal. The results show that the community operated across multiple digital platforms (Discord, Telegram, Facebook, TikTok, Mega, and Instagram), forming an interconnected ecosystem for the practice of violence, with particular emphasis on school attacks, encouragement of self‐harm, cruelty toward animals, and the sale of child sexual content. The characteristics observed provide empirical evidence that reinforces findings from literature on the third generation of radicalization.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

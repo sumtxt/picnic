@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Economics</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · March 20, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-03-20/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap active" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00335533">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00335533" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00335533" style="max-width: 300px;" title="Quarterly Journal of Economics">
+                            Quarterly Journal of Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00028282">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00028282" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00028282" style="max-width: 300px;" title="American Economic Review">
+                            American Economic Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00223808">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00223808" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00223808" style="max-width: 300px;" title="Journal of Political Economy">
+                            Journal of Political Economy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00129682">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00129682" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00129682" style="max-width: 300px;" title="Econometrica">
+                            Econometrica
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00220515">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00220515" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00220515" style="max-width: 300px;" title="Journal of Economic Literature">
+                            Journal of Economic Literature
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00346527">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00346527" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00346527" style="max-width: 300px;" title="Review of Economic Studies">
+                            Review of Economic Studies
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19411383">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19411383" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19411383" style="max-width: 300px;" title="Annual Review of Economics">
+                            Annual Review of Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="08953309">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-08953309" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-08953309" style="max-width: 300px;" title="Journal of Economic Perspectives">
+                            Journal of Economic Perspectives
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="2640205X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-2640205X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-2640205X" style="max-width: 300px;" title="AER: Insights">
+                            AER: Insights
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19457782">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19457782" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19457782" style="max-width: 300px;" title="AEJ: Applied Economics">
+                            AEJ: Applied Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00346535">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00346535" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00346535" style="max-width: 300px;" title="Review of Economics and Statistics">
+                            Review of Economics and Statistics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19457731">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19457731" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19457731" style="max-width: 300px;" title="AEJ: Economic Policy">
+                            AEJ: Economic Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03044076">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03044076" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03044076" style="max-width: 300px;" title="Journal of Econometrics">
+                            Journal of Econometrics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="15424766">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15424766" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15424766" style="max-width: 300px;" title="Journal of the European Economic Association">
+                            Journal of the European Economic Association
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0734306X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0734306X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0734306X" style="max-width: 300px;" title="Journal of Labor Economics">
+                            Journal of Labor Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0022166X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0022166X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0022166X" style="max-width: 300px;" title="Journal of Human Resources">
+                            Journal of Human Resources
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17597323">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17597323" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17597323" style="max-width: 300px;" title="Quantitative Economics">
+                            Quantitative Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00472727">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00472727" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00472727" style="max-width: 300px;" title="Journal of Public Economics">
+                            Journal of Public Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="02664658">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-02664658" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-02664658" style="max-width: 300px;" title="Economic Policy">
+                            Economic Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13684221">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13684221" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13684221" style="max-width: 300px;" title="Econometrics Journal">
+                            Econometrics Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00130133">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00130133" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00130133" style="max-width: 300px;" title="Economic Journal">
+                            Economic Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19457669">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19457669" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19457669" style="max-width: 300px;" title="AEJ: Microeconomics">
+                            AEJ: Microeconomics
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="00346527">
+<div class="row">
+<div class="col-10">
+<h2>Review of Economic Studies</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00346527">
+</div><article class="article-card" id="10-1093-restud-rdag022" role="article">
+<h3 class="article-card__title">Normal Approximation in Large Network Models</h3>
+<p class="article-card__authors">Michael P Leung, Hyungsik Roger Moon</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-restud-rdag022" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-restud-rdag022" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/restud/rdag022" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/restud/rdag022" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-restud-rdag022">
+        We prove a central limit theorem for network formation models with strategic interactions and homophilous agents. Since data often consists of observations on a single large network, we consider an asymptotic framework in which the network size diverges. We argue that a modification of “stabilization” conditions from the literature on geometric graphs provides a useful high-level formulation of weak dependence which we utilize to establish an abstract central limit theorem. Using results in branching process theory, we derive interpretable primitive conditions for stabilization. The main conditions restrict the strength of strategic interactions and equilibrium selection mechanism. We discuss practical inference procedures justified by our results.
+    </div>
+</article><article class="article-card" id="10-1093-restud-rdag020" role="article">
+<h3 class="article-card__title">Gendered Spheres of Learning and Household Decision-Making over Fertility</h3>
+<p class="article-card__authors">Nava Ashraf, Maxim Bakhtin, Erica Field, Alessandra Voena, Roberta Ziparo</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-restud-rdag020" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-restud-rdag020" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/restud/rdag020" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/restud/rdag020" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-restud-rdag020">
+        While men and women make joint decisions about fertility, women give birth and are more likely to learn about a significant cost of childbearing—maternal health risk. Within couples in Zambia, men have systematically lower awareness of maternal risk factors and higher desire for children than their wives. We develop a model in which information asymmetries between partners over maternal health risk can persist in equilibrium due to strategic incentives and can generate disagreement over fertility that cannot be resolved with transfers. To study the effect of communication barriers on fertility, we design an experiment that varies whether the husband or the wife receives information about maternal health risk. One year after the intervention, men told about such risk exhibit significant gains in knowledge, report lower demand for children, and communicate this information to their wives, who also update their beliefs. Pregnancy falls significantly, while transfers remain unchanged relative to the control group. Meanwhile, when women are told about risk, they update their beliefs, but fail to transmit the information to their husbands, who do not change their demand for children. While pregnancy also falls among these couples, the decline is accompanied by a significant reduction in transfers and support to the wife. When childbearing costs, particularly those borne by one party, cannot be easily communicated within the household, targeting information can help overcome asymmetries and improve household decision-making.
+    </div>
+</article><article class="article-card" id="10-1093-restud-rdag023" role="article">
+<h3 class="article-card__title">De Gustibus and Disputes about Reference Dependence</h3>
+<p class="article-card__authors">Pol Campos-Mercade, Lorenz Goette, Thomas Graeber, Alexandre Kellogg, Charles Sprenger</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-restud-rdag023" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-restud-rdag023" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/restud/rdag023" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/restud/rdag023" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-restud-rdag023">
+        Existing tests of reference-dependent preferences assume universal loss aversion. This paper examines the implications of heterogeneity in gain-loss attitudes for such tests. In experiments on labor supply and exchange behavior, we first measure gain-loss attitudes and then study a canonical treatment effect that distinguishes different models of reference dependence. We document substantial heterogeneity in gain-loss attitudes and evidence against universal loss aversion. Moreover, we find heterogeneous treatment effects over gain-loss attitudes consistent with formulations of expectations-based reference points. Assuming homogeneous preferences would lead to different and potentially incorrect conclusions in these tests. Our findings provide foundational support for reference points derived from expectations and help reconcile inconsistencies in prior empirical exercises.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="19411383">
+<div class="row">
+<div class="col-10">
+<h2>Annual Review of Economics</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-19411383" data-bs-toggle="collapse" type="button">
+              +3
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-19411383"><article class="article-card" id="10-1146-economics-2014-6-issue-1" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title"></h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/economics.2014.6.issue-1" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/economics.2014.6.issue-1" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1146-economics-2024-16-issue-1" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title"></h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/economics.2024.16.issue-1" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/economics.2024.16.issue-1" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1146-economics-2025-17-issue-1" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title"></h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/economics.2025.17.issue-1" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/economics.2025.17.issue-1" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1146-annurev-economics-051624-065932" role="article">
+<h3 class="article-card__title">Masculinity Norms and Their Economic Implications</h3>
+<p class="article-card__authors">Ieda Matavelli, Pauline Grosjean, Ralph De Haas, Victoria Baranov</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-economics-051624-065932" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-economics-051624-065932" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-economics-051624-065932" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-economics-051624-065932" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-economics-051624-065932">
+        While economists have extensively studied gender norms affecting women, masculinity norms—social norms about how men should behave—remain underexplored. This review first synthesizes how other disciplines have studied masculinity, providing economists with conceptual foundations and empirical patterns for understanding masculinity norms. We then discuss how the study of masculinity norms can inform the economics literature on gender gaps and men's outcomes across multiple domains: health behavior, labor supply and occupational choice, violence and aggression, and political preferences. We also discuss paths for the transmission and persistence of these norms. Finally, using novel survey data from 70 countries, we present five stylized facts about masculinity norms. We document substantial global variation in these norms and demonstrate their predictive power for various socioeconomic and political outcomes.
+    </div>
+</article><article class="article-card" id="10-1146-annurev-economics-051624-060215" role="article">
+<h3 class="article-card__title">Evidence in Games and Mechanisms</h3>
+<p class="article-card__authors">Elchanan Ben-Porath, Eddie Dekel, Barton L. Lipman</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-economics-051624-060215" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-economics-051624-060215" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-economics-051624-060215" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-economics-051624-060215" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-economics-051624-060215">
+        We survey theoretical work on the use of evidence, including work in game theory and in mechanism design.
+    </div>
+</article><article class="article-card" id="10-1146-annurev-economics-072225-113623" role="article">
+<h3 class="article-card__title">Natural Language Processing and Innovation Research</h3>
+<p class="article-card__authors">Antonin Bergeaud, Adam Jaffe, Dimitris Papanikolaou</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-economics-072225-113623" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-economics-072225-113623" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-economics-072225-113623" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-economics-072225-113623" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-economics-072225-113623">
+        Innovation is central to models in economics, strategy, management, and finance, yet it remains difficult to measure due to its intangible and knowledge-based nature. Recent advancements in natural language processing offer new methods to analyze textual artifacts, providing empirical insights into previously hard-to-measure aspects of innovation. This article provides an overview of the current applications of these methods in empirical innovation research, highlights their transformative potential for reshaping how researchers study and quantify innovation, and discusses the critical challenges that accompany their use.
+    </div>
+</article><article class="article-card" id="10-1146-annurev-economics-051624-065145" role="article">
+<h3 class="article-card__title">Religion in Emerging and Developing Regions</h3>
+<p class="article-card__authors">Sara Lowes, Benjamin Marx, Eduardo Montero</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-economics-051624-065145" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-economics-051624-065145" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-economics-051624-065145" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-economics-051624-065145" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-economics-051624-065145">
+        This article examines the evolving relationship between religion and economic development in emerging and developing countries (EDCs). Building on large-scale survey data and recent scholarship, we document persistent and, in many regions, increasing levels of religiosity. First, we present global trends in religious beliefs and practices, highlighting a religious divergence between EDCs and high-income countries, as well as the continued prevalence of traditional belief systems alongside major world religions. Second, we analyze the determinants and consequences of religious behavior, showing how income volatility, financial insecurity, and cultural transitions sustain demand for religion. Third, we explore the institutional and political dimensions of religion in EDCs, emphasizing the role of religious institutions as public goods providers and as politically influential actors. This discussion offers a framework for understanding religious organizations as adaptive, competing platforms in pluralistic religious marketplaces. Overall, our findings suggest that religious adaptation, rather than decline, is central to understanding the future of religion and its economic implications in the developing world.
+    </div>
+</article><article class="article-card" id="10-1146-annurev-economics-051624-062344" role="article">
+<h3 class="article-card__title">The Neuroeconomics of Simple and Complex Choice</h3>
+<p class="article-card__authors">Peter Bossaerts, Wolfram Schultz</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-economics-051624-062344" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-economics-051624-062344" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-economics-051624-062344" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-economics-051624-062344" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-economics-051624-062344">
+        Neuroeconomics investigates how the brain makes decisions. The field integrates insights from neuroscience, psychology, economics, and computer science. In simple choices, such as selecting between an apple and a pear, the brain computes and compares value signals for each option. After each choice, the value signals are updated according to the experienced outcome by reinforcement learning. The brain structures involved in choices include different areas of the frontal and parietal cortex, striatum, and amygdala, whereas the value updating involves the reward prediction error signal of dopamine neurons. Complex choices involve interaction among choice options and engage additional neural circuits and computations. While some mechanisms from simple choice are preserved, complex decisions require higher-order processing in the prefrontal cortex. Thus, neuroeconomics aims to build a unified, biologically grounded model of both simple and complex decision-making.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00346535">
+<div class="row">
+<div class="col-10">
+<h2>Review of Economics and Statistics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00346535">
+</div><article class="article-card" id="10-1162-rest_a_01450" role="article">
+<h3 class="article-card__title">Exporting, Global Sourcing, and Multinational Activity: Theory and Evidence from the United States</h3>
+<p class="article-card__authors">Pol Antràs, Teresa C. Fort, Evgenii Fadeev, Felix Tintelnot</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01450" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01450" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01450" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01450" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01450">
+        Multinational firms (MNEs) dominate trade flows, yet their foreign production decisions are often ignored in firm-level studies of exporting and importing. Using newly merged data on US firms’ trade and global production, we show that MNEs are more likely to trade with countries that are proximate to their affiliates. We rationalize these patterns with a new source of firm-level scale economies that arises when fixed costs to source from, or sell in, a market are shared across the MNE’s plants. These shared fixed costs create interdependencies between firms’ production and trade locations that generate third-market responses to trade policy changes.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01402" role="article">
+<h3 class="article-card__title">Inflation and Attention Thresholds</h3>
+<p class="article-card__authors">Oleg Korenok, David Munro, Jiayi Chen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01402" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01402" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01402" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01402" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01402">
+        One of the dangers of high inflation is that it can cause individuals to pay close attention to it. This internalization of inflation can lead to an accelerationist regime, making inflation harder to control. We empirically assess the relationship between attention and inflation for 38 countries. Our measures of attention are constructed from Internet search behavior or the popularity of inflation mentions on Twitter. We find evidence that attention thresholds exist for most of the countries, and that they typically occur between 2% and 4% inflation. We also document interesting variability across countries and find similar thresholds in newspaper coverage of inflation.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01409" role="article">
+<h3 class="article-card__title">The Effect of the Prior Teacher on Value-Added</h3>
+<p class="article-card__authors">Michael Gilraine, Odhrain McCarthy</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01409" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01409" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01409" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01409" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01409">
+        We show that teachers’ value added (VA) depends on the VA of the teachers that preceded them. To do so, we use administrative data from North Carolina and find that a one-standard deviation increase in last grade’s mean teacher VA causes a 0.08σ decrease in teacher VA. Controlling for prior teacher assignment eliminates this bias. Under a benchmark policy that releases teachers in the bottom 5% of the VA distribution, 32% of teachers are incorrectly released using traditional techniques. Our results highlight the importance of incorporating dynamic features of education production into the estimation of teacher quality.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01417" role="article">
+<h3 class="article-card__title">Improving Estimation Efficiency via Regression-Adjustment in Covariate-Adaptive Randomizations with Imperfect Compliance</h3>
+<p class="article-card__authors">Liang Jiang, Oliver B. Linton, Haihan Tang, Yichong Zhang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01417" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01417" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01417" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01417" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01417">
+        We investigate how to improve efficiency using regression adjustments with covariates in covariate-adaptive randomizations (CARs) with imperfect subject compliance. Our regression-adjusted estimators, which are based on the doubly robust moment for local average treatment effects, are consistent and asymptotically normal even with heterogeneous probabilities of assignment and misspecified regression adjustments. We propose an optimal but potentially misspecified linear adjustment and its further improvement via a nonlinear adjustment, both of which lead to more efficient estimators than the one without adjustments. We also provide conditions for nonparametric and regularized adjustments to achieve the semiparametric efficiency bound under CARs.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01415" role="article">
+<h3 class="article-card__title">How Big Is the Media Multiplier? Evidence from Dyadic News Data</h3>
+<p class="article-card__authors">Timothy Besley, Thiemo Fetzer, Hannes Mueller</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01415" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01415" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01415" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01415" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01415">
+        This paper estimates the size of the media multiplier, an easily generalizable model-based measure of how far media coverage magnifies the economic response to shocks. We combine monthly aggregated and anonymized credit card activity data from 114 card-issuing countries in 5 destination countries with a large corpus of news coverage in issuing countries reporting on violent events in the destinations. To define and quantify the media multiplier, we estimate a model in which latent beliefs, shaped by either events or news coverage, drive card activity. According to the model, media coverage can more than triple the economic impact of an event. We document, through our model, that this effect is highly heterogeneous and depends on the broader media representation of countries in each other’s news. We speculate about the role of the media in driving international travel patterns.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01425" role="article">
+<h3 class="article-card__title">The Unintended Consequences of Infrastructure Development</h3>
+<p class="article-card__authors">Antonella Bancalari</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01425" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01425" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01425" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01425" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01425">
+        I investigate the social costs imposed by poor implementation of public infrastructure. Focusing on the period from 2005 to 2015 in Peru, when the government embarked on a nationwide initiative to expand sewerage systems, I leverage quasirandom variation in initiation of the implementation phase. By combining several sources of administrative data, I find that infrastructure development increased infant and under-5 mortality. These effects are driven by health and safety hazards associated with construction work, leading to increased deaths from accidents and waterborne diseases. The severity of these effects is more pronounced in areas where construction activity was more intense.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01431" role="article">
+<h3 class="article-card__title">Optimal Ownership and Firm Performance: An Analysis of China’s FDI Liberalization</h3>
+<p class="article-card__authors">Peter Eppinger, Hong Ma</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01431" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01431" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01431" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01431" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01431">
+        Seminal theories of the firm posit that firm ownership is allocated to minimize contractual inefficiencies. Yet, it remains unclear how much the optimal ownership choice affects firm performance in practice. This paper provides a first quantification of the gains from optimal ownership within multinational firms by exploiting a major liberalization of China’s policy restrictions on foreign ownership. The liberalization allowed previously restricted firms to become fully foreign-owned. We find that these reoptimized ownership choices raise firm output by 40% and productivity by 7.5% on average. An extended property-rights theory of the multinational firm rationalizes these effects and their heterogeneity.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01410" role="article">
+<h3 class="article-card__title">Examining Selection Pressures in the Publication Process through the Lens of Sniff Tests</h3>
+<p class="article-card__authors">Christopher M. Snyder, Ran Zhuo</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01410" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01410" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01410" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01410" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01410">
+        Economics papers increasingly report balance, pretrend, placebo, and other “sniff tests,” rejection of which is bad news for authors, undermining the credibility of their main results. We derive nonparametric bounds on the latent proportion of significant sniff tests removed by the publication process (whether by p-hacking or relegation to the file drawer) and the proportion whose significance was due to true misspecification, not bad luck. Using a hand-collected sample of nearly 30,000 sniff tests, we estimate a removal rate of more than 30% for balance tests in randomized controlled trials and a misspecification rate of more than 40% for other tests.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01411" role="article">
+<h3 class="article-card__title">Consumption Response to Minimum Wages: Evidence from Chinese Households</h3>
+<p class="article-card__authors">Ernest Dautović, Harald Hau, Yi Huang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01411" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01411" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01411" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01411" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01411">
+        This article evaluates the impact of the Chinese minimum-wage policy on consumption of low-wage households for the period 2002–2009. Using a representative panel of urban households, we find that the consumption response to minimum-wage income hikes increases in the share of minimum-wage income in total household income. In particular, poorer households fully consume their additional income, while meaningful negative employment effects are absent. The large marginal propensity to consume is driven by households with at least one child, while poor, childless households save two-thirds of a minimum-wage hike. The expenditure increase is concentrated in health care and education with potentially long-lasting benefits to household welfare.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01418" role="article">
+<h3 class="article-card__title">The Risk of Narrow, Disputable Results in the U.S. Electoral College</h3>
+<p class="article-card__authors">Michael Geruso, Dean Spears</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01418" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01418" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01418" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01418" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01418">
+        Close elections are important for many reasons, including that consequent election disputes can weaken democratic legitimacy and risk political violence. We quantify the probability of close outcomes in U.S. presidential races with novel applications of empirical election models from several sources. We show that razor-thin margins are very likely under the Electoral College (EC). And we establish that the EC causes this closeness: It would not occur under any plausibly comparable popular vote system. The tendency of the EC to generate close elections is found today and throughout U.S. presidential voting history.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01440" role="article">
+<h3 class="article-card__title">Firm-Level Uncertainty and the Transmission of Monetary Policy</h3>
+<p class="article-card__authors">Aeimit Lakdawala, Timothy Moreland</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01440" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01440" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01440" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01440" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01440">
+        We show that firms that face higher uncertainty adjust their investment less in response to monetary policy shocks. We find corroborating evidence of this differential effect from firm-level stock returns on FOMC announcement days. Our results are consistent with a real options (or wait-and-see) channel whereby higher uncertainty dampens the response to changes in business conditions. Consistent with this mechanism, the dampening effect is stronger for firms that face higher reversibility.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01422" role="article">
+<h3 class="article-card__title">The Value of a High School GPA</h3>
+<p class="article-card__authors">Fanny Landaud, Éric Maurin, Barton Willage, Alexander Willén</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01422" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01422" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01422" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01422" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01422">
+        This paper provides novel evidence on the causal effect of high school Grade Point Average (GPA) on the human capital development and labor market trajectory of individuals. Causal identification is achieved by exploiting a unique feature of the Norwegian education system that produces exogenous variation in GPA among high school students. We find little effect on the number of completed years of higher education, but significant effects on the number and quality of higher education programs available to students after high school. Most importantly, we find persistent effects on students’ long-run labor market outcomes, most notably market wage.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01420" role="article">
+<h3 class="article-card__title">Common Subcontracting and Airline Prices</h3>
+<p class="article-card__authors">Gaurab Aryal, Dennis J. Campbell, Federico Ciliberto, Ekaterina A. Khmelnitskaya</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01420" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01420" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01420" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01420" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01420">
+        In the U.S. airline industry, independent regional airlines fly passengers on behalf of several national airlines across different markets, giving rise to common subcontracting. On the one hand, we find that subcontracting is associated with lower prices, consistent with the notion that regional airlines tend to fly passengers at lower costs than major airlines. On the other hand, we find that common subcontracting is associated with higher prices. These two countervailing effects suggest that the growth of regional airlines can have anticompetitive implications for the industry.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01421" role="article">
+<h3 class="article-card__title">Hindsight Bias and Trust in Government</h3>
+<p class="article-card__authors">Holger Herz, Deborah Kistler, Christian Zehnder, Christian Zihlmann</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01421" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01421" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01421" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01421" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01421">
+        We empirically assess whether hindsight bias affects citizens’ evaluation of their political actors. Using an incentivized elicitation technique, we demonstrate that people systematically misremember their past policy preferences regarding how to best fight the COVID-19 pandemic. At the peak of the first wave in the United States, the average respondent mistakenly believed that they supported significantly stricter restrictions at the onset of the first wave than they actually did. Exogenous variation in the extent of hindsight bias, induced through a randomized survey experiment, indicates that hindsight bias has a negative causal impact on the change in trust in government.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01432" role="article">
+<h3 class="article-card__title">Stimulus on the Home Front: The State-Level Effects of WWII Spending</h3>
+<p class="article-card__authors">Gillian Brunet</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01432" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01432" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01432" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01432" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01432">
+        I use newly digitized contract data on U.S. war production spending over 1940–1945 to analyze the macroeconomic effects of U.S. military spending in World War II. I find personal income multipliers of 0.34 over two years and 0.49 over three years. Personal income multipliers may substantially understate gross domestic product multipliers, perhaps by as much as 50%. Employment estimates imply costs per job-year over the same time horizons of $405,013 and $232,268 in 2015 dollars, suggesting job creation was limited. I also find evidence of negative scale effects: larger positive spending shocks are associated with systematically smaller multiplier estimates.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01416" role="article">
+<h3 class="article-card__title">Testing Monotonicity of Mean Potential Outcomes in a Continuous Treatment with High-Dimensional Data</h3>
+<p class="article-card__authors">Yu-Chin Hsu, Martin Huber, Ying-Ying Lee, Chu-An Liu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01416" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01416" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01416" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01416" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01416">
+        We propose a Cramér–von Mises–type test for testing whether the mean potential outcome given a specific treatment level has a weakly monotonic relationship with the continuous treatment under unconfoundedness. To flexibly control for a possibly high-dimensional set of covariates, our test is based on a double debiased machine learning method. We show that our test controls asymptotic size and is consistent against any fixed alternative. We apply our test to evaluate the Job Corps program and reject a weakly negative relationship between the treatment (hours in academic and vocational training) and labor market performance among relatively low treatment values.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01458" role="article">
+<h3 class="article-card__title">Aid Fragmentation and Corruption</h3>
+<p class="article-card__authors">Travers B. Child, Austin L. Wright, Yun Xiao</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01458" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01458" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01458" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01458" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01458">
+        Aid fragmentation—the simultaneous operation of multiple development agencies in one setting—has long raised concerns about coordination challenges and opportunities for corruption. Leveraging unique data on project delivery in Afghanistan, we present the first microlevel empirical analysis of aid fragmentation. We find that aid delivered by a single donor can significantly reduce corruption. Projects delivered under conditions of aid fragmentation, by contrast, can facilitate corruption. We find evidence for a theoretical mechanism linking infrastructure and physical goods with waste and leakage. Our results clarify the policy losses tied to fragmentation, yielding insights for combating misappropriation of aid.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01439" role="article">
+<h3 class="article-card__title">Can Competitiveness Predict Education and Labor Market Outcomes? Evidence from Incentivized Choice and Survey Measures</h3>
+<p class="article-card__authors">Thomas Buser, Muriel Niederle, Hessel Oosterbeek</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01439" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01439" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01439" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01439" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01439">
+        We assess the predictive power of two measures of competitiveness for education and labor market outcomes using a large, representative survey panel. The first is incentivized and is an online adaptation of the laboratory-based Niederle-Vesterlund measure. The second is an unincentivized survey question eliciting general competitiveness. Both measures are strong predictors of income, occupation, level of education, and field of study. The predictive power of the new unincentivized measure is robust to controlling for other traits, including risk attitudes, confidence, and the Big Five personality traits. For most outcomes, the predictive power of competitiveness exceeds that of the other traits.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01390" role="article">
+<h3 class="article-card__title">Aggregate Skewness and the Business Cycle</h3>
+<p class="article-card__authors">Martin Iseringhausen, Ivan Petrella, Konstantinos Theodoridis</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01390" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01390" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01390" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01390" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01390">
+        We develop a data-rich measure of expected macroeconomic skewness in the U.S. economy. Expected macroeconomic skewness is strongly procyclical, mainly reflects the cyclicality in the skewness of real variables, is highly correlated with the cross-sectional skewness of firm-level employment growth, and is distinct from financial market skewness. Revisions in expected skewness lead to business cycle fluctuations nearly indistinguishable from those induced by the main business cycle shock of Angeletos et al. (2020). This result is robust to controlling for macroeconomic volatility and uncertainty, and alternative macroeconomic shocks. Our findings suggest an important role of higher-order dynamics for business cycle theories.
+    </div>
+</article><article class="article-card" id="10-1162-rest_a_01452" role="article">
+<h3 class="article-card__title">Public School Funding, School Quality, and Adult Crime</h3>
+<p class="article-card__authors">E. Jason Baron, Joshua Hyman, Brittany Vasquez</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1162-rest_a_01452" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1162-rest_a_01452" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1162/rest_a_01452" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1162/rest_a_01452" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1162-rest_a_01452">
+        This paper asks whether increasing public school funding can be an effective long-run crime-prevention strategy in the United States. Specifically, we examine the effect of increases in funding early in children’s lives on the likelihood that they are arrested as adults. We exploit quasi-experimental variation in public school funding, leveraging two natural experiments in Michigan and a novel administrative data set linking the universe of Michigan public school students to adult criminal justice records. First, research design exploits variation in operating expenditures due to Michigan’s 1994 school finance reform, Proposal A. second design exploits variation in capital spending by leveraging close school district capital bond elections in a regression discontinuity framework. In both cases, we find that students exposed to additional funding during elementary school were substantially less likely to be arrested in adulthood. We show that the social benefits of increasing school funding are greater than the costs, even when considering only the crime-reducing benefits.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="03044076">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Econometrics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-03044076">
+</div><article class="article-card" id="10-1016-j-jeconom-2026-106216" role="article">
+<h3 class="article-card__title">A sorted penalty estimator: Inference for a correlation-robust shrinkage method</h3>
+<p class="article-card__authors">Marcelo C. Medeiros, Chuanping Sun</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.jeconom.2026.106216" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.jeconom.2026.106216" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1016-j-jeconom-2026-106222" role="article">
+<h3 class="article-card__title">Estimation and inference for unbalanced panel data models with interactive fixed effects</h3>
+<p class="article-card__authors">Liangjun Su, Fa Wang, Yiren Wang</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.jeconom.2026.106222" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.jeconom.2026.106222" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1016-j-jeconom-2026-106220" role="article">
+<h3 class="article-card__title">Inference on breaks in weak location time series models with the estimating function approach</h3>
+<p class="article-card__authors">Christian Francq, Lorenzo Trapani, Jean-Michel Zakoïan</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.jeconom.2026.106220" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.jeconom.2026.106220" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1016-j-jeconom-2026-106221" role="article">
+<h3 class="article-card__title">An empirical evaluation of some long-horizon macroeconomic forecasts</h3>
+<p class="article-card__authors">Kurt G. Lunsford, Kenneth D. West</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.jeconom.2026.106221" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.jeconom.2026.106221" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="15424766">
+<div class="row">
+<div class="col-10">
+<h2>Journal of the European Economic Association</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-15424766">
+</div><article class="article-card" id="10-1093-jeea-jvag013" role="article">
+<h3 class="article-card__title">Noisy Foresight</h3>
+<p class="article-card__authors">Anujit Chakraborty, Chad Kendall</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jeea-jvag013" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jeea-jvag013" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jeea/jvag013" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jeea/jvag013" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jeea-jvag013">
+        In a controlled experiment, we show that decision-makers in a one-player, dynamic setting often fail to think through their own future actions before making initial decisions. This failure to plan at future contingencies implies a lack of perfect foresight, violating a fundamental assumption in dynamic decision problems. We show that neither experience nor prompting subjects to think about their future actions improve behavior. Instead the problem stems from failing to think through how future actions translate to optimal actions in the first period. We then turn to the question of how to model the foresight of such boundedly rational agents. Using the rich dataset we collect, across the five behavioral models we consider, we find that a model in which subjects expect to make less mistakes when the utility consequences of their future actions are more disparate best fits behavior.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00472727">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Public Economics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00472727">
+</div><article class="article-card" id="10-1016-j-jpubeco-2026-105615" role="article">
+<h3 class="article-card__title">Cronies in the courtroom: Political interference and judicial reforms</h3>
+<p class="article-card__authors">Hongbin Cai, Heng Chen, Yuyu Chen, Sisi Zhang</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.jpubeco.2026.105615" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.jpubeco.2026.105615" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1016-j-jpubeco-2026-105626" role="article">
+<h3 class="article-card__title">A prescription for knowledge: Patient information and generic substitution</h3>
+<p class="article-card__authors">Linn Hjalmarsson, Christian P.R. Schmid, Nicolas Schreiner</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.jpubeco.2026.105626" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.jpubeco.2026.105626" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00130133">
+<div class="row">
+<div class="col-10">
+<h2>Economic Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00130133">
+</div><article class="article-card" id="10-1093-ej-ueag033" role="article">
+<h3 class="article-card__title">Do markets deliver? Competition and Choice in European healthcare markets</h3>
+<p class="article-card__authors">Carol Propper</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-ej-ueag033" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-ej-ueag033" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/ej/ueag033" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/ej/ueag033" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-ej-ueag033">
+        In the last two decades European policy makers have sought to increase the use of market mechanisms in the delivery of healthcare. These reforms introduce competition and choice into previously heavily constrained environments. This leads to a set of interesting economic issues that have been addressed in a range of papers, both theoretical and empirical. This paper examines whether this popular reform model has resulted in improvements in outcomes for patients and/or taxpayers. It synthesises the existing economic analyses, highlights what is known and what is not, and signals potential next steps for economic research.
+    </div>
+</article><article class="article-card" id="10-1093-ej-ueag036" role="article">
+<h3 class="article-card__title">Product Safety in the Age of AI: Autonomy, R&amp;D, and Liability</h3>
+<p class="article-card__authors">Yongmin Chen, Xinyu Hua</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-ej-ueag036" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-ej-ueag036" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/ej/ueag036" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/ej/ueag036" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-ej-ueag036">
+        We study optimal liability for AI-powered products. Like human users, artificial intelligence (AI) can cause product failures that harm third parties. Additionally, it may introduce extreme risks of large-scale harm that renders full liability impractical. Raising AI liability for ordinary loss above actual harm can decrease excessive autonomy and increase social welfare, even when it negatively impacts R&amp;D efforts. A well-designed liability rule implements efficient levels of autonomy and balanced R&amp;D that reduces AI’s general risk. However, under targeted R&amp;D to reduce AI’s extreme risk, full efficiency cannot be achieved with liability, and regulations limiting such risk can perform better.
+    </div>
+</article><article class="article-card" id="10-1093-ej-ueag035" role="article">
+<h3 class="article-card__title">Swiftness and delay of punishment</h3>
+<p class="article-card__authors">Libor Dušek, Christian Traxler</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-ej-ueag035" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-ej-ueag035" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/ej/ueag035" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/ej/ueag035" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-ej-ueag035">
+        We study how the swiftness and delay of punishment affect behaviour in the context of speeding offences. Using rich administrative data from automated speed cameras, we exploit two quasi-experimental sources of variation in the lag between an offence and the sending of a ticket. At the launch of the speed camera system, administrative bottlenecks created delays of up to three months. Later, we implemented a protocol that randomly assigned tickets to either swift or delayed processing. We present two main results. First, delays reduce payment compliance: timely payments fall by 7 to 9% when tickets are sent with delays of four or more weeks. We also provide evidence suggesting that very swift tickets – sent on the first or second day after the offence – increase timely payments. These findings align with predictions from expert scholars elicited through a survey. Second, speeding tickets cause a strong, immediate, and persistent decline in speeding. Although swift tickets generate sizable mechanical benefits, we find no robust differential effects of swiftness or delay on subsequent speeding behaviour. This challenges widely held beliefs, as reflected in our survey. Finally, we outline a simple framework of learning and updating that explains our findings.
+    </div>
+</article><article class="article-card" id="10-1093-ej-ueag031" role="article">
+<h3 class="article-card__title">Universal Daycare and Mothers’ Working Lifetime</h3>
+<p class="article-card__authors">Sarah Sander</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-ej-ueag031" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-ej-ueag031" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/ej/ueag031" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/ej/ueag031" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-ej-ueag031">
+        This paper examines the effects of universal daycare on mothers’ labour force participation, hours worked, full-time employment, and earnings over their working lives. I exploit variation in access created by the roll-out of daycare centres across Denmark, combined with rich administrative data. Daycare availability positively affects participation (2.3%), hours worked (3.1%), and earnings (3.7%) 16 years after the first child. Secondary fertility choices and parental separation appear to mediate these effects. The effects on labour market outcomes are driven by low-educated mothers, suggesting that lack of subsidised childcare is a larger employment barrier for low-educated mothers.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

@@ -1,0 +1,2400 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Political Science</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · May 22, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-05-22/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="10942939">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10942939" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10942939" style="max-width: 300px;" title="Annual Review of Political Science">
+                            Annual Review of Political Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00030554">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00030554" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00030554" style="max-width: 300px;" title="American Political Science Review">
+                            American Political Science Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10471987">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10471987" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10471987" style="max-width: 300px;" title="Political Analysis">
+                            Political Analysis
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00925853">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00925853" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00925853" style="max-width: 300px;" title="American Journal of Political Science">
+                            American Journal of Political Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00104140">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00104140" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00104140" style="max-width: 300px;" title="Comparative Political Studies">
+                            Comparative Political Studies
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00071234">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00071234" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00071234" style="max-width: 300px;" title="British Journal of Political Science">
+                            British Journal of Political Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="15375927">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15375927" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15375927" style="max-width: 300px;" title="Perspectives on Politics">
+                            Perspectives on Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00223816">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00223816" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00223816" style="max-width: 300px;" title="Journal of Politics">
+                            Journal of Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10455736">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10455736" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10455736" style="max-width: 300px;" title="Journal of Democracy">
+                            Journal of Democracy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03044130">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03044130" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03044130" style="max-width: 300px;" title="European Journal of Political Research">
+                            European Journal of Political Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="01909320">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-01909320" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-01909320" style="max-width: 300px;" title="Political Behavior">
+                            Political Behavior
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="15540626">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15540626" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15540626" style="max-width: 300px;" title="Quarterly Journal of Political Science">
+                            Quarterly Journal of Political Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0033362X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0033362X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0033362X" style="max-width: 300px;" title="Public Opinion Quarterly">
+                            Public Opinion Quarterly
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="20498470">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-20498470" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-20498470" style="max-width: 300px;" title="Political Science Research and Methods">
+                            Political Science Research and Methods
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0162895X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0162895X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0162895X" style="max-width: 300px;" title="Political Psychology">
+                            Political Psychology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00483915">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00483915" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00483915" style="max-width: 300px;" title="Philosophy &amp; Public Affairs">
+                            Philosophy &amp; Public Affairs
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="20531680">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-20531680" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-20531680" style="max-width: 300px;" title="Research &amp; Politics">
+                            Research &amp; Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="01402382">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-01402382" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-01402382" style="max-width: 300px;" title="West European Politics">
+                            West European Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13510347">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13510347" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13510347" style="max-width: 300px;" title="Democratization">
+                            Democratization
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09638016">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09638016" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09638016" style="max-width: 300px;" title="Journal of Political Philosophy">
+                            Journal of Political Philosophy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="20522630">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-20522630" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-20522630" style="max-width: 300px;" title="Journal of Experimental Political Science">
+                            Journal of Experimental Political Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17557739">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17557739" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17557739" style="max-width: 300px;" title="European Political Science Review">
+                            European Political Science Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0017257X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0017257X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0017257X" style="max-width: 300px;" title="Government and Opposition">
+                            Government and Opposition
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09626298">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09626298" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09626298" style="max-width: 300px;" title="Political Geography">
+                            Political Geography
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13608746">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13608746" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13608746" style="max-width: 300px;" title="South European Society and Politics">
+                            South European Society and Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="02613794">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-02613794" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-02613794" style="max-width: 300px;" title="Electoral Studies">
+                            Electoral Studies
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="1743923X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-1743923X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-1743923X" style="max-width: 300px;" title="Politics &amp; Gender">
+                            Politics &amp; Gender
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00027162">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00027162" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00027162" style="max-width: 300px;" title="Annals of the American Academy of Political and Social Science">
+                            Annals of the American Academy of Political and Social Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13540688">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13540688" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13540688" style="max-width: 300px;" title="Party Politics">
+                            Party Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00286060">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00286060" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00286060" style="max-width: 300px;" title="New Left Review">
+                            New Left Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14623528">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14623528" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14623528" style="max-width: 300px;" title="Journal of Genocide Research">
+                            Journal of Genocide Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10659129">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10659129" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10659129" style="max-width: 300px;" title="Political Research Quarterly">
+                            Political Research Quarterly
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="21599165">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-21599165" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-21599165" style="max-width: 300px;" title="East European Politics">
+                            East European Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14650045">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14650045" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14650045" style="max-width: 300px;" title="Geopolitics">
+                            Geopolitics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00905917">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00905917" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00905917" style="max-width: 300px;" title="Political Theory">
+                            Political Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="1060586X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-1060586X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-1060586X" style="max-width: 300px;" title="Post-Soviet Affairs">
+                            Post-Soviet Affairs
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00104159">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00104159" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00104159" style="max-width: 300px;" title="Comparative Politics">
+                            Comparative Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03629805">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03629805" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03629805" style="max-width: 300px;" title="Legislative Studies Quarterly">
+                            Legislative Studies Quarterly
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14651165">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14651165" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14651165" style="max-width: 300px;" title="European Union Politics">
+                            European Union Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10490965">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10490965" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10490965" style="max-width: 300px;" title="PS: Political Science &amp; Politics">
+                            PS: Political Science &amp; Politics
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="10471987">
+<div class="row">
+<div class="col-10">
+<h2>Political Analysis</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10471987">
+</div><article class="article-card" id="10-1017-pan-2026-10044" role="article">
+<h3 class="article-card__title">Improving Small-Area Estimates of Public Opinion by Calibrating to Known Population Quantities</h3>
+<p class="article-card__authors">William Marble, Joshua D. Clinton</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-pan-2026-10044" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-pan-2026-10044" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/pan.2026.10044" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/pan.2026.10044" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-pan-2026-10044">
+        Multilevel regression and poststratification (MRP) is widely used to estimate opinion in small subgroups and to adjust unrepresentative surveys. Yet, even flexible MRP models contain errors generated by non-response and model misspecification. We propose a principled, data-driven method to leverage observable errors on auxiliary quantities with known marginal distributions—for example, election outcomes—to improve estimates of policy attitudes. Our method leverages the correlation between auxiliary variables and outcomes of interest to calibrate MRP estimates to these known marginal distributions. We illustrate our approach using a pre-election poll measuring support for an abortion referendum. We find that the method reduces county-level error by nearly two-thirds relative to traditional MRP. We also show how our calibration approach can be used to generate estimates for smaller nested geographies, such as precincts, even in the absence of poststratification data at this level. Our approach provides a framework for fully incorporating known population data to improve estimates of public opinion in small subgroups, providing scholars another tool to study representation.
+    </div>
+</article><article class="article-card" id="10-1017-pan-2026-10046" role="article">
+<h3 class="article-card__title">Estimating Treatment Effects on Proportions with Synthetic Controls</h3>
+<p class="article-card__authors">Konstantin Bogatyrev, Lukas F. Stoetzer</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-pan-2026-10046" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-pan-2026-10046" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/pan.2026.10046" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/pan.2026.10046" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-pan-2026-10046">
+        Synthetic control methods are widely used for causal inference in case studies and panel data settings, often applied to model counterfactuals for proportional outcomes. However, conventional synthetic control methods are designed for univariate outcomes, leading researchers to model counterfactuals for each proportion separately. We make the case for jointly estimating synthetic controls across multiple compositional outcomes. Using the same weights for each proportion establishes a constant control comparison, improving comparability while adhering to compositional constraints on treatment effects. We illustrate the benefits of the method through a simulation and two applications to recent empirical studies. This implementation integrates naturally with a wide range of synthetic control approaches, providing interpretable estimates for compositional panel data common in political science.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00925853">
+<div class="row">
+<div class="col-10">
+<h2>American Journal of Political Science</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00925853">
+</div><article class="article-card" id="10-1111-ajps-70065" role="article">
+<h3 class="article-card__title">Breaking barriers: How an international treaty for women reduces the size of the informal economy</h3>
+<p class="article-card__authors">Chris Gahagan</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-ajps-70065" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-ajps-70065" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/ajps.70065" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/ajps.70065" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-ajps-70065">
+        Prior research on the role the Convention on the Elimination of All Forms of Discrimination Against Women (CEDAW) has improving women's outcomes has shown ratification results in increased political and social rights, yet no improvements in economic rights. I challenge prior findings by providing evidence that CEDAW improves women's economic rights by reducing gendered legal barriers to employment. I also demonstrate CEDAW has unexpected but desirable downstream consequences that further improve women's economic outcomes by facilitating movement from the informal to the formal economy. Through matching within a difference‐in‐differences design, I show ratifying countries experience a significant increase in women's equality of economic opportunity and a significant decrease in the size of the informal economy. These results hold under multiple robustness checks and placebo tests. By examining specific outcomes that are relevant to CEDAW, I offer greater insight into CEDAW's impact on women's economic outcomes than previous research has afforded.
+    </div>
+</article><article class="article-card" id="10-1111-ajps-70064" role="article">
+<h3 class="article-card__title">Post‐instrument bias</h3>
+<p class="article-card__authors">Julian Schuessler, Adam N. Glynn, Miguel R. Rueda</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-ajps-70064" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-ajps-70064" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/ajps.70064" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/ajps.70064" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-ajps-70064">
+        When using instrumental variables, researchers often assume that causal effects are only identified conditional on covariates. We show that the role of these covariates is often unclear and that there exists confusion regarding their ability to mitigate violations of the exclusion restriction. We explain when and how existing adjustment strategies may lead to “post‐instrument” bias. We then discuss assumptions that are sufficient to identify various treatment effects when adjustment for post‐instrument variables is required. In general, these assumptions are highly restrictive, albeit they sometimes are testable. We also show that other existing tests are possibly misleading. Then, we introduce a sensitivity analysis that uses information on variables influenced by the instrument to gauge the effect of potential violations of the exclusion restriction. We illustrate it using a published study and summarize our results in easy‐to‐understand guidelines.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00104140">
+<div class="row">
+<div class="col-10">
+<h2>Comparative Political Studies</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00104140">
+</div><article class="article-card" id="10-1177-00104140261448429" role="article">
+<h3 class="article-card__title">The Cordon Dilemma: How Voters Evaluate Cooperation With the Far-Right in Parliament</h3>
+<p class="article-card__authors">Martin Gross, Christina-Marie Juen, Christian Stecker</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00104140261448429" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00104140261448429" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00104140261448429" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00104140261448429" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00104140261448429">
+        The electoral success of far-right parties forces mainstream parties to reconsider their strategies towards these challengers. Center-right parties in particular face trade-offs between a principled commitment to non-cooperation and their vote and policy goals. Accommodation may win back conservative voters, yet simultaneously alienate centrist supporters. Existing research has explored accommodation and dismissal primarily in the electoral arena, but less is known about the role of wholesale exclusion – the cordon sanitaire – in the legislative arena. Studying Germany, we examine how voters evaluate the willingness of the center-right (CDU/CSU) to collaborate with the far-right (AfD) in parliament. We show that voters overwhelmingly reject a coalition, while many are willing to tolerate issue-specific cooperation under certain conditions. By uncovering how voters balance principled commitments against instrumental policy goals, this study deepens our understanding of the electoral and democratic consequences of the cordon sanitaire.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00071234">
+<div class="row">
+<div class="col-10">
+<h2>British Journal of Political Science</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00071234">
+</div><article class="article-card" id="10-1017-s0007123426101586" role="article">
+<h3 class="article-card__title">Who Do Parties Speak To? Introducing the PSoGA: A New Comprehensive Database of Parties’ Social Group Appeals</h3>
+<p class="article-card__authors">Alona O. Dolinsky, Lena Maria Huber, Will Horne</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-s0007123426101586" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-s0007123426101586" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/s0007123426101586" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/s0007123426101586" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-s0007123426101586">
+        Which social groups do political parties appeal to? This is an important question, yet a lack of comparative data has constrained research. To address this gap, we introduce the Parties’ Social Group Appeals (PSoGA) Database, which includes two novel datasets covering 791 election manifestos from 139 parties across Austria, Denmark, Germany, Ireland, the Netherlands, Spain, Switzerland, and the United Kingdom from 1970 to 2025. This article outlines the methodology for constructing and validating the datasets, demonstrates compatibility with policy-focused resources like MARPOR, and highlights key aspects. This database provides researchers with unprecedented insight into representation dynamics across space and time by documenting the groups that parties speak about and appeal to.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="15375927">
+<div class="row">
+<div class="col-10">
+<h2>Perspectives on Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-15375927">
+</div><article class="article-card" id="10-1017-s1537592725104349" role="article">
+<h3 class="article-card__title">Competing Issue Publics in the Opioid Epidemic: Implications for Public Policy</h3>
+<p class="article-card__authors">Elizabeth Pérez-Chiqués, Patricia Strach, Katie Zuber</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-s1537592725104349" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-s1537592725104349" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/s1537592725104349" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/s1537592725104349" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-s1537592725104349">
+        Public perception matters for policy outcomes. Most research finds that, in contrast to past drug waves, the public views the contemporary opioid epidemic as a medical rather than criminal justice issue, although a smaller body of research suggests that criminal justice frameworks persist. We know less, however, about how issue publics with direct experience—who are more likely to take action and have the ear of policy makers—understand it. How do people involved in the ecosystem of drug use and policy understand the opioid epidemic, and what are the implications for policy and policy change? We identify the competing issue publics that people with experience represent by the frameworks they draw from and the perceptions they hold. Through in-depth interviews and participant observation, we, too, find that people with direct experience more often use language of the medical framework than the criminal justice framework. Yet underlying the seemingly strong surface-level support for the medical framework, the criminal justice approach remains in place. Within the issue publics critical for policy debates, individuals apply the medical framework selectively to people proximate to them, or they are ambivalent, holding multiple frames (including criminal justice) at once, even among those outside the criminal justice field. Further, our research reinforces how even the medical framework is compatible with many punitive elements. The hidden persistence of a punitive framework allows differential treatment for specific populations today and paves the way for dramatic policy change, potentially in the future. Our research has implications for public perception and policy change more broadly.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00223816">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00223816">
+</div><article class="article-card" id="10-1086-742311" role="article">
+<h3 class="article-card__title">Gender Quota Laws and Women in Cabinets</h3>
+<p class="article-card__authors">Tiffany Barnes, Giulia Venturini, Ana Catalano Weeks</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/742311" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/742311" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1086-742310" role="article">
+<h3 class="article-card__title">Cadre networks and bureaucratic careers in autocracies</h3>
+<p class="article-card__authors">Alexander De Juan, Felix Haass, Jan H. Pierskalla</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/742310" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/742310" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="03044130">
+<div class="row">
+<div class="col-10">
+<h2>European Journal of Political Research</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-03044130">
+</div><article class="article-card" id="10-1017-s1475676526101200" role="article">
+<h3 class="article-card__title">The paradox of representation: How identity fragmentation complicates voter-party congruence</h3>
+<p class="article-card__authors">Jozef Michal Mintal, Felix Butzlaff, Bence Hamrak, Róbert Vancel, Kamila Borseková</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-s1475676526101200" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-s1475676526101200" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/s1475676526101200" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/s1475676526101200" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-s1475676526101200">
+        How should democratic representation be measured in an era of increasingly individualized and volatile political identities, and fragile collective attachments? Traditionally, research on representation has sought a single best dimension measure of voter-party congruence and representative fit; yet, in postmodern societies marked by fluid and fragmented identities, this approach, we argue, oversimplifies voter choice and misrepresents the quality of democratic representation. To address these limitations, we draw on social theory diagnoses that illuminate how contemporary processes of individualization, alienation, and fragmentation shape political identity formation and democratic representation. We develop a novel framework of multi-point congruence to assess voter-party alignment across the full voter-party matrix along three dimensions: aggregate issue agreement, party-defined salience, and voter-defined salience. Using a unique voting advice application dataset from Slovakia’s early elections in 2023 ( N = 134,699), an illustrative case for postmodern electoral dynamics, we show that personalized representation, centered on voter-defined priorities, maximizes policy alignment but fosters fragmentation, as voters often find multiple parties equally proximate. By contrast, party-centered representation sharpens partisan distinctiveness but increases ideological distance from voters. These competing logics of representation expose a core democratic trade-off: tailoring representation to individual preferences enhances policy fit but erodes partisan clarity, potentially leading to higher voter volatility and weakening voter-party linkages at the system level. Overall, our framework offers a more nuanced and generalizable assessment of voter-party alignment and representative quality in fragmented party systems of the contemporary, capturing not just how alignment occurs, but the democratic tensions it entails.
+    </div>
+</article><article class="article-card" id="10-1017-s1475676526101248" role="article">
+<h3 class="article-card__title">Political socialisation before and after migration: How origin-country political culture shapes immigrant voting in Europe</h3>
+<p class="article-card__authors">Zeynep Mentesoglu Tardivo, Simona Guglielmi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-s1475676526101248" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-s1475676526101248" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/s1475676526101248" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/s1475676526101248" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-s1475676526101248">
+        Electoral participation among immigrants is frequently examined through the lens of residence country integration policies and institutional access. However, immigrants arrive with embedded values and political attitudes developed through early political socialisation in their country of origin, which may influence their engagement with democratic institutions long after migration. Grounded in theories of political (re)socialisation – exposure, resilience, and transferability – and drawing on the ‘impressionable years’ argument in resilience theory, we hypothesise that pre-migration political culture influences electoral participation, but its influence varies across generations. Specifically, we examine how pre-migration exposure to different political regimes affects electoral behaviour and how the timing of arrival (before or after age 13) and the length of residence moderate these effects. To test the hypotheses, the analysis draws on European Social Survey (ESS) data (Rounds 5–11), covering 23 EU member states. We focus on citizens of foreign origin, including 14,216 first-generation, 3,620 1.5-generation (arriving before age 13), and 5,359 second-generation immigrants. Using additional measures from the Varieties of Democracy (V-Dem), we employ logistic regression models that integrate individual-level predictors with origin-country political culture, derived from migrants’ or their parents’ countries of birth. Our findings speak to all three strands of the political resocialisation framework. Early arrival and longer residence are associated with higher electoral participation, while pre-migration political socialisation continues to shape political behaviour after migration. Most notably, we find that first-generation immigrants socialised under authoritarian regimes exhibit higher electoral participation than their peers from democratic origins, suggesting the presence of a reactive mobilisation mechanism.
+    </div>
+</article><article class="article-card" id="10-1017-s1475676526101327" role="article">
+<h3 class="article-card__title">Strategies of agenda denial: Anti-gender opposition to LGBTQ+ policies in Italy</h3>
+<p class="article-card__authors">Anna Lavizzari, Andrea Terlizzi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-s1475676526101327" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-s1475676526101327" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/s1475676526101327" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/s1475676526101327" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-s1475676526101327">
+        While the agenda setting literature largely focuses on how issues gain the attention of policy-makers, the strategies used to keep certain issues off the governmental agenda remain underexplored. This paper addresses this gap by examining agenda denial in the context of LGBTQ+ equality policies. It analyzes how opponents of such policies employ both strategies of avoidance and non-confrontation, as well as strategies of attack and issue redefinition, in order to prevent LGBTQ+ equality from advancing on the policy agenda. The opponents examined in this study are anti-gender actors, who have increasingly positioned themselves at the forefront of the backlash against gender equality, forming alliances across political and civil society sectors to push back or halt progress on LGBTQ+ policies. By dissecting their opposition arguments, this study examines how they strategically mobilize reason (evoking empirical proofs and factual evidence) and emotion (evoking sensibilities and feelings) to sustain their denial strategies. Focusing on Italy, where parties of the right-wing bloc and anti-gender organizations are increasingly intertwined and have gained significant influence, this study utilizes qualitative, interpretive content analysis of parliamentary debates on laws against homotransphobia, as well as organizational documents from anti-gender actors. The paper contributes to the literature by linking gender studies with agenda denial theory, offering fresh insights into gender backlash dynamics from a public policy perspective.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="01909320">
+<div class="row">
+<div class="col-10">
+<h2>Political Behavior</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-01909320">
+</div><article class="article-card" id="10-1007-s11109-026-10140-z" role="article">
+<h3 class="article-card__title">Perceptions of Discrimination Against White People in Post-Floyd America: Media Coverage and Public Opinion, 2020–2024</h3>
+<p class="article-card__authors">Matthew Levendusky, Shawn Patterson, James N. Druckman, Michele Margolis, Josh Pasek</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1007-s11109-026-10140-z" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1007-s11109-026-10140-z" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1007/s11109-026-10140-z" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1007/s11109-026-10140-z" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1007-s11109-026-10140-z">
+        The aftermath of the 2020 George Floyd protests illustrates a fundamental truism of race relations in America: racial progress is difficult to sustain. While the protests initially seemed to usher in a progressive era of racial politics, a counter-narrative quickly emerged arguing that efforts to remedy past injustices against people of color discriminated against white people. We show that this framing soon dominated media coverage of, and elite messages about, racial issues. Moreover, using data tracking public opinion between 2020 and 2024, we show that Americans came to believe that white (Black) people experienced more (less) discrimination. In fact, by 2021, Republicans, on average, perceived white people as facing more discrimination than Black people.
+    </div>
+</article><article class="article-card" id="10-1007-s11109-026-10150-x" role="article">
+<h3 class="article-card__title">Tesla Takedown: Brand Politicization and Partisan Consumerism in the Trump Era</h3>
+<p class="article-card__authors">Kyle Endres, Donald P. Green, Costas Panagopoulos</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1007-s11109-026-10150-x" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1007-s11109-026-10150-x" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1007/s11109-026-10150-x" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1007/s11109-026-10150-x" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1007-s11109-026-10150-x">
+        During the 2024 U.S. presidential election, Tesla CEO Elon Musk endorsed the Republican nominee Donald Trump, contributed nearly $250 million to PACs supporting his candidacy, and grew close to Trump as a prominent figure in his second administration through his involvement with the Department of Government Efficiency, prior to his withdrawal from the Trump inner circle in May 2025. We contend his alliance with Trump politicized his electric vehicle company Tesla, polarized the carmaker’s brand image and reputation, and likely resulted in partisan consumerism. Using daily brand tracking data, we find support for these contentions across a variety of brand perception metrics including quality, value, employment reputation, and purchase considerations. Specifically, we show that, on average, Democrats grew to view Tesla more negatively while Republicans warmed to the brand in the aftermath of Musk’s endorsement of Trump and in the early months of his second administration. Consumers are responsive to partisan activity by corporate leaders and appear willing to adapt their views of corporate brands and purchasing behaviors to align with and express their partisan allegiances. Corporate leaders engage in partisan politics at the peril of their brand images and, ultimately, even the bottom line.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0033362X">
+<div class="row">
+<div class="col-10">
+<h2>Public Opinion Quarterly</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0033362X">
+</div><article class="article-card" id="10-1093-poq-nfag031" role="article">
+<h3 class="article-card__title">The Social Nature of Political (Dis)Interest: Conceptualizing and Validating Political (Dis)Interest as a Social Identity</h3>
+<p class="article-card__authors">Céline M Laffineur, Bert N Bakker, Gijs Schumacher</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-poq-nfag031" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-poq-nfag031" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/poq/nfag031" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/poq/nfag031" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-poq-nfag031">
+        Political interest is fundamental to democratic engagement. Yet, its conceptualization remains debated. In this agenda-setting study, we offer a new but important perspective by conceptualizing political (dis)interest as a social identity. We introduce two innovative measures: the Positive Political Interest Identity Scale (PPIS) and the Negative Political Interest Identity Scale (NPIS). Employing Item Response Theory, we demonstrate the construct validity of both scales in a preregistered study in the Netherlands (N = 1,553). Using the same dataset, we demonstrate their predictive validity. Specifically, the PPIS and NPIS uncover substantial differences in political attitudes and behaviors both between and within individuals who identify as politically (dis)interested. Conceptualizing political (dis)interest as a social identity enriches our understanding of the concept and its implications for politically relevant attitudes and behaviors, while also informing interventions to foster political interest equally across all citizens.
+    </div>
+</article><article class="article-card" id="10-1093-poq-nfag020" role="article">
+<h3 class="article-card__title">Reassessing Racial Differences in Authoritarianism in the United States: Measurement Invariance and Group Comparisons Using the ANES Child-Rearing Values Scale</h3>
+<p class="article-card__authors">Fabrício M Fialho</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-poq-nfag020" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-poq-nfag020" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/poq/nfag020" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/poq/nfag020" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-poq-nfag020">
+        Measurement invariance is a necessary condition for meaningful comparisons across populations. Previous studies argue that authoritarianism between Blacks and Whites in the United States cannot be compared due to the lack of measurement invariance in the American National Election Studies child-rearing values index. This paper challenges this claim. I analyze ANES data from 1992 to 2016 and identify partial measurement invariance in the 1992–2008 surveys (only one item, respect for elders, displays differential item functioning across groups) and full invariance in the 2012 and 2016 data. It is demonstrated that the child-rearing scale is comparable across Black and White respondents once partial measurement invariance is modeled accordingly, and that group comparisons are methodologically sound. I advanced a hypothesis for the noninvariance of respect for elders and suggest that future work should use measurement models that accommodate differential item functioning and further develop the child-rearing scale.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="20498470">
+<div class="row">
+<div class="col-10">
+<h2>Political Science Research and Methods</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-20498470">
+</div><article class="article-card" id="10-1017-psrm-2026-10105" role="article">
+<h3 class="article-card__title">Political lotteries and roll-call voting in the Belgian parliament during democratization</h3>
+<p class="article-card__authors">Brenda Van Coppenolle, Jessica De Rongé, Sofija Riegger</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-psrm-2026-10105" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-psrm-2026-10105" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/psrm.2026.10105" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/psrm.2026.10105" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-psrm-2026-10105">
+        How do political lotteries affect choices and outcomes? We study the monthly lotteries used to assign all legislators to deliberation committees in 19th century Belgium. We focus on the period of democratization around the entry of a new, third, and Socialist party. We ask whether random, more extensive exposure to certain MP types affected voting over all roll-call votes between 1892 and 1902, i.e. debating more Socialists, more incumbents, or more of those from majority Flemish-speaking districts. We find small but significant exposure effects on rebelling against the party majority, against the deliberative ideal but along government-opposition logic. Legislatures may similarly limit lottery’s potential today.
+    </div>
+</article><article class="article-card" id="10-1017-psrm-2026-10104" role="article">
+<h3 class="article-card__title">Electoral opportunism and economic policy: disentangling myopia and moderation</h3>
+<p class="article-card__authors">Axel Cronert, Pär Nyman</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-psrm-2026-10104" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-psrm-2026-10104" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/psrm.2026.10104" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/psrm.2026.10104" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-psrm-2026-10104">
+        This study jointly considers two opportunistic behaviors among political incumbents that may be triggered by electoral uncertainty—policy myopia and policy moderation—which hitherto have been the focus of separate research traditions. We evaluate their prevalence in economic policy-making among Swedish local governments, using a new measure of electoral competitiveness, capturing the incumbent government’s re-election probability, for which plausibly exogenous variation is generated by exploiting national-level polls. We find a substantial moderating effect of competitiveness on incumbents’ tax rate decisions—shifting policy towards the political center—but little evidence of policy myopia, whether in taxation, budget balance, or public investment. Corroborated by evidence from a politician survey, these findings caution against the popular understanding of democratic policy-making as inherently short-sighted.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0162895X">
+<div class="row">
+<div class="col-10">
+<h2>Political Psychology</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-0162895X" data-bs-toggle="collapse" type="button">
+              +1
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0162895X"><article class="article-card" id="10-1111-pops-70151" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Backsliding on democracy: A critical dialogue</h3>
+<p class="article-card__authors"></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/pops.70151" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/pops.70151" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1111-pops-70149" role="article">
+<h3 class="article-card__title">Similar moral values, different agendas: U.S. politicians' use of moral language is issue‐specific</h3>
+<p class="article-card__authors">Éloïse Côté, Sze‐Yuh Nina Wang, Yoel Inbar</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-pops-70149" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-pops-70149" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/pops.70149" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/pops.70149" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-pops-70149">
+        We used Structured Topic Models (STM) combined with a word embedding model to examine U.S. politicians' use of moral language and identify the issues Democrats and Republicans moralize most on X (formerly Twitter). Analyzing 1,578,057 posts from U.S. members of Congress (2019–2023), we found that (1) Democrats and Republicans did not differ meaningfully in what kinds of moral language they used but that (2) they used moral language for different issues. For example, Republicans used language reflecting harm and care to criticize Democratic economic policies, whereas Democrats used it to criticize Trump's immigration policies. These findings suggest that politicians on the right and left rhetorically invoke similar moral values but do so to highlight different issues.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="20531680">
+<div class="row">
+<div class="col-10">
+<h2>Research &amp; Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-20531680">
+</div><article class="article-card" id="10-1177-20531680261449585" role="article">
+<h3 class="article-card__title">Immigration attitudes and the emerging education divide in left-right identification</h3>
+<p class="article-card__authors">Ruth Dassonneville, Ian McAllister</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20531680261449585" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20531680261449585" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20531680261449585" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20531680261449585" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20531680261449585">
+        Across the advanced democracies, educational attainment has become increasingly linked to citizens’ political orientations. Education, it seems, polarizes citizens – with the higher educated turning to the left and the lower educated to the right. Here, we contend that this ideological divide between the highly and less educated does not stem from changing political opinions, but rather from a change in the issues that are associated with left and right . Drawing on over two decades of data from the European Social Survey, we demonstrate that Europeans have progressively come to associate left-right positions more with views on immigration. As a result, long-standing educational divides in immigration attitudes have become more strongly reflective of left-right self-identifications. Our findings suggest that the growing education-based cleavage is driven not by opinion change, but by the rising salience of immigration in structuring ideological labels.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="01402382">
+<div class="row">
+<div class="col-10">
+<h2>West European Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-01402382">
+</div><article class="article-card" id="10-1080-01402382-2026-2662870" role="article">
+<h3 class="article-card__title">Populism in the EU and the trade-off between ethical claiming and mainstreaming</h3>
+<p class="article-card__authors">Nuria Font, Cristina Ares</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/01402382.2026.2662870" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/01402382.2026.2662870" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-01402382-2026-2667788" role="article">
+<h3 class="article-card__title">The 2025 Czech parliamentary election</h3>
+<p class="article-card__authors">Radek Buben, Karel Kouba</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/01402382.2026.2667788" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/01402382.2026.2667788" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-01402382-2026-2662884" role="article">
+<h3 class="article-card__title">Group-based congruence and political support</h3>
+<p class="article-card__authors">Lucca Hoffeller, Nils D. Steiner</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/01402382.2026.2662884" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/01402382.2026.2662884" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13510347">
+<div class="row">
+<div class="col-10">
+<h2>Democratization</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13510347">
+</div><article class="article-card" id="10-1080-13510347-2026-2661683" role="article">
+<h3 class="article-card__title">State of the world 2025: unraveling the democratic era?</h3>
+<p class="article-card__authors">Marina Nord, Ana Good God, Staffan I. Lindberg</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13510347.2026.2661683" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13510347.2026.2661683" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="20522630">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Experimental Political Science</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-20522630">
+</div><article class="article-card" id="10-1017-xps-2026-10031" role="article">
+<h3 class="article-card__title">The Policy Feedback Effects of State Assistance: Did Small Business Bailouts Increase Support for Public Aid Programs?</h3>
+<p class="article-card__authors">Neil Malhotra, Saikun Shi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1017-xps-2026-10031" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1017-xps-2026-10031" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1017/xps.2026.10031" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1017/xps.2026.10031" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1017-xps-2026-10031">
+        We examine whether exposure to government assistance can generate positive policy feedback effects among constituencies not traditionally supportive of the welfare state. Focusing on the U.S. Paycheck Protection Program (PPP), a small business bailout enacted during the COVID-19 pandemic, we study how making government assistance salient affects attitudes toward social assistance programs among a typically Republican-leaning and relatively affluent group. Leveraging a bespoke survey of verified program recipients and an embedded experimental manipulation, we find that reminding PPP recipients of program participation increases support for government spending on healthcare, nutritional assistance, and unemployment benefits by an average of 6.9 percentage points—equivalent to roughly 16 percent of the partisan divide on these issues. The findings provide novel causal evidence that making the receipt of government assistance salient increases support for anti-poverty programs among well-off people, even when those programs do not directly benefit them.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="09626298">
+<div class="row">
+<div class="col-10">
+<h2>Political Geography</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-09626298">
+</div><article class="article-card" id="10-1016-j-polgeo-2026-103567" role="article">
+<h3 class="article-card__title">“We'll never go”: Inuit youth refusals as climate politics</h3>
+<p class="article-card__authors">Jen Bagelman, Carmen (Qagun) Kuptana, Darryl Tedjuk, Eriel Lugt, Maéva Gauthier, Michèle Tomasino, Ingrid Medby, Rachel Pain</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.polgeo.2026.103567" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.polgeo.2026.103567" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1016-j-polgeo-2026-103573" role="article">
+<h3 class="article-card__title">The military green transition: Decarbonisation as warfighting opportunity</h3>
+<p class="article-card__authors">Nico Edwards</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.polgeo.2026.103573" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.polgeo.2026.103573" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1016-j-polgeo-2026-103556" role="article">
+<h3 class="article-card__title">Dispossessed geographies: Statelessness and eco-resistance in Rojhelat</h3>
+<p class="article-card__authors">Ahmad Mohammadpour</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.polgeo.2026.103556" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.polgeo.2026.103556" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1016-j-polgeo-2026-103582" role="article">
+<h3 class="article-card__title">Tubular governance: Surveillance, control, and migrant lives in China</h3>
+<p class="article-card__authors">Qinyu Feng</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.polgeo.2026.103582" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.polgeo.2026.103582" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13608746">
+<div class="row">
+<div class="col-10">
+<h2>South European Society and Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13608746">
+</div><article class="article-card" id="10-1080-13608746-2026-2660280" role="article">
+<h3 class="article-card__title">Increasingly fragmented and right-wing: the transformation of the Portuguese electorate</h3>
+<p class="article-card__authors">Marina Costa Lobo, Ana Espírito-Santo</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13608746.2026.2660280" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13608746.2026.2660280" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="02613794">
+<div class="row">
+<div class="col-10">
+<h2>Electoral Studies</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-02613794">
+</div><article class="article-card" id="10-1016-j-electstud-2026-103089" role="article">
+<h3 class="article-card__title">Who does disproportionality favour? A measure for cross-domain comparison of disproportionalities</h3>
+<p class="article-card__authors">Chris Hanretty, Iain McMenamin</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.electstud.2026.103089" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.electstud.2026.103089" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00027162">
+<div class="row">
+<div class="col-10">
+<h2>Annals of the American Academy of Political and Social Science</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00027162">
+</div><article class="article-card" id="10-1177-00027162261422986" role="article">
+<h3 class="article-card__title">The Evolved Male in the Modern Classroom</h3>
+<p class="article-card__authors">David C. Geary</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00027162261422986" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00027162261422986" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261422986" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261422986" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00027162261422986">
+        I elucidate the educational and occupational struggles of boys and men using an evolutionary framework. This perspective is useful in explaining boys’ relative disadvantage in language and reading development and their advantage in visuospatial and mechanical abilities. I show that classroom settings and the behavioral expectations of formal schooling are more of an evolutionary mismatch for boys than girls because of sex differences in physical activity levels and social relations. This results in boys being disproportionately identified as having behavioral difficulties. Further, there are universal preferences that influence occupational choices: More men than women, for example, show an interest in working with things, and these interests align with boys’ and men’s relative strengths. I argue that secondary schooling does not fully capitalize on boys’ evolved capacities to help prepare them for the modern workforce, and suggest how schools can adapt to better accommodate boys’ strengths.
+    </div>
+</article><article class="article-card" id="10-1177-00027162261428305" role="article">
+<h3 class="article-card__title">Single-Sex Public Schools for Boys: Reflections After 25 Years</h3>
+<p class="article-card__authors">Leonard Sax</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00027162261428305" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00027162261428305" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261428305" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261428305" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00027162261428305">
+        The efficacy of single-sex education for boys has been a focus of scholarly inquiry for decades. The consensus has been that the all-boys format does not boost academic achievement for boys, on average. In this article, I suggest that the scholarly consensus may be mistaken or at least misleading. I argue that while some boys’ schools are successful and others are not, the all-boys format creates opportunities to educate differently. But when teachers are not trained in boy-friendly instructional strategies, nothing good happens and bad outcomes are likely. I consider some characteristics of a successful boys’ school and the prospects for boys’ public schools in the United States.
+    </div>
+</article><article class="article-card" id="10-1177-00027162261440739" role="article">
+<h3 class="article-card__title">Education Policy in Support of Boys and Men</h3>
+<p class="article-card__authors">Linda Darling-Hammond, Hanna Melnick</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261440739" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261440739" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1177-00027162261431696" role="article">
+<h3 class="article-card__title">Mentoring Relationships in the Lives of Boys and Young Men</h3>
+<p class="article-card__authors">Jean E. Rhodes</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00027162261431696" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00027162261431696" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261431696" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261431696" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00027162261431696">
+        In developed countries, males lag females on nearly every educational indicator, from early childhood readiness to postsecondary enrollment and completion (Hurst 2024; Irwin et al. 2024). One contributing factor is their limited access to positive male role models and mentors in their families, schools, and communities (Yu et al. 2021). Although formal mentoring can help bridge these gaps, many programs are not as effective as they could be and suffer from a shortage of male volunteers. I review what research has shown about the need for mentoring and the promise of various mentoring approaches, and I propose several strategies to increase both the effectiveness and availability of male role models and mentors in the lives of boys and young men.
+    </div>
+</article><article class="article-card" id="10-1177-00027162261442363" role="article">
+<h3 class="article-card__title">Why Now? Why Education?</h3>
+<p class="article-card__authors">Richard V. Reeves, Pedro Noguera, Ioakim Boutakidis</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261442363" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261442363" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1177-00027162261443002" role="article">
+<h3 class="article-card__title">Turning Insight into Impact for Indiana’s Male Students</h3>
+<p class="article-card__authors">Katie Jenner</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261443002" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261443002" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1177-00027162261432041" role="article">
+<h3 class="article-card__title">Gender, Ethnoracial, and Economic Differences in the Predictive Power of Early-Grade Test Scores on College Enrollment and Degree Completion</h3>
+<p class="article-card__authors">Dan Goldhaber, Stephanie Liddle</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00027162261432041" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00027162261432041" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261432041" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261432041" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00027162261432041">
+        Attempts to explain gender differences in postsecondary enrollment and completion have focused almost exclusively on students’ academic performance and experiences in middle school and high school. Our analysis shows that elementary-grade test scores are also an early indicator of postsecondary outcomes. We examine the relationship between third-grade test performance and students’ college outcomes, focusing on variations by gender, race/ethnicity, and free/reduced-price lunch eligibility. We establish how the gender gaps in college outcomes that favor females relate to early-grade academic performance and show the extent to which third-grade test scores are predictive of college enrollment and degree completion.
+    </div>
+</article><article class="article-card" id="10-1177-00027162261429523" role="article">
+<h3 class="article-card__title">Do Male Teachers Matter to Boys’ Education?</h3>
+<p class="article-card__authors">Clare Suter</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00027162261429523" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00027162261429523" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261429523" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261429523" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00027162261429523">
+        Boys, particularly those from disadvantaged backgrounds, increasingly trail their female peers across key educational and economic milestones. One long-proposed policy intervention aimed at ameliorating this inequity is to increase the share of male teachers, especially in earlier grades where men comprise just a small fraction of the teaching workforce. I review the theoretical rationale for this policy approach and the empirical evidence on how teacher gender affects student outcomes. Male teachers could benefit boys in at least two ways: They could serve as same-gender role models, or they could employ distinct pedagogical or disciplinary approaches that are helpful to boys. The causal evidence supporting either of these ideas is mixed. Some studies find modest positive effects of same-gender teachers on grades and test scores, but others detect no benefits, and research on long-term outcomes is largely absent. I conclude by identifying potential directions for future research on the topic.
+    </div>
+</article><article class="article-card" id="10-1177-00027162261427952" role="article">
+<h3 class="article-card__title">Should Gender Gaps Be Incorporated into School Accountability Measures? If So, How?</h3>
+<p class="article-card__authors">Michael Hansen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00027162261427952" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00027162261427952" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261427952" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261427952" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00027162261427952">
+        School accountability policies are central to current education reform efforts, and most of these policies prominently focus on race- and income-based achievement gaps. Recently, though, discussion of gender-based achievement gaps in schools has emerged in research and policy discussions, so accounting for gender-based achievement differences in existing accountability policies may be an inevitable next step. In this article, I offer a brief background on the origins of school accountability as an education policy priority and review the evidence on its effects. I then discuss gender gaps in education and consider how they stand apart from gaps based on race and socioeconomics. I speculate about the possible adverse outcomes and potential benefits of including gender differences in present school accountability policies and offer concluding recommendations about using these measures in school accountability.
+    </div>
+</article><article class="article-card" id="10-1177-00027162261433718" role="article">
+<h3 class="article-card__title">Technical Education: Boys and Men</h3>
+<p class="article-card__authors">Hannah C. Kistler, Shaun M. Dougherty</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00027162261433718" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00027162261433718" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261433718" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261433718" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00027162261433718">
+        Male students graduate from high school and enroll in college at lower rates than females. Male participation in the workforce has also declined over the past several decades. We present evidence on changing workforce demand and participation that highlights how opportunities for female-dominated employment have outstripped those for male-dominated occupations. We also show how several of the high-growth occupations that do not require a BA fall under the category of career and technical education (CTE), suggesting that CTE has a role to play in improving outcomes for males. We conclude with four implications for policy and practice: (1) scale successful models, (2) support areas shown to benefit male students, (3) use CTE to connect applied postsecondary education to employment, and (4) use CTE to connect males to occupations with high demand or strong compensation, including jobs in which males are not well represented, like education and health care.
+    </div>
+</article><article class="article-card" id="10-1177-00027162261428730" role="article">
+<h3 class="article-card__title">Boys’ K–12 Education: Gaps, Trends, and Outcomes</h3>
+<p class="article-card__authors">Benjamin M. Smith</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00027162261428730" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00027162261428730" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261428730" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261428730" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00027162261428730">
+        Boys lag girls on several important measures of educational achievement and engagement. They begin school with weaker early literacy and self-regulation skills, perform worse in reading but not in math, and are more likely to exhibit behavioral problems and to drop out. These patterns are durable, widespread across countries, and largest among students with the greatest learning and behavioral challenges. This article synthesizes findings from major U.S. and international assessments—the Early Childhood Longitudinal Study, Kindergarten Class; the National Assessment of Educational Progress; and the Program for International Student Assessment—to document where gender gaps are largest and how they have changed over time.
+    </div>
+</article><article class="article-card" id="10-1177-00027162261439434" role="article">
+<h3 class="article-card__title">Educating Boys and Men: Remaining Questions and Final Thoughts</h3>
+<p class="article-card__authors">Ioakim Boutakidis</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261439434" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261439434" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1177-00027162261439696" role="article">
+<h3 class="article-card__title">Gender Differences in the Educational Effects of the COVID-19 Pandemic</h3>
+<p class="article-card__authors">Sean F. Reardon, Sadie Richardson, Sofia Wilson</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00027162261439696" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00027162261439696" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261439696" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261439696" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00027162261439696">
+        Girls’ math and reading scores declined more than boys’ during the pandemic, but these gender differences varied substantially across communities. Using test score data from roughly 7,000 U.S. school districts, we investigate how local context shaped these patterns. Community socioeconomic resources buffered children against the negative academic consequences of the pandemic, and these protections were substantially stronger for girls than for boys. In high-resource communities, pandemic disruption had little differential effect on girls and boys, while in low-resource communities, disruptions produced larger academic declines for girls than boys. This resulted in gender gaps shifting toward boys on average, but especially in low-resource settings with high levels of community disruption. These patterns suggest that the gendered allocation of resources is shaped by family and community context, perhaps because gender norms—which shape expectations, opportunities, and resource allocation—are more deeply activated in conditions of disruption and resource scarcity.
+    </div>
+</article><article class="article-card" id="10-1177-00027162261422990" role="article">
+<h3 class="article-card__title">Educating Boys: Notes from the Field</h3>
+<p class="article-card__authors">Michael C. Reichert</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00027162261422990" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00027162261422990" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00027162261422990" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00027162261422990" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00027162261422990">
+        I draw from several decades of work as a psychologist—in clinical and consulting practice, on staff at a boys’ school, and conducting research studies—to offer a set of observations about boys’ education. I argue that despite a long history of poor outcomes, schools have neglected to ground their approach to male students in sound developmental science. In my initial research, boys across the globe were clear about the primacy of the student–teacher relationship for their learning. In a follow-up study, I learned that these relationships are particularly vulnerable to break down due to normative cultural stresses and teachers’ reactions to boys’ resistance. Yet it was also clear that the teacher bears primary responsibility for the working alliance. Finally, I learned that it is in these relationships that boys can best learn critical skills of accountability and moral behavior.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13540688">
+<div class="row">
+<div class="col-10">
+<h2>Party Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13540688">
+</div><article class="article-card" id="10-1177-13540688261449721" role="article">
+<h3 class="article-card__title">Youth representation in Latin American legislatures: Cross-national party-level evidence from the PELA project</h3>
+<p class="article-card__authors">Vicente Faúndez-Caicedo, Sergio Huertas-Hernández</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13540688261449721" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13540688261449721" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13540688261449721" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13540688261449721" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13540688261449721">
+        Despite relatively low legal age thresholds for legislative office in Latin America, young people remain markedly underrepresented in national parliaments. Drawing on more than 9,000 individual interviews from the Parliamentary Elites of Latin America (PELA-USAL) project covering 18 countries between 1994 and 2024, this research note provides a cross-national descriptive overview of the age profile of legislators. The analysis examines age distributions across countries, political parties, gender, and ideological positioning. The findings show that only 12.2% of deputies are under 35, with substantial cross-national variation: while only 3.4% of legislators in Argentina fall into this category, the share reaches 14.8% in Mexico. Using individual-level survey data, the study documents persistent youth underrepresentation and highlights important variation across party systems and ideological orientations in Latin American legislatures.
+    </div>
+</article><article class="article-card" id="10-1177-13540688261444620" role="article">
+<h3 class="article-card__title">Political parties and democratic innovations: From challenges to consequences</h3>
+<p class="article-card__authors">Sergiu Gherghina, Bettina Mitru, Petar Bankov, David M Farrell</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13540688261444620" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13540688261444620" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13540688261444620" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13540688261444620" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13540688261444620">
+        Despite the popular appeal of democratic innovations and of political parties’ need to reconnect with citizens, many parties are reluctant to embrace innovations - especially in the form of direct and deliberative democracy - either internally or in the wider political system. This is counter-intuitive behaviour on which the literature rarely reflects. This special issue addresses this gap and makes two main contributions to the existing research. Theoretically, it formulates broad questions to be picked up by further research and develops more focused analytical frameworks on how political parties use reforms. Empirically, it enriches the literature about the importance of ideology, explains why party elites and members engage with, avoid or are undecided about democratic innovations, and investigates the consequences of the relationship between parties and new democratic approaches for the political system, society, and decision-making.
+    </div>
+</article><article class="article-card" id="10-1177-13540688261451361" role="article">
+<h3 class="article-card__title">Intra-government democracy and policy responsiveness to public opinion</h3>
+<p class="article-card__authors">Tobias Böhmelt, Lawrence Ezrow</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13540688261451361" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13540688261451361" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13540688261451361" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13540688261451361" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13540688261451361">
+        Does the internal organization of governmental parties influence their ability to respond to shifts in public opinion? We argue that intra-government democracy , defined as the average internal democracy of governmental parties, explains variation in responsiveness. Intra-government democracy has positive features such as promoting internal deliberation and it encourages attention to core supporters’ preferences. However, deliberation limits policy changes, and responding to supporters may distract governing parties from the median voter. Thus, we expect that internally democratic governments will be less responsive to changes in the median voter position. We test this expectation using three different estimation strategies for time-series cross-national data on public opinion and governmental policies since the 1970s, and these analyses support our argument. This finding has important implications for our understanding of how intra-party institutions influence substantive responsiveness to public opinion.
+    </div>
+</article><article class="article-card" id="10-1177-13540688261439099" role="article">
+<h3 class="article-card__title">Issue ownership in times of crisis: Dynamics of party issue ownership during the COVID-19 pandemic</h3>
+<p class="article-card__authors">Christopher Klamm, Marc Debus, Simone Paolo Ponzetto, Ines Rehbein, Sarah Wagner</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13540688261439099" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13540688261439099" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13540688261439099" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13540688261439099" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13540688261439099">
+        The COVID-19 pandemic became one of the most salient issues for the public in the past few years, so that political parties had to address this issue if they wanted to maximize their vote share and thus the support of the citizens in upcoming elections. Due to the pandemic’s all-encompassing nature, many parties were forced to adjust their policy stances to the multitude of issues facing the public, the economy, and the health care sector. In this contribution, we analyse to what extent parties associated the COVID-19 pandemic with their issue ownership drawing upon German parliamentary parties’ press releases. Using a novel multi-step text analysis approach, we estimate which additional topics parties address in their press releases when publishing their position on the COVID-19 pandemic. We find mixed evidence for our expectation: only in a limited number of prominent issue areas, including domestic affairs, labour policy, macroeconomic issues and civil rights, do the parties we identify as more likely to associate these issues with the pandemic actually make such associations.
+    </div>
+</article><article class="article-card" id="10-1177-13540688261448391" role="article">
+<h3 class="article-card__title">Party systems at the European union’s doorstep: Party system structuration and dimensionality in the Western Balkans</h3>
+<p class="article-card__authors">Adea Gafuri, Jacob R. Gunderson, Jesper Lindqvist</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-13540688261448391" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-13540688261448391" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/13540688261448391" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/13540688261448391" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-13540688261448391">
+        Although consisting of EU (potential) candidate countries, the Western Balkan Six (WB6: Albania, Bosnia and Herzegovina, Kosovo, Montenegro, North Macedonia and Serbia) remain largely absent from the study of party politics. Mapping the dominant lines of party contestation in the region and comparing them cross-nationally is vital to understanding what types of ideological conflicts divide the parties of this region, how programmatic the party systems are, and whether they resemble other party systems. We are the first to use and validate the 2019 Chapel Hill Expert Survey to investigate which issues structure Western Balkan party systems and to quantitatively map these systems. Generally, these party systems are weakly programmatic, unidimensional, and structured along cultural issues with a background consensus on the EU. This article contributes to the scholarly understanding of party competition in a geopolitically important region and facilitates future research on party systems in young democracies.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="10659129">
+<div class="row">
+<div class="col-10">
+<h2>Political Research Quarterly</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10659129">
+</div><article class="article-card" id="10-1177-10659129261452230" role="article">
+<h3 class="article-card__title">Bridges and Walls: How Rising Income Inequality Drives Anti-Immigrant Politics and Republican Realignment</h3>
+<p class="article-card__authors">Matthew Polacko, Giacomo Di Pasquale, Emma Lofstedt</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-10659129261452230" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-10659129261452230" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/10659129261452230" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/10659129261452230" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-10659129261452230">
+        Rising economic inequality has coincided with growing political polarization and heightened opposition to immigration in the United States. This paper examines how inequality conditions the relationship between individual economic perceptions, immigration attitudes, and partisan voting behavior. Drawing on theories of relative deprivation and cultural backlash, we argue that inequality amplifies the political salience of anti-immigrant sentiment by shaping how economic and cultural grievances are interpreted and translated into electoral choices. Using pooled multilevel regression analyses of American National Election Studies (ANES) data from 1988 to 2020, we test four hypotheses linking state-level income inequality, prospective financial evaluations, immigration attitudes, and Republican vote choice. We find that higher inequality is associated with more negative views toward immigration, particularly among individuals with pessimistic economic expectations. Moreover, the association between anti-immigrant attitudes and Republican voting is stronger in high-inequality contexts. Together, these findings suggest that inequality operates as a contextual amplifier, strengthening the link between immigration attitudes and partisan behavior.
+    </div>
+</article><article class="article-card" id="10-1177-10659129261451210" role="article">
+<h3 class="article-card__title">The Public’s Constraint of Undemocratic Elites</h3>
+<p class="article-card__authors">Kevin J. Mullinix, David J. Ciuk, Danna Catalina Arias Quiñones, Jonah Anderson</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-10659129261451210" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-10659129261451210" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/10659129261451210" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/10659129261451210" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-10659129261451210">
+        There is much scholarly discussion about antidemocratic political rhetoric, the erosion of public support for democratic norms, and the implications for democratic backsliding. Underlying this literature is a concern about whether the citizenry holds officials accountable for efforts to undermine democratic principles and institutions. We theorize that priming an injunctive civic norm about how political leaders “ought” to behave increases the electorate’s willingness to hold elites accountable. We implement survey experiments in the United States focused on an election in which a candidate advocates for violating democratic norms in service to political goals. We demonstrate that priming an injunctive civic norm reduces people’s support for their party’s norm-violating candidate, and, in some contexts, increases the self-reported likelihood of voting for an opposing party candidate. Although an appeal to civic norms increases the public’s willingness to constrain elite efforts to subvert democratic principles, our results make clear that it is not a panacea.
+    </div>
+</article><article class="article-card" id="10-1177-10659129261449160" role="article">
+<h3 class="article-card__title">Ideological Sorting Helps Explain the Galvanization of Latino Republicans in Contemporary U.S. Politics: Qualitative Evidence From In-Depth Interviews</h3>
+<p class="article-card__authors">Rodolfo Solís, Efrén Pérez</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-10659129261449160" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-10659129261449160" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/10659129261449160" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/10659129261449160" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-10659129261449160">
+        Latino Republicans have long comprised about one-third of the Latino electorate, yet their support for the GOP has intensified at a time when it is publicly championing policies and candidates that are perceived as hostile to Latinos and other people of color. Available research traces Latinos’ resurgent Republican partisanship to weakened pan-ethnic identity or diminished ties to immigrants. We consider another plausible but ignored possibility: ideological sorting in a polarizing political system. We accomplish this by drawing on 85 in-depth interviews with Latino Republicans from five Latino-majority counties in south Texas, which shifted dramatically toward the GOP after 2016. Our analyses reveal that participants (re-)interpret their longstanding commitments—rooted in family histories, religious beliefs, and orientations toward social order—through salient culture war issues (e.g., immigration, abortion, and LGBTQ rights), which increasingly differentiate Republicans from Democrats. Thus, participants interpret their Republican partisanship as the product of recognizing which party is a better steward of their personal commitments. Crucially, participants articulate this reasoning while also expressing meaningful and positive attachments to their Latino identity and immigrant heritage, thus complicating theories that attribute Latinos’ Republican partisanship to dis-identification with their pan-ethnic group or immigrant peers.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="21599165">
+<div class="row">
+<div class="col-10">
+<h2>East European Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-21599165">
+</div><article class="article-card" id="10-1080-21599165-2026-2669224" role="article">
+<h3 class="article-card__title">The geopoliticisation of domestic issues in the Baltic Sea Region and Central and Eastern Europe</h3>
+<p class="article-card__authors">Joakim Ekman, Thomas Sedelius, Kjetil Duvold</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/21599165.2026.2669224" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/21599165.2026.2669224" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-21599165-2026-2666801" role="article">
+<h3 class="article-card__title">The making of a president, the making of an opponent: discursive constructions of Karol Nawrocki in left-liberal online commentary</h3>
+<p class="article-card__authors">Marcin Kosman</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/21599165.2026.2666801" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/21599165.2026.2666801" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14650045">
+<div class="row">
+<div class="col-10">
+<h2>Geopolitics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14650045">
+</div><article class="article-card" id="10-1080-14650045-2026-2672619" role="article">
+<h3 class="article-card__title">Taking the Field: Field Space, Borderwork and Taiwan’s Guest-Worker Programme</h3>
+<p class="article-card__authors">Edward Painter</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/14650045.2026.2672619" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/14650045.2026.2672619" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-14650045-2026-2673159" role="article">
+<h3 class="article-card__title">Fractal Borders: Locating the Boundaries of Urban China</h3>
+<p class="article-card__authors">Leif Johnson</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/14650045.2026.2673159" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/14650045.2026.2673159" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-14650045-2026-2671091" role="article">
+<h3 class="article-card__title">Accumulation by Securitisation in Tourism: Reflections from the Maya Biosphere Reserve, Guatemala</h3>
+<p class="article-card__authors">Jennifer Devine, Laura Sauls</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/14650045.2026.2671091" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/14650045.2026.2671091" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-14650045-2026-2672608" role="article">
+<h3 class="article-card__title">Climatising the Law of the Sea: Small Island Developing States and the ITLOS Advisory Opinion</h3>
+<p class="article-card__authors">Samuel Bither</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/14650045.2026.2672608" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/14650045.2026.2672608" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00905917">
+<div class="row">
+<div class="col-10">
+<h2>Political Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00905917">
+</div><article class="article-card" id="10-1177-00905917261448201" role="article">
+<h3 class="article-card__title">“Barricades Across the Road to Democracy”: The Referendum and the Crisis of Parliamentarism in Europe, 1890–1930</h3>
+<p class="article-card__authors">Lucia Rubinelli</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00905917261448201" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00905917261448201" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00905917261448201" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00905917261448201" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00905917261448201">
+        During the first decades of the twentieth century, the word “democracy” was rarely used to describe existing political systems. Rather, it was usually employed polemically to criticize European parliamentary regimes for their incapacity to actualize the principle of popular power. Critiques of parliamentarism in the name of democracy were numerous and came from all sides of the political spectrum. This paper analyses them through the lens offered by debates about the use of the referendum. The “direct appeal to the people” was widely discussed at the turn between the nineteenth and twentieth centuries: It was the lowest common denominator of otherwise highly divergent political projects, all of which appealed to democracy to overcome the failures of parliamentarism. Yet their diagnoses of what was wrong with parliamentary regimes differed widely, as did their interpretations of the democratic nature of the referendum. In what follows, I will analyze three different critiques of parliamentarism, and their corresponding theories of democracy, as outlined through debates about the referendum in Europe from 1890 to 1935.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14651165">
+<div class="row">
+<div class="col-10">
+<h2>European Union Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14651165">
+</div><article class="article-card" id="10-1177-14651165261446566" role="article">
+<h3 class="article-card__title">Measuring European integration as boundary formation—The EUROBORD dataset</h3>
+<p class="article-card__authors">Buket Buse Demirci, Christian Freudlsperger, Pit Rieger, Frank Schimmelfennig</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14651165261446566" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14651165261446566" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14651165261446566" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14651165261446566" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14651165261446566">
+        This article introduces the EUROBORD dataset. Starting from a Rokkanian conceptualization of polity formation as boundary formation, we propose a novel measurement of European integration as a combination of boundary closure and boundary control. We measure integration annually across 48 functional boundaries based on a coding of European Union (EU) law. By comparing our measure with existing measures of European integration, we provide support for its convergent validity and demonstrate its value added. We further present descriptive analyses of the historical development of the EU boundary and polity formation and propose a unified measure of European integration combining boundary control and boundary closure. The EUROBORD dataset offers the most comprehensive and fine-grained measure of European institutional integration to date.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

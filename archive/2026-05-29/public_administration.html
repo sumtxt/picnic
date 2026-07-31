@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Public Administration</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · May 29, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-05-29/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="15206688">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15206688" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15206688" style="max-width: 300px;" title="Journal of Policy Analysis and Management">
+                            Journal of Policy Analysis and Management
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10531858">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10531858" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10531858" style="max-width: 300px;" title="Journal of Public Administration Research and Theory">
+                            Journal of Public Administration Research and Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333352">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333352" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333352" style="max-width: 300px;" title="Public Administration Review">
+                            Public Administration Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14494035">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14494035" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14494035" style="max-width: 300px;" title="Policy and Society">
+                            Policy and Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13501763">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13501763" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13501763" style="max-width: 300px;" title="Journal of European Public Policy">
+                            Journal of European Public Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0190292X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0190292X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0190292X" style="max-width: 300px;" title="Policy Studies Journal">
+                            Policy Studies Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333298">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333298" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333298" style="max-width: 300px;" title="Public Administration">
+                            Public Administration
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03055736">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03055736" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03055736" style="max-width: 300px;" title="Policy and Politics">
+                            Policy and Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09521895">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09521895" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09521895" style="max-width: 300px;" title="Governance">
+                            Governance
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17485983">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17485983" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17485983" style="max-width: 300px;" title="Regulation &amp; Governance">
+                            Regulation &amp; Governance
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="15206688">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Policy Analysis and Management</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-15206688">
+</div><article class="article-card" id="10-1002-pam-70107" role="article">
+<h3 class="article-card__title">Does Long‐Term Care Subsidy Decrease Healthcare Utilization and Expenditures? Evidence From the Long‐Term Care Insurance in Korea</h3>
+<p class="article-card__authors">GaYoung Park, Youjin Hahn</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70107" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70107" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70107" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70107" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70107">
+        We examine the effect of government subsidies for long‐term care (LTC) on healthcare utilization and health outcomes in Korea, which exhibits one of the fastest rates of population aging. Using a regression discontinuity design, our intent‐to‐treat estimates indicate that eligibility for subsidized LTC services reduces out‐of‐pocket medical and prescription drug spending by about 20% and 16% of the baseline mean, respectively, and lowers the likelihood of inpatient hospital admission by about 12%. These reductions in healthcare utilization and expenditures are not associated with adverse health outcomes. In particular, eligibility reduces the likelihood of hospital admission due to fractures, which could be a possible channel for these results. Overall, our findings suggest that LTC subsidies can partially offset medical expenditures without negatively affecting the health outcomes of older adults.
+    </div>
+</article><article class="article-card" id="10-1002-pam-70110" role="article">
+<h3 class="article-card__title">Access to Mental Health Care Services and Suicide Rates in the United States</h3>
+<p class="article-card__authors">Shishir Shakya, Agnitra RoyChoudhury</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70110" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70110" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70110" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70110" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70110">
+        We examine the causal effect of improvements in access to mental care providers on suicide rates in the United States. We track the universe of practice locations of psychiatric and psychological health care providers from 2016 to 2019. We construct a county‐level index to measure proximity to these facilities, accounting for local variations in demand for and supply of mental health care services. To address the endogeneity between the location of these medical facilities in a given county, we use the implementation of prescriptive authority for psychologists () as an instrument. Our IV results show a 10% enhancement in access translates to an additional three providers per mile, resulting in a 3% reduction, equivalent to 1.6 fewer suicides per 100,000 population within a county.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333352">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333352">
+</div><article class="article-card" id="10-1111-puar-70141" role="article">
+<h3 class="article-card__title">Functional Politicization in Practice. From Responsive Competence to Reflexive Functional Politicization</h3>
+<p class="article-card__authors">Amalie Trangbæk</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70141" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70141" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70141" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70141" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70141">
+        This study addresses how senior civil servants navigate the tension between responsiveness and competence through functional politicization. Based on rich observational data (300 h) and interview material (42 interviews), the article theorizes how senior civil servants navigate this tension by providing advice that integrates political considerations with professional technical knowledge to challenge the minister, provide alternative solutions, and clarify consequences. I call this practice reflexive functional politicization and hereby contribute to the literature on politicization by conceptualizing how politicization is practiced by civil servants in action. Their practice is motivated by the conviction that true neutrality is rare or nonexistent and thus that they must instead strike a balance between political responsiveness and technical competence.
+    </div>
+</article><article class="article-card" id="10-1111-puar-70149" role="article">
+<h3 class="article-card__title">Context, Mechanism, and Outcome: Explaining Gendered Administrative Burdens on Abortion Access in Italy</h3>
+<p class="article-card__authors">Debra Lanfranconi, Markus Hinterleitner</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70149" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70149" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70149" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70149" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70149">
+        Abortion access in Italy provides a case to examine how gendered administrative burdens emerge through the interplay of legal provisions, informal frontline practices, and contextual influences. Drawing on the Context–Mechanism–Outcome framework from realist evaluation, the analysis shows how legal access to abortion is constrained by procedural requirements, widespread conscientious objection among healthcare providers, and the institutional presence of anti‐abortion actors. Using qualitative data from Obiezione Respinta— a user‐generated platform mapping abortion access barriers across Italy—we demonstrate how everyday bureaucratic processes (re)produce gender inequalities. Three contributions follow. First, the analysis extends the gendered administrative burden literature by highlighting how informal policy design and contextual factors contribute to gender inequality. Second, it introduces the C‐M‐O framework to administrative burden research as a structured yet parsimonious approach to studying how burdens emerge. Third, it centers on women's experiences to offer a qualitative account of how burdens are perceived and navigated.
+    </div>
+</article><article class="article-card" id="10-1111-puar-70142" role="article">
+<h3 class="article-card__title">Exploring the Role of Gene, Traumatic Experiences, and Religious Participation in Public Service Employment: A Gene–Environment Interaction Perspective</h3>
+<p class="article-card__authors">Hailun Liang, Lei Tao, Tao Huang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70142" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70142" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70142" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70142" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70142">
+        Previous studies on sectoral choice have examined environmental and genetic factors in isolation, with little consideration of how gene–environment interactions influence public service employment selection. Notably, altruism‐related genes have been found to play a critical role in shaping prosocial behaviors. This study investigates how early traumatic experiences affect individuals' choice of public service employment through the mediating role of religious participation. It further investigates whether the altruism‐related gene moderates the effect of early traumatic experience on religious participation, thereby establishing a moderated mediation model. Using a nationally representative UK dataset, we find that religious participation mediates the relationship between traumatic experiences and public service employment selection. Additionally, individuals carrying more alleles of the altruism‐related gene exhibit greater sensitivity to traumatic experiences, which in turn influences their religious participation and subsequent career choice.
+    </div>
+</article><article class="article-card" id="10-1111-puar-70140" role="article">
+<h3 class="article-card__title">How Democratic Backsliding Shapes the Entry, Non‐Entry, and Waiting of Potential Civil Servants</h3>
+<p class="article-card__authors">Reut Marciano, Ilana Shpaizman, Sharon Gilad</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70140" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70140" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70140" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70140" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70140">
+        Democratic backsliding is coupled with politicians' undermining of the civil service's professionalism and commitment to liberal democratic values. Existing research has examined civil servants' responses. Nonetheless, politicians' attacks on democracy and the bureaucracy also affect potential recruits' career choices. Based on existing research and in‐depth interviews in Israel, we extend Hirschman's model to develop an abductive mirror‐image typology of the narratives deployed by potential recruits and civil servants to explain their career choices amid democratic backsliding. We find that, unlike civil servants who often choose to stay and fight, those outside the civil service either forgo entering it or wait for a trustworthy government. Additionally, we find tentative associations between the variation in interviewees' narrations of their career choices and their beliefs about the scope of bureaucratic politicization, the role of civil servants vis‐à‐vis politicians, and their attachment to the nation.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14494035">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14494035">
+</div><article class="article-card" id="10-1093-polsoc-puag012" role="article">
+<h3 class="article-card__title">Unfair behavioral public policies</h3>
+<p class="article-card__authors">Till Grüne-Yanoff</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-polsoc-puag012" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-polsoc-puag012" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/polsoc/puag012" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/polsoc/puag012" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-polsoc-puag012">
+        Behavioral public policies (BPPs) often affect individuals unevenly: the same intervention can produce systematically different outcomes across socio-economic groups, genders, or other population characteristics. Such heterogeneity raises a distinctive fairness concern. This article develops a mechanistic account of intervention fairness grounded in the ideal of impartial treatment. I argue that impartiality is violated when policy effects are heterogeneously moderated across a population without adequate justification. Building on a causal-mechanistic framework, I identify moderators as the key drivers of unequal treatment and distinguish three potential justifications for heterogeneous effects: randomness, lack of social salience, and desert. Desert, I argue, is limited in the BPP context to prior contributions to—or prior distributions of—the intervention’s target outcome. On this basis, the article proposes a sufficient definition of BPP unfairness: interventions are unfair when they either ignore deserved heterogeneity or produce unjustified moderation by socially salient, non-random factors. Finally, I translate this account into a practical, fast-and-frugal decision tool to help policymakers diagnose unfair behavioral interventions in concrete contexts.
+    </div>
+</article><article class="article-card" id="10-1093-polsoc-puag013" role="article">
+<h3 class="article-card__title">The bibliometrics of the behavioural state: structure, agency, and institutions</h3>
+<p class="article-card__authors">Swee Kiat Tay, Ching Leong</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-polsoc-puag013" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-polsoc-puag013" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/polsoc/puag013" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/polsoc/puag013" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-polsoc-puag013">
+        Behavioural Public Policy (BPP), which focuses on the psychological micro-mechanisms involved in public policy, has experienced prodigious growth over the last decade. This study examines 2,301 BPP articles from 1980 to 2024 on the Scopus database. Our findings reveal an exponential increase in BPP publications since 2019. As a proportion of all public policy publications, BPP articles have been rising in number and significance. We also observe a thematic shift from environmental and transport issues to global emergencies (e.g., global pandemic), a reflection of how deeply BPP research engages with the real policy world, with its research agenda aligned with policy challenges of the day. We uncovered a greater level of diversity in countries involved in terms of output, collaboration, and funding. As evident from our brief discussion of two case studies and considerations from the “heterogeneity revolution,” granular contextual factors do lead to differences in outcomes from similar policy interventions. Taken together, these show the rising importance of BPP, not just as a tool for designing interventions to achieve some public end, but also as a legitimation device in specific contexts. However, the pursuit of contextual heterogeneity without any organizing mechanism leads to a real risk of BPP turning into an atheoretical policy lab, where the intervention effects are so varied and diverse that literature is limited in its ability to inform policy research or design. We argue that embedding BPP within institutional theory can be useful both for theorizing efforts and for understanding the rising importance of the legitimation role of BPP.
+    </div>
+</article><article class="article-card" id="10-1093-polsoc-puag015" role="article">
+<h3 class="article-card__title">Do research characteristics matter? Policymakers’ interest in evidence and expectations about policy improvement</h3>
+<p class="article-card__authors">Mariana Batista</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-polsoc-puag015" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-polsoc-puag015" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/polsoc/puag015" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/polsoc/puag015" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-polsoc-puag015">
+        Despite the growing demand for evidence-based policymaking, integrating research evidence in policy decisions is not granted and depends on the incorporation of this practice in decision-making processes. We contribute to this debate by focusing on the earlier stage of the policy process: how policymakers form attitudes prior to evidence use. When presented with research regarding their policy area, do policymakers demonstrate an interest in using research evidence? Do they believe that using research evidence will improve policymaking? Do the characteristics of the research evidence at hand matter for their interest and expectation that incorporating evidence will improve a policy? The argument is that policymakers use research evidence characteristics as a heuristic to reduce uncertainty and integrate research evidence into their decisions. We empirically test which characteristics trigger these heuristics by presenting results from a survey experiment with senior-level bureaucrats in Brazil. The main findings are that (1) positive attitudes toward evidence-based policymaking are high, and (2) the characteristics of research evidence influence policymakers’ level of interest in the study, but not their expectations regarding the research evidence’s ability to improve a policy. These results represent a significant contribution to the debate, highlighting the demand-side perspective and how the characteristics of research evidence trigger heuristics and affect attitudes towards evidence use.
+    </div>
+</article><article class="article-card" id="10-1093-polsoc-puag014" role="article">
+<h3 class="article-card__title">Personal experience with policy matters: using natural experiment to estimate mere exposure effect</h3>
+<p class="article-card__authors">Arnošt Veselý, Ivan Petrúšek</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-polsoc-puag014" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-polsoc-puag014" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/polsoc/puag014" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/polsoc/puag014" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-polsoc-puag014">
+        Can simply living through a policy shape how people think about the policy? While existing scholarship often treats personal experience as secondary or contingent, we argue that lived policy experience can exert a direct and independent causal effect on policy attitudes. Drawing on mere exposure theory, we conceptualize personal experience as a distinct mechanism of attitude formation and leverage a natural experiment based on recurring changes in the length of basic schooling in the Czech Republic to identify its causal impact. Because assignment to 8- versus 9-year basic school was determined by birth cohort and policy timing rather than individual choice, we can isolate the effect of lived policy experience from confounding selection processes. We find that individuals who experienced a 9-year basic school policy regime exhibit substantially higher opposition to its abolition than those who attended an 8-year basic school. This treatment effect persists robustly after accounting for political ideology, parental status, educational attainment, and other covariates. Contrary to expectations, the treatment effect does not diminish over time nor vary by political sophistication. These findings suggest that the lived experience with policy can have a robust and lasting impact on policy attitudes, independent of symbolic or ideological factors. We discuss implications for policy theory and call for greater attention to personal experience in both empirical research and theory development.
+    </div>
+</article><article class="article-card" id="10-1093-polsoc-puag016" role="article">
+<h3 class="article-card__title">Collaborative governance in social policy: conditions, contexts, and everyday practice</h3>
+<p class="article-card__authors">Kidjie Saguin, Azad Singh Bali</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-polsoc-puag016" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-polsoc-puag016" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/polsoc/puag016" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/polsoc/puag016" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-polsoc-puag016">
+        Collaborative arrangements have become popular in contemporary public policy and administration, particularly in the domain of social policy. Drawing on five articles spanning four countries, our symposium examines the design and performance of collaborative governance when we move from ideal conditions into specific, often demanding, real-world contexts. This preface introduces three tensions that confront collaborative governance arrangement in social policy. First, when enabling conditions are weak or actively hostile, collaborative governance does not simply fail and instead, persists through other means like ‘street-level partnerships’. Second, when politics enter the picture, it can both undermine and sustain collaboration, depending on the nature of contestations. Third, theories of collaborative governance that are built disproportionately on cases from stable advanced democracies are translatable to Global South and post-socialist environments if they are attendant to the bottom-up processes that permits collaboration to emerge. This symposium sheds light on the relationship between formal institutional design and the everyday relational work through which practitioners in various contexts keep collaborative arrangements alive. It hopes to inspire future research on the costs of failed collaborative governance and the role of civil society beyond the service delivery partner they are traditionally thought to perform.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13501763">
+<div class="row">
+<div class="col-10">
+<h2>Journal of European Public Policy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13501763">
+</div><article class="article-card" id="10-1080-13501763-2026-2678994" role="article">
+<h3 class="article-card__title">Supranationalisation without integration: how European Council normalisation empowers the Commission in EU migration policies</h3>
+<p class="article-card__authors">Ariadna Ripoll Servent, Marguerite Arnoux Bellavitis</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2678994" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2678994" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0190292X">
+<div class="row">
+<div class="col-10">
+<h2>Policy Studies Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0190292X">
+</div><article class="article-card" id="10-1111-psj-70126" role="article">
+<h3 class="article-card__title">Facets of Crises: How Problem Indicators and Public Perceptions Affect Policy Change</h3>
+<p class="article-card__authors">Constantin Kaplaner, Alexa Lenz, Vanessa Millich, Christoph Knill, Yves Steinebach, Clara Fochler, Annika Kolbe</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70126" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70126" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70126" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70126" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70126">
+        Crises are widely acknowledged as catalysts for policy change. Yet, our understanding of the policy effects of crises remains limited. Why do only some crises lead to major changes, while significant policy changes also occur during seemingly non‐crisis periods? This paper addresses this gap by distinguishing between two critical “components” of crises: objective problem pressures and public perceptions. We argue that these components often co‐occur but may not always align, leading to differing changes in policy outputs. Using migration policy in Switzerland as a crucial case study, we explore fluctuations in both objective metrics and public sentiment over a period of 25 years (1994 to 2019). Our analysis reveals that substantial policy changes typically occur when both components highlight crisis conditions. However, notable policy change can also be triggered by either high objective pressures or strong public perceptions of crisis. These findings highlight the significance of how scholars define and conceptualize crises, as well as the dimensions—whether objective or perceptual—that they use.
+    </div>
+</article><article class="article-card" id="10-1111-psj-70132" role="article">
+<h3 class="article-card__title">Polarization Entrepreneurs: Dividing to Conquer in the Trump Era</h3>
+<p class="article-card__authors">Christoph H. Stefes, Kayla M. Gabehart, Kristin Olofsson</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70132" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70132" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70132" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70132" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70132">
+        The policy process literature has long theorized about the role of policy entrepreneurs, whom Paul Cairney calls the “hero… who knows that the pursuit of ambitious aims such as ‘evidence‐based policymaking’ requires framing a problem, having a solution ready, and exploiting the motive and opportunity of policymakers to select it” (2018, 199). The research agenda on policy entrepreneurs also holds great potential for another type of policy actor that we aim to introduce into the policy process lexicon: the polarization entrepreneur. These polarization entrepreneurs aim not to resolve the specific policy conflict at hand, but to advance broader strategic goals, such as solidifying their ideological base, expanding their influence across several policy subsystems, or gaining electoral advantage. We introduce the polarization entrepreneur as a policy actor who strategizes within policy spaces in ways we have not yet fully comprehended or theorized. We thus draw on the Multiple Streams Literature (MSF), the Advocacy Coalition Framework (ACF) literature, as well as the political rise of Donald Trump to theorize about how these polarization entrepreneurs operate. We suggest a research agenda that presents a wealth of opportunity for policy scholars to better understand the policy system of our day.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333298">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333298">
+</div><article class="article-card" id="10-1111-padm-70070" role="article">
+<h3 class="article-card__title">When Coproduction Meets Professionalism: Toward a Conceptual Framework for Understanding Challenges of Lay Input</h3>
+<p class="article-card__authors">Rikke Kolding</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70070" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70070" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70070" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70070" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70070">
+        Coproduction is an established element in public service provision, linked to positive outcomes such as increased service quality and quantity. Realizing these outcomes requires skills and motivation from street‐level professionals and lay actors alike. Nevertheless, research has long questioned professionals' willingness to engage in coproduction because lay input challenges their professionalism. However, existing research often treats lay input as a uniform, challenging factor, overlooking the possibility that professionals may perceive it differently depending on the interaction. To respond to these challenges more effectively, the article develops a conceptual framework addressing the research question: When do street‐level professionals perceive lay input as a challenge to their professionalism? The article studies coproduction in the design phase, particularly the active input of clients in interactions with street‐level professionals. It identifies three key aspects of interactions that influence the extent to which lay input challenges professionalism: the type of, need for, and communication of lay input. Contrary to the existing literature, the findings highlight that different forms of input exist within interactions that vary in how much they challenge professionalism. These findings are based on an interpretive ethnographic study conducted in two Danish daycare centers, comprising 58 semi‐structured interviews with childcare professionals and parents and 42 days of participant observation. The case serves as an informative case due to the extensive coproduction related to core pedagogical matters. The article informs targeted professional training, managerial practices, and flexible policy frameworks that help professionals anticipate, interpret, and integrate lay input more effectively.
+    </div>
+</article><article class="article-card" id="10-1111-padm-70063" role="article">
+<h3 class="article-card__title">Cultural Competence in Community‐Level Initiatives to Advance Racial Equity in Homeless Services</h3>
+<p class="article-card__authors">Saerim Kim, Andrew Sullivan, Kotomi Yokokura, Hyokyung Kwak, Emily Nwakpuda</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70063" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70063" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70063" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70063" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70063">
+        This study investigates how organizations in collaborative networks in the United States address racial inequality in homelessness through cultural competence continuum and actionable initiatives. Conducting a content analysis, we deductively and inductively code the U.S. Department of Housing and Urban Development's Continuum of Care (CoC) funding applications to identify the cultural competency of actions for homelessness taken by CoCs. CoCs most frequently take actions related to data and training. 83% of CoCs demonstrate cultural proficiency but often miss opportunities for advancing proficiency. The findings highlight the importance of actively developing cultural competence in organizations when addressing complex issues like homelessness. The study offers an empirical application of Sweeting's framework, providing valuable insights for future research on social equity in public service provision.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="17485983">
+<div class="row">
+<div class="col-10">
+<h2>Regulation &amp; Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-17485983">
+</div><article class="article-card" id="10-1111-rego-70170" role="article">
+<h3 class="article-card__title">What Candidates Benefit From Corruption? Opportunities for Corruption and the Prevalence of Candidates With Business Ties</h3>
+<p class="article-card__authors">Saverio Di Giorno, Monika Bauhr, Francesco Busato</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70170" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70170" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70170" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70170" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70170">
+        Which candidates benefit from corruption and favoritism in public procurement? While existing studies show that politically connected firms profit from corruption risks in public procurement, we know less about whether these risks also increase the prevalence of political candidates with ties to business. This study suggests that pre‐election corruption risks increase the prevalence of candidates with business ties, but that this relationship is highly contextual. Candidates with business ties have greater opportunities to benefit from favoritism and corruption in public contracting and may use these advantages to bolster their electoral base. However, when corruption reaches systemic levels, increases in pre‐election corruption are less likely to affect the prevalence of candidates with business ties, since such ties are already deeply entrenched and collusive arrangements between business and politics are well established. We develop a new indicator of candidates' involvement in local companies—the Business‐Politics Involvement (BPI) index—and use it to show that increases in pre‐election corruption risks in public procurement are associated with a higher prevalence of candidates with business ties in the 2018 Italian election. Yet we also show that this association is largely driven by provinces in Northern Italy, while there is no such relationship in Southern Italy, where business ties are more common and corruption is systemic. Our findings suggest that contextual nuance is needed when interpreting single‐bid procurement as evidence of corruption—particularly in systemically corrupt settings where pre‐bid collusion is widespread. They also indicate the need for further research to better understand the nexus between business ties and corruption.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

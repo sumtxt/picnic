@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Communication Studies</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · April 17, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-04-17/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="19312458">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19312458" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19312458" style="max-width: 300px;" title="Communication Methods and Measures">
+                            Communication Methods and Measures
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10584609">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10584609" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10584609" style="max-width: 300px;" title="Political Communication">
+                            Political Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00219916">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00219916" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00219916" style="max-width: 300px;" title="Journal of Communication">
+                            Journal of Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10836101">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10836101" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10836101" style="max-width: 300px;" title="Journal of Computer-Mediated Communication">
+                            Journal of Computer-Mediated Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19401612">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19401612" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19401612" style="max-width: 300px;" title="International Journal of Press-Politics">
+                            International Journal of Press-Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="20563051">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-20563051" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-20563051" style="max-width: 300px;" title="Social Media + Society">
+                            Social Media + Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="21670811">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-21670811" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-21670811" style="max-width: 300px;" title="Digital Journalism">
+                            Digital Journalism
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14614448">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14614448" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14614448" style="max-width: 300px;" title="New Media &amp; Society">
+                            New Media &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00936502">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00936502" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00936502" style="max-width: 300px;" title="Communication Research">
+                            Communication Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19442866">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19442866" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19442866" style="max-width: 300px;" title="Policy and Internet">
+                            Policy and Internet
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="19401612">
+<div class="row">
+<div class="col-10">
+<h2>International Journal of Press-Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-19401612">
+</div><article class="article-card" id="10-1177-19401612261423412" role="article">
+<h3 class="article-card__title">Political Speech, Scandals, and the News Media in Japan</h3>
+<p class="article-card__authors">Matthew M. Carlson, Yukio Maeda</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-19401612261423412" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-19401612261423412" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/19401612261423412" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/19401612261423412" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-19401612261423412">
+        Recent scholarship has aimed to expand the concept of political scandal by examining problematic statements made by public figures, often termed “talk scandals.” However, a major limitation of existing studies is the lack of clear differentiation between gaffes and talk scandals. This study aims to better understand talk scandals by focusing on the political dynamics, including the relationship between the media and politics, that generate them. Using a new collection of political gaffes, we examine the frequency of gaffes associated with different cabinet positions, the locations of gaffes, the durations of gaffes, and the major societal actors who expressed offense at statements made by Japanese cabinet ministers. Through quantitative analysis and case studies, we explore why problematic statements escalate into scandals while others quickly fade from public attention. Our analysis suggests that the news media alone cannot independently transform a gaffe into a talk scandal. Instead, journalists must reference and justify their coverage by citing clear criticisms from offended groups or individuals. These statements tend to develop into talk scandals only when they receive strong and sustained criticism within the political arena.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="20563051">
+<div class="row">
+<div class="col-10">
+<h2>Social Media + Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-20563051">
+</div><article class="article-card" id="10-1177-20563051261437497" role="article">
+<h3 class="article-card__title">Bystanders and Reporters: Who Acts Against Illegal Online Content?</h3>
+<p class="article-card__authors">Friederike Quint, Yannis Theocharis, Spyros Kosmidis, Margaret E. Roberts</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261437497" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261437497" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261437497" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261437497" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261437497">
+        Harmful and illegal content on social media is widespread, but what should be taken down is widely disputed, creating ongoing challenges for resolving the tension between free speech and user safety. User reporting is a key mechanism for addressing such content, yet little is known about who reports, what motivates them, and how they compare to the general population. We study these questions using two datasets: (1) a unique survey with individuals verified to have previously reported potentially illegal content to a third-party organization in Germany and (2) a quota-based sample approximating the German population. We show that individuals who have previously reported potentially illegal content via a third-party reporting service represent a distinct, civically engaged subset of users. They tend to be older, more often men than women, highly educated, highly politically active, and markedly left-leaning. They are not politically representative of the German population and take a distinctly different position when balancing free speech and protection from harm, putting more emphasis on protecting from harm. Reporting users’ motivations appear primarily civic-minded rather than reactive, especially among those who do it frequently and those intervening on behalf of others. These insights highlight reporting as a form of digital civic participation and offer perspectives relevant for understanding political engagement online, platform governance, user agency, and trust and safety regulation.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261437487" role="article">
+<h3 class="article-card__title">Social Media Is Now Parasocial Media</h3>
+<p class="article-card__authors">danah boyd</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261437487" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261437487" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261437487" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261437487" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261437487">
+        When practitioners used the term “social media” to describe the internet tools that emerged in the mid-aughts, they were giving a name to the kinds of platforms and protocols that allowed people to socialize with friends and communities of interest by using digital technologies. Twenty years later, users of social media are far more likely to scroll than post – and the content that they consume is often strategically produced and algorithmically curated. In this essay, I argue that the very essence of social media has changed. To more effectively interrogate what we are witnessing, we need to stop presuming that these tools are “social media” and begin recognizing that they are now “parasocial media.” Doing so raises new questions about digitally mediated sociality, not to mention the politics and governance of these platforms.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261428916" role="article">
+<h3 class="article-card__title">The AI Referee: How Online Interventions Shape Incivility and User Engagement in News Discussions</h3>
+<p class="article-card__authors">Georgia Kernell, Seonhye Noh</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261428916" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261428916" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261428916" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261428916" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261428916">
+        This paper seeks to understand how online interventions shape incivility and user engagement with news comments. Using a novel dataset of over 39 million news comments on Korea’s largest online news source (Naver News), we examine changes in the share of comments that are categorized as uncivil before and after the introduction of two automated interventions aimed at flagging incivility. We trained two deep learning models to categorize comments and replicate each intervention. The findings reveal significant decreases in uncivil content following each intervention. Interestingly, we find mixed effects of the interventions on total engagement: while the number of comments and commenters decreased after the first intervention, both metrics increased after the second. Examining individual-level data reveals that the aggregate reduction in incivility cuts across all users regardless of pre-intervention incivility or commenting frequency.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261432482" role="article">
+<h3 class="article-card__title">Social Media has Aged, It’s Time It Got Wise</h3>
+<p class="article-card__authors">Eszter Hargittai, John Palfrey</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261432482" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261432482" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261432482" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261432482" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261432482">
+        As social media platforms mature, their user base is simultaneously aging, with older adults now representing the fastest-growing demographic of users. Despite persistent myths contrasting “digital natives” with “clueless seniors,” empirical evidence demonstrates that socioeconomic status, rather than age, is the primary driver of digital inequality. The study, design, and regulation of social media must undergo a paradigm shift to embrace older adults as active, vital participants. Market self-regulation has failed to address critical issues like privacy and interoperability and thus deliberate government intervention is needed to ensure user autonomy and data portability. To fulfill its potential, the social media ecosystem must “wise up,” abandoning ageist tropes and recognizing older adults not as passive victims, but as capable users, valuable support sources, and essential stakeholders in technology design.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261437922" role="article">
+<h3 class="article-card__title">Social Media in the Scam Age</h3>
+<p class="article-card__authors">Lana Swartz</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261437922" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261437922" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261437922" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261437922" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261437922">
+        This essay examines scams as a central organizing logic of contemporary social media rather than peripheral criminal activity. Drawing on research in cryptocurrency and financial technology alongside childhood experiences in 1990s Miami, the piece argues that social media is entering a “scam age” where boundaries between legitimate and illegitimate economic activity increasingly blur and the technological and social systems that make those distinctions are being rebuilt. It calls for social media scholars to explore the work that scams—and the idea of “scams”—do in the production of social media, the future, and the future of social media.
+    </div>
+</article><article class="article-card" id="10-1177-20563051261436101" role="article">
+<h3 class="article-card__title">The Platformization of Everything: From the End of the Like Button to AI Infrastructure in Space</h3>
+<p class="article-card__authors">Anne Helmond</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261436101" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261436101" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261436101" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261436101" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261436101">
+        A decade after the term was coined, “platformization” has evolved from describing the infrastructural expansion of platforms into other domains to capturing a broader transformation in how platforms organize (digital) life. This article traces this shift from the early social web to today’s AI-centered platform models. The retirement of Facebook’s Like button and Google’s “Suncatcher” space-based AI initiative are used as illustrative examples to demonstrate how platforms continually adapt their expansion strategies. Although the concept has been productively adopted across disciplines, its frequent conflation with the term “digitization” has led to conceptual erosion, weakening its analytical precision. To reclaim its explanatory power, this article redefines platformization as a form of platform-specific “transcoding”: a situated process whereby practices and domains are made “platform-ready.”
+    </div>
+</article><article class="article-card" id="10-1177-20563051261434796" role="article">
+<h3 class="article-card__title">Broken Connections: Fieldnotes from the Old Internet</h3>
+<p class="article-card__authors">Alice E. Marwick</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261434796" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261434796" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261434796" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261434796" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261434796">
+        This essay reflects on the lived experience of early internet culture to interrogate what has been lost in the transition to today’s platform-dominated online environment. Drawing on autobiographical fieldnotes from the 1990s and early 2000s—Prodigy forums, IRC channels, university bulletin boards, and most centrally LiveJournal—I revisit a period when online communication fostered intimacy, community, and meaningful social ties among strangers and friends alike. LiveJournal, in particular, offered an infrastructure for sustained reciprocal writing, affective labor, and audience management that enabled deep connection and mutual support. Its social dynamics illuminate a mode of computer-mediated communication that was less commercialized, less surveilled, and more oriented toward collective meaning-making than contemporary social media. By contrast, today’s social platforms feel alienating, extractive, and hostile to vulnerability. The political economy of social media, driven by advertising, surveillance, consolidation, and algorithmic optimization, has foreclosed the kinds of small, semi-private, socially coherent spaces that once enabled genuine community formation. Rather than imagining social media as infrastructure requiring stewardship, safety, and care, the industry has prioritized virality, scale, and profit, producing environments shaped by harassment, polarization, and corporate capture. Reflecting on these shifts, the essay argues that the trajectory of social media was never inevitable. Alternative design choices and governance models might have cultivated a richer, more humane digital public sphere. If online community has a future, it will not lie in replicating legacy platforms, but in reimagining communication infrastructures that support vulnerability, reciprocity, and small-scale sociality, the qualities that once made the early internet feel like home.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="21670811">
+<div class="row">
+<div class="col-10">
+<h2>Digital Journalism</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-21670811">
+</div><article class="article-card" id="10-1080-21670811-2026-2655242" role="article">
+<h3 class="article-card__title">Taking Care Online: Reconceptualising Professional Wellbeing for Social Media Engagement in Journalism</h3>
+<p class="article-card__authors">Diana Bossio, Jonathon Hutchinson</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/21670811.2026.2655242" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/21670811.2026.2655242" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1080-21670811-2026-2652342" role="article">
+<h3 class="article-card__title">Infrastructures of Media Freedom: Expanding Journalism’s Ethical Horizon</h3>
+<p class="article-card__authors">Natali Helberger</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/21670811.2026.2652342" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/21670811.2026.2652342" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14614448">
+<div class="row">
+<div class="col-10">
+<h2>New Media &amp; Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14614448">
+</div><article class="article-card" id="10-1177-14614448251370967" role="article">
+<h3 class="article-card__title">Witnessing carnage: Self-documented terrorism and the moral challenges of decentralized digital platforms</h3>
+<p class="article-card__authors">Tal Morse, Doron Altaratz</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448251370967" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448251370967" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448251370967" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448251370967" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448251370967">
+        On October 7, 2023, Hamas launched a coordinated attack on Israel, documenting atrocities through wearable cameras and disseminating footage on platforms like Telegram. This article investigates how these self-documented acts exemplify the erosion of traditional distinctions between perpetrators and mediators of representations of violence. Using point-of-view (POV) aesthetics and leveraging decentralized digital platforms, Hamas transformed violence into a mediated spectacle, dehumanizing victims and gamifying terrorism. The study critically unpacks these strategies, highlighting their role in bypassing journalistic filters to spread fear and achieve ideological objectives. The article further examines the ethical and societal challenges posed by this new ecology of media, where platforms act as sites of violence, and witnessing becomes intertwined with participation. By analyzing the events of October 7, this work contributes to understanding the complexities of mediated violence, exploring how end-users recontextualize and circulate graphic content, shaping new forms of media witnessing and engagement with political violence.
+    </div>
+</article><article class="article-card" id="10-1177-14614448251336431" role="article">
+<h3 class="article-card__title">The violence of online conspiracy theories</h3>
+<p class="article-card__authors">Line Nybro Petersen, Mikkel Bækby Johansen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448251336431" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448251336431" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448251336431" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448251336431" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448251336431">
+        This article investigates the relationship between online conspiracy theory communities and platformed violence through a case study of a conspiratorial harassment campaign against a Danish children’s TV show, Uncle Shrimp (DR, 2012–), and its main actor. Based on theories of violent extremism, conspiracism, and the participatory practices in online spaces of hybridized extremism, we aim to understand how the QAnon-adjacent Uncle Shrimp conspiracy theory is appropriated to fit a Danish context. We analyze 370 user comments and six posts from Facebook ( N = 376), drawing on Berger’s four steps of group extremism: crisis narratives, in-group negotiations, out-group threats, and (violent) solutions. We found that users engage in conspiracy theory worldbuilding through a range of participatory practices and that the harassment campaign against the Uncle Shrimp actor emerged from the community shaped by mutual appreciation and forensic play alongside expressions of hate and platformed violence.
+    </div>
+</article><article class="article-card" id="10-1177-14614448251356604" role="article">
+<h3 class="article-card__title">“Doing gender”: A digital ethnography of image-based abuse perpetration</h3>
+<p class="article-card__authors">Nicola Henry, Courtney Vowles, Gemma Beard</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448251356604" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448251356604" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448251356604" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448251356604" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448251356604">
+        Image-based sexual abuse (IBSA) refers to the non-consensual taking, creating, or sharing of intimate images, as well as threats to share intimate images. While considerable research has examined the nature, scope, and impacts of IBSA, comparatively little is known about perpetration. Drawing on a digital ethnography of 47 different websites, this article explores how users “do gender” through the online sharing of non-consensual intimate images. Using thematic analysis, we examine interactional dynamics that produce, reinforce, or reinvent gender norms within online digital spaces. We argue that IBSA is a homosocial practice that is embedded in ritualistic objectification and othering. These relational gender practices not only bestow social capital and sustain group cohesion, but they also normalize intimate image abuse and foster the emergence of other forms of gendered violence. This study highlights the need for more nuanced accounts of IBSA perpetration that attend to the social interactions among online users.
+    </div>
+</article><article class="article-card" id="10-1177-14614448251370965" role="article">
+<h3 class="article-card__title">Contextual governance &amp; androcentric hegemony on Twitch.tv</h3>
+<p class="article-card__authors">Brandon C. Harris, Christine H. Tran, Christopher J. Persaud</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448251370965" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448251370965" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448251370965" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448251370965" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448251370965">
+        Twitch’s Terms of Service (ToS) and Community Guidelines (CG) policies forbid discriminatory behavior and harassment, but many streamers from marginalized communities have been victimized while their harassers go unpunished. These inconsistencies in how safety violations are managed prompted the author(s) to perform a two-stage analysis of Twitch’s platform governance strategies to understand the relationship between platform governance and androcentric hegemony. The first stage included an inductive thematic analysis of ToS and CG documents, leading to the second analysis of two case studies that specify inconsistencies in policy enforcement dependent on opaque contextual exceptions. Ultimately, the authors provide evidence of contextual exceptions for safety, edgy humor, attire, and nudity which demonstrate how Twitch’s inconsistent governance reifies androcentric hegemony that benefits all men, rather than geek masculinity that largely prioritizes white men.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261437808" role="article">
+<h3 class="article-card__title">Mapping the relationship between journalistic discourse, tech industry layoffs, and artificial intelligence</h3>
+<p class="article-card__authors">Anne Herfurth, Jessica Maddox</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261437808" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261437808" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261437808" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261437808" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261437808">
+        The tech industry’s 2023–2024 mass layoffs represented a critical moment in which an infallible industry seemed to suddenly lay bare its weak spots. Historically, Big Tech and the American press have had a complementary relationship, journalism often reinforcing an industry long viewed as too big to fail. Through textual analysis of long-form coverage of the tech layoff crisis, we identify three themes. First, even amid layoffs, Big Tech is presented as too complex and important to regulate, with layoffs framed as necessary for long-term health—and as justification for subsequent layoffs by other firms. Second, AI is presented as both a positive and a negative factor in layoffs, yet remains largely unchallenged. Finally, coverage paid minimal attention to disproportionate impacts on women and racial minorities, upholding gender and racial imbalances in Big Tech. Taken together, the press did not simply explain layoffs—it acted as an active stakeholder.
+    </div>
+</article><article class="article-card" id="10-1177-14614448251357264" role="article">
+<h3 class="article-card__title">Affordance folklore: Truth, community and visibility during Sri Lanka’s Internet shutdowns</h3>
+<p class="article-card__authors">Craig Ryder</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448251357264" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448251357264" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448251357264" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448251357264" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448251357264">
+        To governments worldwide, Internet shutdowns are the trip-switch solution to civic unrest, and they occur with surprising regularity. In Sri Lanka, Internet shutdowns have been tactically deployed to geo-specific regions and specific platforms on three occasions during episodes of extraordinary violence and resistance. The concept of ‘algorithmic folklore’ has been used to describe the speculative ideas and tactics that users of digital technology exhibit in order to make sense of their relationship with opaque computational systems. Using this conceptual approach, I consider the modes through which Sri Lankans experience Internet shutdowns and offer the novel term ‘affordance folklore’ to illustrate the discursive constructions and practical strategies that help people make sense of complex sociotechnical events, such as Internet shutdowns. The article examines three core practices of affordance folklore relating to truth, community, and visibility that emerge to theorise the intrinsic values of social media.
+    </div>
+</article><article class="article-card" id="10-1177-14614448251364814" role="article">
+<h3 class="article-card__title">Normative dislocation: When platforms moderate without memory</h3>
+<p class="article-card__authors">Emillie de Keulenaar, Marcelo Alves dos Santos</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448251364814" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448251364814" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448251364814" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448251364814" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448251364814">
+        This article introduces the concept of normative dislocation to explain how platform moderation during Brazil’s 2022 presidential elections failed to account for local histories of political violence. Drawing on a digital methods analysis of militaristic discourse across Telegram, YouTube, X, Facebook, Instagram, and Gettr, we show how moderation standards—rooted in US electoral experiences—prioritized electoral “misinformation” over calls for a military coup. As these circulated, especially on Telegram, platforms operated outside local moderation frameworks developed through processes of reconciliation, dialogue, and democratic reconstruction. In doing so, they risked dislodging institutional processes by reigniting historical conflicts without adequate measures for public dialogue. We conclude by proposing moderation models that integrate various forms of consensus-building and locally embedded understandings of historical violence
+    </div>
+</article><article class="article-card" id="10-1177-14614448261433481" role="article">
+<h3 class="article-card__title">Trending women in STEM: Visual space-making on TikTok</h3>
+<p class="article-card__authors">Jiyoun Suk, Sara Holland Levin, Jocelyn Steinke, Kyle Schnitzer, Amanda Coletti, Christine Gilbert, Anne Oeldorf-Hirsch</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261433481" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261433481" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261433481" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261433481" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261433481">
+        While previous research has established foundational knowledge on how women in STEM (Science, Technology, Engineering, and Math) social media content creators use digital platforms to combat stereotypes, less is known about how they make space for themselves on visually dominant platforms. We address this gap by theorizing visual space-making as the coordinated use of visual cues into reproducible, platform-legible visual configurations that create recognizable “places” of belonging and authority within networked counterpublics. We employ visual clustering of video frames and topic modeling of text to identify recurring patterns in STEM-related TikTok content and examine their relationship with audience engagement. Results show that identity-oriented visuals are more prevalent than expertise-oriented visuals but applied differently across content topics. Identity-oriented visuals are more likely to be associated with higher comment rates, whereas expertise-oriented visuals are associated with higher share rates. Results suggest implications for balancing identity and expertise self-presentation in digital spaces for women in STEM.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261430714" role="article">
+<h3 class="article-card__title">Going negative across platforms and time: Assessing the supply and demand of negative campaigning</h3>
+<p class="article-card__authors">Anders Olof Larsson</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261430714" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261430714" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261430714" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261430714" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261430714">
+        This study investigates dynamics of negative campaigning by Norwegian political parties on Facebook, Instagram and Twitter from 2013 to 2024. Analysing 89,791 posts from nine major parties, it uses a novel content analysis approach combining Large Language Models (LLMs) and human annotation to categorize posts as negative, positive or neutral. The findings show an overall rise in negative campaigning across platforms, with significant changes following leadership shifts in the right-wing populist Progress Party (PP). The study examines engagement levels, measured by likes, for different content types. Initially, negative content attracted more engagement on Facebook. This trend, however, decreased over time, while Instagram saw increased engagement with negative content during later years. Twitter users appeared to have rather consistently favoured negative content, reflecting its reputation for incivility. The article enhances understanding of political communication strategies in a high-choice media environment, emphasizing the need to tailor campaign strategies to platform-specific user dynamics.
+    </div>
+</article><article class="article-card" id="10-1177-14614448251338507" role="article">
+<h3 class="article-card__title">Memeing the moniker: The stickiness of gang myths in Swedish news legacy media and TikTok</h3>
+<p class="article-card__authors">Moa Eriksson Krutrök, Jeffrey Mitchell</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448251338507" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448251338507" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448251338507" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448251338507" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448251338507">
+        With the rise of explosive violence in urban Sweden, gang-related crime has become a dominant theme in Swedish media and political discourse. As individual members of prominent criminal networks gain increasing media attention, the construction of the gang myth—how gangs and their members are represented, circulated, and re-imagined—becomes a crucial area of inquiry. This article investigates the ways in which crime content moves through the hybrid news cycle, shaping public perceptions of gangs and their leaders. Using topic modeling of news articles (n = 521) and multimodal critical discourse analysis of TikTok posts (n = 73) referencing one of the most well-known gang leader in contemporary Sweden, the Kurdish Fox, we examine how myth-building operates across different media contexts. Our findings reveal a stark contrast in narrative strategies: while news media frame gangs through urgency, fear, and political crisis, TikTok users engage in playful, dissident humor—employing memes, emojis, and remix culture to subvert dominant crime discourses.
+    </div>
+</article><article class="article-card" id="10-1177-14614448261437810" role="article">
+<h3 class="article-card__title">Seeing into the air: Media practices of blind vloggers and the visual paradox of mediated visibility</h3>
+<p class="article-card__authors">Sijing Song</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261437810" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261437810" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261437810" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261437810" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261437810">
+        Although discussions of visibility often presuppose that it transcends the visual dimension, within short-video platforms, the realization of visibility is in fact highly dependent on a visually dominant communication environment. Through in-depth interviews with Douyin blind vloggers, this study reveals three layers of invisibility they encounter: operational, presentational, and algorithmic. To share their unique sensory experiences, blind vloggers have to adapt to the ocularcentric structure of the platform through strategies such as repetition, imitation, and compensation, reflecting the ableist pre-assumptions in today’s digital media landscape. Drawing from this “visibility paradox,” the study proposes a perceptual model of mediated visibility for future theoretical analysis and practical applications.
+    </div>
+</article><article class="article-card" id="10-1177-14614448251396942" role="article">
+<h3 class="article-card__title">Just a meme? The role of context in mythologies of memetic misogyny</h3>
+<p class="article-card__authors">Suay Melisa Özkula, Patricia Prieto-Blanco</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448251396942" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448251396942" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448251396942" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448251396942" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448251396942">
+        This article provides a multiplatform systematic analysis of contextual factors in what we term memetic misogyny , a form of implicit, polysemous and ephemeral visual gender-based hate. We draw on a feminist ethnographic approach with a semiotic analysis applied across three case studies of meme-based misogyny (Greta Thunberg, Karens and anti-feminist memes related to protest # SisterIDoBelieveYou ) on Twitter/X, Facebook, Reddit and YouTube to argue that memetic misogyny is created, maintained and co-shaped by (1) misogynistic contents (depictions, aesthetics and narrative framing), (2) platform affordances (real and imagined) – above all meme affordances and (3) the hegemonic discourses of the cultural communities where these are distributed. In combination, these three create what we call mythologies of memetic misogyny , that is, gendered socio-cultural and socio-political narratives that present misogynistic ideas as if they were natural, universal and timeless gendered truths, often going unnoticed because of the volatile, polysemous and polycontextual nature of memes.
+    </div>
+</article><article class="article-card" id="10-1177-14614448251344286" role="article">
+<h3 class="article-card__title">Race, ethnicity, and technology-facilitated violence: The experience of activists in Chocó, Colombia</h3>
+<p class="article-card__authors">Miyerlandy Cabanzo Valencia, Laura Gianna Guntrum</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448251344286" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448251344286" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448251344286" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448251344286" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448251344286">
+        Racism extends into the digital realm, manifesting in various forms of technology-facilitated violence (TFV). Although much research centers on the Global North, it is essential to investigate this issue in other settings, such as Colombia, where activists are particularly vulnerable to TFV. This study enriches the debate with a qualitative approach, conducting 18 interviews with activists from Chocó and Bogotá. The literature on race and TFV reveals that technology can exacerbate racism through social media, like anonymity, and introduce new forms of racist violence, including deepfakes and algorithmic bias. However, these forms were not prevalent in our interviews. For activists, structural racism, especially limited Internet, and electricity access emerged as a primary factor in their experiences with racist TFV. Overt TFV escalates to offline threats, silencing dissenting voices. This research emphasizes the need to understand TFV within non-Western regions, advocating for nuanced approaches to addressing digital racism in diverse contexts.
+    </div>
+</article><article class="article-card" id="10-1177-14614448251357269" role="article">
+<h3 class="article-card__title">(De)constructing research ‘expertise’ in transnational participatory warfare</h3>
+<p class="article-card__authors">Peter Chonka</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448251357269" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448251357269" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448251357269" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448251357269" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448251357269">
+        Focusing on a case study of offline and online violence in Somalia/Somaliland and the disputed city of Las Anod, this article presents an (auto)netnographic analysis of transnational digital hostility and participatory warfare. It argues that academic ‘expertise’ is an under-theorised but significant aspect of complex conflict dynamics as they play out on social media. The affordances of digital platforms can compel researchers to engage in new ways with conflicts, further blurring long-contested boundaries between scholarship and activism. In the article’s reflexive case study, debates about ‘expertise’ have a racialised aspect linked to historical inequalities in knowledge production in/on the Horn of Africa. These legacies intersect with newer dynamics of social media mis/disinformation, adding another layer of contextual complexity to online and offline participation in armed conflict that can both challenge and reinforce power imbalances in the politics of expertise.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="19442866">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Internet</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-19442866">
+</div><article class="article-card" id="10-1002-poi3-70040" role="article">
+<h3 class="article-card__title">Governing by Ambiguity: Sociotechnical Imaginaries of Platforms in China</h3>
+<p class="article-card__authors">Fangyu Qing, Ngai Keung Chan</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-poi3-70040" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-poi3-70040" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/poi3.70040" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/poi3.70040" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-poi3-70040">
+        Besides clear policy directives, the unresolved and open‐ended elements in policy communication also create discursive politics. This article argues that ambiguity in policy communication reflects the state's exercise of power within a fractured sociocultural landscape. Examining state policies around the platform economy, we demonstrate how China's techno‐politics are constructed upon visions of the future and their ambiguous articulations—ambiguous imaginaries. By integrating the concepts of sociotechnical imaginaries and strategic ambiguity, we conduct a longitudinal qualitative analysis to identify and trace the evolution of three functional imaginaries (transformative, conflict‐mediating, and regulatory). Together, these functional imaginaries co‐constitute an ultimate imaginary (healthy platforms). Each type mobilizes ambiguity respectively via metaphors, contradictory descriptions, and shifting emphases. This produces ambiguities that either evoke modernization or mediate tensions around the platform's role as an enterprise or capital within the socialist market economy. We argue that these ambiguous imaginaries serve as a discursive “glue,” temporarily reconciling deep‐seated ideological fractures through surface‐level uncertainty and future promises. This article contributes a framework that interprets the futuristic ambiguities embedded in policy as both an actionable instrument and a future gaze, making development possible in the (centralized) developmentalist state.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Sociology</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"></body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · May 22, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-05-22/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap active" href="./sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="./multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="./environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="./working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a class="nav-link text-nowrap" href="./notifications">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00031224">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00031224" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00031224" style="max-width: 300px;" title="American Sociological Review">
+                            American Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03600572">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03600572" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03600572" style="max-width: 300px;" title="Annual Review of Sociology">
+                            Annual Review of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00491241">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00491241" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00491241" style="max-width: 300px;" title="Sociological Methods &amp; Research">
+                            Sociological Methods &amp; Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00029602">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00029602" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00029602" style="max-width: 300px;" title="American Journal of Sociology">
+                            American Journal of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00987921">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00987921" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00987921" style="max-width: 300px;" title="Population and Development Review">
+                            Population and Development Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="07352751">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-07352751" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-07352751" style="max-width: 300px;" title="Sociological Theory">
+                            Sociological Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00811750">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00811750" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00811750" style="max-width: 300px;" title="Sociological Methodology">
+                            Sociological Methodology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="23306696">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-23306696" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-23306696" style="max-width: 300px;" title="Sociological Science">
+                            Sociological Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00703370">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00703370" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00703370" style="max-width: 300px;" title="Demography">
+                            Demography
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00377732">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00377732" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00377732" style="max-width: 300px;" title="Social Forces">
+                            Social Forces
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00323292">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00323292" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00323292" style="max-width: 300px;" title="Politics &amp; Society">
+                            Politics &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="02667215">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-02667215" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-02667215" style="max-width: 300px;" title="European Sociological Review">
+                            European Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14742837">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14742837" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14742837" style="max-width: 300px;" title="Social Movement Studies">
+                            Social Movement Studies
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="00031224">
+<div class="row">
+<div class="col-10">
+<h2>American Sociological Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00031224">
+</div><article class="article-card" id="10-1177-00031224261439738" role="article">
+<h3 class="article-card__title">Colonization Fever: Malaria and the Israeli–Palestinian Conflict, 1882 to 1914</h3>
+<p class="article-card__authors">Omri Tubi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00031224261439738" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00031224261439738" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00031224261439738" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00031224261439738" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00031224261439738">
+        What are the origins of the Israeli–Palestinian conflict? In this article, I shed new light on the beginnings of Zionist colonization and the Israeli–Palestinian conflict by focusing on the effect of malaria on labor competition in late-Ottoman Palestine. In doing so, I develop a bioterritorial theory of colonization; I propose that disease can profoundly shape territorialization, labor regimes, political-economic development, and intergroup conflict over labor and land. In dialogue with Du Bois’s work on collectivist colonization in closed labor markets, I use this bioterritorial theory to understand early economic competition between Jews and Arabs. I show how disease shaped this competition by undermining malaria-naïve Jewish workers, who consequently struggled to survive in the country. I propose that malaria was a highly important factor driving the Jewish workers to ally with the World Zionist Organization in pursuit of exclusivist collective settlements, thereby shifting their focus from labor to land. To develop this argument, I draw from historical data, including memoirs, newspaper articles, reports, letters, and scientific publications. The bioterritorial theory contributes to scholarship on settler colonialism, theories of disease and colonization, and explanations of colonization and conflict that focus on ideology and ethnonationalism.
+    </div>
+</article><article class="article-card" id="10-1177-00031224261441865" role="article">
+<h3 class="article-card__title">Between Two Rituals: Face and Effervescence as Moments of Social Life</h3>
+<p class="article-card__authors">Anders Vassenden, Nicholas Hoynes, Taylor Price, Iddo Tavory</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00031224261441865" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00031224261441865" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00031224261441865" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00031224261441865" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00031224261441865">
+        Many of the social outcomes and patterns located at the very center of sociological inquiry are grounded in interaction ritual dynamics. Yet, while broadly used across subdisciplinary divides, such rituals are depicted in radically different ways. Drawing from a Durkheimian tradition, and following Erving Goffman and Randall Collins, we distinguish between what we term “rituals of face” and “rituals of effervescence”—rituals aimed at defending the self, and rituals that produce emotional entrainment. Leveraging two very different empirical research projects—patterns of ethnoracial stigmatization in Norway and an ethnography of creative songwriting sessions in Canada—we show that these two kinds of rituals are simultaneously at play. Using the first empirical case, we show how actors ritually segregate their social worlds, saving face with white audiences while often producing effervescence with minority audiences. Using the second, we show how rituals of face and of effervescence are recursively intertwined. We then argue that distinguishing these interaction ritual forms, and attending to their situational dynamics, allows us to ask new empirical questions and to develop a better understanding of the interactional structure of diverse processes: from social movement dynamics to discrimination.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="03600572">
+<div class="row">
+<div class="col-10">
+<h2>Annual Review of Sociology</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-03600572">
+</div><article class="article-card" id="10-1146-annurev-soc-031025-063531" role="article">
+<h3 class="article-card__title">Diversity as a Dominant Social Value</h3>
+<p class="article-card__authors">Clayton Childress, Omar Lizardo</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-soc-031025-063531" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-soc-031025-063531" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-soc-031025-063531" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-soc-031025-063531" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-soc-031025-063531">
+        Over the past half-century, sociologists working across subfields and analytic levels have documented the downstream implementations of diversity as a dominant social value. We synthesize this research, paying special attention to scholarship examining five key analytic contexts: class, taste, interactions, organizations, and cultural objects. The literature suggests that, despite persistent hierarchies of valuation and worth, a “conspicuous openness to diversity” has become particularly institutionalized among organizations and elites, operating as a foundational schema. We conclude with three directions for future research: exploring both historical and contemporary backlashes to diversity on the local and global scale, the impacts of diversity as a dominant social value for both non-elites and those who are cast as visible evidence of diversity, and the underlying mechanisms behind conspicuous openness to diversity, given well-documented gaps between discourse and action.
+    </div>
+</article><article class="article-card" id="10-1146-annurev-soc-031424-072724" role="article">
+<h3 class="article-card__title">Dual-Process and Framing Models in Sociology: European Contributions and Cross-Disciplinary Bridges</h3>
+<p class="article-card__authors">Clemens Kroneberg, Andreas Tutić</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1146-annurev-soc-031424-072724" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1146-annurev-soc-031424-072724" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1146/annurev-soc-031424-072724" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1146/annurev-soc-031424-072724" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1146-annurev-soc-031424-072724">
+        Human behavior can vary markedly across situations, yet it at times exhibits striking persistence. To account for these characteristics, cognitive sociologists have focused on two aspects: how situational cues—including the presence and behavior of others—activate mental structures and predispositions, such as schemas, frames, or repertoires, and how behavior is governed by dual processes, whether through autonomous, associative activation or controlled, effortful deliberation. Building on research in cognitive and social psychology, these insights became central to the literature on culture and cognition in North American sociology. Even earlier, ideas about framing and dual processes had been adopted in European sociology. We introduce this largely separate body of scholarship, discuss its relationship to its North American counterpart, and highlight related developments in axiomatic decision theory and mathematical psychology. We also demonstrate how sociologists can employ dual-process and framing models to generate new hypotheses across diverse areas of research.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00491241">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Methods &amp; Research</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00491241">
+</div><article class="article-card" id="10-1177-00491241261450123" role="article">
+<h3 class="article-card__title">Rationale and Methodologies for Surveying Vulnerable Neighborhoods: Lessons From Three Nordic Countries</h3>
+<p class="article-card__authors">Peter Esaiasson, Kim Mannemar Sønderskov, Henning Finseraas, Niels Nyholt, Oskar Rönnberg, Jacob Sohlberg, Mari Vaattovaara</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00491241261450123" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00491241261450123" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00491241261450123" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00491241261450123" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00491241261450123">
+        The paper argues for the value of conducting surveys in vulnerable neighborhoods and provides a detailed account of a cost-effective strategy for surveying a recognized hard-to-survey population. The approach is illustrated through insights from the Vulnerable Neighborhoods Survey, conducted in three Nordic countries. The strategy focuses on a small number of specific neighborhoods and implements a range of measures to lower participation barriers. A key component involves combining random and non-random sampling techniques to facilitate the recruitment of a broad segment of residents. According to comparisons with registry data, the strategy produces samples that resemble the population on multiple demographic factors.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00029602">
+<div class="row">
+<div class="col-10">
+<h2>American Journal of Sociology</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00029602">
+</div><article class="article-card" id="10-1086-742317" role="article">
+<h3 class="article-card__title">Deportation’s Fallout: Evidence from Denmark</h3>
+<p class="article-card__authors">Michael T. Light, Lars H. Andersen, Noa Hendel</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/742317" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/742317" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00987921">
+<div class="row">
+<div class="col-10">
+<h2>Population and Development Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00987921">
+</div><article class="article-card" id="10-1111-padr-70064" role="article">
+<h3 class="article-card__title">Leveraging High‐Frequency Digital Data to Analyze Forced Displacement Dynamics: A Case Study from the Gaza Strip</h3>
+<p class="article-card__authors">Edith Darin, Ridhi Kashyap, Douglas R. Leasure</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70064" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70064" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70064" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70064" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70064">
+        The quantification and analysis of forced displacement, driven by political unrest or natural disasters, has become increasingly central to both humanitarian and demographic research. With displaced populations reaching record numbers, there is an urgent need for accurate and timely data on displacement patterns, particularly disaggregated by age and gender. This paper introduces an analytical toolbox designed to leverage the growing diversity of digital trace data that overcomes disruptions of traditional data collection systems during crises, enabling high‐frequency monitoring of forced displacement. The toolbox enhances our understanding of the magnitude, pace, and subpopulation heterogeneity of displacement dynamics. We apply this toolbox to the Gaza Strip following the 2023 Hamas attack. Deriving population estimates using data from Facebook's marketing API in combination with pre‐war population data, we demonstrate how this toolbox facilitates a multifaceted assessment of the consequences of war on population movement, connects mobility patterns to ground events, dissects displacement by gender, and enables cross‐country comparisons. Ultimately, the analysis highlights the unparalleled relative magnitude of forced displacement in the Gaza Strip from October 7, 2023, to May 15, 2024, with up to 70 percent of the population displaced, alongside increasing volatility in population movements as the conflict persists.
+    </div>
+</article><article class="article-card" id="10-1111-padr-70067" role="article">
+<h3 class="article-card__title">Conflict, Climate, and Child Health: Evidence from Sub‐Saharan Africa</h3>
+<p class="article-card__authors">Brian C. Thiede, Nigel James, Jorden Jackson, Samrin Sauda</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70067" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70067" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70067" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70067" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70067">
+        Many parts of the world are experiencing social and political instability, as well as ongoing climatic changes that are expected to accelerate in the years ahead. These changes can undermine children's health through multiple pathways, and the growing frequency of sociopolitical and environmental stressors increases the likelihood that individuals are exposed to multiple risks simultaneously. Few studies have quantified the effects of such concurrent shocks despite conceptual motivations for doing so. We address this gap by measuring the independent and compounding effects of conflict and climate exposures on the weight‐for‐height of 0–23 month‐old children across 32 countries in sub‐Saharan Africa. We fit regression models to measure the independent and interactive effects of conflict and climate exposures, to explore heterogeneity in effects, and to assess the robustness of our main findings. The results indicate that both conflict and heat undermine children's health, and the effects of conflict exposures are amplified when violence occurs in heat‐stressed contexts. Impacts are heterogeneous across social groups: female children, children born to less‐educated mothers, and residents of urban areas may be most vulnerable to conflict and heat exposures.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="07352751">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-07352751">
+</div><article class="article-card" id="10-1177-07352751261448520" role="article">
+<h3 class="article-card__title">The Mediodoxy: A Bourdieusian Third Logic of Practice between Orthodoxy and Heresy in the Lived Experience of Anti-Muslim Racism and Antisemitism</h3>
+<p class="article-card__authors">Fatih Bahadir Kaya</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-07352751261448520" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-07352751261448520" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/07352751261448520" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/07352751261448520" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-07352751261448520">
+        Bourdieu’s triad of doxa, orthodoxy, and heresy explains consensus and contestation yet leaves undertheorized the middle ground where practice unfolds. I theorize mediodoxy as a third logic of practice and knowledge that neither ratifies doxa nor negates it. Drawing on 23 interviews with Jews and Muslims, I reconstruct sequences in which actors invoke racialized tropes (“Timbuktu,” “pure-blooded”), normalize discriminatory jokes, or acquiesce in exclusion. These cases show symbolic violence operates not only by external imposition but also through the practical compromises of those navigating stigma. Extending Bourdieu’s claim that domination works with the complicity of the dominated, I specify mechanisms of complicity and argue that mediodoxy can crystallize as a mediodoxic habitus—durable, patterned, and formed through recurrent experience of antisemitism and anti-Muslim racism. Mediodoxy refines field theory and advances the sociology of racism and antisemitism by showing inequality is stabilized, legitimated, and rendered ordinary between orthodoxy and heresy.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00377732">
+<div class="row">
+<div class="col-10">
+<h2>Social Forces</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00377732">
+</div><article class="article-card" id="10-1093-sf-soag054" role="article">
+<h3 class="article-card__title">Do occupations confer equal prestige on female and male incumbents?</h3>
+<p class="article-card__authors">Maik Hamjediers, Ferdinand Geissler, Johannes Giesecke, Markus Schrenker</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag054" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag054" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag054" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag054" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag054">
+        While common measures of occupational prestige target shared beliefs about occupations at the aggregate level, little is known about whether these apply equally across potentially different incumbents of the same occupation. We address this gap by asking whether occupations confer the same prestige to female and male incumbents. Therein, occupational prestige provides an empirical lens on the evaluation of gendered labor market positions, allowing us to test theories of the devaluation of women’s work and perceptions of incumbents in gender-atypical occupations. We conducted a survey experiment that signals occupational incumbents’ gender via grammatically gendered occupational titles in German and collected about 64,000 prestige ratings for 106 occupations that cover half of the employed workforce. Findings indicate less prestige assigned to feminine compared to masculine occupational titles, suggesting that female incumbents face a prestige disadvantage. This applies foremost to male-dominated occupations, supporting theories on the devaluation of women’s work among them. However, these within–occupation gender prestige gaps are relatively small compared to prestige variation between occupations and unlikely to undermine established prestige measures in most empirical applications. These insights shed light on how gender and occupations relate in conveying prestige and contribute to the methodology of surveying occupational prestige, especially when faced with grammatically gendered languages.
+    </div>
+</article><article class="article-card" id="10-1093-sf-soag055" role="article">
+<h3 class="article-card__title">Conservative politics is more strongly associated with skepticism about science than is conservative religion - and both restrain enthusiasm more than they encourage negativity</h3>
+<p class="article-card__authors">Karyn Vilbig, Paul DiMaggio</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag055" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag055" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag055" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag055" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag055">
+        Research on Americans’ attitudes toward science shows that both theologically conservative religious views and political conservatism are associated with negative views of science and scientists. In their efforts to understand the relationship between conservatism and science attitudes, however, authors have often prioritized one type of conservatism—either religious or political—rather than exploring the unique role of each. This paper examines the relative weight of religious versus political conservatism as they relate to a variety of attitudes toward science. Using an original nationally representative survey and data from the Pew American Trends Panel, we show that outright hostility toward science is relatively rare, though it is associated with both theological conservatism and political conservatism. Political conservatism is more strongly associated with science attitudes than religious conservatism, a finding that holds across several measures of attitudes toward science, scientists, and science policies and is robust to the inclusion of measures of Christian nationalism. Moreover, these relationships are not limited to contentious scientific fields such as evolution and epidemics, but are also observable in areas of science that have not been seen as widely controversial. Finally, political and religious conservatism are more strongly associated with blunted enthusiasm for—rather than an outright rejection of—science and scientists
+    </div>
+</article><article class="article-card" id="10-1093-sf-soag050" role="article">
+<h3 class="article-card__title">Review of “Disabled Power: A Storm, a Grid, and Embodied Harm in the Age of Disaster”</h3>
+<p class="article-card__authors">Adrianna Munson</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag050" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag050" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1093-sf-soag053" role="article">
+<h3 class="article-card__title">Review of “Legalized Inequalities: Immigration and Race in the Low-Wage Workplace”</h3>
+<p class="article-card__authors">Irene Vega</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag053" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag053" type="button">
+            BibTeX
+        </button>
+</div>
+</article><article class="article-card" id="10-1093-sf-soag044" role="article">
+<h3 class="article-card__title">Qualified lotteries can neutralize conflicts of interest in the appointment of individuals to positions of power</h3>
+<p class="article-card__authors">Malte Doehne, Katja Rost</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag044" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag044" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag044" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag044" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag044">
+        The preferential treatment of relatives, friends, and peers is, and has always been, a problem in the appointment of individuals to positions of power, such as executive managerial positions, judgeships, professorships, or leadership roles in public administration and regulatory agencies. Are there viable institutional alternatives to today’s reliance on recusals and consensus-based selection? In this paper, we examine a historical regime in 18th-century Basel, Switzerland, that combined meritocratic preselection with randomized choice through a qualified lottery to reduce favoritism in political appointments. In Basel, variants of qualified lotteries were implemented for over 100 years with the intent of combating nepotism and corruption. Using data on 22,017 male citizens and the families they married into, we analyze how three forms of social dependency relations—being born into, marrying into, or being embedded among the “right” families—shaped appointments to entry-level political office. We find that as the citizenry expanded, social dependencies became increasingly predictive of appointment outcomes. Yet under the qualified lottery regime, these dependencies lost their salience. Thus, our findings indicate that qualified lotteries can neutralize conflicts of interest not only in theory but also in practice. Qualified lotteries offer compelling alternatives to consensus-driven candidate selection because they can be designed to enhance fairness, reduce search costs, and mitigate conflicts of interest. Our study contributes to the broader discourse on institutional governance and on practices that mitigate conflicts of interest in the appointment of individuals to positions of power.
+    </div>
+</article><article class="article-card" id="10-1093-sf-soag049" role="article">
+<h3 class="article-card__title">Precarious work schedules and flexibility: implications for work-caregiving conflict and parenting stress</h3>
+<p class="article-card__authors">Jaeseung Kim, Julia R Henly</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag049" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag049" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag049" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag049" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag049">
+        Although there is growing recognition that unstable and unpredictable work schedules create challenges for working parents, research is scarce on whether access to flexibility from different resources can attenuate problems created by scheduling instability. Guided by Emlen’s conceptualization of flexibility and the Job Demands-Resource Model, we examine the buffering effects of flexibility resources—from work, child care, and family—on work-caregiving conflict and parental stress in the context of work schedule instability. We first assessed the direct relationship between schedule instability and these outcomes and found it was associated with a higher level of work-caregiving conflict but not parenting stress. We then considered the direct and moderating role of flexibility resources and found that work schedule input and provider flexibility buffered the relationship between schedule instability and work-caregiving conflict. Policy implications to ameliorate work schedule instability and strengthen flexibility resources are discussed.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00323292">
+<div class="row">
+<div class="col-10">
+<h2>Politics &amp; Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00323292">
+</div><article class="article-card" id="10-1177-00323292261448814" role="article">
+<h3 class="article-card__title">How Segmented Globalization Undermines Democratic Prospects in China</h3>
+<p class="article-card__authors">Chuyu Liu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00323292261448814" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00323292261448814" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00323292261448814" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00323292261448814" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00323292261448814">
+        Why has China's integration into the global economy reinforced rather than undermined the Chinese Communist Party’s (CCP) authoritarian rule? This article advances a theory of “segmented globalization” to explain how China's distinctive form of globalization creates structural impediments to democratization. I argue that “segmented globalization”—the symbiosis between open trade and closed finance combined with elite emigration—produces a self-reinforcing equilibrium that consolidates CCP rule. First, China's closed financial system channels vast resources into state control. Second, neoliberal export policies paradoxically reinforce financial closure. This export-finance nexus enables the CCP to massively invest in coercion and patronage, maintain the structural dependence of the nascent capitalist class on the party-state, and cultivate output-based legitimacy. Third, elite emigration makes potential agents of democratization relocate abroad rather than demanding domestic political changes. However, the recent US-China strategic competition may threaten this equilibrium by undermining the export-finance nexus that has sustained CCP rule for decades.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="02667215">
+<div class="row">
+<div class="col-10">
+<h2>European Sociological Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-02667215">
+</div><article class="article-card" id="10-1093-esr-jcag017" role="article">
+<h3 class="article-card__title">The impact of mothers: intergenerational mobility in Sweden 1865–2015</h3>
+<p class="article-card__authors">Elien Dalman</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-esr-jcag017" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-esr-jcag017" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/esr/jcag017" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/esr/jcag017" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-esr-jcag017">
+        Recent studies show how patterns and trends in social mobility look substantially different when both parents are considered rather than one. Using Swedish census and register data covering cohorts born 1865–1985 and their parents, I describe social mobility among both male-breadwinner and dual-earner family types, each reflecting a work-life context common globally today. This rich longitudinal data capture the occupational status of homemaker mothers later in life. Mobility levels in dual-earner families historically mirror mobility levels in dual-earner society today. Occupational persistence increased substantially as society transitioned from male breadwinner to dual earner; rank-rank correlations increased from 0.20 to 0.38—more so among daughters than among sons; long-term trends are however highly sensitive to specification choices - with the highest persistence specification suggesting historical levels as high as 0.47. Gender continues to play an important role throughout the period, with same-gender parent–child associations being substantially stronger than opposite-gender associations. Fathers’ highest occupational attainment captures most intergenerational persistence historically, while mothers and fathers contribute similarly to intergenerational persistence in dual-earner families. Parental resources are not independent, but accumulate—and differently so over time. These findings together suggest that both parents need to be included to correctly describe long-term mobility patterns and trends, either parsimoniously with the ‘pooled’ approach, or through two-parent models.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14742837">
+<div class="row">
+<div class="col-10">
+<h2>Social Movement Studies</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14742837">
+</div><article class="article-card" id="10-1080-14742837-2026-2669048" role="article">
+<h3 class="article-card__title">New insights into global labour: movement strategy and mobilisation in the context of crisis</h3>
+<p class="article-card__authors">Katrin Uba, Elizabeth Humphrys</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/14742837.2026.2669048" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/14742837.2026.2669048" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>
