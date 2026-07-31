@@ -24,13 +24,13 @@ def main():
     except Exception:
         idx = []
 
-    if not any(e["date"] == date for e in idx):
-        idx.insert(0, {"date": date})
+    if not any(e["date"] == date and e.get("version") == "v1" for e in idx):
+        idx.insert(0, {"date": date, "version": "v1"})
         idx.sort(key=lambda x: x["date"], reverse=True)
         idx_path.write_text(json.dumps(idx, indent=2))
-        print(f"Added {date} to archive index.")
+        print(f"Added {date} (v1) to archive index.")
     else:
-        print(f"Entry for {date} already in archive index.")
+        print(f"Entry for {date} (v1) already in archive index.")
 
 
 if __name__ == "__main__":

@@ -9,7 +9,6 @@ Usage: python3 archive_postprocess.py <archive_dir> <date>
 """
 
 import sys
-import re
 from pathlib import Path
 from datetime import datetime
 from bs4 import BeautifulSoup
@@ -28,8 +27,14 @@ INTERNAL_PATHS = {
     "/working_papers", "/working_papers.html",
     "/about", "/about.html",
     "/stats", "/stats.html",
-    "/notifications", "/notifications.html",
     "/archive", "/archive.html",
+}
+
+# Links deactivated rather than rewritten — not archived, visually dimmed
+DEACTIVATE_HREFS = {
+    "/notifications", "/notifications.html",
+    "https://nep.repec.org/",
+    "https://nep.repec.org",
 }
 
 
@@ -38,6 +43,17 @@ LOCAL_ASSETS = {
     "/assets/js/custom.js",
     "/assets/js/storage.js",
 }
+
+
+def deactivate_links(soup):
+    for link in soup.find_all("a", href=True):
+        href = link["href"]
+        # Also match already-rewritten forms like /archive/DATE/notifications
+        if href in DEACTIVATE_HREFS or href.rstrip("/").endswith("/notifications"):
+            del link["href"]
+            link["tabindex"] = "-1"
+            link["aria-disabled"] = "true"
+            link["style"] = "pointer-events: none; opacity: 0.5; cursor: default;"
 
 
 def rewrite_links(soup, archive_prefix):
@@ -99,6 +115,7 @@ def inject_banner(soup, date_str):
 def process_file(html_path, archive_prefix, date_str):
     content = html_path.read_text(encoding="utf-8")
     soup = BeautifulSoup(content, "html.parser")
+    deactivate_links(soup)
     rewrite_links(soup, archive_prefix)
     inject_banner(soup, date_str)
     html_path.write_text(str(soup), encoding="utf-8")
