@@ -26,13 +26,13 @@ function isUniversityEmail(email) {
 }
 
 async function sendPlunkEmail(to, subject, body, env) {
-  const resp = await fetch('https://api.useplunk.com/v1/send', {
+  const resp = await fetch('https://next-api.useplunk.com/v1/send', {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${env.PLUNK_SECRET_KEY}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ to, subject, body, subscribed: false }),
+    body: JSON.stringify({ to, from: 'noreply@paper-picnic.com', subject, body, subscribed: false }),
   })
   if (!resp.ok) {
     const text = await resp.text()
