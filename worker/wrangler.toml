@@ -1,0 +1,15 @@
+name = "picnic-subscriber-api"
+main = "src/index.js"
+compatibility_date = "2025-08-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "picnic-subscribers"
+database_id = "f8f0e2ce-9b1c-4f32-8408-2e3baf9c2929"
+
+[[routes]]
+pattern = "api.paper-picnic.com/*"
+zone_name = "paper-picnic.com"
+
+[triggers]
+crons = ["*/2 * * * 5,6"]
