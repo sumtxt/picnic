@@ -111,8 +111,36 @@ app.post('/api/subscribe', async (c) => {
   return c.json({ message: 'Please check your email to confirm your subscription.' })
 })
 
-// GET /api/confirm?token=
+// GET /api/confirm?token= — show confirmation page (do not confirm yet, defeats link scanners)
 app.get('/api/confirm', async (c) => {
+  const token = c.req.query('token')
+  if (!token) return c.json({ error: 'Missing token' }, 400)
+
+  const sub = await c.env.DB.prepare(
+    'SELECT confirmed FROM subscribers WHERE token = ?'
+  ).bind(token).first()
+
+  if (!sub) {
+    return c.html(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>Paper Picnic</title></head><body style="font-family:sans-serif;max-width:480px;margin:4rem auto;padding:0 1rem">
+<h2>Invalid link</h2><p>This confirmation link is invalid or has expired.</p></body></html>`, 404)
+  }
+
+  if (sub.confirmed) {
+    return c.html(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>Paper Picnic</title></head><body style="font-family:sans-serif;max-width:480px;margin:4rem auto;padding:0 1rem">
+<h2>Already confirmed</h2><p>Your subscription is already active. You can <a href="https://www.paper-picnic.com/preferences?token=${token}">manage your preferences</a> at any time.</p></body></html>`)
+  }
+
+  return c.html(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>Confirm subscription — Paper Picnic</title></head><body style="font-family:sans-serif;max-width:480px;margin:4rem auto;padding:0 1rem">
+<h2>Confirm your subscription</h2>
+<p>Click the button below to activate your Paper Picnic email alerts.</p>
+<form method="POST" action="/api/confirm?token=${token}">
+  <button type="submit" style="background:#2563eb;color:#fff;border:none;padding:0.75rem 1.5rem;font-size:1rem;border-radius:4px;cursor:pointer">Confirm subscription</button>
+</form>
+</body></html>`)
+})
+
+// POST /api/confirm?token= — actually confirm
+app.post('/api/confirm', async (c) => {
   const token = c.req.query('token')
   if (!token) return c.json({ error: 'Missing token' }, 400)
 
