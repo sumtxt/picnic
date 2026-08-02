@@ -4,11 +4,13 @@ import PostalMime from 'postal-mime'
 import { createMimeMessage } from 'mimetext'
 
 import { extractBlock, parseSelections, stripTags } from './parse.js'
+import { UNIVERSITY_DOMAINS } from './university-domains.js'
 
 import digestTpl from '../templates/digest.mustache'
 import replySubscribedTpl from '../templates/reply-subscribed.mustache'
 import replyUnsubscribedTpl from '../templates/reply-unsubscribed.mustache'
 import replyHelpTpl from '../templates/reply-help.mustache'
+import replyNonUniversityTpl from '../templates/reply-nonuniversity.mustache'
 
 const BATCH_SIZE = 10
 
@@ -18,6 +20,13 @@ const JOURNALS_URL = 'https://raw.githubusercontent.com/sumtxt/picnic/main/param
 const OSF_SUBJECTS_URL = 'https://raw.githubusercontent.com/sumtxt/picnic/main/parameters/osf_subjects.json'
 
 // --- Helpers ---
+
+// Sign-ups are limited to institutional addresses (bundled Hipo university-domains list).
+function isUniversityEmail(email) {
+  const parts = email.toLowerCase().split('@')
+  if (parts.length !== 2) return false
+  return UNIVERSITY_DOMAINS.has(parts[1])
+}
 
 async function sendPlunkEmail(to, subject, body, env, { reply, headers } = {}) {
   const payload = {
@@ -340,8 +349,13 @@ async function handleEmail(message, env) {
       return
     }
 
-    // Subscribe: need at least one valid id
+    // Subscribe: need at least one valid id, and a university/institutional address
     if (selections.journals.length > 0 || selections.osf.length > 0) {
+      if (!isUniversityEmail(from)) {
+        const body = Mustache.render(replyNonUniversityTpl, {})
+        await sendReply(message, 'Re: Paper Picnic subscription', body)
+        return
+      }
       await upsertSubscriber(from, selections.journals, selections.osf, env)
       const body = Mustache.render(replySubscribedTpl, {})
       await sendReply(message, 'Re: Subscribed to Paper Picnic', body)
