@@ -25,7 +25,7 @@
             <span class="mx-1">|</span>
             <a {% if page.url=="/news.html" %}class="active" {% endif %} href="https://paperpicnic.substack.com/" target="_blank"><span class="d-none d-md-inline">📢 </span>Substack</a>
             <span class="mx-1">|</span>
-            <a {% if page.url=="/stats.html" %}class="active" {% endif %} href="{{ site.baseurl }}/stats"><span class="d-none d-md-inline">📈 </span>Stats</a>
+            <a {% if page.url=="/archive.html" %}class="active" {% endif %} href="{{ site.baseurl }}/archive"><span class="d-none d-md-inline">📦 </span>Archive</a>
             <span class="mx-1">|</span>
             <a href="{{ site.baseurl }}/md/index.md" title="Machine-readable version for AI agents and LLMs"><span class="d-none d-md-inline">🤖 </span>For AI</a>
         </div>
@@ -58,26 +58,26 @@
                         Politics
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="politicsDropdown">
-                        <li><a class="dropdown-item" href="./political_science">Political Science</a></li>
-                        <li><a class="dropdown-item" href="./public_administration">Public Administration</a></li>
-                        <li><a class="dropdown-item" href="./international_relations">International Relations</a></li>
+                        <li><a class="dropdown-item" href="{{ site.baseurl }}/political_science">Political Science</a></li>
+                        <li><a class="dropdown-item" href="{{ site.baseurl }}/public_administration">Public Administration</a></li>
+                        <li><a class="dropdown-item" href="{{ site.baseurl }}/international_relations">International Relations</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a {% if page.url=="/economics.html" %}class="nav-link text-nowrap active" {% else %}
-                        class="nav-link text-nowrap" {% endif %} href="./economics">
+                        class="nav-link text-nowrap" {% endif %} href="{{ site.baseurl }}/economics">
                         Economics
                     </a>
                 </li>
                 <li class="nav-item">
                     <a {% if page.url=="/sociology.html" -%}class="nav-link text-nowrap active" {%- else -%}
-                        class="nav-link text-nowrap" {% endif %} href="./sociology">
+                        class="nav-link text-nowrap" {% endif %} href="{{ site.baseurl }}/sociology">
                         Sociology
                     </a>
                 </li>
                 <li class="nav-item">
                     <a {% if page.url=="/multidisciplinary.html" -%}class="nav-link text-nowrap active" {%- else -%}
-                        class="nav-link text-nowrap" {% endif %} href="./multidisciplinary">
+                        class="nav-link text-nowrap" {% endif %} href="{{ site.baseurl }}/multidisciplinary">
                         Multidisciplinary
                     </a>
                 </li>
@@ -87,12 +87,12 @@
                         More
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./migration_studies">Migration Studies</a></li>
-                        <li><a class="dropdown-item" href="./communication_studies">Communication Studies</a></li>
+                        <li><a class="dropdown-item" href="{{ site.baseurl }}/migration_studies">Migration Studies</a></li>
+                        <li><a class="dropdown-item" href="{{ site.baseurl }}/communication_studies">Communication Studies</a></li>
                         <li><a class="dropdown-item"
-                                href="./environmental_studies">Environmental Studies</a></li>
+                                href="{{ site.baseurl }}/environmental_studies">Environmental Studies</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="./working_papers">
+                        <li><a class="dropdown-item" href="{{ site.baseurl }}/working_papers">
                             <div>🔥 Working Papers</div>
                             <small class="text-muted">SocArXiv/OSF Preprints</small>
                         </a></li>
@@ -112,7 +112,7 @@
                 {%- endif -%}
                 <li class="nav-item">
                     <a {% if page.url=="/notifications.html" %} class="nav-link text-nowrap active" {% else %}
-                        class="nav-link text-nowrap" {% endif %} href="./notifications">
+                        class="nav-link text-nowrap" {% endif %} href="{{ site.baseurl }}/notifications">
                         📨 Notifications
                     </a>
                 </li>
