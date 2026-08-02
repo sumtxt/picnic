@@ -8,11 +8,12 @@
     "deploy": "wrangler deploy",
     "db:init": "wrangler d1 execute picnic-subscribers --remote --file=./schema.sql",
     "db:init:local": "wrangler d1 execute picnic-subscribers --local --file=./schema.sql",
-    "db:migrate": "wrangler d1 execute picnic-subscribers --remote --file=./schema-migration.sql",
-    "db:migrate:local": "wrangler d1 execute picnic-subscribers --local --file=./schema-migration.sql"
+    "test": "node --test test/*.mjs"
   },
   "dependencies": {
-    "hono": "^4.7.11"
+    "mimetext": "^3.0.27",
+    "mustache": "^4.2.0",
+    "postal-mime": "^2.3.13"
   },
   "devDependencies": {
     "wrangler": "^4.23.0"

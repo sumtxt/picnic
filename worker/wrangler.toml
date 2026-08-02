@@ -1,15 +1,35 @@
 name = "picnic-subscriber-api"
 main = "src/index.js"
 compatibility_date = "2025-08-01"
+# nodejs_compat is required by mimetext (used to build inbound-email replies)
+compatibility_flags = ["nodejs_compat"]
+# workers.dev must stay enabled or the cron trigger (the only digest trigger) won't fire
+workers_dev = true
+
+[[rules]]
+type = "Text"
+globs = ["**/*.mustache"]
+fallthrough = true
 
 [[d1_databases]]
 binding = "DB"
 database_name = "picnic-subscribers"
 database_id = "f8f0e2ce-9b1c-4f32-8408-2e3baf9c2929"
 
-[[routes]]
-pattern = "api.paper-picnic.com/*"
-zone_name = "paper-picnic.com"
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = true
+persist = true
+head_sampling_rate = 1
 
 [triggers]
-crons = ["*/2 * * * 5,6"]
+crons = ["*/2 * * * FRI,SAT,SUN,MON"]

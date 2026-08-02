@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Picnic - Your New Baskets</title>
+</head>
+
+<body>
+
+    <p>Your new baskets with the latest published research are available on <a
+            href="https://paper-picnic.com">paper-picnic.com</a>. This email contains only the journals and preprint
+        categories you selected. Abstracts are included whenever
+        available from Crossref.</p>
+
+    {{#disciplines}}
+    <h2 id="{{id}}">{{name}}</h2>
+    {{#journals}}
+    <div>
+        <h3>{{journal_name}}</h3>
+        {{#articles}}
+        <div>
+            <div id="title"><a href="{{doi}}">{{title}}</a></div>
+            <div id="authors">{{authors}}</div>
+            {{#abstract}}
+            <div id="abstract">{{abstract}}</div>
+            {{/abstract}}
+            <p></p>
+        </div>
+        {{/articles}}
+    </div>
+    {{/journals}}
+    {{/disciplines}}
+
+    {{#preprints}}
+    <h2 id="preprints">Preprints (SocArXiv / OSF)</h2>
+    {{#groups}}
+    <div>
+        <h3>{{group_name}}</h3>
+        {{#items}}
+        <div>
+            <div id="title"><a href="{{url}}">{{title}}</a></div>
+            <div id="authors">{{authors}}</div>
+            {{#abstract}}
+            <div id="abstract">{{abstract}}</div>
+            {{/abstract}}
+            <p></p>
+        </div>
+        {{/items}}
+    </div>
+    {{/groups}}
+    {{/preprints}}
+
+    <hr>
+
+    <div class="footer">
+        <p>Annoyed by these emails? Don't send them to spam but unsubscribe by sending an email to <a
+                href="mailto:unsubscribe@paper-picnic.com">unsubscribe@paper-picnic.com</a>. The subject and the body of
+            your message are irrelevant and you will be unsubscribed immediately. For all comments and concerns, please
+            write to <a href="mailto:hello@paper-picnic.com">hello@paper-picnic.com</a></p>
+    </div>
+
+</body>
+
+</html>
