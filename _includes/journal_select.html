@@ -1,0 +1,50 @@
+<div class="accordion mb-2" id="accordionJournalSelect">
+  {%- for cat_info in include.categories_list -%}
+  {%- assign category_journals = site.data.journals | where: "category", cat_info.category | sort: "category_rank" -%}
+  {%- assign category_id = cat_info.category | slugify -%}
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-select-{{ category_id }}" aria-expanded="false"
+              aria-controls="collapse-select-{{ category_id }}">
+        {{ cat_info.category }}
+      </button>
+    </h2>
+    <div id="collapse-select-{{ category_id }}" class="accordion-collapse collapse"
+         data-bs-parent="#accordionJournalSelect">
+      <div class="accordion-body">
+        {%- for journal in category_journals -%}
+        <div class="form-check ms-2">
+          <input class="form-check-input"
+                 type="checkbox" name="journal" value="{{ journal.id }}"
+                 id="j-{{ journal.id }}">
+          <label class="form-check-label" for="j-{{ journal.id }}">{{ journal.name }}</label>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  {%- endfor -%}
+  {%- assign osf_subgroups = site.data.osf_subjects.subgroups | where_exp: "sg", "sg.id != 'ooo'" | where_exp: "sg", "sg.id != 'xxx'" -%}
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-select-osf" aria-expanded="false"
+              aria-controls="collapse-select-osf">
+        🔥 SocArXiv/OSF Preprints
+      </button>
+    </h2>
+    <div id="collapse-select-osf" class="accordion-collapse collapse"
+         data-bs-parent="#accordionJournalSelect">
+      <div class="accordion-body">
+        {%- for sg in osf_subgroups -%}
+        <div class="form-check ms-2">
+          <input class="form-check-input" type="checkbox" name="osf_category"
+                 value="{{ sg.id }}" id="osf-{{ sg.id }}">
+          <label class="form-check-label" for="osf-{{ sg.id }}">{{ sg.name }}</label>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>

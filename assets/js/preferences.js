@@ -44,17 +44,6 @@
       loadingEl.textContent = err.message || 'Could not load preferences. Please use the link from your weekly email.';
     });
 
-  // Select-all buttons
-  document.querySelectorAll('.select-all-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var cat = btn.getAttribute('data-category');
-      var boxes = document.querySelectorAll('.cat-' + cat);
-      var allChecked = Array.from(boxes).every(function (b) { return b.checked; });
-      boxes.forEach(function (b) { b.checked = !allChecked; });
-      btn.textContent = allChecked ? 'Select all' : 'Deselect all';
-    });
-  });
-
   // Save preferences
   var form = document.getElementById('preferences-form');
   form.addEventListener('submit', function (e) {

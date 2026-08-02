@@ -1,61 +1,40 @@
 ---
-title: "Manage Email Preferences"
+title: "Manage Your Picnic Basket 📨"
 layout: page
+tagline: Update which journals and preprints you receive in your weekly email.
 permalink: /preferences
+journals:
+  - category: Political Science
+  - category: International Relations
+  - category: Public Administration
+  - category: Economics
+  - category: Sociology
+  - category: Multidisciplinary
+  - category: Communication Studies
+  - category: Environmental Studies
+  - category: Migration Studies
 ---
 
-<div id="status-message" class="alert d-none mb-4" role="alert"></div>
 <div id="loading-msg" class="text-muted">Loading your preferences…</div>
 
-<div id="preferences-container" class="d-none">
+<div id="status-message" class="alert d-none mb-4" role="alert"></div>
 
-  <p>Update which journals and preprint categories you receive weekly alerts for.</p>
+<div id="preferences-container" class="article-card d-none">
+<form id="preferences-form">
 
-  <form id="preferences-form">
+<fieldset class="mb-3">
+  <legend class="h5 mb-3">Content Selection</legend>
+  <p class="text-muted small">Select the journals and preprint categories you want included.</p>
 
-    <hr class="my-4">
-    <h2 class="h5 mb-3">Journals</h2>
+  {% include journal_select.html categories_list=page.journals %}
+  </fieldset>
 
-    {% assign grouped = site.data.journals | group_by: 'category' | sort: 'name' %}
-    {% for group in grouped %}
-    <div class="mb-4">
-      <div class="d-flex align-items-center mb-2">
-        <h3 class="h6 mb-0 me-3">{{ group.name }}</h3>
-        <button type="button" class="btn btn-sm btn-outline-secondary py-0 select-all-btn"
-                data-category="{{ group.name | slugify }}">Select all</button>
-      </div>
-      {% assign sorted = group.items | sort: 'category_rank' %}
-      {% for journal in sorted %}
-      <div class="form-check ms-2">
-        <input class="form-check-input journal-check cat-{{ group.name | slugify }}"
-               type="checkbox" name="journal" value="{{ journal.id }}"
-               id="j-{{ journal.id }}">
-        <label class="form-check-label" for="j-{{ journal.id }}">{{ journal.name }}</label>
-      </div>
-      {% endfor %}
-    </div>
-    {% endfor %}
+  <div class="mt-4 d-flex gap-2">
+    <button type="submit" class="btn btn-primary" id="save-btn">Save preferences</button>
+    <button type="button" class="btn btn-outline-danger" id="unsubscribe-btn">Unsubscribe</button>
+  </div>
 
-    <hr class="my-4">
-    <h2 class="h5 mb-3">Preprints (SocArXiv / OSF)</h2>
-
-    {% assign subgroups = site.data.osf_subjects.subgroups %}
-    {% for sg in subgroups %}
-    {% unless sg.id == 'ooo' or sg.id == 'xxx' %}
-    <div class="form-check ms-2">
-      <input class="form-check-input" type="checkbox" name="osf_category"
-             value="{{ sg.id }}" id="osf-{{ sg.id }}">
-      <label class="form-check-label" for="osf-{{ sg.id }}">{{ sg.name }}</label>
-    </div>
-    {% endunless %}
-    {% endfor %}
-
-    <div class="mt-4 d-flex gap-2">
-      <button type="submit" class="btn btn-primary" id="save-btn">Save preferences</button>
-      <button type="button" class="btn btn-outline-danger" id="unsubscribe-btn">Unsubscribe</button>
-    </div>
-
-  </form>
+</form>
 </div>
 
 <script src="/assets/js/preferences.js"></script>

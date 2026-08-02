@@ -13,23 +13,12 @@
   var params = new URLSearchParams(window.location.search);
   var status = params.get('status');
   if (status === 'confirmed') {
-    showStatus('Your subscription is confirmed! You will receive your first email on the next Friday after the weekly crawl.', 'success');
+    showStatus('Your subscription is confirmed!', 'success');
     var container = document.getElementById('subscribe-form-container');
     if (container) container.classList.add('d-none');
   } else if (status === 'already_confirmed') {
     showStatus('Your subscription was already confirmed.', 'info');
   }
-
-  // Select-all buttons
-  document.querySelectorAll('.select-all-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var cat = btn.getAttribute('data-category');
-      var boxes = document.querySelectorAll('.cat-' + cat);
-      var allChecked = Array.from(boxes).every(function (b) { return b.checked; });
-      boxes.forEach(function (b) { b.checked = !allChecked; });
-      btn.textContent = allChecked ? 'Select all' : 'Deselect all';
-    });
-  });
 
   var form = document.getElementById('subscribe-form');
   if (!form) return;
@@ -62,7 +51,7 @@
       .then(function (resp) { return resp.json().then(function (data) { return { ok: resp.ok, data: data }; }); })
       .then(function (result) {
         if (result.ok) {
-          showStatus(result.data.message || 'Please check your email to confirm your subscription.', 'success');
+          showStatus(result.data.message || 'Please check your email inbox and spam folder to confirm your subscription.', 'success');
           form.reset();
         } else {
           showStatus(result.data.error || 'Something went wrong. Please try again.', 'danger');
