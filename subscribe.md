@@ -46,7 +46,7 @@ journals:
 
 ### FAQ ###
 
-1. _Why are subscriptions limited to emails from universities?_ The technical infrastructure for this service comes with a cost covered by the maintainer. These costs grow with the number of subscribers. To control expenditures, university domains are used as a screening device to limit sign-ups. If you do not have a university email address, please use the <a href="/notifications">Picnic Notifications</a> instead.
+1. _Why are subscriptions limited to emails from universities?_ The technical infrastructure for this service comes with a cost covered by the maintainer. These costs grow with the number of subscribers. To control expenditures, university domains are used as a screening device to limit sign-ups. If you do not have a university email address, please use the <a href="{{ site.baseurl }}/notifications">Picnic Notifications</a> instead.
 
 2. _Are you experimenting on me, train models on my data, or sell my data?_ No, never. Read more in the privacy policy. 
 
