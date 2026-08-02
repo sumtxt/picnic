@@ -1,68 +1,94 @@
 (function () {
   'use strict';
 
-  var WORKER_URL = 'https://api.paper-picnic.com';
+  var generateBtn = document.getElementById('generate-btn');
+  var emailBlockSection = document.getElementById('email-block-section');
+  var emailBlock = document.getElementById('email-block');
+  var copyBtn = document.getElementById('copy-btn');
+  var copyConfirm = document.getElementById('copy-confirm');
+  var noSelectionHint = document.getElementById('no-selection-hint');
 
-  function showStatus(message, type) {
-    var el = document.getElementById('status-message');
-    el.textContent = message;
-    el.className = 'alert alert-' + type + ' mb-4';
-  }
+  if (!generateBtn) return;
 
-  // Handle status param from confirmation redirect
-  var params = new URLSearchParams(window.location.search);
-  var status = params.get('status');
-  if (status === 'confirmed') {
-    showStatus('Your subscription is confirmed!', 'success');
-    var container = document.getElementById('subscribe-form-container');
-    if (container) container.classList.add('d-none');
-  } else if (status === 'already_confirmed') {
-    showStatus('Your subscription was already confirmed.', 'info');
-  }
+  function buildBlock() {
+    var journalChecks = Array.from(document.querySelectorAll('input[name="journal"]:checked'));
+    var osfChecks = Array.from(document.querySelectorAll('input[name="osf_category"]:checked'));
 
-  var form = document.getElementById('subscribe-form');
-  if (!form) return;
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    var email = document.getElementById('email-input').value.trim();
-    var journals = Array.from(document.querySelectorAll('input[name="journal"]:checked'))
-      .map(function (c) { return c.value; });
-    var osf_categories = Array.from(document.querySelectorAll('input[name="osf_category"]:checked'))
-      .map(function (c) { return c.value; });
-
-    if (!email) { showStatus('Please enter your email address.', 'danger'); return; }
-    if (journals.length === 0 && osf_categories.length === 0) {
-      showStatus('Please select at least one journal or preprint category.', 'danger');
-      return;
+    if (journalChecks.length === 0 && osfChecks.length === 0) {
+      return null;
     }
 
-    var btn = document.getElementById('submit-btn');
-    var spinner = document.getElementById('submit-spinner');
-    btn.disabled = true;
-    spinner.classList.remove('d-none');
+    var lines = [];
+    lines.push('#PICNIC v1 BEGIN');
+    lines.push('action: subscribe');
 
-    fetch(WORKER_URL + '/api/subscribe', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, journals: journals, osf_categories: osf_categories }),
-    })
-      .then(function (resp) { return resp.json().then(function (data) { return { ok: resp.ok, data: data }; }); })
-      .then(function (result) {
-        if (result.ok) {
-          showStatus(result.data.message || 'Please check your email inbox and spam folder to confirm your subscription.', 'success');
-          form.reset();
-        } else {
-          showStatus(result.data.error || 'Something went wrong. Please try again.', 'danger');
-        }
-      })
-      .catch(function () {
-        showStatus('Network error. Please try again.', 'danger');
-      })
-      .finally(function () {
-        btn.disabled = false;
-        spinner.classList.add('d-none');
-      });
+    journalChecks.forEach(function (cb) {
+      var label = document.querySelector('label[for="' + cb.id + '"]');
+      var name = label ? label.textContent.trim() : cb.value;
+      lines.push('journal: ' + cb.value + '   (' + name + ')');
+    });
+
+    osfChecks.forEach(function (cb) {
+      var label = document.querySelector('label[for="' + cb.id + '"]');
+      var name = label ? label.textContent.trim() : cb.value;
+      lines.push('preprint: ' + cb.value + '   (' + name + ')');
+    });
+
+    lines.push('#PICNIC END');
+    return lines.join('\n');
+  }
+
+  function updateBlock() {
+    var block = buildBlock();
+    if (block === null) {
+      emailBlockSection.classList.add('d-none');
+      noSelectionHint.classList.remove('d-none');
+    } else {
+      noSelectionHint.classList.add('d-none');
+      emailBlock.textContent = block;
+      emailBlockSection.classList.remove('d-none');
+    }
+    copyConfirm.classList.add('d-none');
+  }
+
+  generateBtn.addEventListener('click', updateBlock);
+
+  // Live-update when checkboxes change (only if block already visible)
+  document.addEventListener('change', function (e) {
+    if (e.target && (e.target.name === 'journal' || e.target.name === 'osf_category')) {
+      if (!emailBlockSection.classList.contains('d-none') || !noSelectionHint.classList.contains('d-none')) {
+        updateBlock();
+      }
+    }
   });
+
+  copyBtn.addEventListener('click', function () {
+    var text = emailBlock.textContent;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        copyConfirm.classList.remove('d-none');
+        setTimeout(function () { copyConfirm.classList.add('d-none'); }, 2500);
+      }).catch(fallbackCopy);
+    } else {
+      fallbackCopy();
+    }
+  });
+
+  function fallbackCopy() {
+    var ta = document.createElement('textarea');
+    ta.value = emailBlock.textContent;
+    ta.style.position = 'fixed';
+    ta.style.top = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      copyConfirm.classList.remove('d-none');
+      setTimeout(function () { copyConfirm.classList.add('d-none'); }, 2500);
+    } catch (err) {
+      // silent failure
+    }
+    document.body.removeChild(ta);
+  }
+
 })();

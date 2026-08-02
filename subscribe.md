@@ -15,6 +15,10 @@ journals:
   - category: Migration Studies
 ---
 
+Use the checkboxes below to select the journals and SocArXiv/OSF Preprints categories you want in your weekly email. Click the "Generate" button. Then send the generated text block to the displayed email address via your university email address. We'll reply to confirm your subscription.
+
+<br>
+<hr>
 
 <div class="article-card">
 <form id="subscribe-form">
@@ -26,23 +30,27 @@ journals:
   {% include journal_select.html categories_list=page.journals %}
   </fieldset>
 
-  <div id="status-message" class="alert d-none mb-4" role="alert"></div>
-
-  <div class="mb-3">
-    <label for="email-input" class="form-label fw-semibold">Email Address<p class="text-muted small">Only university email addresses are accepted.</p></label>
-    <input type="email" class="form-control" id="email-input" placeholder="name@university.edu" required>
-  </div>
-  
   <div class="mt-4">
-    <button type="submit" class="btn btn-primary" id="submit-btn">Subscribe</button>
-    <span id="submit-spinner" class="ms-2 d-none">Sending…</span>
+    <button type="button" class="btn btn-primary" id="generate-btn">Generate</button>
   </div>
 
 </form>
 </div>
 
+<div id="email-block-section" class="d-none mt-4">
+  <p class="mb-2">Copy the text below and email it, unchanged, to <a href="mailto:subscribe@paper-picnic.com">subscribe@paper-picnic.com</a> from your university email address. The subject line doesn't matter. We'll reply to confirm.</p>
+  <pre id="email-block" style="font-family: monospace; background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 4px; white-space: pre; overflow-x: auto; font-size: 0.9rem;"></pre>
+  <button type="button" class="btn btn-primary btn-sm mt-2" id="copy-btn">Copy</button>
+  <span id="copy-confirm" class="ms-2 text-success d-none">Copied!</span>
+</div>
+
+<div id="no-selection-hint" class="alert alert-info d-none mt-4" role="alert">
+  Please select at least one journal or preprint category above before generating your subscription email.
+</div>
+
 <br>
 <hr>
+
 
 ### FAQ ###
 
@@ -50,5 +58,6 @@ journals:
 
 2. _Are you experimenting on me, train models on my data, or sell my data?_ No, never. Read more in the privacy policy. 
 
+3. _How do I unsubscribe?_ Email _unsubscribe@paper-picnic.com_ (subject and body can just say "unsubscribe"), or use the List-Unsubscribe link in any of your weekly emails.
 
 <script src="/assets/js/subscribe.js"></script>
