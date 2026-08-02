@@ -875,3 +875,56 @@ a:hover {
     gap: 4px;
   }
 }
+
+/* ==================== */
+/* Archive Calendar */
+/* ==================== */
+
+.calendar-summary {
+  font-size: var(--font-size-sm);
+}
+
+.calendar-year-btn.active {
+  background: var(--color-accent) !important;
+  color: #fff !important;
+  border-color: var(--color-accent) !important;
+}
+
+.calendar-table th,
+.calendar-table td {
+  border: none !important;
+  padding: 2px 0;
+}
+
+.calendar-table th {
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.calendar-table td {
+  font-size: 0.75rem;
+}
+
+.calendar-day-empty {
+  color: var(--color-text-light);
+}
+
+.calendar-day-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff !important;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.calendar-day-badge:hover {
+  transform: scale(1.15);
+  box-shadow: var(--shadow-sm);
+}
