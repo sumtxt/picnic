@@ -67,15 +67,15 @@ journal: 10584609   (Political Communication)
 preprint: c6a       (Sociology)
 `
   const result = parseSelections(block, known)
-  assert.equal(result.action, 'subscribe')
   assert.deepEqual(result.journals.sort(), ['10584609', '19312458'])
   assert.deepEqual(result.osf, ['c6a'])
 })
 
-test('parseSelections: parses unsubscribe action', () => {
-  const block = 'action: unsubscribe\n'
+test('parseSelections: an action line is ignored, not treated as a selection', () => {
+  const block = 'action: unsubscribe\njournal: 19312458\n'
   const result = parseSelections(block, known)
-  assert.equal(result.action, 'unsubscribe')
+  assert.deepEqual(result.journals, ['19312458'])
+  assert.deepEqual(result.osf, [])
 })
 
 test('parseSelections: drops unknown journal IDs (whitelist)', () => {
@@ -119,7 +119,6 @@ action = subscribe
 journal = 19312458
 `
   const result = parseSelections(block, known)
-  assert.equal(result.action, 'subscribe')
   assert.deepEqual(result.journals, ['19312458'])
 })
 
@@ -136,7 +135,6 @@ p: c6a
 
 test('parseSelections: null block returns empty result', () => {
   const result = parseSelections(null, known)
-  assert.equal(result.action, null)
   assert.deepEqual(result.journals, [])
   assert.deepEqual(result.osf, [])
 })
@@ -167,7 +165,6 @@ preprint: c2b
   assert.ok(block !== null, 'expected block from stripped HTML')
 
   const result = parseSelections(block, known)
-  assert.equal(result.action, 'subscribe')
   assert.deepEqual(result.journals, ['00219916'])
   assert.deepEqual(result.osf, ['c2b'])
 })

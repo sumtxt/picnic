@@ -35,16 +35,17 @@ export function extractBlock(text) {
  * the known journal-id and osf-id Sets.  Unknown tokens are silently dropped.
  *
  * Recognised keys (case-insensitive, aliases supported):
- *   action                         → 'subscribe' | 'unsubscribe'
  *   journal | j                    → journal IDs
  *   preprint | osf | p             → OSF subgroup IDs
+ * (An `action:` line, if present, is ignored — intent is decided by the
+ * recipient address, not the block contents.)
  *
  * @param {string|null} block           The raw block text (from extractBlock)
  * @param {{ journalIds: Set<string>, osfIds: Set<string> }} known
- * @returns {{ action: string|null, journals: string[], osf: string[] }}
+ * @returns {{ journals: string[], osf: string[] }}
  */
 export function parseSelections(block, known) {
-  const result = { action: null, journals: [], osf: [] }
+  const result = { journals: [], osf: [] }
   if (!block) return result
 
   const { journalIds, osfIds } = known
@@ -62,14 +63,6 @@ export function parseSelections(block, known) {
 
     // Split value on whitespace, commas, parentheses (handles "(Human Name)" annotations)
     const tokens = rawVal.split(/[\s,()]+/).map(t => t.trim()).filter(Boolean)
-
-    if (key === 'action') {
-      const val = tokens[0]?.toLowerCase()
-      if (val === 'subscribe' || val === 'unsubscribe') {
-        result.action = val
-      }
-      continue
-    }
 
     if (key === 'journal' || key === 'j') {
       for (const tok of tokens) {

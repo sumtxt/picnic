@@ -14,6 +14,11 @@ import replyNonUniversityTpl from '../templates/reply-nonuniversity.mustache'
 
 const BATCH_SIZE = 10
 
+// The Worker only acts on mail delivered to these two addresses; anything else
+// is ignored (the catch-all route sends other mail to a human inbox).
+const SUBSCRIBE_ADDRESS = 'subscribe@paper-picnic.com'
+const UNSUBSCRIBE_ADDRESS = 'unsubscribe@paper-picnic.com'
+
 const PUBLICATIONS_URL = 'https://raw.githubusercontent.com/sumtxt/picnic/main/output/publications.json'
 const PREPRINTS_URL = 'https://raw.githubusercontent.com/sumtxt/picnic/main/output/preprints.json'
 const JOURNALS_URL = 'https://raw.githubusercontent.com/sumtxt/picnic/main/parameters/journals.json'
@@ -189,7 +194,8 @@ async function runWeeklySend(env) {
         preprints: preprintsContent,
       })
       await sendPlunkEmail(sub.email, subject, html, env, {
-        reply: 'unsubscribe@paper-picnic.com',
+        // Replies go to a human; one-click unsubscribe stays on the header below.
+        reply: 'hello@paper-picnic.com',
         headers: {
           'List-Unsubscribe': listUnsubscribeHeader,
         },
@@ -304,31 +310,30 @@ async function handleEmail(message, env) {
     return
   }
 
-  // Normalized identity for all D1 lookups (envelope From, DMARC-verified above)
+  // Identity = DMARC-verified envelope From; intent = the address it was sent to.
   const from = (message.from || '').trim().toLowerCase()
+  const to = (message.to || '').trim().toLowerCase()
 
-  // 3. Extract text body (prefer text/plain; fall back to tag-stripped HTML)
-  const bodyText = email.text || (email.html ? stripTags(email.html) : '')
-
-  // 4. Check for unsubscribe intent via subject line or first body line
-  const subjectLine = (email.subject || '').trim()
-  const firstBodyLine = bodyText.split('\n').find(l => l.trim()) || ''
-  const unsubscribeRe = /^\s*(unsubscribe|stop)\b/i
-  const isUnsubscribeByHeader = unsubscribeRe.test(subjectLine) || unsubscribeRe.test(firstBodyLine)
-
-  if (isUnsubscribeByHeader) {
+  // 3. Unsubscribe: any mail delivered to the unsubscribe address. The content
+  // is irrelevant, so a one-click List-Unsubscribe, a plain email, or a reply
+  // all work — nothing else reaches this address (digest Reply-To is hello@).
+  if (to === UNSUBSCRIBE_ADDRESS) {
     await deleteSubscriber(from, env)
     const body = Mustache.render(replyUnsubscribedTpl, {})
     await sendReply(message, 'Re: Unsubscribed from Paper Picnic', body)
     return
   }
 
-  // 5. Extract and parse #PICNIC block
-  const block = extractBlock(bodyText)
+  // 4. Only subscribe@ is handled beyond this point. Ignore anything else so a
+  // routing change can't make the Worker treat arbitrary mail as a subscription.
+  if (to !== SUBSCRIBE_ADDRESS) return
 
-  // Check for action: unsubscribe inside the block
+  // 5. Subscribe: parse the #PICNIC block (prefer text/plain; fall back to
+  //    tag-stripped HTML).
+  const bodyText = email.text || (email.html ? stripTags(email.html) : '')
+  const block = extractBlock(bodyText)
   if (block) {
-    // Load known IDs for whitelisting
+    // Whitelist the selections against the known journal / OSF ids.
     const [journalsResp, osfResp] = await Promise.all([
       fetch(JOURNALS_URL),
       fetch(OSF_SUBJECTS_URL),
@@ -341,15 +346,7 @@ async function handleEmail(message, env) {
 
     const selections = parseSelections(block, { journalIds, osfIds })
 
-    // Explicit unsubscribe action in block
-    if (selections.action === 'unsubscribe') {
-      await deleteSubscriber(from, env)
-      const body = Mustache.render(replyUnsubscribedTpl, {})
-      await sendReply(message, 'Re: Unsubscribed from Paper Picnic', body)
-      return
-    }
-
-    // Subscribe: need at least one valid id, and a university/institutional address
+    // Need at least one valid id, and a university/institutional address.
     if (selections.journals.length > 0 || selections.osf.length > 0) {
       if (!isUniversityEmail(from)) {
         const body = Mustache.render(replyNonUniversityTpl, {})
@@ -363,7 +360,7 @@ async function handleEmail(message, env) {
     }
   }
 
-  // 6. Unparseable / no valid ids — send help
+  // 6. Couldn't parse a subscribe request — send help.
   const body = Mustache.render(replyHelpTpl, {})
   await sendReply(message, 'Re: Paper Picnic Subscription Help', body)
 }
