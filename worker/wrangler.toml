@@ -3,7 +3,6 @@ main = "src/index.js"
 compatibility_date = "2025-08-01"
 # nodejs_compat is required by mimetext (used to build inbound-email replies)
 compatibility_flags = ["nodejs_compat"]
-# workers.dev must stay enabled or the cron trigger (the only digest trigger) won't fire
 workers_dev = true
 
 [[rules]]
@@ -11,25 +10,27 @@ type = "Text"
 globs = ["**/*.mustache"]
 fallthrough = true
 
+[[kv_namespaces]]
+binding = "KV"
+id = "251ea2af13fe4735b58ba29e2c195d29"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "picnic-subscribers"
 database_id = "f8f0e2ce-9b1c-4f32-8408-2e3baf9c2929"
 
+[[workflows]]
+binding = "WEEKLY_DIGEST"
+name = "weekly-digest"
+class_name = "WeeklyDigestWorkflow"
+
 [observability]
-enabled = false
+enabled = true
 head_sampling_rate = 1
 
 [observability.logs]
 enabled = true
-head_sampling_rate = 1
-persist = true
 invocation_logs = true
 
 [observability.traces]
 enabled = true
-persist = true
-head_sampling_rate = 1
-
-[triggers]
-crons = ["*/2 * * * FRI,SAT,SUN,MON"]
