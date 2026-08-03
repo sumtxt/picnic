@@ -97,10 +97,13 @@ export class WeeklyDigestWorkflow extends WorkflowEntrypoint {
       if (!publications?.update || !publications?.content) return { issueKey: null, subscribers: [] }
 
       const today = new Date().toISOString().slice(0, 10)
-      if (publications.update !== today) throw new Error(`publications.json not yet updated for ${today}`)
+      if (!event.payload?.skipDateCheck && publications.update !== today) {
+        console.log(`Skipping: publications.json is for ${publications.update}, not ${today}`)
+        return { issueKey: null, subscribers: [] }
+      }
 
       const { results } = await this.env.DB.prepare(
-        'SELECT id, email FROM subscribers WHERE confirmed = 1 AND (last_sent_week IS NULL OR last_sent_week != ?)'
+        'SELECT id, email FROM subscribers WHERE last_sent_week IS NULL OR last_sent_week != ?'
       ).bind(publications.update).all()
 
       return { issueKey: publications.update, subscribers: results }
