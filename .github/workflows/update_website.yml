@@ -8,11 +8,7 @@ on:
 
 
 jobs:
-  archive:
-    uses: ./.github/workflows/archive_snapshot.yml
-
   update-gh-pages:
-    needs: archive
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
