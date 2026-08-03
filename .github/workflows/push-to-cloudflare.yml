@@ -1,0 +1,30 @@
+name: Push to Cloudflare KV
+
+on:
+  workflow_dispatch:
+
+jobs:
+  push-to-kv:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Install wrangler
+        run: npm install --global wrangler
+
+      - name: Push data to KV and trigger weekly digest
+        working-directory: worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: |
+          wrangler kv key put --binding=KV publications  --path=../output/publications.json
+          wrangler kv key put --binding=KV preprints     --path=../output/preprints.json
+          wrangler kv key put --binding=KV journals      --path=../parameters/journals.json
+          wrangler kv key put --binding=KV osf_subjects  --path=../parameters/osf_subjects.json
+          wrangler workflows trigger weekly-digest
