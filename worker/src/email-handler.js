@@ -20,11 +20,14 @@ function isUniversityEmail(email) {
 
 async function sendReply(message, subject, body) {
   const msg = createMimeMessage()
-  // Threading: Cloudflare requires In-Reply-To referencing the incoming Message-ID.
+  // Threading: Cloudflare requires In-Reply-To referencing the incoming Message-ID,
+  // and References to be the full chain (incoming References + incoming Message-ID) —
+  // not just the Message-ID on its own.
   const messageId = message.headers.get('Message-ID')
   if (messageId) {
     msg.setHeader('In-Reply-To', messageId)
-    msg.setHeader('References', messageId)
+    const incomingReferences = message.headers.get('References')
+    msg.setHeader('References', incomingReferences ? `${incomingReferences} ${messageId}` : messageId)
   }
   // Sender must be on the same domain that received the mail; use the exact To address.
   msg.setSender({ name: 'Paper Picnic', addr: message.to })
