@@ -1,7 +1,6 @@
 name: "Archive Snapshot"
 
 on:
-  workflow_call:
   workflow_dispatch:
 
 jobs:
@@ -25,40 +24,7 @@ jobs:
 
       - name: Fetch and archive current live site
         working-directory: ./gh_pages_folder
-        run: |
-          PREV_DATE=$(curl -sf --retry 3 "https://www.paper-picnic.com/data/publications.json" \
-            | python3 -c "import sys, json; print(json.load(sys.stdin)['update'])")
-          echo "PREV_DATE=${PREV_DATE}" >> $GITHUB_ENV
-
-          if [ -f "archive/${PREV_DATE}/index.html" ]; then
-            echo "Archive for ${PREV_DATE} already exists — skipping."
-            exit 0
-          fi
-
-          mkdir -p "archive/${PREV_DATE}/assets/css" \
-                   "archive/${PREV_DATE}/assets/js"
-
-          BASE="https://www.paper-picnic.com"
-
-          for PAGE in "" political_science economics sociology \
-                      international_relations public_administration \
-                      multidisciplinary migration_studies \
-                      communication_studies environmental_studies working_papers; do
-            FILENAME="${PAGE:-index}.html"
-            curl -sf --retry 3 "${BASE}/${PAGE}" -o "archive/${PREV_DATE}/${FILENAME}"
-          done
-
-          curl -sf --retry 3 "${BASE}/assets/css/custom.css" \
-               -o "archive/${PREV_DATE}/assets/css/custom.css"
-          curl -sf --retry 3 "${BASE}/assets/js/custom.js" \
-               -o "archive/${PREV_DATE}/assets/js/custom.js"
-          curl -sf --retry 3 "${BASE}/assets/js/storage.js" \
-               -o "archive/${PREV_DATE}/assets/js/storage.js"
-
-          python3 ../main_folder/scripts/archive_postprocess.py \
-            "archive/${PREV_DATE}" "${PREV_DATE}"
-
-          python3 ../main_folder/scripts/archive_update_index.py "${PREV_DATE}"
+        run: python3 ../main_folder/scripts/archive_snapshot.py
 
       - name: Commit archive to gh-pages
         working-directory: ./gh_pages_folder
