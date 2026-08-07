@@ -45,6 +45,16 @@ function buildSubgroupMap(osfSubjects) {
   return Object.fromEntries((osfSubjects.subgroups || []).map(sg => [sg.id, sg.name]))
 }
 
+function buildOsfIdToSubgroup(osfSubjects) {
+  const map = {}
+  for (const sg of osfSubjects.subgroups || []) {
+    for (const osf of sg.osf || []) {
+      map[osf.id] = sg.id
+    }
+  }
+  return map
+}
+
 function groupBySubscriber(rows, valueKey) {
   const map = {}
   for (const row of rows) {
@@ -79,12 +89,20 @@ function buildDisciplineSections(pubContent, journalMap, subscriberJournalIds) {
     }))
 }
 
-function buildPreprintsSection(preprints, subgroupMap, subscriberOsfCategories) {
-  if (!preprints?.content || subscriberOsfCategories.length === 0) return null
+function buildPreprintsSection(preprints, osfIdToSubgroup, subgroupMap, subscriberOsfCategories) {
+  const articles = preprints?.content?.articles
+  if (!articles || subscriberOsfCategories.length === 0) return null
   const selected = new Set(subscriberOsfCategories)
-  const groups = preprints.content
-    .filter(g => selected.has(g.id) && g.items?.length > 0)
-    .map(g => ({ group_name: subgroupMap[g.id] || g.id, items: g.items }))
+  const bySubgroup = {}
+  for (const article of articles) {
+    const subgroupIds = new Set((article.subjects || []).map(s => osfIdToSubgroup[s.id]).filter(Boolean))
+    for (const sgId of subgroupIds) {
+      if (!selected.has(sgId)) continue
+      if (!bySubgroup[sgId]) bySubgroup[sgId] = []
+      bySubgroup[sgId].push(article)
+    }
+  }
+  const groups = Object.entries(bySubgroup).map(([id, items]) => ({ group_name: subgroupMap[id] || id, items }))
   return groups.length > 0 ? { groups } : null
 }
 
@@ -128,6 +146,7 @@ export class WeeklyDigestWorkflow extends WorkflowEntrypoint {
 
         const journalMap = buildJournalMap(journalsData)
         const subgroupMap = buildSubgroupMap(osfSubjects)
+        const osfIdToSubgroup = buildOsfIdToSubgroup(osfSubjects)
         const subject = `[Paper Picnic] New Baskets from ${formatDate(issueKey)}`
 
         const ids = batch.map(s => s.id)
@@ -148,7 +167,7 @@ export class WeeklyDigestWorkflow extends WorkflowEntrypoint {
           if (alreadySent.has(sub.id)) continue
 
           const disciplines = buildDisciplineSections(publications.content, journalMap, journalsBySub[sub.id] || [])
-          const preprintsContent = buildPreprintsSection(preprints, subgroupMap, osfBySub[sub.id] || [])
+          const preprintsContent = buildPreprintsSection(preprints, osfIdToSubgroup, subgroupMap, osfBySub[sub.id] || [])
           if (disciplines.length === 0 && !preprintsContent) continue
 
           const html = Mustache.render(digestTpl, { disciplines, preprints: preprintsContent })
