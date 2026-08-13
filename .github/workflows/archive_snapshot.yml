@@ -1,11 +1,15 @@
-name: "Archive Snapshot"
+name: Archive
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: [ Crawl ]
+    types: [ completed ]
 
 jobs:
   snapshot:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Check out main (for scripts)
         uses: actions/checkout@v4

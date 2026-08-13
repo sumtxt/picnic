@@ -1,15 +1,15 @@
 name: "Update Website"
 
-on: 
+on:
    workflow_dispatch:
    workflow_run:
-     workflows: [ Crawl ]
+     workflows: [ Archive ]
      types: [ completed ]
-
 
 jobs:
   update-gh-pages:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -23,7 +23,7 @@ jobs:
           path: gh_pages_folder
           ref: gh-pages
 
-      - name: Commit to gh-pages branch 
+      - name: Commit to gh-pages branch
         working-directory: ./gh_pages_folder
         run: |
           cp -f ../main_folder/output/* ./_data/
