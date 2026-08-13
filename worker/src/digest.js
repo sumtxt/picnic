@@ -6,6 +6,18 @@ import digestTpl from '../templates/digest.mustache'
 const BATCH_SIZE = 50
 const LIST_UNSUBSCRIBE = '<mailto:unsubscribe@paper-picnic.com?subject=unsubscribe&body=unsubscribe>'
 
+const DISCIPLINE_ORDER = [
+  'Political Science',
+  'International Relations',
+  'Public Administration',
+  'Economics',
+  'Sociology',
+  'Multidisciplinary',
+  'Communication Studies',
+  'Environmental Studies',
+  'Migration Studies',
+]
+
 // --- Plunk ---
 
 async function sendPlunkEmail(to, subject, body, env, { reply, headers } = {}) {
@@ -81,7 +93,14 @@ function buildDisciplineSections(pubContent, journalMap, subscriberJournalIds) {
     })
   }
   return Object.entries(byCategory)
-    .sort((a, b) => a[1].rank - b[1].rank)
+    .sort((a, b) => {
+      const orderA = DISCIPLINE_ORDER.indexOf(a[0])
+      const orderB = DISCIPLINE_ORDER.indexOf(b[0])
+      if (orderA === -1 && orderB === -1) return a[0].localeCompare(b[0])
+      if (orderA === -1) return 1
+      if (orderB === -1) return -1
+      return orderA - orderB
+    })
     .map(([name, data]) => ({
       id: name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
       name,
