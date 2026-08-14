@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Public Administration</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"><script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"ac2e1fb808b74f97af54ce21c1386f91","r":1}' integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" type="module"></script>
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · August 7, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-08-07/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-08-07/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-07/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-07/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-07/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-07/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-07/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-08-07/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-07/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-07/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-08-07/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="15206688">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15206688" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15206688" style="max-width: 300px;" title="Journal of Policy Analysis and Management">
+                            Journal of Policy Analysis and Management
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10531858">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10531858" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10531858" style="max-width: 300px;" title="Journal of Public Administration Research and Theory">
+                            Journal of Public Administration Research and Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333352">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333352" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333352" style="max-width: 300px;" title="Public Administration Review">
+                            Public Administration Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14494035">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14494035" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14494035" style="max-width: 300px;" title="Policy and Society">
+                            Policy and Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13501763">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13501763" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13501763" style="max-width: 300px;" title="Journal of European Public Policy">
+                            Journal of European Public Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0190292X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0190292X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0190292X" style="max-width: 300px;" title="Policy Studies Journal">
+                            Policy Studies Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333298">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333298" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333298" style="max-width: 300px;" title="Public Administration">
+                            Public Administration
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03055736">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03055736" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03055736" style="max-width: 300px;" title="Policy and Politics">
+                            Policy and Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09521895">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09521895" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09521895" style="max-width: 300px;" title="Governance">
+                            Governance
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17485983">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17485983" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17485983" style="max-width: 300px;" title="Regulation &amp; Governance">
+                            Regulation &amp; Governance
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="10531858">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Public Administration Research and Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10531858">
+</div><article class="article-card" id="10-1093-jopart-muag020" role="article">
+<h3 class="article-card__title">Large Language Models and Conversational Counter-Arguments to Anti-Public Sector Bias</h3><p class="article-card__authors" title="John D Marvel, Sheeling Neo, Rachel Cho, Sangwon Ju">John D Marvel, Sheeling Neo, Rachel Cho, Sangwon Ju</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopart-muag020" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopart-muag020" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopart/muag020" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopart/muag020" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopart-muag020">
+        Can a good argument change an individual’s mind? In three pre-registered experiments, we explore this question in the domain of public sector organizational performance. We observe human subjects as they engage in conversations with a generative artificial intelligence (AI) programmed to argue in one of seven distinct “styles,” including a confrontational challenger style, a didactic style, and a sycophantic style. We develop a theory of effective argumentation predicting that conversational styles which are pleasant and engaging will be more persuasive than styles which are unpleasant or unstimulating. Contrary to this prediction, we find that conversational styles which challenge subjects’ negative views of government agencies produce significant positive attitude change, while sycophantic styles that indulge those views do not. Troublingly, subjects find the sycophantic styles more enjoyable, less frustrating, and more credible than the challenger styles. This dissociation between user experience and persuasive outcome—what we call “grudging persuasion”—suggests that attitude change does not require a pleasant conversational experience, and that the styles subjects enjoy most may be precisely the ones least likely to move them. Our findings point to a potentially dark side of LLM-based persuasion: sycophantic styles that users find most appealing are the least effective at correcting misinformed views.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333352">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333352">
+</div><article class="article-card" id="10-1111-puar-70165" role="article">
+<h3 class="article-card__title">A Race to the Top: The Adoption of Net‐Zero City Pledges in Large US Cities</h3><p class="article-card__authors" title="Mingrui Chen, Zhirong Jerry Zhao">Mingrui Chen, Zhirong Jerry Zhao</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70165" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70165" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70165" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70165" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70165">
+        Many cities have adopted net‐zero emission pledges, yet little is known about why these commitments emerge or how their determinants shift under changing policy environments. Using a panel of 148 large US cities from 2016 to 2022, this study applies the Political Market Framework and employs discrete‐time event‐history models to examine how policy demand, policy supply and institutional conditions shape adoption decisions. Results show that civic capacity, political ideology, and horizontal diffusion drive adoption in the full period, but their influence varies sharply across institutional contexts. During federal disengagement (2016–2018), cities with less population, strong vulnerability signals, supportive state policies, or fiscal cushioning through federal aid are more likely to adopt. When federal engagement returned (2019–2022), education, population size, and neighbor adoption emerged as significant correlates of net‐zero adoption. These findings extend the Political Market Framework by showing how federal contexts condition the adoption of ambitious climate commitments.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70167" role="article">
+<h3 class="article-card__title">Social Capital and Policy Compliance in a Polarized Democracy: A Necessary Condition Analysis of COVID Vaccination Rates Across US Counties</h3><p class="article-card__authors" title="Bin Chen, Zhiwei Zhang, Gao Liu, Kun Huang">Bin Chen, Zhiwei Zhang, Gao Liu, Kun Huang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70167" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70167" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70167" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70167" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70167">
+        Policy compliance, the extent to which citizens adhere to government policies, remains a central test of democratic governance, especially during the COVID‐19 pandemic in the United States. This study examines how distinct forms of social capital—relational, structural (bonding versus bridging), cognitive, and vertical linking—serve as critical preconditions for COVID‐19 vaccination uptake in 2021. Using necessary condition analysis (NCA), we uncover nuanced and context‐specific impacts of distinct social capital on policy compliance. NCA also identifies threshold levels of various social capital required to achieve specific vaccination outcomes, yielding actionable diagnostics for policymakers and administrators. Strategies to raise compliance must align with local social capital configurations, prioritizing bridging in Republican‐leaning counties and relational support and careful use of bridging in Democratic‐leaning counties. The study advances civil society research by pinpointing the civic preconditions under which democratic institutions can function effectively in a polarized environment.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70174" role="article">
+<h3 class="article-card__title">Does Political Decoupling Through Fair Market Privatization Improve Managerial and Political Outcomes? Insights From Water Utility Sales</h3><p class="article-card__authors" title="Jesse L. Barnes, Michael A. Powell">Jesse L. Barnes, Michael A. Powell</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70174" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70174" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70174" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70174" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70174">
+        Many U.S. municipalities face environmental service delivery challenges, including aging infrastructure and rising debt. In response, several states have adopted Fair Market Value (FMV) legislation, which aims to incentivize private firms to acquire and invest in municipal utilities—particularly in the water sector. However, the impacts of FMV privatization remain understudied. Guided by political decoupling theory, this study hypothesizes that FMV privatization improves drinking water utility management and local incumbent electoral outcomes. Using a difference‐in‐differences design, we analyze fifteen Illinois municipalities that sold their utilities after the state adopted FMV legislation relative to thirty‐four controls. Results suggest that FMV privatization improves personnel and technical management outcomes by reducing violations under the Safe Drinking Water Act but has no significant impact on incumbent vote share. These findings indicate that while FMV privatization may enhance utility management through political decoupling, its presumed political benefits warrant further investigation.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70177" role="article">
+<h3 class="article-card__title">Consolidating Liberal Democracy From Within A Theory of Public Institutional Leadership</h3><p class="article-card__authors" title="Sandra Groeneveld, Heidi Houlberg Salomonsen">Sandra Groeneveld, Heidi Houlberg Salomonsen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70177" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70177" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70177" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70177" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70177">
+        Recent developments in also established democracies have made clear that public administration and management research alike have neglected giving scholarly attention to public organizations as institutions. Drawing upon research on leadership of institutions and leadership in public organizations we suggest a theory of public institutional leadership . Public institutional leadership reconnects public management with democracy by suggesting three central dimensions of leadership behaviors that instill and sustain liberal democratic values in public organizations. These behaviors include articulating and reaffirming democratic values through top‐down vision‐setting; building “character” bottom‐up through role modeling and fostering psychological safety to enable dialogue and deliberation around these values as well as demonstrating constrained responsiveness to political principals relative to those values enabled by the cultivation of bureaucratic autonomy. Although the necessity of such behaviors is made salient by rising populism and democratic backsliding, their relevance extends to public management situated in liberal democracies in general.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13501763">
+<div class="row">
+<div class="col-10">
+<h2>Journal of European Public Policy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13501763">
+</div><article class="article-card" id="10-1080-13501763-2026-2710717" role="article">
+<h3 class="article-card__title">Promising security, delivering dependency: the material constraints of EU semiconductor collective securitisation</h3><p class="article-card__authors" title="Konstantinos Manakos, Helena Carrapico, Benjamin Farrand">Konstantinos Manakos, Helena Carrapico, Benjamin Farrand</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2710717" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2710717" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-13501763-2026-2706559" role="article">
+<h3 class="article-card__title">Flexible firewalls: selective cooperation and strategic demarcation between centre-right and far-right parties in the EU</h3><p class="article-card__authors" title="Michael Blauberger, Ulrich Sedelmeier">Michael Blauberger, Ulrich Sedelmeier</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2706559" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2706559" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-13501763-2026-2710714" role="article">
+<h3 class="article-card__title">New tech, new threat? Occupational exposure to artificial intelligence increases support for AI regulation</h3><p class="article-card__authors" title="Zack Grant, Jane Green, Geoffrey Evans">Zack Grant, Jane Green, Geoffrey Evans</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2710714" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2710714" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0190292X">
+<div class="row">
+<div class="col-10">
+<h2>Policy Studies Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0190292X">
+</div><article class="article-card" id="10-1111-psj-70150" role="article">
+<h3 class="article-card__title">Transparency and Responsibility Attribution: A Field Experiment in Western Uganda</h3><p class="article-card__authors" title="Bill Schultz, Eric A. Coleman, Rani Parker, Jacob Manyindo, Emmanuel Mukuru">Bill Schultz, Eric A. Coleman, Rani Parker, Jacob Manyindo, Emmanuel Mukuru</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70150" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70150" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70150" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70150" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70150">
+        The implementation of public policy is increasingly diffuse with responsibilities divided among several levels of government administration, the private sector, and nonprofits. In the face of such diffusion, many advocate for transparency initiatives to inform the public about policymaking. However, it remains unclear whether transparency initiatives clarify the blame and credit for policy, or what this means for collective action and accountability. Such concerns are especially pressing in complex settings like the non‐renewable extractives sector (oil, mining, and natural gas). We assess policy attributions of blame and credit using data from a field experiment that randomizes stakeholder engagement in Western Uganda's oil sector, building on our prior work showing that this intervention increased collective action. While participating in multistakeholder forums improved transparency for communities, we find that it did not change their attributions. In other words, improving transparency does not ensure that citizens will update their opinions about who is to blame for the problems they face. Yet, this did not preclude greater collective action. Evidence from this intervention highlights the need for more exploration of pathways linking transparency, collective action, and accountability.
+    </div>
+</article>
+<article class="article-card" id="10-1111-psj-70144" role="article">
+<h3 class="article-card__title">The Effects of Policy Success Versus Failure Narratives</h3><p class="article-card__authors" title="Sarah Pralle, Emily Thorson">Sarah Pralle, Emily Thorson</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70144" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70144" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70144" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70144" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70144">
+        While public policies usually have mixed effects, succeeding at some aspects and failing at others, this nuance is often lost in public discourse when political actors like advocacy groups and politicians strategically emphasize either the successes or failures of particular policies. For example, advocacy groups often emphasize the failures of existing policy with the goal of galvanizing public attention and concern. However, little empirical evidence exists assessing the actual causal impact of these different approaches on public attitudes. This paper presents the results of a pre‐registered experiment in which participants watch a TikTok‐style short news video about either the success or failure of one of three different public policies and then are asked about their trust in government to handle the issue, their perceptions of the issue's importance, and their feelings of collective efficacy. While success and failure narratives are both effective at raising an issue's salience, focusing on a policy's failure has the downstream effect of increasing cynicism about the government's ability to address the issue.
+    </div>
+</article>
+<article class="article-card" id="10-1111-psj-70149" role="article">
+<h3 class="article-card__title">It Does Matter. A New Framework on the Influence of Policy Evaluation</h3><p class="article-card__authors" title="Pirmin Bundi, Valérie Pattyn">Pirmin Bundi, Valérie Pattyn</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70149" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70149" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70149" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70149" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70149">
+        Governments worldwide have invested heavily in policy evaluation, providing many policymakers with a steady stream of evidence into the effectiveness, efficiency, or relevance of policies. Yet, despite these investments, systematic knowledge about the actual influence of policy evaluations remains surprisingly limited. This is partly due to the insufficient conceptual differentiation of policy evaluation as a distinct type of policy advice. Building on interdisciplinary evaluation literature and public policy scholarship, the article introduces a new framework designed to enhance our understanding and categorization of the changes policy evaluations bring about in terms of policy, polity, and politics, and how these dimensions interrelate. As a parsimonious heuristic tool, the framework enables a dynamic and comprehensive assessment of the influence of policy evaluations. It contributes to the theorization of policy evaluation influence and offers insights that may inform related research on the influence of expert knowledge, policy advice, and evidence‐informed policymaking more broadly.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333298">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333298">
+</div><article class="article-card" id="10-1111-padm-70076" role="article">
+<h3 class="article-card__title">Institutional Pressures or Organizational Capacity? Antecedents of Digital Maturity in Local Governments</h3><p class="article-card__authors" title="Sarah Van Impe, Lieselot Danneels, Ben Suykens">Sarah Van Impe, Lieselot Danneels, Ben Suykens</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70076" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70076" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70076" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70076" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70076">
+        Public administration research has identified institutional pressures and organizational capacity as digital maturity (DM) antecedents, yet these are typically considered in isolation. Taking the proverbial next step, this study draws on primary survey data to explain the variation of DM among local governments in Flanders (the northern region of Belgium) by juxtaposing the explanatory power of institutional pressures on the one hand, and political and administrative capacity on the other hand. Using multiple regression analyses, our findings highlight the critical role of administrative capacity in advancing DM among local governments. In contrast, and somewhat surprisingly, political capacity and institutional pressures appear to play a more limited role. These findings challenge conventional assumptions in existing literature, indicating that institutional pressures may catalyze the initial stages of DT, whereas organizational capacity seems to be more influential in sustaining and advancing DM.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="03055736">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-03055736">
+</div><article class="article-card" id="10-1332-03055736y2026d000000102" role="article">
+<h3 class="article-card__title">Power, politics, and policy agency: towards a Functional Theory of Agency</h3><p class="article-card__authors" title="Oliver Meza, Ana Cecilia de Alba">Oliver Meza, Ana Cecilia de Alba</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1332-03055736y2026d000000102" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1332-03055736y2026d000000102" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1332/03055736y2026d000000102" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1332/03055736y2026d000000102" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1332-03055736y2026d000000102">
+        This article examines how political position shapes policy agency in local policy making. Specifically, it asks: what patterns of policy agency functions do municipal councillors ( regidores ) exhibit in the local policy process? Drawing on the Functional Theory of Agency framework and a sequential mixed-methods design combining a national survey of Mexican municipal councillors with follow-up semi-structured interviews, we analyse how councillors exercise four modes of policy agency: steering, innovation, intermediation, and intelligence. Our findings reveal systematic differences between majoritarian and opposition councillors. Majoritarian councillors dominate commissions, align with mayoral priorities, and primarily act as steerers and brokers of executive policy. By contrast, opposition councillors, who are often excluded from formal decision-making arenas, engage in disruptive innovation, cultivate vertical alliances beyond the municipality, and invest more heavily in knowledge production as a counter-power strategy. These distinct patterns suggest that political position shapes the policy agency functions available to local legislators and influences how they seek to affect policy outcomes. The article contributes to the consolidation of a Functional Theory of Agency by demonstrating how unequal access to formal policy-making authority structures actors’ behavioural repertoires within policy-making processes. It also advances comparative research on legislative actors by showing how local representatives adapt their policy agency strategies under conditions of unequal access to formal policy-making authority.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="09521895">
+<div class="row">
+<div class="col-10">
+<h2>Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-09521895">
+</div><article class="article-card" id="10-1111-gove-70148" role="article">
+<h3 class="article-card__title">Senior Bureaucrats, Coalitions and the Quality of Government: Accounting for Effective Governance in Fragmented Settings</h3><p class="article-card__authors" title="André Borges, Arnaldo Mauerberg">André Borges, Arnaldo Mauerberg</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-gove-70148" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-gove-70148" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/gove.70148" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/gove.70148" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-gove-70148">
+        Debates over the consequences of party and cabinet fragmentation for government performance remain unsettled. While some scholars argue that coalition governments foster instability and rent‐seeking, others contend that they enhance accountability and inclusion. This article argues that the effects of cabinet fragmentation depend on the rules of recruitment and promotion of the senior civil service. Using data from the Quality of Government Expert Survey covering 89 democracies, we examine how fragmentation interacts with both bureaucratic politicization and bureaucratic career systems. The results show that fragmentation amplifies the negative effects of politicized senior appointments, although we find limited evidence that fragmentation itself reduces the quality of government under high politicization. By contrast, fragmented cabinets are associated with more effective governance in the presence of career‐based structures characterized by internal recruitment of senior bureaucrats and long‐term careers. The findings highlight the importance of bureaucratic career structures for effective governance in multiparty systems.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="17485983">
+<div class="row">
+<div class="col-10">
+<h2>Regulation &amp; Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-17485983">
+</div><article class="article-card" id="10-1111-rego-70180" role="article">
+<h3 class="article-card__title">Bold Claims, Low Wages: Why Voluntary Sustainability Standards ( VSS ) Struggle to Implement Living Wages</h3><p class="article-card__authors" title="Elizabeth A. Bennett">Elizabeth A. Bennett</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70180" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70180" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70180" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70180" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70180">
+        Voluntary sustainability standards (VSS)—such as Fairtrade International and the Forest Stewardship Council—aim to improve sustainability in global supply chains by setting high social and environmental standards and certifying businesses that adopt them. This article examines why some VSS adopt ambitious goals for living wages or living incomes yet continue to certify businesses that only pay a minimum wage. Drawing on previous literature, it offers a typology of five ways that VSS can decouple. Drawing on documents, interviews, and participant observation, it offers detailed case studies of how five VSS have engaged in the coupling and decoupling of wage standards. The research identifies four drivers of decoupling: priorities that complete, costs of coupling, low risk of decoupling, and anticipation that coupling will be easier in the future. It also describes several factors that influence these drivers. Finally, it shows how decoupling may paradoxically facilitate progress, while pressure to fully couple may inhibit transformative change, and concludes with recommendations for avoiding empty claims while harnessing aspirational standards.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>
