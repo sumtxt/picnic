@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Sociology</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"><script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"ac2e1fb808b74f97af54ce21c1386f91","r":1}' integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" type="module"></script>
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · August 14, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-08-14/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-08-14/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-14/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-14/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-14/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap active" href="/archive/2026-08-14/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-14/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-08-14/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-14/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-14/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-08-14/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00031224">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00031224" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00031224" style="max-width: 300px;" title="American Sociological Review">
+                            American Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03600572">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03600572" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03600572" style="max-width: 300px;" title="Annual Review of Sociology">
+                            Annual Review of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00491241">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00491241" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00491241" style="max-width: 300px;" title="Sociological Methods &amp; Research">
+                            Sociological Methods &amp; Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00029602">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00029602" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00029602" style="max-width: 300px;" title="American Journal of Sociology">
+                            American Journal of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00987921">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00987921" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00987921" style="max-width: 300px;" title="Population and Development Review">
+                            Population and Development Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="07352751">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-07352751" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-07352751" style="max-width: 300px;" title="Sociological Theory">
+                            Sociological Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00811750">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00811750" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00811750" style="max-width: 300px;" title="Sociological Methodology">
+                            Sociological Methodology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="23306696">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-23306696" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-23306696" style="max-width: 300px;" title="Sociological Science">
+                            Sociological Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00703370">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00703370" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00703370" style="max-width: 300px;" title="Demography">
+                            Demography
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00377732">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00377732" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00377732" style="max-width: 300px;" title="Social Forces">
+                            Social Forces
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00323292">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00323292" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00323292" style="max-width: 300px;" title="Politics &amp; Society">
+                            Politics &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="02667215">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-02667215" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-02667215" style="max-width: 300px;" title="European Sociological Review">
+                            European Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14742837">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14742837" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14742837" style="max-width: 300px;" title="Social Movement Studies">
+                            Social Movement Studies
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="00029602">
+<div class="row">
+<div class="col-10">
+<h2>American Journal of Sociology</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00029602">
+</div><article class="article-card" id="10-1086-743490" role="article">
+<h3 class="article-card__title">The Less Agreeable Side of Charisma: Donald Trump, Incredulous Onlooking, and Antistructural Power</h3><p class="article-card__authors" title="Paul Joosse">Paul Joosse</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/743490" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/743490" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00987921">
+<div class="row">
+<div class="col-10">
+<h2>Population and Development Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00987921">
+</div><article class="article-card" id="10-1111-padr-70069" role="article">
+<h3 class="article-card__title">Projecting Population Size and Structure in Conflict Settings for Humanitarian Response and Disaster Preparedness: Insights from Haiti, Mozambique, and Sudan</h3><p class="article-card__authors" title="Romesh Silva, Mallika Snyder">Romesh Silva, Mallika Snyder</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70069" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70069" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70069" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70069" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70069">
+        Up‐to‐date subnational population estimates—disaggregated by age, sex, and to the lowest possible geographical level —are a key component of evidence‐based humanitarian action. In many humanitarian crises, however, large‐scale population mobility, combined with disruptions to national statistical systems, makes updating subnational population estimates challenging. Addressing these estimation challenges requires incorporating nontraditional population data sources, including mobility data generated for operational humanitarian response efforts, and addressing a range of data interoperability issues. In this paper, we present recent work by the United Nations Population Fund to update subnational population projections for Mozambique, Haiti, and Sudan by adapting applied demographic methods to a mix of traditional and nontraditional population data sources. These projections are used by UN Humanitarian Country Teams as a common population baseline for UN system‐wide decision‐making and operational response. We also highlight how cohort‐component Bayesian probabilistic projection techniques can be leveraged, alongside modeling of subnational mobility flows, to better measure and communicate uncertainty to humanitarian decision‐makers in limited‐data settings. Our work offers insights on key issues related to population data and estimation in humanitarian settings, including accounting for the impact of large‐scale crisis‐related mobility in subnational population projections.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padr-70081" role="article">
+<h3 class="article-card__title">Do Survey Respondents Distinguish between Ideal, Desired, and Expected Fertility? An Empirical Test of Survey Design Effects</h3><p class="article-card__authors" title="Heather M. Rackin, Emily A. Marshall, Julia Behrman">Heather M. Rackin, Emily A. Marshall, Julia Behrman</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70081" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70081" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70081" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70081" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70081">
+        Fertility preferences offer insights into how social factors shape behavior. Despite their significance, it remains unclear whether preference measures capture distinct, firm constructs in respondents’ minds, or to what extent responses reflect survey design choices like question order. In two survey experiments, we tested whether the sequence of fertility preference measures affected responses. The first experiment manipulated the sequence of general ideal, personal ideal, wanted, and expected fertility among college students. Sequence changes caused no changes in means for these measures, except for expected, which declined when asked later. Personal ideal and wanted fertility were indistinguishable from each other and were fairly unresponsive to sequencing. The second experiment compared general and personal ideals among a sample representative of U.S. adults. Preferences were firm and distinct among reproductive‐age individuals. For older respondents, the measures were equivalent when asked first, but personal ideal declined when asked after general ideal. Across both samples, general ideal fertility remained similar and higher than other measures for reproductive‐age respondents. These findings suggest that most preferences are relatively unaffected by ordering. We also offer guidance for survey design; general ideals are not interchangeable with other preference measures, and fertility expectations may not be comparable across survey designs.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="23306696">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Science</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-23306696">
+</div><article class="article-card" id="10-15195-v13-a39" role="article">
+<h3 class="article-card__title">Men’s Labor-Market Decline and the Rising Correlation between Spouses’ Earnings in the United States</h3><p class="article-card__authors" title="Yifan Shen">Yifan Shen</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.15195/v13.a39" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.15195/v13.a39" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00703370">
+<div class="row">
+<div class="col-10">
+<h2>Demography</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00703370">
+</div><article class="article-card" id="10-1215-00703370-12771478" role="article">
+<h3 class="article-card__title">Formation of Children's Cognitive and Socioemotional Skills: Is All Parental Time Equally Effective?</h3><p class="article-card__authors" title="Hélène Le Forner">Hélène Le Forner</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12771478" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12771478" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12771478" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12771478" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12771478">
+        Highlights This study estimates the distinct effect of mother, father, and joint parental time investments and compares the effects of mothers’ and fathers’ parenting styles on child development. Joint parental educational time improves children's cognitive skills more than mother-only time. For verbal skills, this effect is driven by families where parents have at least a bachelor's degree. Mothers’ monitoring benefits children's socioemotional skills more than fathers’ monitoring. Fathers’ monitoring improves children's verbal skills more than mothers’ monitoring.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12785873" role="article">
+<h3 class="article-card__title">Pregnancy Intentions, Race and Ethnicity, and Infant Outcomes: A Research Note</h3><p class="article-card__authors" title="Nicholas Mark">Nicholas Mark</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12785873" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12785873" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12785873" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12785873" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12785873">
+        Highlights “Unintended” pregnancies are commonly thought to be associated with worse infant health outcomes than “intended” pregnancies. These associations are strongest among White mothers and are weak or not significant among Black and Hispanic mothers. Adjusting for a basic set of sociodemographic variables dramatically changes the relationship between pregnancy intention and outcomes for Whites but not for other racial and ethnic groups. The relationships between maternal characteristics, pregnancy intentions, and outcomes are very heterogeneous for different racial and ethnic groups. Public health messaging should avoid generic statements linking pregnancy intentions to adverse outcomes; tackling specific barriers to autonomy would likely be more helpful for improving outcomes than a generic focus on unintended pregnancies that risks blaming and shaming mothers.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12784457" role="article">
+<h3 class="article-card__title">A Comprehensive Evaluation of Population Forecast Error for San Diego County and Its Jurisdictions</h3><p class="article-card__authors" title="Gregor Schroeder, Nivedya Madankara Kottayi, Bryce Burdge">Gregor Schroeder, Nivedya Madankara Kottayi, Bryce Burdge</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12784457" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12784457" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12784457" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12784457" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12784457">
+        Highlights This study is the first in the San Diego region to evaluate population forecast error across multiple forecast vintages and increment years spanning more than five decades. Forecast accuracy declines with increasing forecast horizon, while forecast errors are also influenced by population growth rate, population size, and jump-off discrepancy. Findings confirm the generalizability of established relationships in the forecast evaluation literature while extending prior research through analysis of errors in population change rather than solely through population level. Simple naive extrapolation methods frequently matched or exceeded the accuracy of more complex forecasting approaches, demonstrating the importance of benchmarking forecast performance.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12785170" role="article">
+<h3 class="article-card__title">“Equally Available to Anyone”: The Invention of Public Use Microdata at the U.S. Census Bureau</h3><p class="article-card__authors" title="Diana L. Magnuson, Steven Ruggles">Diana L. Magnuson, Steven Ruggles</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12785170" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12785170" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12785170" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12785170" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12785170">
+        Highlights The Census Bureau invented microdata as a product of the 1960 U.S. Census. The 1960 public use sample revolutionized analysis of the U.S. population and led to an outpouring of new census-based research. Interactions between academics and the Census Bureau at the Population Association of America played a central role in development of the first microdata. Continued collaboration between academics and the Census Bureau is needed to ensure broad accessibility and usability of microdata.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12674386" role="article">
+<h3 class="article-card__title">Within Families, Across Borders: Lifespans of U.S. Immigrants Born in 1850–1890 Relative to Origin, Destination, and Siblings</h3><p class="article-card__authors" title="Saverio Minardi, Paul Puschmann, Nicola Barban">Saverio Minardi, Paul Puschmann, Nicola Barban</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12674386" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12674386" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12674386" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12674386" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12674386">
+        Highlights U.S. immigrants born in 1850–1890 had shorter lifespans than U.S.-born Whites. This mortality penalty was concentrated among specific origin groups. Migrants generally outlived origin populations and nonmigrant siblings. Migration–mortality patterns varied by origin, reflecting both origin and destination contexts.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12772821" role="article">
+<h3 class="article-card__title">The Reliability of Repeated Measures of Retrospective Parity and Birth Dates in U.S. Survey Data: A Research Note</h3><p class="article-card__authors" title="Karen Benjamin Guzzo, Gabrielle Juteau, Anna Belykh, Wendy D. Manning">Karen Benjamin Guzzo, Gabrielle Juteau, Anna Belykh, Wendy D. Manning</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12772821" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12772821" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12772821" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12772821" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12772821">
+        Highlights In a longitudinal survey, most people consistently report parity and birth date information. One in 10 respondents, and one in five parents, report parity inconsistently across waves. Among those who reported children at an earlier wave, 11% report different dates of first birth. Inconsistency in parity and first birth dates was higher among males and less advantaged people.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12777411" role="article">
+<h3 class="article-card__title">Maternal Employment and Children's Cognitive Ability in a Gender-Inegalitarian Society</h3><p class="article-card__authors" title="Jia Wang, James M. Raymo">Jia Wang, James M. Raymo</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12777411" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12777411" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12777411" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12777411" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12777411">
+        Highlights Maternal employment in regular full-time work is negatively associated with children's cognitive performance in Japan. The negative association is limited to the employment of mothers with a high school education or less. Mothers’ nonstandard employment is unrelated to children's cognitive performance. Analyses examine children's cumulative exposure to mothers’ employment. The estimation of marginal structural models facilitates causal inference.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12782880" role="article">
+<h3 class="article-card__title">From Disparate Lists to Population Estimates: A Multiple Systems Estimation Workflow for Mortality Analysis in Conflict Settings</h3><p class="article-card__authors" title="Maria Gargiulo">Maria Gargiulo</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12782880" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12782880" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12782880" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12782880" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12782880">
+        Highlights Nontraditional data sources can provide valuable insights into mortality in conflict settings. Missing data challenges are common, but they can be addressed with modeling approaches. Correcting missing data issues can alter substantive conclusions about mortality in conflict. Methods for addressing missing data are context agnostic and can be applied to other topics.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12785315" role="article">
+<h3 class="article-card__title">Rising Sex Ratio and Labor Supply of the Urban Elderly in China</h3><p class="article-card__authors" title="Yunyi Kuang, Liqiu Zhao">Yunyi Kuang, Liqiu Zhao</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12785315" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12785315" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12785315" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12785315" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12785315">
+        Highlights High sex ratios increase employment among elderly fathers of sons relative to fathers of daughters. Higher marriage costs and reduced old-age support drive the increase in elderly labor supply. High sex ratios reduce consumption and well-being among fathers of sons.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00377732">
+<div class="row">
+<div class="col-10">
+<h2>Social Forces</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00377732">
+</div><article class="article-card" id="10-1093-sf-soag091" role="article">
+<h3 class="article-card__title">Review of “Trading Beyond Understanding: Machine Learning, Risk, and Markets”</h3><p class="article-card__authors" title="Koray Caliskan">Koray Caliskan</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag091" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag091" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1093-sf-soag102" role="article">
+<h3 class="article-card__title">Integrating or segregating? Gentrification, the changing city-suburb divide, and black exceptionalism</h3><p class="article-card__authors" title="Jackelyn Hwang, Elizabeth Roberto, Francine I Stephens, Jacob S Rugh">Jackelyn Hwang, Elizabeth Roberto, Francine I Stephens, Jacob S Rugh</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag102" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag102" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag102" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag102" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag102">
+        Racial residential segregation has been pivotal in maintaining racial inequality following the Civil Rights Era. The transformation of cities by the spread of gentrification in recent decades may have mitigated these longstanding divisions or reproduced them as gentrification reorganizes residential patterns across urban space. However, the extent and nature of this relationship remain in question. We bridge theories of racial capitalism and residential sorting to test the racialized nature of gentrification’s prevalence, and we use a decomposition approach for measuring segregation to examine the relationship between the prevalence of gentrification and changes in segregation between various race-income groups from 1990 to 2019 across US metropolitan areas. We find that the prevalence of gentrification within central cities is associated with decreasing segregation between several groups—including poor Black and nonpoor White households—but also increasing segregation between poor minority and nonpoor White households in the suburbs and between nonpoor Black and White households overall. Altogether, the results highlight the changing spatial structure of segregation and the evolution of residential attainment for nonpoor Black households in the twenty-first century. They suggest that the spread of gentrification may contribute to dismantling longstanding patterns of segregation by race and class but may simultaneously contribute to new patterns of segregation in the suburbs and reinforce Black-White divisions.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="02667215">
+<div class="row">
+<div class="col-10">
+<h2>European Sociological Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-02667215">
+</div><article class="article-card" id="10-1093-esr-jcag028" role="article">
+<h3 class="article-card__title">Who deserves protection? Deservingness, intergroup contact, and public support for gig workers’ rights</h3><p class="article-card__authors" title="Anna Wilson, Carlo Dimitri, Juliana Chueri">Anna Wilson, Carlo Dimitri, Juliana Chueri</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-esr-jcag028" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-esr-jcag028" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/esr/jcag028" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/esr/jcag028" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-esr-jcag028">
+        The rapid expansion of platform-mediated gig work has intensified debates over whether gig workers should receive social and employment rights comparable to those of standard employees. Yet, despite its high political salience, we know little about how citizens evaluate gig workers’ entitlement to such protections. Gig work, especially in ride hailing and food delivery, is often precarious, with a lack of control at work, weaker contribution records, and overrepresentation of migrant workers—aspects that previous research has identified as central to welfare deservingness judgments. This makes deservingness a particularly relevant lens for analysing public support for gig workers’ rights. With a pre-registered factorial vignette experiment in a six-country survey (Germany, Italy, the Netherlands, Sweden, Switzerland, and the United Kingdom), we examine the general population’s willingness to pay for ride-hailing gig workers’ improved rights. We find that support for improved rights closely follows core deservingness dimensions: workers perceived as in need, showing effort on the job and lacking control receive higher support, whereas migrant status and low reciprocity reduce it. Yet, deservingness cues explain only part of the variation. Exploratory analyses show that frequent use of gig services and personal ties with gig workers associate with a higher willingness to pay, showing the relevance of intergroup contact.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>

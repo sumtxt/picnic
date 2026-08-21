@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Public Administration</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"><script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"ac2e1fb808b74f97af54ce21c1386f91","r":1}' integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" type="module"></script>
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · August 14, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-08-14/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-08-14/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-14/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-14/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-14/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-14/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-14/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-08-14/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-14/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-14/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-08-14/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="15206688">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15206688" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15206688" style="max-width: 300px;" title="Journal of Policy Analysis and Management">
+                            Journal of Policy Analysis and Management
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10531858">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10531858" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10531858" style="max-width: 300px;" title="Journal of Public Administration Research and Theory">
+                            Journal of Public Administration Research and Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333352">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333352" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333352" style="max-width: 300px;" title="Public Administration Review">
+                            Public Administration Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14494035">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14494035" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14494035" style="max-width: 300px;" title="Policy and Society">
+                            Policy and Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13501763">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13501763" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13501763" style="max-width: 300px;" title="Journal of European Public Policy">
+                            Journal of European Public Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0190292X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0190292X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0190292X" style="max-width: 300px;" title="Policy Studies Journal">
+                            Policy Studies Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333298">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333298" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333298" style="max-width: 300px;" title="Public Administration">
+                            Public Administration
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03055736">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03055736" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03055736" style="max-width: 300px;" title="Policy and Politics">
+                            Policy and Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09521895">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09521895" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09521895" style="max-width: 300px;" title="Governance">
+                            Governance
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17485983">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17485983" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17485983" style="max-width: 300px;" title="Regulation &amp; Governance">
+                            Regulation &amp; Governance
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="10531858">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Public Administration Research and Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10531858">
+</div><article class="article-card" id="10-1093-jopart-muag025" role="article">
+<h3 class="article-card__title">Institutional Amnesia and Public Administration: Does History Repeat?</h3><p class="article-card__authors" title="Alastair Stark, Hridesh Gajural, Jack Corbett, Dennis C Grube, Heather Lovell, Rodney Scott">Alastair Stark, Hridesh Gajural, Jack Corbett, Dennis C Grube, Heather Lovell, Rodney Scott</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopart-muag025" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopart-muag025" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopart/muag025" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopart/muag025" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopart-muag025">
+        Existing research suggests that a lack of institutional memory causes history to repeat in problematic ways within public administration agencies. However, this claim has not been well supported by theory or data that illuminates the process and effects of history repeating. To remedy this, the nascent concept of institutional amnesia is presented here as a means of theorizing repetitions of public administrative history. A sequential explanatory mixed method research design uses quantitative survey data (n=1608) and qualitative interview data (n=75) generated in the public services of Australia, New Zealand and the United Kingdom to show how institutional amnesia can lead to the recycling of ideas and practices, the inefficient relearning of information seeking processes and the delivery of conducive decision-making environments that can help address historical problems. These findings draw attention to the fact that administrative history does indeed repeat in public agencies because of institutional amnesia, but that it does so in positive as well as negative ways.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333352">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333352">
+</div><article class="article-card" id="10-1111-puar-70173" role="article">
+<h3 class="article-card__title">Public Service Delegation and the Mechanisms of Blame Attribution: Evidence From a Survey Experiment on Public Service Failure</h3><p class="article-card__authors" title="Oscar Nowlan">Oscar Nowlan</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70173" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70173" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70173" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70173" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70173">
+        A growing body of experimental public administration research examines how structural arrangements in public services, such as delegating service delivery to public or private actors, shape citizens' blame attributions for service failures. However, the mechanisms underlying these attributions are less well understood. This article investigates two mechanisms, focusing on the mediating roles of citizens' perceptions of politicians' causal responsibility (perceived control over service delivery) and functional responsibility (perceived duty to ensure service quality). A UK‐based survey experiment on local waste collection failures tests these mechanisms using causal mediation analysis. The results show higher levels of delegation reduce blame primarily by lowering perceptions of politicians' control over service delivery. In contrast, there is no strong evidence of mediation through perceived duty, suggesting that role‐based expectations of functional responsibility are more resistant to change. These findings provide new insight into how different public service delivery methods influence blame attribution for service performance.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70176" role="article">
+<h3 class="article-card__title">Improving Cooperation in Government Purchasing Through Formal‐Relational Contracting</h3><p class="article-card__authors" title="Ole Helby Petersen, Matthew Potoski, Lena Brogaard">Ole Helby Petersen, Matthew Potoski, Lena Brogaard</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70176" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70176" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70176" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70176" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70176">
+        A central challenge in government contracting is fostering cooperation between buyers and sellers where contract terms are incomplete. This article introduces a framework for formal‐relational contracting (FRC) in public sector contexts, where rigid regulations, competing values, and market imperfections make cooperation both difficult and valuable. FRC promotes cooperation through contract terms defining shared goals, guiding principles, and governance mechanisms. We present the theoretical foundations of FRC and examine its potential through 320 government contract management decision simulations where public contract managers acted as government buyers and business sellers facing sequential choices under both FRC contracts and the more conventional formal contracting approach. The results show that FRC increased managers' cooperative behavior by around 30 percentage points compared to formal contracting. Qualitative evidence further suggests that FRC shifted managers' mindsets from adversarial to cooperative. We discuss theoretical and practical implications for how FRC can enhance cooperation and mutual value in government contracting.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70181" role="article">
+<h3 class="article-card__title">The Gendered Path of Least Resistance: First Entry and Exit Behaviors of Public and Nonprofit Employees</h3><p class="article-card__authors" title="Tiana Marrese, Ying Liu, Femida Handy">Tiana Marrese, Ying Liu, Femida Handy</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70181" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70181" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70181" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70181" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70181">
+        Public and nonprofit organizations exhibit high rates of female employment often attributed to sector structures and social roles. To better understand how individual behaviors dynamically contribute to these distinctive ratios, we deconstruct public and nonprofit employment into gendered patterns of attraction and attachment. Using duration analysis and following a cohort from the National Longitudinal Survey of Youth 1997, this research finds that women demonstrate a higher attraction to their first public and nonprofit job compared to men, evidenced through a faster rate of entry into this employment. There are no significant gender differences when considering the duration of an individual's first stint in these sectors. Additional investigation finds that these sector‐level patterns, when decomposed to account for gender‐dominant professions, are driven by stronger female attraction to female‐dominated professions while masking higher female turnover from male‐dominated professions. Results inform recruitment and retention strategies for public and nonprofit organizations.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70170" role="article">
+<h3 class="article-card__title">Public Administration in the 21st Century: A Global South Perspective, 2nd ed. By RumkiBasu, London: Routledge, 2025. 182 pp.</h3><p class="article-card__authors" title="Krishna K. Tummala">Krishna K. Tummala</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70170" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70170" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1111-puar-70179" role="article">
+<h3 class="article-card__title">Putting Democratic Theory and Principles of Justice in the Right Place: Ethical Pluralism in Collaborative and Participatory Governance</h3><p class="article-card__authors" title="Alexander L. Q. Chen‐Florea">Alexander L. Q. Chen‐Florea</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70179" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70179" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70179" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70179" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70179">
+        Participatory and collaborative governance (P&amp;CG) is widely celebrated as an institutional vehicle for democratizing public decision‐making by inviting affected stakeholders into inclusive and deliberative policy processes. This essay argues that underlying appeals to democratic legitimacy in P&amp;CG are tacit commitments to specific (and often ideologically bounded) conceptions of justice. Democracy, far from being normatively univocal, encompasses competing justice principles that yield divergent and sometimes incompatible design imperatives. In response, this essay calls for a shift from vague democratic invocations to a more precise theorization of justice as the operative normative currency in P&amp;CG. To this end, the essay outlines an analytical framework that maps three core dimensions of governance design (input, process, and output) onto corresponding domains of justice: representational, procedural, and distributive. Systematically unpacking the plural and conflicting ethical principles within each domain shows how different principles of justice produce distinct governance dilemmas and trade‐offs.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13501763">
+<div class="row">
+<div class="col-10">
+<h2>Journal of European Public Policy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13501763">
+</div><article class="article-card" id="10-1080-13501763-2026-2710724" role="article">
+<h3 class="article-card__title">A grandparenthood gap in political attitudes? Family ties and attitudes on intertemporal redistribution</h3><p class="article-card__authors" title="Marie Heldgaard Seestedt">Marie Heldgaard Seestedt</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2710724" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2710724" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-13501763-2026-2716085" role="article">
+<h3 class="article-card__title">The realisation of NextGenerationEU: taking stock of the Recovery and Resilience Facility</h3><p class="article-card__authors" title="Lucas Schramm, Tiziano Zgaga">Lucas Schramm, Tiziano Zgaga</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2716085" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2716085" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0190292X">
+<div class="row">
+<div class="col-10">
+<h2>Policy Studies Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0190292X">
+</div><article class="article-card" id="10-1111-psj-70148" role="article">
+<h3 class="article-card__title">Power Through Visibility: How Policy Narratives Matter in Climate Change Debate on X</h3><p class="article-card__authors" title="Simon Bulian, Anne‐Marie Parth, Maria Becker, Lars Tapken">Simon Bulian, Anne‐Marie Parth, Maria Becker, Lars Tapken</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70148" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70148" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70148" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70148" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70148">
+        Research on policy narratives has shown that political actors employ certain narrative strategies in their competition for attention. Although we know that actors' narrative strategies coincide with existing power constellations (e.g., government vs. opposition), the ways in which they influence public attention remain largely unknown. In this paper, we ask whether different narrative strategies laid down by the Narrative Policy Framework (NPF) vary in the attention they create on social media. To do so, we identify policy narratives within the German debate on climate change on X with Large Language Models (LLMs) and estimate their impact on attention through statistical analysis. Our results suggest that tweets with a policy narrative on climate change tend to be more visible than tweets on climate change without such a narrative. In particular, tweets that link policy solutions on climate change with the narrative characters villains or heroes tend to receive more attention on social media. This suggests that using both heroic and villainous policy narratives in public debate may be an effective way of generating public attention. The results challenge the widely held assumption in NPF research that devil‐ and angel‐shift narrative strategies influence agenda‐setting dynamics in the policy process differently.
+    </div>
+</article>
+<article class="article-card" id="10-1111-psj-70152" role="article">
+<h3 class="article-card__title">Time's Sentimental Tale: Operationalizing Plot Within the Narrative Policy Framework</h3><p class="article-card__authors" title="Rachel McGovern, Crystal Soderman, Alex Osei‐Kojo, Michael D. Jones, Kristin L. Olofsson">Rachel McGovern, Crystal Soderman, Alex Osei‐Kojo, Michael D. Jones, Kristin L. Olofsson</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70152" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70152" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70152" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70152" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70152">
+        The Narrative Policy Framework (NPF) has proven to be a successful analytical tool for examining the role of narratives within the policy process; however, the analysis of plot is still understudied. This gap persists due to difficulty in developing valid and reliable measures of plot and a lack of plot operationalizations using longitudinal data. Inspired by Kurt Vonnegut's thesis on the shape of stories, this study explores the extent to which policy narratives assume a generalizable shape and how that shape can contribute to our understanding of the policy process. Using 2014–2020 news media coverage of Ghana's energy crisis, we reconceptualize plot as a temporal story arc captured through the media's affective evaluations of policy events, reflecting how the policy problem is framed across time. To achieve this, we apply sentiment analysis to news media coverage of policy events and aggregate them into a sentiment score. This score is then plotted over time to visually depict the shape of Ghana's energy crisis story. Our results reveal that this shape closely mirrors Vonnegut's Man in Hole story, suggesting that policy narratives may adhere to generalizable story arcs. Theoretically, these results contribute to our understanding of time and sentiment within the NPF, opening avenues for future research. Methodologically, this paper provides an empirical blueprint for capturing and coding plot variables in a reliable and replicable manner.
+    </div>
+</article>
+<article class="article-card" id="10-1111-psj-70154" role="article">
+<h3 class="article-card__title">A Narrative Walks Into a Forum: Bridging the Narrative Policy and Ecology of Games Frameworks</h3><p class="article-card__authors" title="Rachel McGovern, Danielle M. McLaughlin, Jack Mewhirter, Michael D. Jones">Rachel McGovern, Danielle M. McLaughlin, Jack Mewhirter, Michael D. Jones</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70154" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70154" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70154" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70154" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70154">
+        Policy process research has expanded rapidly, yet many frameworks still develop in silos, limiting dialogue and leaving complementary mechanisms underused. In an effort to bridge these silos, we bring together two influential frameworks that have largely developed in parallel: the Narrative Policy Framework (NPF) and the Ecology of Games Framework (EGF). We integrate them across three levels of analysis: actors at the micro level, forums at the meso level, and interconnected systems of forums at the macro level. At the actor level, we connect the EGF and NPF through learning, showing how narrative learning clarifies the mechanisms behind EGF learning processes, while the EGF helps the NPF specify the conditions under which learning is more or less likely. At the forum level, we develop concepts of narrative convergence and divergence to explain cooperation and conflict within collective‐choice venues. At the system level, we show how both frameworks help explain policy spillovers and ultimately, system performance. In doing so, we aim to begin a conversation between two seemingly disparate frameworks, offering preliminary but intentionally non‐exhaustive set of propositions and ideas about where the frameworks align, diverge, and where their integration is most theoretically and empirically productive.
+    </div>
+</article>
+<article class="article-card" id="10-1111-psj-70147" role="article">
+<h3 class="article-card__title">Supply‐Side Policy Feedback</h3><p class="article-card__authors" title="Isabel M. Perera">Isabel M. Perera</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70147" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70147" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70147" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70147" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70147">
+        The scholarship on policy feedback has been among the most plentiful and successful of the policy sciences. Much of it has focused on the demand‐side, or on the political relationship between a public policy and its recipients. Less attention has been paid to the supply‐side: the political relationship between a public policy and its providers. Parents may care about education, patients about health care, and prisoners about criminal justice—but an emerging literature shows that teachers, hospital employees, and the police care just as, if not more, about these areas. This article builds on new work to introduce a theory of supply‐side policy feedback and outline a research agenda for its further investigation.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333298">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333298">
+</div><article class="article-card" id="10-1111-padm-70081" role="article">
+<h3 class="article-card__title">AI Innovations in Public Services: The Case of National Libraries. By InesMergel and CarstenSchmidt (eds.), Cham, Switzerland: Springer Nature, 2026, 222 pp. hardcover ISBN: 978‐3‐032‐01343‐9; eBook ISBN: 978‐3‐032‐01344‐6. Open Access (eBook).</h3><p class="article-card__authors" title="Abdollah Zeraatpisheh">Abdollah Zeraatpisheh</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70081" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70081" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1111-padm-70078" role="article">
+<h3 class="article-card__title">Getting the Priorities Straight: Public Values in AI Adoption</h3><p class="article-card__authors" title="Jinke M. Oostvogel, Matthew M. Young, Bram Klievink">Jinke M. Oostvogel, Matthew M. Young, Bram Klievink</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70078" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70078" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70078" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70078" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70078">
+        Artificial Intelligence (AI) is adopted in public organizations as a transformative innovation, yet how value prioritizations unfold in AI adoption processes remains underexplored. Therefore, we ask: How do public values unfold in AI adoption processes in public organizations? We conducted a qualitative case study of an AI adoption process at the radiology department of a Dutch academic hospital after the decision to adopt is made and before implementation, using ethnographic fieldwork, interviews, and document analysis. Our findings highlight how public values and the AI adoption process are balanced in the transition from the initiation to the implementation stage. We find a recursive relationship between public values and the AI adoption process. We show an interplay of instrumental and intrinsic values. We highlight the importance of top‐down adoption decisions for how public values are perceived, and we show the importance of public organizations ensuring public values are safeguarded in public‐private partnerships.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padm-70080" role="article">
+<h3 class="article-card__title">Public Finance Law and Public Administrations: The Shaping Power of Public Finance in the European Union. By ElisaD'Alterio, London: Routledge, 2025. 206 pp. $56.99 (ebk). ISBN : 978‐1‐03‐274124‐6</h3><p class="article-card__authors" title="Jinhui Lan">Jinhui Lan</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70080" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70080" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="09521895">
+<div class="row">
+<div class="col-10">
+<h2>Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-09521895">
+</div><article class="article-card" id="10-1111-gove-70149" role="article">
+<h3 class="article-card__title">The Bureaucratic Paradox of Citizen Agency: Institutional Crowding‐Out in Government‐Catalyzed Co‐Production in Shanghai, China</h3><p class="article-card__authors" title="Huanming Wang, Xiaoyun Sun, Bing Ran">Huanming Wang, Xiaoyun Sun, Bing Ran</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-gove-70149" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-gove-70149" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/gove.70149" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/gove.70149" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-gove-70149">
+        Public service co‐production is often framed as a means of creating public value, yet its dynamics are complex when citizen‐led participation is catalyzed by strong public institutions. This mixed‐methods study examines government‐catalyzed, citizen‐centric co‐production in Shanghai, China, where the state provides institutional support, policy legitimacy, and infrastructure while citizens undertake much of the work of deliberation, coordination, and implementation. Drawing on 246 interviews and survey data from 1476 residents involved in community new infrastructure projects, we examine how citizen trust, public‐service‐oriented motivation, and perceived co‐production efficacy are associated with process and outcome value creation, and how perceived institutional settings condition these relationships. The findings show that citizen cognitive factors are positively associated with value creation, while stronger perceived institutional settings can negatively moderate these relationships. Recursive qualitative analysis suggests two mechanisms that help interpret this pattern: formal rigidity may crowd out citizen agency in the co‐production process, while informal social density may generate lock‐in effects that weaken the translation of trust into substantive outcomes. The study contributes to co‐production and institutional theory by specifying the boundary conditions under which institutional support becomes over‐institutionalization. Effective co‐production requires not less government, but strong enabling support at the initiation stage combined with greater local discretion, participatory rule revision, and flexible enforcement.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="17485983">
+<div class="row">
+<div class="col-10">
+<h2>Regulation &amp; Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-17485983">
+</div><article class="article-card" id="10-1111-rego-70195" role="article">
+<h3 class="article-card__title">A Duty to Care or a Duty to Comply? Gambling Operators' Interpretation of the Legal Concept of Duty of Care and Their Responsibility for Preventing Gambling‐Related Harm</h3><p class="article-card__authors" title="Maria Persson, Therese Reitan, Jenny Cisneros Örnberg">Maria Persson, Therese Reitan, Jenny Cisneros Örnberg</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70195" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70195" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70195" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70195" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70195">
+        From the perspective of negotiated governance, this study examines how companies respond to regulatory measures that combine hard and soft elements, assigning them greater responsibility for addressing social problems. Focusing on the Swedish gambling market, the study analyzes gambling operators' interpretation of the legal concept of duty of care. While this duty obliges operators to protect gamblers from excessive gambling, what it entails in practice and how responsibilities are understood are largely left to operators to define. Guided by the concept of responsibility, the analysis shows that interpretations vary and it is unclear what duty of care aims to prevent. Despite variations, duty of care is often framed in terms of responsible gambling, thereby individualizing responsibility for gambling‐related harm, and the action plans largely describe compliance with other legal requirements. In conclusion, the findings suggest a need for greater regulatory clarity regarding the normative foundations of duty of care regulation.
+    </div>
+</article>
+<article class="article-card" id="10-1111-rego-70196" role="article">
+<h3 class="article-card__title">Does Corruption Increase Inequality? Evidence From a European Fact‐Based Assessment</h3><p class="article-card__authors" title="Iva Parvanova, Alina Mungiu‐Pippidi">Iva Parvanova, Alina Mungiu‐Pippidi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70196" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70196" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70196" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70196" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70196">
+        This paper examines whether government favoritism in public procurement generates negative social costs, even within redistributive institutional frameworks such as the European Union. Rather than relying on perception‐based corruption indicators, we employ an objective proxy of corruption risk—the share of awarded public contracts which received only one bid. This measure captures non‐competitive allocation and mitigates reverse causality concerns. Using static and dynamic fixed effects panel models, we find that procurement favoritism is systematically associated with adverse social outcomes across EU member states. Specifically, we document robust, statistically significant negative effects on educational attainment, income inequality, and poverty. Our results suggest that governance quality—and not merely the volume of public expenditure—is a critical determinant of social development, and that distortions in procurement processes can undermine the effectiveness of public spending even where formal cohesion commitments exist.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>
