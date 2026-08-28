@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Sociology</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script crossorigin="anonymous" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-eeLEhtwdMwD3X9y+8P3Cn7Idl/M+w8H4uZqkgD/2eJVkWIN1yKzEj6XegJ9dL3q0" src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+<script async="" defer="" src="https://scripts.withcabin.com/hello.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100"><script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"ac2e1fb808b74f97af54ce21c1386f91","r":1}' integrity="sha512-d9sL6GJLXn6fInD1+TVXhTcQOsmxeHfmHAvwGDIxp5TO+uo1fiWW7mHomMj4MLRlCsJDTqXzWLHJFFlPCEIj/A==" src="https://static.cloudflareinsights.com/beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925" type="module"></script>
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · August 21, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-08-21/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-08-21/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-21/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-21/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-21/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap active" href="/archive/2026-08-21/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-21/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-08-21/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-21/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-21/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-08-21/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00031224">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00031224" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00031224" style="max-width: 300px;" title="American Sociological Review">
+                            American Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03600572">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03600572" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03600572" style="max-width: 300px;" title="Annual Review of Sociology">
+                            Annual Review of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00491241">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00491241" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00491241" style="max-width: 300px;" title="Sociological Methods &amp; Research">
+                            Sociological Methods &amp; Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00029602">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00029602" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00029602" style="max-width: 300px;" title="American Journal of Sociology">
+                            American Journal of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00987921">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00987921" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00987921" style="max-width: 300px;" title="Population and Development Review">
+                            Population and Development Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="07352751">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-07352751" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-07352751" style="max-width: 300px;" title="Sociological Theory">
+                            Sociological Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00811750">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00811750" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00811750" style="max-width: 300px;" title="Sociological Methodology">
+                            Sociological Methodology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="23306696">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-23306696" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-23306696" style="max-width: 300px;" title="Sociological Science">
+                            Sociological Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00703370">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00703370" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00703370" style="max-width: 300px;" title="Demography">
+                            Demography
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00377732">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00377732" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00377732" style="max-width: 300px;" title="Social Forces">
+                            Social Forces
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00323292">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00323292" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00323292" style="max-width: 300px;" title="Politics &amp; Society">
+                            Politics &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="02667215">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-02667215" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-02667215" style="max-width: 300px;" title="European Sociological Review">
+                            European Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14742837">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14742837" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14742837" style="max-width: 300px;" title="Social Movement Studies">
+                            Social Movement Studies
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="00987921">
+<div class="row">
+<div class="col-10">
+<h2>Population and Development Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00987921">
+</div><article class="article-card" id="10-1111-padr-70085" role="article">
+<h3 class="article-card__title">Marital Dissolution, Repartnering, and the Realization of Fertility Desires in Sub‐Saharan Africa</h3><p class="article-card__authors" title="Ben Malinga John, Sara Yeatman">Ben Malinga John, Sara Yeatman</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70085" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70085" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70085" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70085" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70085">
+        Women who experience union disruption in sub‐Saharan Africa tend to have lower fertility than those in stable unions. It remains unclear, however, whether this pattern reflects lower fertility desires, constrained opportunities to achieve desired fertility, or both. Using Demographic Health Survey data from 34 countries, this study examines whether fertility differences between women in intact unions and those who experience marital dissolution are primarily driven by differences in family size ideals, unrealized fertility, or unwanted fertility. Results indicate that unrealized fertility is widespread and especially pronounced among women whose first unions ended, particularly those not in union. Although remarriage offers some fertility recovery, it rarely eliminates the reproductive disadvantage associated with union disruption. In contrast, women in intact first unions have higher levels of unwanted fertility across most countries, contributing to the fertility gap. Although women in intact unions have somewhat higher ideal numbers of children than women outside of unions, constrained realization of fertility goals emerges as the dominant factor explaining observed differences. Furthermore, women who experience union dissolution are more likely to revise their desires downward or express uncertainty about future childbearing. These findings underscore the importance of union trajectories in shaping fertility variation in sub‐Saharan Africa.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padr-70080" role="article">
+<h3 class="article-card__title">Does Exposure to Community Violence Predict Higher Suicide Rates? The Case of Mexico</h3><p class="article-card__authors" title="Mónica L. Caudillo, Jaein Lee">Mónica L. Caudillo, Jaein Lee</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70080" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70080" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70080" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70080" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70080">
+        Despite both homicide and suicide being identified as global public health concerns, it is unclear whether and how homicide trends could shape suicide patterns, particularly in low‐or‐middle income countries. We use the case of Mexico, an upper‐middle‐income country that experienced a dramatic increase in homicide after a shift in drug‐enforcement policy in 2006, to evaluate the relationship between community violence and suicide. Our analysis relies on geocoded death certificates microdata for the entire national territory to assess the association between homicide rates and suicide rates at the municipality level for the 2000–2019 period. We find evidence of positive associations between homicide rates and suicide within six months of exposure to high homicide levels, and especially in the period immediately after homicide spikes relative to the violence baseline in the previous three years. These surges in suicide are primarily driven by auto‐inflicted strangulation. No changes in suicide were identified after more than six months of exposure to high homicide levels, or as exposure to increasing homicides accumulated in the long term. Our results are consistent with violence spikes predicting an instant but transitory increase in suicide, plausibly by causing acute fear, stress, and uncertainty in the period immediately surrounding drastic surges in violence.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padr-70083" role="article">
+<h3 class="article-card__title">Demographic Structure and Democracy: Population Aging and Immigration in Global Perspective</h3><p class="article-card__authors" title="Yao Lu, Zhirui Luo">Yao Lu, Zhirui Luo</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70083" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70083" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70083" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70083" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70083">
+        Substantial demographic and democratic changes have unfolded globally in recent history, inviting inquiry into the relationship between these two phenomena. Joining the growing research in political demography, we advance a conceptual framework that links structural demographic factors to democratic progress and decline through economic, ideological, and representational mechanisms. Guided by this framework, we analyze two key demographic factors using an original longitudinal dataset covering 153 countries from 1975 to 2020. The results demonstrate a nonlinear and context‐dependent relationship between demography and democracy. Specifically, population aging and immigration levels are generally associated with lower levels of democracy; though in the case of immigration, this relationship weakens as immigrant shares increase, indicating a nonlinear pattern. Importantly, demography is not destiny: the relationship between population structure and democracy is further shaped by economic and political contexts. Overall, this paper underscores the profound and nuanced ways in which structural demographic change shapes democratic outcomes.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padr-70087" role="article">
+<h3 class="article-card__title">Value Change and the New Wave of Fertility Postponement in Western Europe</h3><p class="article-card__authors" title="Oskar Lindström, Raffaele Guetto, Daniele Vignoli">Oskar Lindström, Raffaele Guetto, Daniele Vignoli</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70087" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70087" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70087" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70087" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70087">
+        Since 2010, Western Europe has experienced a renewed wave of fertility postponement, contributing to declining fertility rates and rising childlessness. Although multiple explanations have been proposed, the role of ideational factors remains underexplored. This study examines whether broad changes in values help explain contemporary fertility postponement, drawing on the framework of the Second Demographic Transition (SDT). We apply Schwartz's theory of basic human values to investigate trends in openness‐to‐change and conservation among women of childbearing age, assessing both aggregate changes over time and individual‐level associations with having entered parenthood. Results show that these values are strongly associated with differences in entry into motherhood. However, the stability in value orientations over time suggests that values are unlikely to be a primary driver of the recent fertility postponement trend. Moreover, the relationship between values and entry into motherhood has remained unchanged, indicating that contemporary postponement extends across value orientations. Some regional heterogeneity emerges, with Southern Europe showing value shifts that may contribute to fertility postponement, though their overall influence appears limited. We conclude that broad shifts in SDT‐related values are unlikely to explain the widespread fertility decline observed in Western Europe.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="07352751">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-07352751">
+</div><article class="article-card" id="10-1177-07352751261470431" role="article">
+<h3 class="article-card__title">Rethinking Risk Society from the Global South: On the Unequal Distribution of Risk</h3><p class="article-card__authors" title="Hatice Oğuz Özgür">Hatice Oğuz Özgür</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-07352751261470431" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-07352751261470431" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/07352751261470431" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/07352751261470431" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-07352751261470431">
+        Beck’s theory of risk society offers a powerful account of manufactured uncertainty, transboundary hazards, and the limits of national and class-based insulation under reflexive modernization. Yet its universalizing language remains insufficient for explaining how risks are differentially produced, displaced, governed, and lived across colonial and postcolonial geographies. This article critically reconstructs Beck from the standpoint of the Global South, understood not as a fixed geography but as a historically produced positionality within unequal global power relations. I argue that the key issue is not whether risks become transboundary but how unequal capacities for protection, buffering, accountability, and repair stabilize asymmetrical exposure under global interdependence. To address this, I propose the concept of unequal risk regimes , through which accumulation logics, spatial displacement, slow violence, and institutional–epistemic mechanisms combine to routinize and obscure harm. Beck’s theory should not be abandoned; rather, it should be transformed through a justice- and mechanism-oriented sociology of global risk.
+    </div>
+</article>
+<article class="article-card" id="10-1177-07352751261474511" role="article">
+<h3 class="article-card__title">The Consent to Destroy: Imperial Melancholia and the Hegemony of Fragmentation</h3><p class="article-card__authors" title="Baris Cayli Messina">Baris Cayli Messina</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-07352751261474511" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-07352751261474511" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/07352751261474511" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/07352751261474511" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-07352751261474511">
+        Across the world’s most powerful states, millions actively embrace the destruction of the shared reality on which democratic life depends. Democracy does not simply collapse from without; it can be unmade from within through consent. This article introduces hegemonic fragmentation, an original concept revealing how declining empires manufacture consent for their own unraveling. Synthesizing Arendt’s analysis of the common world with Hall’s theory of hegemonic consent, I generate a novel framework to identify the culturally constructed consent for the dissolution of shared factuality, political space, and meaning, experienced not as loss but as freedom and belonging. Imperial melancholia, the refusal to mourn lost dominance, is the affective mechanism converting structural decline into the desire to destroy. Through conjunctural comparison of Trump’s United States and Putin’s Russia, I reveal authoritarian populism as a pathological sociological mechanism through which imperial decline is distorted into consent to destroy the common world.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="23306696">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Science</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-23306696">
+</div><article class="article-card" id="10-15195-v13-a40" role="article">
+<h3 class="article-card__title">Social Class Differences in Parenting? Revisiting Classed Childrearing through a Video-Ethnography of Mealtime</h3><p class="article-card__authors" title="Joanne Golann, Karen Kozlowski, Kara Brennan">Joanne Golann, Karen Kozlowski, Kara Brennan</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.15195/v13.a40" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.15195/v13.a40" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00703370">
+<div class="row">
+<div class="col-10">
+<h2>Demography</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00703370">
+</div><article class="article-card" id="10-1215-00703370-12791507" role="article">
+<h3 class="article-card__title">Does Context Matter for Parenthood Aspirations and Realized Fertility of LGB Individuals? A Comparison Across Two Cohorts</h3><p class="article-card__authors" title="Gioia Geremia">Gioia Geremia</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12791507" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12791507" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12791507" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12791507" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12791507">
+        Highlights This is the first study of parenthood desires among LGB people across cohorts using a nationally representative sample. The prevalence of child-free desires among lesbian women has decreased across cohorts. Parenthood desires among gay and bisexual men have increased or remained stable across cohorts. Bisexual women show little cohort variation. Overall, desires for parenthood are higher when obstacles to accessing it are lower.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12788356" role="article">
+<h3 class="article-card__title">Countering the Current: Flood Risk and Uneven Patterns of Immobility</h3><p class="article-card__authors" title="Katherine A. Thomas">Katherine A. Thomas</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12788356" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12788356" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12788356" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12788356" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12788356">
+        Highlights Increased neighborhood flood risk predicts lower odds of households moving out of their neighborhood. This association is largest for renters, low-income homeowners, and Black homeowners. This pattern may reflect housing insecurity, which can manifest as both immobility and instability. Studies of climate and population should disaggregate by race and ethnicity, income, and housing tenure.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12786247" role="article">
+<h3 class="article-card__title">The Glass Is Half Full: The Safety Net for Low-Income Women Around Childbirth</h3><p class="article-card__authors" title="Colleen Heflin, Taryn W. Morrissey, Hyojeong Kim">Colleen Heflin, Taryn W. Morrissey, Hyojeong Kim</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12786247" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12786247" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12786247" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12786247" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12786247">
+        Highlights Employed, social welfare–connected mothers experience a substantial reduction in earnings around a child's birth. Social welfare programs, assuming full take-up, can offset these lost earnings after birth but not during pregnancy. Most social welfare benefits available around birth are nutrition assistance, which are not fungible. These mothers spend about six months out of the labor force, with Black mothers returning earlier, on average.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12792522" role="article">
+<h3 class="article-card__title">Youth Subjective Life Expectancy and Early Labor Market Choices</h3><p class="article-card__authors" title="Lucas Finamor">Lucas Finamor</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12792522" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12792522" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12792522" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12792522" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12792522">
+        Highlights Survival beliefs elicited at ages 18–26 predict later pension contributions. A 1-SD-higher life expectancy is linked to 5% more pension wealth 15 years later. Job formality, not labor force participation, drives most of the pension gap. This SLE–pension link grows over the life cycle, from 2.5–5% at ages 18–26 to 9–11% at ages 48–52.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00377732">
+<div class="row">
+<div class="col-10">
+<h2>Social Forces</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00377732">
+</div><article class="article-card" id="10-1093-sf-soag104" role="article">
+<h3 class="article-card__title">Beneath consensus: political framing of gender-based violence in the Italian press, 2005–2023</h3><p class="article-card__authors" title="Ester Fanelli">Ester Fanelli</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag104" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag104" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag104" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag104" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag104">
+        Discourse on gender-based violence started as a political struggle driven by feminist movements allied with progressive parties in the 1970s. However, in recent years, both progressive and conservative Italian parties have proposed and approved laws to combat gender-based violence. The combination of cross-partisan legislation and sharp cultural divisions makes Italy an interesting case for examining how polarization can persist alongside legislative consensus. This study draws on a large corpus of newspaper articles (7,978) from progressive, moderate, and conservative national outlets to address the following questions: How did the distribution of frames of gender-based violence vary across the political spectrum between 2005 and 2023 (ideological polarization)? Did newspapers make explicit adversarial claims against the opposing political side (affective polarization), and if so, around which frames? Combining Structural Topic Modeling and qualitative content analysis, this article shows that the salience of gender-based violence increased across the political spectrum. However, ideological polarization persists regarding how newspapers describe gender-based violence and which solutions they privilege, with progressives increasingly focusing on preventive, rather than punitive, interventions. At the same time, gender-based violence became a catalyst for deep partisan divisions around gender identity and immigration, two discursive overlaps that fuel affective polarization. By examining the framing process as a site of both ideological and affective polarization, this study bridges the literatures on social problems and political polarization and provides a data-driven understanding about the actual content of opposing positions.
+    </div>
+</article>
+<article class="article-card" id="10-1093-sf-soag118" role="article">
+<h3 class="article-card__title">Multiracial young adults’ experiences of Whiteness as a wage and tax</h3><p class="article-card__authors" title="Monica Heilman">Monica Heilman</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag118" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag118" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag118" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag118" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag118">
+        Debates persist on the racial position of multiracial Americans, namely whether this population will “become White” or not. However, the premise of this question is predicated on a monoracial paradigm of race that cannot fully account for the experiences of multiracial individuals. Multiracial experiences with Whiteness, including ways they conform to and confound monoracial expectations, have the potential to reshape our understandings of racial constructions, boundaries, and futures, particularly considering shifting racial demographics. One necessary precursor toward these insights lies in the distinctions between how multiracial and monoracial individuals experience Whiteness. Drawing on thirty-seven in-depth interviews with multiracial young adults with White ancestry in the Midwest, I argue that multiracial individuals experience Whiteness as a wage (privileges) and a tax (costs). Like monoracial Whites, multiracial individuals viewed as White can receive public and psychological wages, yet these wages are offset by an inseparable “racial tax,” which is predicated on the contingent and exclusive nature of Whiteness. These results underscore the utility of calling attention to the monoracial structure, as well as recognizing and theorizing beyond its limits.
+    </div>
+</article>
+<article class="article-card" id="10-1093-sf-soag111" role="article">
+<h3 class="article-card__title">Review of “Fighting for a Foothold: How Government and Markets Undermine Black Middle-Class Suburbia”</h3><p class="article-card__authors" title="Max Besbris">Max Besbris</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag111" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag111" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1093-sf-soag119" role="article">
+<h3 class="article-card__title">Defended neighborhoods, vulnerable routines: routine activities, collective efficacy, and the social ecology of discrimination</h3><p class="article-card__authors" title="Nicolo P Pinchak, Christopher R Browning, Bethany Boettner, J Brandon Carter, Catherine A Calder">Nicolo P Pinchak, Christopher R Browning, Bethany Boettner, J Brandon Carter, Catherine A Calder</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag119" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag119" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag119" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag119" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag119">
+        We describe hypotheses about how features of urban settings—including location types, sociodemographic composition, and the extent of collective efficacy (CE)—are differentially related to Black and White individuals’ risks of experiencing discrimination while conducting routine activities. These hypotheses are then tested with data from a large, representative sample of caregivers in the Adolescent Health and Development in Context study (2014–2016). We find that Black individuals are twice as likely as White individuals to report experiencing discrimination in their routine activities, and this Black-White gap is further increased among workplaces, grocery stores, and businesses relative to other locations. Additionally, Black and White individuals report similarly increased probabilities of experiencing discrimination at schools. Consistent with an extension of research on “defended neighborhoods,” exposure to higher CE is positively associated with discrimination for Black individuals especially among areas high in socioeconomic status or high in proportion White population. However, for White individuals, exposure to higher CE is negatively associated with discrimination especially among areas low in socioeconomic status or low in proportion White population. This study underscores that measuring social processes at routine activity settings, rather than just in home neighborhoods, is essential for research on everyday well-being. Further, the findings complement calls to invest in the resource capacity of high-poverty and low-proportion White neighborhoods.
+    </div>
+</article>
+<article class="article-card" id="10-1093-sf-soag109" role="article">
+<h3 class="article-card__title">When hazards don’t make law: structural resonance in global disaster-law diffusion, 1960–2025</h3><p class="article-card__authors" title="Maoxin Ye, Daniel P Aldrich">Maoxin Ye, Daniel P Aldrich</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag109" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag109" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag109" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag109" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag109">
+        This article asks why states adopt comprehensive national disaster laws. Rather than treating legislation as an automatic response to hazard exposure, we conceptualize disaster-law adoption as a process of structural resonance: regional diffusion pressures become consequential when they align with domestic governance needs and administrative capacity. Using a new country-year dataset of first adoptions across 204 states and territories from 1960 to 2025, we estimate Cox proportional hazards models with multiple imputation. Recent hazard exposure predicts adoption only in simpler specifications and loses significance once diffusion and state-structure variables are introduced. Regional adoption share strongly accelerates first adoption. Decentralization and government accountability are also associated with earlier enactment, and regional diffusion is amplified in more decentralized polities. The findings show that disaster legalization is not simply a functional response to risk. It is a sociological process in which external legal templates gain force where domestic authority is fragmented and the demand for administrative coordination is high.
+    </div>
+</article>
+<article class="article-card" id="10-1093-sf-soag103" role="article">
+<h3 class="article-card__title">Explaining gendered language through embedding approximation: how “stupid” became a man’s word</h3><p class="article-card__authors" title="Yutong Zhu">Yutong Zhu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag103" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag103" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag103" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag103" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag103">
+        Recent advances in word embedding have reinvigorated macro-historical cultural analysis based on empirical data. However, these methods primarily model the semantic structure of language, which can obscure the pragmatic dimension of language use central to sociology. Focusing on a previous study of “unintelligence” words in 20th-century American discourse, I investigate the puzzling finding that these words became more male-aligned over time. I argue there is a one-to-many mapping between low-level distance in the embedding space and high-level cultural meanings, and reconsider the stereotype-based interpretation of the changing gender alignment of “unintelligence” words. While the gender axis reliably measures gendered associations, distance-based associations do not neatly map onto well-defined gender stereotypes. Cross-validating embedding alignments against direct co-occurrence with gender-identity words, I first demonstrate that the masculinization of “unintelligence” is unlikely to be driven by judgments directed at gendered persons. Applying an adapted A La Carte (ALC) approximation of individual context words and sentences, I then characterize the pragmatic register of the influential context words—their tone and stance—through close reading validated against the NRC Emotion Lexicon: the contexts driving masculinization shifted from affiliative ease (“soft” contexts, e.g., “adored,” “wholesome”) toward confrontational intensity (“harsh” contexts, e.g., “sin,” “shout”). Robustness checks across randomly sampled word sublists confirm that this pragmatic register shift, not changing judgments of male intellect, is associated with the masculinization. This study demonstrates the interpretive gap in embedding-based methods and calls for more rigorous approaches to intersubjectively valid interpretation of cultural change.
+    </div>
+</article>
+<article class="article-card" id="10-1093-sf-soag105" role="article">
+<h3 class="article-card__title">Review of “Detroit Never Left: Black Space, White Borders, Latino Crossings”</h3><p class="article-card__authors" title="Jessica Welburn Paige">Jessica Welburn Paige</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag105" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag105" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1093-sf-soag108" role="article">
+<h3 class="article-card__title">Festivalized marriage as a Time Threshold: Spring Festival bottlenecks, Qualification Audits, and escalating entry standards in rural China</h3><p class="article-card__authors" title="Yong Yu, Keke Qin, Wenzhao Huang, Shishi Tang">Yong Yu, Keke Qin, Wenzhao Huang, Shishi Tang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag108" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag108" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag108" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag108" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag108">
+        When do institutional calendars become stratifying devices rather than neutral schedules of action? Drawing on two Spring Festival windows in villages under Yingchunting Subdistrict, Wugang, Hunan, this article shows that rural bachelors’ marriage seeking becomes festivalized: compressed into a recurrent return window where families, matchmakers, and prospective spouses assemble evidence, compare candidates, and clear outcomes before migrants disperse. We theorize Spring Festival as a Time Threshold: a window-deadline-clearing structure that synchronizes dispersed actors and converts courtship into concentrated evaluation. Inside this threshold, a Qualification Audit makes hypergamy auditable by translating marriageability and county-seat mobility into evidence bundles of housing, renovation progress, cash flow, bridewealth timing, parental backstops, reputation, and interactional fit. The window also creates Outcome Filing and Threshold Escalation: advancement, suspension, ghosting, and failure travel as records that alter next-cycle starting positions and evidentiary demands. Combining 114 interviews with 94 participants, 224 hours of observation, 41 reconstructed chains, and 297 de-identified artifacts, the article specifies when calendars stratify: recurrent deadlines, synchronized availability, high-stakes qualification, portable evidence, and outcomes that travel. The mechanism speaks beyond rural China to admissions cycles, visa windows, hiring seasons, and other institutional calendars that convert unequal life chances into auditable records with cumulative consequences.
+    </div>
+</article>
+<article class="article-card" id="10-1093-sf-soag110" role="article">
+<h3 class="article-card__title">Review of “Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy”</h3><p class="article-card__authors" title="Pyong Gap Min">Pyong Gap Min</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag110" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag110" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="02667215">
+<div class="row">
+<div class="col-10">
+<h2>European Sociological Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-02667215">
+</div><article class="article-card" id="10-1093-esr-jcag027" role="article">
+<h3 class="article-card__title">Same neighbourhood, same employer? Residential proximity and workplace concentration among immigrants</h3><p class="article-card__authors" title="JooHee Han, Are Skeie Hermansen, Aleksander Å Madsen, Mats Lillehagen">JooHee Han, Are Skeie Hermansen, Aleksander Å Madsen, Mats Lillehagen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-esr-jcag027" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-esr-jcag027" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/esr/jcag027" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/esr/jcag027" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-esr-jcag027">
+        Living near one another can channel immigrants toward workplaces through social connections and information flow, shared local opportunity structures, and other residentially patterned pathways, yet few studies link residential proximity to employment outcomes among immigrants and their children. Using Norwegian linked employer–employee administrative data with detailed residential locations, we study how neighbourhood co-residence is tied to workplace concentration and individual wages among coworkers of immigrant and native background. We compare observed co-employment of neighbours against a simulated baseline of random workplace allocation within municipalities and adjust for stable local geography using neighbourhood fixed effects. We find that immigrants are considerably more likely than natives living in the same neighbourhood to work with immigrant neighbours, particularly coethnics from the same country of origin. Immigrant neighbour exposure concentrates workers in low-wage, immigrant-dense establishments but is only modestly tied to wages, suggesting that such pathways may reinforce workplace segregation without clear individual economic costs or benefits. Children of immigrants, in contrast, are not overexposed to immigrant-background neighbours at work compared with natives. These patterns tie residential proximity to immigrants’ workplace concentration in ways consistent with neighbourhood-based network mechanisms, while weaker links in the second generation point to broader integration into the mainstream economy.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted">Privacy with <a href="https://withcabin.com/privacy/paper-picnic.com" rel="noopener noreferrer" target="_blank">Cabin</a></small>
+</div>
+</footer>
+
+</html>
