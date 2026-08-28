@@ -8,6 +8,61 @@
   var copyConfirm = document.getElementById('copy-confirm');
   var noSelectionHint = document.getElementById('no-selection-hint');
 
+  // Handle URL hash tab activation if tabs exist
+  function handleHashTab() {
+    var hash = window.location.hash;
+    if (hash) {
+      var tabTrigger = document.querySelector('button[data-bs-target="' + hash + '"], a[href="' + hash + '"]');
+      if (tabTrigger && typeof bootstrap !== 'undefined' && bootstrap.Tab) {
+        var tab = bootstrap.Tab.getOrCreateInstance(tabTrigger);
+        tab.show();
+      }
+    }
+  }
+
+  // Listen for tab changes to update URL hash and toggle card highlights
+  var tabButtons = document.querySelectorAll('button[data-bs-toggle="pill"], button[data-bs-toggle="tab"]');
+  tabButtons.forEach(function (btn) {
+    btn.addEventListener('shown.bs.tab', function (e) {
+      var target = e.target.getAttribute('data-bs-target');
+      if (target && history.replaceState) {
+        history.replaceState(null, null, target);
+      }
+      // Toggle highlight on the summary cards to match the active tab
+      var cardClassic = document.getElementById('card-classic');
+      var cardCustom = document.getElementById('card-custom');
+      if (cardClassic && cardCustom) {
+        if (target === '#classic') {
+          cardClassic.classList.add('highlight');
+          cardCustom.classList.remove('highlight');
+        } else if (target === '#custom') {
+          cardCustom.classList.add('highlight');
+          cardClassic.classList.remove('highlight');
+        }
+      }
+    });
+  });
+
+  // Data tab switch buttons (e.g., custom trigger buttons)
+  var switchButtons = document.querySelectorAll('[data-tab-switch]');
+  switchButtons.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var targetId = btn.getAttribute('data-tab-switch');
+      var targetTabBtn = document.querySelector('button[data-bs-target="' + targetId + '"]');
+      if (targetTabBtn && typeof bootstrap !== 'undefined' && bootstrap.Tab) {
+        var tab = bootstrap.Tab.getOrCreateInstance(targetTabBtn);
+        tab.show();
+      }
+    });
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', handleHashTab);
+  } else {
+    handleHashTab();
+  }
+
   if (!generateBtn) return;
 
   function buildBlock() {
@@ -92,3 +147,4 @@
   }
 
 })();
+

@@ -928,3 +928,105 @@ a:hover {
   transform: scale(1.15);
   box-shadow: var(--shadow-sm);
 }
+
+/* ==================== */
+/* 13. Notifications & Subscription Hub */
+/* ==================== */
+
+.nav-pills-custom {
+  background-color: var(--color-bg-secondary);
+  padding: 6px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  gap: 6px;
+  border: 1px solid var(--color-border);
+}
+
+.nav-pills-custom .nav-link {
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-pill);
+  padding: 8px 20px;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.nav-pills-custom .nav-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-pills-custom .nav-link.active {
+  background-color: var(--color-accent) !important;
+  color: #ffffff !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.option-card {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.option-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent) !important;
+}
+
+.option-card.highlight {
+  border: 2px solid var(--color-accent) !important;
+  position: relative;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #ffffff;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-primary);
+}
+
+.comparison-table {
+  margin-bottom: 0;
+}
+
+.comparison-table th {
+  background: var(--color-bg-secondary);
+  padding: 12px 16px;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+.comparison-table td {
+  padding: 14px 16px;
+  vertical-align: middle;
+  font-size: var(--font-size-sm);
+}
+
