@@ -12,13 +12,13 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Check out main (for scripts)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: main_folder
           ref: main
 
       - name: Check out gh-pages (for writing archive)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: gh_pages_folder
           ref: gh-pages
