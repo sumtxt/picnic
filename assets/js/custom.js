@@ -93,7 +93,6 @@ $(function () {
 function initJournalSettings() {
     const discipline = getDisciplineFromPath(window.location.pathname);
     if (!discipline) {
-        console.log('No discipline detected from path');
         return;
     }
 
@@ -102,13 +101,10 @@ function initJournalSettings() {
 
     // Check if the settings container exists on this page
     if (!$container.length) {
-        console.log('Settings container not found on this page');
         return;
     }
 
-    console.log('Initializing journal settings for:', discipline);
     const settings = StorageUtil.get(storageKey);
-    console.log('Loaded settings:', settings);
 
     // Extract journals from pre-rendered DOM (only IDs, not names)
     const domJournals = $container.find('.draggable-item').map(function () {
