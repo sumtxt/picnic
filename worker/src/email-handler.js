@@ -3,7 +3,7 @@ import Mustache from 'mustache'
 import PostalMime from 'postal-mime'
 import { createMimeMessage } from 'mimetext'
 
-import { extractBlock, parseSelections, stripTags } from './parse.js'
+import { extractBlock, parseAuthResults, parseSelections, stripTags } from './parse.js'
 import { UNIVERSITY_DOMAINS } from './university-domains.js'
 
 import replySubscribedTpl from '../templates/reply-subscribed.mustache'
@@ -14,21 +14,61 @@ import replyNonUniversityTpl from '../templates/reply-nonuniversity.mustache'
 const SUBSCRIBE_ADDRESS = 'subscribe@paper-picnic.com'
 const UNSUBSCRIBE_ADDRESS = 'unsubscribe@paper-picnic.com'
 
+// authserv-id that Cloudflare Email Routing stamps on the Authentication-Results
+// header it prepends. If this is wrong, EVERY message is rejected — the mismatch
+// is logged with the observed id so it is a one-line fix.
+const CF_AUTHSERV_ID = 'mx.cloudflare.net'
+
+// The domain is whatever follows the final '@'. Requires a non-empty local part,
+// so a degenerate '@ucl.ac.uk' yields '' rather than a valid-looking domain.
+function emailDomain(email) {
+  const at = email.lastIndexOf('@')
+  return at > 0 ? email.slice(at + 1).toLowerCase() : ''
+}
+
 function isUniversityEmail(email) {
-  return UNIVERSITY_DOMAINS.has(email.toLowerCase().split('@')[1])
+  return UNIVERSITY_DOMAINS.has(emailDomain(email))
+}
+
+// RFC 3834: never auto-reply to auto-generated mail, or our reply and the other
+// side's autoresponder ping-pong indefinitely.
+function isAutoSubmitted(message) {
+  if (!message.from) return true // null envelope sender — a bounce
+
+  const autoSubmitted = message.headers.get('Auto-Submitted')
+  if (autoSubmitted && autoSubmitted.trim().toLowerCase() !== 'no') return true
+
+  if (message.headers.get('X-Auto-Response-Suppress')) return true
+
+  // Mailing-list traffic: a reply would go to the whole list.
+  if (message.headers.get('List-Id') || message.headers.get('List-Unsubscribe')) return true
+
+  const precedence = (message.headers.get('Precedence') || '').trim().toLowerCase()
+  if (['bulk', 'list', 'junk', 'auto_reply'].includes(precedence)) return true
+
+  // Older/vendor autoresponder markers predating RFC 3834
+  if (message.headers.get('X-Autoreply')) return true
+  if (message.headers.get('X-Autoreply-From')) return true
+  if (message.headers.get('X-Autorespond')) return true
+
+  const deliveredTo = (message.headers.get('Delivered-To') || '').trim().toLowerCase()
+  return deliveredTo === 'autoresponder'
 }
 
 async function sendReply(message, subject, body) {
   const msg = createMimeMessage()
-  // Threading: Cloudflare requires In-Reply-To referencing the incoming Message-ID,
-  // and References to be the full chain (incoming References + incoming Message-ID) —
-  // not just the Message-ID on its own.
+
   const messageId = message.headers.get('Message-ID')
   if (messageId) {
     msg.setHeader('In-Reply-To', messageId)
     const incomingReferences = message.headers.get('References')
     msg.setHeader('References', incomingReferences ? `${incomingReferences} ${messageId}` : messageId)
   }
+
+  // RFC 3834: mark the reply so a well-behaved autoresponder does not answer it.
+  msg.setHeader('Auto-Submitted', 'auto-replied')
+  msg.setHeader('X-Auto-Response-Suppress', 'All')
+
   // Sender must be on the same domain that received the mail; use the exact To address.
   msg.setSender({ name: 'Paper Picnic', addr: message.to })
   msg.setRecipient(message.from)
@@ -39,33 +79,48 @@ async function sendReply(message, subject, body) {
 }
 
 async function upsertSubscriber(email, journals, osf, env) {
-  const existing = await env.DB.prepare(
-    'SELECT id FROM subscribers WHERE email = ?'
-  ).bind(email).first()
+  const row = await env.DB.prepare(
+    `INSERT INTO subscribers (id, email, created_at) VALUES (?, ?, ?)
+     ON CONFLICT(email) DO UPDATE SET email = excluded.email
+     RETURNING id`
+  ).bind(crypto.randomUUID(), email, new Date().toISOString()).first()
 
-  const id = existing ? existing.id : crypto.randomUUID()
-  const now = new Date().toISOString()
-  const stmts = []
+  const id = row.id
 
-  if (existing) {
-    stmts.push(
-      env.DB.prepare('DELETE FROM journal_preferences WHERE subscriber_id = ?').bind(id),
-      env.DB.prepare('DELETE FROM preprint_preferences WHERE subscriber_id = ?').bind(id),
-    )
-  } else {
-    stmts.push(
-      env.DB.prepare('INSERT INTO subscribers (id, email, created_at) VALUES (?, ?, ?)').bind(id, email, now),
-    )
-  }
-
-  for (const jid of journals) {
+  const stmts = [
+    env.DB.prepare('DELETE FROM journal_preferences WHERE subscriber_id = ?').bind(id),
+    env.DB.prepare('DELETE FROM preprint_preferences WHERE subscriber_id = ?').bind(id),
+  ]
+  for (const jid of new Set(journals)) {
     stmts.push(env.DB.prepare('INSERT INTO journal_preferences (subscriber_id, journal_id) VALUES (?, ?)').bind(id, jid))
   }
-  for (const cat of osf) {
+  for (const cat of new Set(osf)) {
     stmts.push(env.DB.prepare('INSERT INTO preprint_preferences (subscriber_id, osf_category) VALUES (?, ?)').bind(id, cat))
   }
 
   await env.DB.batch(stmts)
+}
+
+async function deletePlunkContact(email, env) {
+  const listResp = await fetch(`https://next-api.useplunk.com/contacts?search=${encodeURIComponent(email)}`, {
+    headers: { 'Authorization': `Bearer ${env.PLUNK_SECRET_KEY}` },
+  })
+  if (!listResp.ok) {
+    console.error('Plunk contact lookup failed:', listResp.status, listResp.statusText)
+    return
+  }
+
+  const { data } = await listResp.json()
+  const contact = (data ?? []).find(c => c.email?.toLowerCase() === email.toLowerCase())
+  if (!contact) return
+
+  const delResp = await fetch(`https://next-api.useplunk.com/contacts/${contact.id}`, {
+    method: 'DELETE',
+    headers: { 'Authorization': `Bearer ${env.PLUNK_SECRET_KEY}` },
+  })
+  if (!delResp.ok) {
+    console.error('Plunk contact delete failed:', delResp.status, delResp.statusText)
+  }
 }
 
 async function deleteSubscriber(email, env) {
@@ -79,6 +134,7 @@ async function deleteSubscriber(email, env) {
     env.DB.prepare('DELETE FROM preprint_preferences WHERE subscriber_id = ?').bind(sub.id),
     env.DB.prepare('DELETE FROM subscribers WHERE id = ?').bind(sub.id),
   ])
+  await deletePlunkContact(email, env)
   return true
 }
 
@@ -90,12 +146,44 @@ export async function handleEmail(message, env) {
   // A sender can forge their own AR header, but it sits below Cloudflare's, so
   // headers.get() (which concatenates all) would be spoofable.
   const receiverAr = email.headers.find(h => h.key?.toLowerCase() === 'authentication-results')?.value ?? ''
-  if (!/\bdmarc=pass\b/i.test(receiverAr)) {
+  const dmarc = parseAuthResults(receiverAr, CF_AUTHSERV_ID)
+  if (!dmarc) {
+    // Log the observed authserv-id only — the rest of the header carries the
+    // sender's address.
+    const observed = receiverAr.split(';')[0].trim() || '(none)'
+    console.error(`Rejected: no usable Authentication-Results from ${CF_AUTHSERV_ID}, saw: ${observed}`)
+    message.setReject('Could not verify sender domain (DMARC).')
+    return
+  }
+  if (dmarc.result !== 'pass' || !dmarc.headerFrom) {
     message.setReject('Could not verify sender domain (DMARC).')
     return
   }
 
-  const from = (message.from || '').trim().toLowerCase()
+  // Authorise on the identity DMARC actually validated: the RFC 5322 From header,
+  // whose domain must equal the header.from= Cloudflare reported passing.
+  // message.from is the SMTP envelope sender, which DMARC does not authenticate —
+  // a DKIM-aligned message can name any address there, including a victim's.
+  const from = (email.from?.address || '').trim().toLowerCase()
+  if (!from || emailDomain(from) !== dmarc.headerFrom) {
+    message.setReject('Sender address does not match the DMARC-verified domain.')
+    return
+  }
+
+  // The reply is delivered to the envelope sender, so require it to match the
+  // verified From exactly. Otherwise a DKIM-aligned message could still aim our
+  // reply — and the subscription it confirms — at an unrelated address.
+  if ((message.from || '').trim().toLowerCase() !== from) {
+    message.setReject('Envelope sender does not match the verified From address.')
+    return
+  }
+
+  // Drop rather than setReject: rejecting generates a bounce, which is more mail.
+  if (isAutoSubmitted(message)) {
+    console.log('Ignoring auto-submitted message')
+    return
+  }
+
   const to = (message.to || '').trim().toLowerCase()
 
   if (to === UNSUBSCRIBE_ADDRESS) {

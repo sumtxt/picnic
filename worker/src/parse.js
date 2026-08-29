@@ -55,3 +55,37 @@ export function stripTags(html) {
     .replace(/&#39;/g, "'")
     .replace(/&nbsp;/g, ' ')
 }
+
+// Parses a receiver-stamped Authentication-Results header (RFC 8601) and returns
+// { result, headerFrom } for its dmarc= method, or null if the header was not
+// stamped by `expectedAuthservId` or carries no unambiguous dmarc= verdict.
+//
+// Substring matching (/dmarc=pass/) is unsafe here: properties such as
+// smtp.mailfrom= and header.d= echo attacker-controlled text, and '=' is a legal
+// atext character, so a sender whose local part is literally "dmarc=pass" would
+// satisfy such a test while its real verdict was a failure.
+export function parseAuthResults(value, expectedAuthservId) {
+  if (!value || !expectedAuthservId) return null
+
+  // Drop CFWS comments, e.g. "spf=fail (sender IP is 192.0.2.1)", which may
+  // themselves contain '=' or ';'.
+  const stripped = value.replace(/\([^)]*\)/g, ' ')
+
+  // First field is "authserv-id [version]"; anything else is not Cloudflare's header.
+  const authservId = stripped.split(';')[0].trim().split(/\s+/)[0].toLowerCase()
+  if (authservId !== expectedAuthservId.toLowerCase()) return null
+
+  // Anchor on the ';' property-list separator so the token cannot be matched
+  // inside another method's value. Two verdicts means something injected one:
+  // fail closed rather than guess which is the receiver's.
+  const matches = [...stripped.matchAll(/(?:^|;)\s*dmarc\s*=\s*([a-z]+)([^;]*)/gi)]
+  if (matches.length !== 1) return null
+
+  const [, result, properties] = matches[0]
+  const headerFrom = /\bheader\.from\s*=\s*"?([^\s;"]+)/i.exec(properties)
+
+  return {
+    result: result.toLowerCase(),
+    headerFrom: headerFrom ? headerFrom[1].toLowerCase().replace(/\.$/, '') : null,
+  }
+}

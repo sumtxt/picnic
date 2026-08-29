@@ -20,7 +20,7 @@ const DISCIPLINE_ORDER = [
 
 // --- Plunk ---
 
-async function sendPlunkEmail(to, subject, body, env, { reply, headers } = {}) {
+async function sendPlunkEmail(to, subject, body, env, { reply, headers, subscriberId } = {}) {
   const resp = await fetch('https://next-api.useplunk.com/v1/send', {
     method: 'POST',
     headers: {
@@ -37,7 +37,9 @@ async function sendPlunkEmail(to, subject, body, env, { reply, headers } = {}) {
       ...(headers && { headers }),
     }),
   })
-  if (!resp.ok) console.error('Plunk error:', resp.status, await resp.text())
+  if (!resp.ok) {
+    console.error('Plunk send failed:', resp.status, resp.statusText, `subscriber=${subscriberId ?? 'unknown'}`)
+  }
   return resp.ok
 }
 
@@ -193,6 +195,7 @@ export class WeeklyDigestWorkflow extends WorkflowEntrypoint {
           const sent = await sendPlunkEmail(sub.email, subject, html, this.env, {
             reply: 'hello@paper-picnic.com',
             headers: { 'List-Unsubscribe': LIST_UNSUBSCRIBE },
+            subscriberId: sub.id,
           })
           if (sent) {
             await this.env.DB.prepare(
