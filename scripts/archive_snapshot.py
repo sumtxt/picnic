@@ -40,6 +40,24 @@ ASSETS = [
     "assets/css/custom.css",
     "assets/js/custom.js",
     "assets/js/storage.js",
+    "assets/vendor/css/bootstrap-5.3.3.min.css",
+    "assets/vendor/css/inter-fonts.css",
+    "assets/vendor/js/jquery-3.7.1.min.js",
+    "assets/vendor/js/sortable-1.15.0.min.js",
+    "assets/vendor/js/bootstrap-5.3.3.bundle.min.js",
+    "assets/vendor/img/bmc-button.png",
+    "assets/vendor/fonts/inter-v20-cyrillic-ext.woff2",
+    "assets/vendor/fonts/inter-v20-cyrillic.woff2",
+    "assets/vendor/fonts/inter-v20-greek-ext.woff2",
+    "assets/vendor/fonts/inter-v20-greek.woff2",
+    "assets/vendor/fonts/inter-v20-latin-ext.woff2",
+    "assets/vendor/fonts/inter-v20-latin.woff2",
+    "assets/vendor/fonts/inter-v20-vietnamese.woff2",
+]
+
+TRACKER_SCRIPT_HOSTS = [
+    "scripts.withcabin.com",
+    "static.cloudflareinsights.com",
 ]
 
 # PAGES as site-relative paths (both slug and .html forms) — only pages that
@@ -83,15 +101,16 @@ def get_prev_date():
 
 
 def fetch_snapshot(archive_dir):
-    (archive_dir / "assets" / "css").mkdir(parents=True, exist_ok=True)
-    (archive_dir / "assets" / "js").mkdir(parents=True, exist_ok=True)
+    archive_dir.mkdir(parents=True, exist_ok=True)
 
     for page in PAGES:
         filename = f"{page or 'index'}.html"
         (archive_dir / filename).write_bytes(fetch_url(f"{BASE}/{page}"))
 
     for asset in ASSETS:
-        (archive_dir / asset).write_bytes(fetch_url(f"{BASE}/{asset}"))
+        dest = archive_dir / asset
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes(fetch_url(f"{BASE}/{asset}"))
 
 
 # ---------------------------------------------------------------------------
@@ -107,6 +126,12 @@ def deactivate_links(soup):
             link["tabindex"] = "-1"
             link["aria-disabled"] = "true"
             link["style"] = "pointer-events: none; opacity: 0.5; cursor: default;"
+
+
+def strip_trackers(soup):
+    for tag in soup.find_all("script", src=True):
+        if any(host in tag["src"] for host in TRACKER_SCRIPT_HOSTS):
+            tag.decompose()
 
 
 def rewrite_links(soup, archive_prefix):
@@ -163,6 +188,7 @@ def postprocess_snapshot(archive_dir, archive_prefix, date_str):
     for html_path in sorted(archive_dir.glob("*.html")):
         soup = BeautifulSoup(html_path.read_text(encoding="utf-8"), "html.parser")
         deactivate_links(soup)
+        strip_trackers(soup)
         rewrite_links(soup, archive_prefix)
         inject_banner(soup, date_str)
         html_path.write_text(str(soup), encoding="utf-8")
