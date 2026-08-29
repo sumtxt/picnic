@@ -1,6 +1,6 @@
 ---
 title: "Picnic Notifications 📨"
-tagline: "Choose how you want to receive your weekly notification on Fridays"
+tagline: "Choose how you want to receive your picnic notification on Fridays"
 layout: page
 content_col: col-lg-8
 journals:

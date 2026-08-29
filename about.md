@@ -34,7 +34,7 @@ The tool is built around three principles:
 
 1. Updates once a week at a known time. Every Friday morning UTC, the site refreshes with papers published in the previous two weeks.
 2. Displays everything on a single page without clutter. Browse all new papers in a clean, customizable, ad-free interface.
-3. No registration, no ads, no tracking. Access the site immediately without handing over your email address or personal data.
+3. No required registration, no ads, no tracking. Access the site immediately without handing over your email address or personal data.
 
 <br>
 
