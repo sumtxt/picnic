@@ -22,7 +22,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-BASE = "https://www.paper-picnic.com"
+BASE = "https://paper-picnic.com"
 RETRIES = 3
 INDEX_VERSION = "v1"
 USER_AGENT = "Mozilla/5.0 (compatible; archive-snapshot-bot)"
