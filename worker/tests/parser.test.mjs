@@ -1,13 +1,13 @@
 /**
- * Unit tests for extractBlock / parseSelections in src/parse.js
+ * Unit tests for extractBlock / parseSelections / parseAuthResults in src/parse.js
  *
- * Run with: node --test test/parser.test.mjs
+ * Run with: node --test tests/parser.test.mjs
  * (from the worker/ directory)
  */
 
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { extractBlock, parseSelections, stripTags } from '../src/parse.js'
+import { extractBlock, parseAuthResults, parseSelections, stripTags } from '../src/parse.js'
 
 // ---- known ID sets used in all parseSelections tests ----
 const journalIds = new Set(['19312458', '10584609', '00219916'])
@@ -167,4 +167,56 @@ preprint: c2b
   const result = parseSelections(block, known)
   assert.deepEqual(result.journals, ['00219916'])
   assert.deepEqual(result.osf, ['c2b'])
+})
+
+// ---- parseAuthResults tests ----
+
+const CF = 'mx.cloudflare.net'
+const arPass = 'mx.cloudflare.net; dkim=pass header.d=ucl.ac.uk; spf=pass (mx.cloudflare.net: domain of a@ucl.ac.uk designates 1.2.3.4) smtp.mailfrom=a@ucl.ac.uk; dmarc=pass header.from=ucl.ac.uk'
+
+test('parseAuthResults: extracts verdict and header.from', () => {
+  assert.deepEqual(parseAuthResults(arPass, CF), { result: 'pass', headerFrom: 'ucl.ac.uk' })
+})
+
+test('parseAuthResults: reports a failing verdict as-is', () => {
+  const ar = 'mx.cloudflare.net; dkim=none; spf=fail; dmarc=fail header.from=evil.com'
+  assert.deepEqual(parseAuthResults(ar, CF), { result: 'fail', headerFrom: 'evil.com' })
+})
+
+test('parseAuthResults: "dmarc=pass" inside smtp.mailfrom does not pass', () => {
+  // '=' is a legal atext character, so dmarc=pass@evil.com is a valid address.
+  // A naive /\bdmarc=pass\b/ test on this header would match.
+  const ar = 'mx.cloudflare.net; spf=fail smtp.mailfrom=dmarc=pass@evil.com; dmarc=fail header.from=evil.com'
+  assert.equal(parseAuthResults(ar, CF).result, 'fail')
+})
+
+test('parseAuthResults: "dmarc=pass" inside a DKIM d= tag does not pass', () => {
+  const ar = 'mx.cloudflare.net; dkim=permerror header.d=dmarc=pass.example; dmarc=fail header.from=evil.com'
+  assert.equal(parseAuthResults(ar, CF).result, 'fail')
+})
+
+test('parseAuthResults: "dmarc=pass" inside a comment does not pass', () => {
+  const ar = 'mx.cloudflare.net; spf=fail (wanted dmarc=pass); dmarc=fail header.from=evil.com'
+  assert.equal(parseAuthResults(ar, CF).result, 'fail')
+})
+
+test('parseAuthResults: rejects a header from another authserv-id', () => {
+  const ar = 'attacker.example; dmarc=pass header.from=ucl.ac.uk'
+  assert.equal(parseAuthResults(ar, CF), null)
+})
+
+test('parseAuthResults: fails closed on two dmarc verdicts', () => {
+  const ar = 'mx.cloudflare.net; dmarc=pass header.from=ucl.ac.uk; dmarc=fail header.from=evil.com'
+  assert.equal(parseAuthResults(ar, CF), null)
+})
+
+test('parseAuthResults: fails closed on missing or empty header', () => {
+  assert.equal(parseAuthResults('', CF), null)
+  assert.equal(parseAuthResults(null, CF), null)
+  assert.equal(parseAuthResults('mx.cloudflare.net; spf=pass', CF), null)
+})
+
+test('parseAuthResults: tolerates an authserv-id version token', () => {
+  const ar = 'mx.cloudflare.net 1; dmarc=pass header.from=ucl.ac.uk'
+  assert.equal(parseAuthResults(ar, CF).result, 'pass')
 })
