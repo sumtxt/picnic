@@ -1,5 +1,13 @@
 # picnic
 
+### Version 2.2.0 (2026-08-29)
+
+* Added new personalized email notifications
+
+### Version 2.1.0 (2026-07-31)
+
+* Added Picnic Archive 
+
 ### Version 2.0.0 (2026-01-01)
 
 * Migrated backend to Python 

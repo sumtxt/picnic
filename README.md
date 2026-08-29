@@ -1,6 +1,6 @@
-# Paper Picnic 2.0
+# Paper Picnic 2.2
 
-A weekly basket with the latest published research in political science. On Fridays at 2 AM UTC, we query the Crossref API for new research articles that appeared in the previous 7 days across many journals in political science and adjacent fields. [paper-picnic.com/](https://paper-picnic.com/)
+A weekly basket with the latest published research in political science. On Fridays, we query the Crossref API for new research articles that appeared in the previous 7 days across many journals in political science and adjacent fields. [paper-picnic.com/](https://paper-picnic.com/)
 
 The crawler lives in the `main` branch of the backend while the website is rendered from the `gh-pages` branch. 
 
@@ -38,6 +38,7 @@ The crawler lives in the `main` branch of the backend while the website is rende
    ```bash
    OPENROUTER_APIKEY=your_openrouter_api_key
    CROSSREF_EMAIL=your_email@example.com
+   OPENALEX_APIKEY=your_openalex_key
    ```
 
 ### GitHub Actions Setup
@@ -54,9 +55,11 @@ After forking the repository, you need to configure repository settings:
    - Add the following secrets:
      - `OPENROUTER_APIKEY` - OpenRouter API key for article classification
      - `CROSSREF_EMAIL` - Your email for polite Crossref API requests
+     - `OPENALEX_APIKEY` - OpenAlex API key for domain filtering
      - `RESEND_API_KEY` - Resend.com API key for email notifications
      - `RESEND_EMAIL_FROM` - Sender email address
      - `RESEND_EMAIL_TO` - Recipient email address
+     - `CF_API_TOKEN` / `CF_ACCOUNT_ID` - Cloudflare credentials for the personalized email notification worker
 
 ## Usage
 
@@ -103,7 +106,9 @@ picnic/
 ├── parameters/               # Journal/OSF configurations
 ├── memory/                   # Crawl history for deduplication
 ├── output/                   # Generated JSON files and statistics
-├── notification/             # Email notification system (Node.js)
+├── notification/             # Classic email notification (Node.js)
+├── worker/                   # Cloudflare Worker: personalized email notification
+├── scripts/                  # Archiving scripts (gh-pages snapshots)
 ├── .github/workflows/        # GitHub Actions automation
 └── requirements.txt          # Python dependencies
 ```
@@ -117,11 +122,12 @@ The crawler ([main.py](main.py)) runs two parallel workflows:
 1. Tests Crossref API endpoints (public vs polite) to select the faster one
 2. Queries `/works` endpoint with batched ISSNs from [parameters/journals.json](parameters/journals.json)
 3. Searches both `created` and `published` dates (default: 14 days ago to 1 day ago)
-4. Parses metadata and removes duplicates using [memory/doi.csv](memory/doi.csv)
+4. Parses metadata and removes duplicates using [memory/doi.txt](memory/doi.txt)
 5. Merges journal info and applies filters:
    - **Standard**: Removes editorials, ToCs, errata by title pattern
    - **Nature**: Keeps only articles with `/s` in URL
    - **Science**: Keeps only articles with abstracts ≥200 chars
+   - **OpenAlex**: Removes articles whose domain isn't "Social Sciences"
    - **AI** (optional): Uses GPT-4o-mini to classify social science relevance
 6. Outputs to [output/publications.json](output/publications.json)
 
@@ -129,17 +135,18 @@ The crawler ([main.py](main.py)) runs two parallel workflows:
 
 1. Loads subject filter from [parameters/osf_subjects.json](parameters/osf_subjects.json) ("Social and Behavioral Sciences")
 2. Queries OSF API date-by-date within crawl window
-3. Parses metadata, deduplicates versions (keeps latest), removes past preprints using [memory/osf_ids.csv](memory/osf_ids.csv)
+3. Parses metadata, deduplicates versions (keeps latest), removes past preprints using [memory/osf_ids.txt](memory/osf_ids.txt)
 4. Detects language with fasttext-langdetect and hides non-English papers by default (revealable in UI)
 5. Outputs to [output/preprints.json](output/preprints.json)
 
 ### 3. Statistics & Automation
 
 - **Stats**: Counts articles per journal, updates [output/stats.csv](output/stats.csv)
-- **GitHub Actions**:
-  - [Update Website workflow](.github/workflows/update_website.yml) syncs outputs to `gh-pages` branch
-  - [Send Notification workflow](.github/workflows/send-notification.yml) triggers after the Crawl workflow completes
-    - Sends an email with a subset of publications via Resend.com
+- **GitHub Actions** (triggered after the Crawl workflow completes):
+  - [Update Website](.github/workflows/update_website.yml) syncs outputs to `gh-pages`
+  - [Archive Snapshot](.github/workflows/archive_snapshot.yml) saves the published edition to `gh-pages`'s `archive/` (see [scripts/archive_snapshot.py](scripts/archive_snapshot.py))
+  - [Send Notification](.github/workflows/send-notification.yml) sends the classic email notification via Resend.com
+  - [Push to Cloudflare](.github/workflows/push-to-cloudflare.yml) syncs data to the personalized email notification worker and triggers it
 
 Behavior is configurable via [src/config.py](src/config.py) (crawl window, memory updates, filter toggles, etc.)
 
