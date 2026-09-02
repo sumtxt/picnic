@@ -26,8 +26,17 @@ function emailDomain(email) {
   return at > 0 ? email.slice(at + 1).toLowerCase() : ''
 }
 
+// Matches the domain itself or any subdomain of it (e.g., departmental subdomains)
 function isUniversityEmail(email) {
-  return UNIVERSITY_DOMAINS.has(emailDomain(email))
+  const domain = emailDomain(email)
+  if (!domain) return false
+  let suffix = domain
+  while (true) {
+    if (UNIVERSITY_DOMAINS.has(suffix)) return true
+    const dot = suffix.indexOf('.')
+    if (dot === -1) return false
+    suffix = suffix.slice(dot + 1)
+  }
 }
 
 // RFC 3834: never auto-reply to auto-generated mail, or our reply and the other
