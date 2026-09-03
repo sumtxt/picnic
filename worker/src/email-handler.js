@@ -10,6 +10,7 @@ import replySubscribedTpl from '../templates/reply-subscribed.mustache'
 import replyUnsubscribedTpl from '../templates/reply-unsubscribed.mustache'
 import replyHelpTpl from '../templates/reply-help.mustache'
 import replyNonUniversityTpl from '../templates/reply-nonuniversity.mustache'
+import replyTryAgainTpl from '../templates/reply-tryagain.mustache'
 
 const SUBSCRIBE_ADDRESS = 'subscribe@paper-picnic.com'
 const UNSUBSCRIBE_ADDRESS = 'unsubscribe@paper-picnic.com'
@@ -196,7 +197,13 @@ export async function handleEmail(message, env) {
   const to = (message.to || '').trim().toLowerCase()
 
   if (to === UNSUBSCRIBE_ADDRESS) {
-    await deleteSubscriber(from, env)
+    try {
+      await deleteSubscriber(from, env)
+    } catch (err) {
+      console.error('deleteSubscriber failed:', err)
+      await sendReply(message, 'Re: Paper Picnic unsubscribe', Mustache.render(replyTryAgainTpl, {}))
+      return
+    }
     await sendReply(message, 'Re: Unsubscribed from Paper Picnic', Mustache.render(replyUnsubscribedTpl, {}))
     return
   }
@@ -222,7 +229,13 @@ export async function handleEmail(message, env) {
         await sendReply(message, 'Re: Paper Picnic subscription', Mustache.render(replyNonUniversityTpl, {}))
         return
       }
-      await upsertSubscriber(from, selections.journals, selections.osf, env)
+      try {
+        await upsertSubscriber(from, selections.journals, selections.osf, env)
+      } catch (err) {
+        console.error('upsertSubscriber failed:', err)
+        await sendReply(message, 'Re: Paper Picnic subscription', Mustache.render(replyTryAgainTpl, {}))
+        return
+      }
       await sendReply(message, 'Re: Subscribed to Paper Picnic', Mustache.render(replySubscribedTpl, {}))
       return
     }
