@@ -21,7 +21,8 @@ jobs:
           fetch-depth: 1
 
       - name: Install wrangler
-        run: npm install --global wrangler
+        working-directory: worker
+        run: npm ci
 
       - name: Push data to KV and trigger weekly digest
         working-directory: worker
@@ -29,8 +30,8 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: |
-          wrangler kv key put --remote --binding=KV publications  --path=../output/publications.json
-          wrangler kv key put --remote --binding=KV preprints     --path=../output/preprints.json
-          wrangler kv key put --remote --binding=KV journals      --path=../parameters/journals.json
-          wrangler kv key put --remote --binding=KV osf_subjects  --path=../parameters/osf_subjects.json
-          wrangler workflows trigger weekly-digest
+          ./node_modules/.bin/wrangler kv key put --remote --binding=KV publications  --path=../output/publications.json
+          ./node_modules/.bin/wrangler kv key put --remote --binding=KV preprints     --path=../output/preprints.json
+          ./node_modules/.bin/wrangler kv key put --remote --binding=KV journals      --path=../parameters/journals.json
+          ./node_modules/.bin/wrangler kv key put --remote --binding=KV osf_subjects  --path=../parameters/osf_subjects.json
+          ./node_modules/.bin/wrangler workflows trigger weekly-digest

@@ -19,7 +19,8 @@ jobs:
           fetch-depth: 1
 
       - name: Install wrangler
-        run: npm install --global wrangler
+        working-directory: worker
+        run: npm ci
 
       - name: Query subscriber counts
         id: count
