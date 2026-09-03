@@ -1,0 +1,44 @@
+name: Subscriber Report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "42 16 * * 4"
+
+jobs:
+  subscriber-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Install wrangler
+        run: npm install --global wrangler
+
+      - name: Query subscriber counts
+        id: count
+        working-directory: worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: |
+          SINCE=$(date -u -d '7 days ago' +%Y-%m-%dT%H:%M:%S)
+          RESULT=$(wrangler d1 execute picnic-subscribers --remote --json --command="SELECT COUNT(*) AS total, SUM(CASE WHEN created_at >= '$SINCE' THEN 1 ELSE 0 END) AS new_since FROM subscribers;")
+          TOTAL=$(echo "$RESULT" | jq -r '.[0].results[0].total')
+          NEW=$(echo "$RESULT" | jq -r '.[0].results[0].new_since')
+          echo "total=$TOTAL" >> "$GITHUB_OUTPUT"
+          echo "new=$NEW" >> "$GITHUB_OUTPUT"
+
+      - name: Email subscriber report
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_EMAIL_FROM: ${{ secrets.RESEND_EMAIL_FROM }}
+          MAINTAINER_EMAIL: ${{ secrets.MAINTAINER_EMAIL }}
+        run: |
+          curl -s -X POST https://api.resend.com/emails \
+            -H "Authorization: Bearer $RESEND_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "{\"from\":\"$RESEND_EMAIL_FROM\",\"to\":[\"$MAINTAINER_EMAIL\"],\"subject\":\"Paper Picnic: Weekly subscriber report\",\"text\":\"Total subscribers: ${{ steps.count.outputs.total }}\nNew this week: ${{ steps.count.outputs.new }}\"}"
