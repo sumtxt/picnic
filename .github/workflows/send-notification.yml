@@ -6,6 +6,9 @@ on:
      workflows: [ Crawl ]
      types: [ completed ]
 
+permissions:
+  contents: read
+
 jobs:
   send-notification:
     runs-on: ubuntu-latest

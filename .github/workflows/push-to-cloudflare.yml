@@ -6,6 +6,9 @@ on:
     workflows: [ Crawl ]
     types: [ completed ]
 
+permissions:
+  contents: read
+
 jobs:
   push-to-kv:
     runs-on: ubuntu-latest
