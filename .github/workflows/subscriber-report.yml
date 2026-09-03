@@ -26,11 +26,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: |
           SINCE=$(date -u -d '7 days ago' +%Y-%m-%dT%H:%M:%S)
-          if ! RESULT=$(wrangler d1 execute picnic-subscribers --remote --json --command="SELECT COUNT(*) AS total, SUM(CASE WHEN created_at >= '$SINCE' THEN 1 ELSE 0 END) AS new_since FROM subscribers;"); then
-            echo "::error::wrangler d1 execute failed"
-            echo "$RESULT"
-            exit 1
-          fi
+          RESULT=$(./node_modules/.bin/wrangler d1 execute picnic-subscribers --remote --json --command="SELECT COUNT(*) AS total, SUM(CASE WHEN created_at >= '$SINCE' THEN 1 ELSE 0 END) AS new_since FROM subscribers;")
           TOTAL=$(echo "$RESULT" | jq -r '.[0].results[0].total')
           NEW=$(echo "$RESULT" | jq -r '.[0].results[0].new_since')
           echo "total=$TOTAL" >> "$GITHUB_OUTPUT"
