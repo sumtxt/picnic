@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Public Administration</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<link href="./assets/vendor/css/inter-fonts.css" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script src="./assets/vendor/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/vendor/js/sortable-1.15.0.min.js"></script>
+<script src="./assets/vendor/js/bootstrap-5.3.3.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link href="./assets/vendor/css/bootstrap-5.3.3.min.css" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · August 28, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-08-28/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-08-28/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-28/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-28/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-28/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-28/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-08-28/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-08-28/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-28/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-08-28/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-08-28/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="15206688">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15206688" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15206688" style="max-width: 300px;" title="Journal of Policy Analysis and Management">
+                            Journal of Policy Analysis and Management
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10531858">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10531858" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10531858" style="max-width: 300px;" title="Journal of Public Administration Research and Theory">
+                            Journal of Public Administration Research and Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333352">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333352" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333352" style="max-width: 300px;" title="Public Administration Review">
+                            Public Administration Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14494035">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14494035" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14494035" style="max-width: 300px;" title="Policy and Society">
+                            Policy and Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13501763">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13501763" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13501763" style="max-width: 300px;" title="Journal of European Public Policy">
+                            Journal of European Public Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0190292X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0190292X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0190292X" style="max-width: 300px;" title="Policy Studies Journal">
+                            Policy Studies Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333298">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333298" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333298" style="max-width: 300px;" title="Public Administration">
+                            Public Administration
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03055736">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03055736" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03055736" style="max-width: 300px;" title="Policy and Politics">
+                            Policy and Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09521895">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09521895" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09521895" style="max-width: 300px;" title="Governance">
+                            Governance
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17485983">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17485983" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17485983" style="max-width: 300px;" title="Regulation &amp; Governance">
+                            Regulation &amp; Governance
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="15206688">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Policy Analysis and Management</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-15206688" data-bs-toggle="collapse" type="button">
+              +1
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-15206688"><article class="article-card" id="10-1002-pam-70126" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Referee Acknowledgments</h3><p class="article-card__authors" title=""></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70126" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70126" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1002-pam-70127" role="article">
+<h3 class="article-card__title">Titans of Industrial Agriculture: How a Few Giant Corporations Came to Dominate the Farm Sector and Why It Matters</h3><p class="article-card__authors" title="Nadine Lehrer">Nadine Lehrer</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70127" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70127" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="10531858">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Public Administration Research and Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10531858">
+</div><article class="article-card" id="10-1093-jopart-muag027" role="article">
+<h3 class="article-card__title">Civil Servants and Democratic Backsliding: The Role of Managerial Signals</h3><p class="article-card__authors" title="Mads Pieter van Luttervelt, Mathias Rask Østergaard-Nielsen, Martin Bækgaard, Zuzana Murdoch, Benny Geys">Mads Pieter van Luttervelt, Mathias Rask Østergaard-Nielsen, Martin Bækgaard, Zuzana Murdoch, Benny Geys</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopart-muag027" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopart-muag027" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopart/muag027" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopart/muag027" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopart-muag027">
+        Political efforts to weaken democratic institutions place civil servants in a dilemma between political responsiveness and protecting democratic values. As civil servants are embedded in the political-administrative hierarchy, we argue that signals from their direct hierarchical superiors are critical to understand how civil servants address this dilemma. Using a randomized survey experiment among Norwegian national-level civil servants (N = 1,446) and ordered logistic regression models, we find that democratic backsliding increases opposition to government wishes, internal and external voice, and consideration of exit from the organization. Managerial signals moderate these effects: civil servants are more inclined to voice concerns or consider exit when managers signal responsiveness to government wishes. In a conceptual replication and extension among US federal, state and local civil servants (N = 504) using ordered logistic regression models, we likewise find a greater inclination to exit if the manager signals responsiveness to government wishes, but also that respondents are less inclined to voice concerns to the manager. Overall, our findings imply that managerial signals within the political-administrative hierarchy are shaping civil servants’ immediate reactions to democratic backsliding.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333352">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-00333352" data-bs-toggle="collapse" type="button">
+              +3
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333352"><article class="article-card" id="10-1111-puar-70182" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">American Society for Public Administration Code of Ethics</h3><p class="article-card__authors" title=""></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70182" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70182" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1111-puar-70183" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Celebrating 85 Years</h3><p class="article-card__authors" title=""></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70183" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70183" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1111-puar-70194" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Issue Information</h3><p class="article-card__authors" title=""></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70194" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70194" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1111-puar-70187" role="article">
+<h3 class="article-card__title">Sifting Through: Federal Separations in 2025 and Their Implications for Knowledge Loss and Agency Capacity</h3><p class="article-card__authors" title="M. Blake Emidy, Anmol Soni, Evan Mistur">M. Blake Emidy, Anmol Soni, Evan Mistur</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70187" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70187" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70187" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70187" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70187">
+        The federal service experienced unprecedented turnover in the first year of the second Trump administration. Early reports have documented the substantial losses of personnel and the politicization and antagonism underlying those changes. This research breaks down separations over the past year, with a focus on the Deferred Resignation Program (DRP), to understand where turnover occurred and how it affected organizational knowledge and capacity. The analysis examines federal workforce data from January 2015 to December 2025 and reveals that the federal service lost substantial expertise and experience through both voluntary and involuntary means of separation. These results shed light on the fallout from 2025 executive actions, clarify the implications for government capacity, and point out prospective pathways for mitigating damages to the federal service moving forward.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70190" role="article">
+<h3 class="article-card__title">Informal Authority, Legitimacy Transition, and Institutional Change: A Theory of Advisory Capture</h3><p class="article-card__authors" title="Byunggeor Moon">Byunggeor Moon</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70190" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70190" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70190" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70190" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70190">
+        How do informal actors achieve rapid bureaucratic dismantlement without formal authority? Analyzing the Department of Government Efficiency (DOGE) initiative, this article argues that when performance‐based legitimacy displaces procedural legitimacy as the dominant evaluative framework, informal actors can bypass established safeguards and reshape government institutions. Three concepts capture this process: advisory capture , legitimacy regime transition , and constrained coercion . The analysis reveals that dismantlement targets agencies based on political vulnerability rather than functional logic, that informal authority becomes institutionalized through formal rulemaking such as the Schedule Policy/Career rule, and that judicial review operates as ongoing contestation rather than definitive constraint. Protecting democratic governance requires defending not only formal rules but the legitimacy regimes within which those rules derive meaning.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70188" role="article">
+<h3 class="article-card__title">Tax Mobilization in Africa: Is the Secret Hidden in Women's Political Empowerment?</h3><p class="article-card__authors" title="Gaston Brice Nkoumou Ngoa, Donald Ferdinand Okere Atanga, Marie Laure Belomo Onguene">Gaston Brice Nkoumou Ngoa, Donald Ferdinand Okere Atanga, Marie Laure Belomo Onguene</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70188" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70188" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70188" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70188" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70188">
+        This article examines the effects of women's political empowerment (WPE) on tax revenue mobilization using a panel sample of 41 African countries over the 2000–2022 period. Utilizing the system Generalized Method of Moments, the empirical results demonstrate that WPE significantly enhances tax revenue mobilization in Africa. This finding remains robust to alternative measures of both WPE and tax revenue. Furthermore, beyond a specific turning point, increased WPE tends to diminish tax revenue mobilization. Finally, the study highlights that WPE operates through several transmission channels, including corruption control, the size of the informal economy, and female labor force participation. In terms of public policy, strengthening gender quotas within the African political sphere is crucial to enhancing tax mobilization. Nonetheless, given the threshold effects identified in this relationship, policymakers must prioritize the quality of women's political representation rather than focusing solely on increasing their numerical representation within political decision‐making circles.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14494035">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14494035">
+</div><article class="article-card" id="10-1093-polsoc-puag022" role="article">
+<h3 class="article-card__title">Behavioral profiling for compliance: the role of legitimacy, norms, and prior conduct</h3><p class="article-card__authors" title="Michaela Assouline, Jonathan Slater, Yuval Feldman, Michael Gilead">Michaela Assouline, Jonathan Slater, Yuval Feldman, Michael Gilead</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-polsoc-puag022" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-polsoc-puag022" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/polsoc/puag022" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/polsoc/puag022" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-polsoc-puag022">
+        Understanding whether compliance tendencies generalize across legal domains is central to behavioral public policy. This study examines whether psychological mechanisms that shape compliance in one context also predict decisions in others. Using a multi-vignette survey conducted in the United Kingdom (N = 498) across 7 regulatory scenarios, we assess how perceptions of injunctive norms, reputational risk, attitudes toward legal objectives, legal legitimacy beliefs, perceived cost, perceived complexity, and self-efficacy influence stated compliance intentions. Several mechanisms show cross-domain consistency, although they are measured within each vignette. Legitimacy and injunctive norms are robust predictors, while moral costs and perceived risk exhibit moderate but patterned effects. Other influences, such as perceived burden or alignment with specific rules, vary more sharply across contexts, indicating that compliance reflects both situational features and cross-domain variation in interpretive tendencies. These findings have implications for trust-based and risk-based regulation. Cross-domain tendencies offer some support for differentiating oversight based on past behavior, yet the observed contextual variation cautions against mechanistic profiling. Effective regulatory design should combine broader psychological levers with context-specific strategies, recognizing both stability and flexibility in how people interpret legal demands. The study contributes to debates on the generalizability of compliance mechanisms and offers behavioral insights for more calibrated and responsive enforcement.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13501763">
+<div class="row">
+<div class="col-10">
+<h2>Journal of European Public Policy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13501763">
+</div><article class="article-card" id="10-1080-13501763-2026-2720209" role="article">
+<h3 class="article-card__title">EU implementation and compliance in Justice and Home Affairs – the case of the European Arrest Warrant</h3><p class="article-card__authors" title="Viktoria Brendler, Marie Malik">Viktoria Brendler, Marie Malik</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2720209" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2720209" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-13501763-2026-2717288" role="article">
+<h3 class="article-card__title">‘Undeserving winners’ or ‘undeserved losers’? Two types of societal discontent and their relation to vote choice</h3><p class="article-card__authors" title="Magdalena Breyer, Delia Zollinger, Tabea Palmtag">Magdalena Breyer, Delia Zollinger, Tabea Palmtag</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2717288" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2717288" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0190292X">
+<div class="row">
+<div class="col-10">
+<h2>Policy Studies Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0190292X">
+</div><article class="article-card" id="10-1111-psj-70146" role="article">
+<h3 class="article-card__title">Diagnosing Institutional Design‐Implementation Gaps: A Dual‐Layer Systems Modeling Language Protocol for Visualizing Institutional Change Mechanisms</h3><p class="article-card__authors" title="Sina Jangjoo, Tian Tang, Laura Arpan, Emily Lapan, D. G. Webster, Patrick Bitterman, John C. Little, Amro M. Farid">Sina Jangjoo, Tian Tang, Laura Arpan, Emily Lapan, D. G. Webster, Patrick Bitterman, John C. Little, Amro M. Farid</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70146" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70146" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70146" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70146" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70146">
+        This study introduces a dual‐layer protocol for diagnosing how formal institutional designs are implemented in practice in complex governance systems. The protocol builds two linked process maps; one for the formal rules and procedures (rules‐in‐form) and one for the routines actors actually follow in practice (rules‐in‐use). We adapt Systems Modeling Language (SysML), a graphical notation from systems engineering for specifying and analyzing complex socio‐technical systems, to represent both formal workflows and observed rules‐in‐use, and then overlay the two maps to identify divergence nodes where practice bypasses, supplements, or otherwise alters formally prescribed processes. Using Chesapeake Bay watershed governance as an illustrative case, the method shows how drift, layering, conversion, and displacement become visible through recurring divergences in data submission, model review, and approval routines, including socio‐technical artifacts such as data schemas, model parameters, and verification procedures. By producing transparent, empirically checkable visualizations linked to qualitative and documentary evidence, the protocol supports comparative institutional diagnostics and more targeted inquiry into where formal–informal gaps emerge and how they operate in collaborative governance. The study contributes to institutional analysis and policy process research by making visible the mechanisms through which gradual institutional change unfolds in collaborative governance and by offering a replicable way to represent implementation architecture and make socio‐technical dependencies more readily inspectable through an open systems‐engineering notation.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333298">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333298">
+</div><article class="article-card" id="10-1111-padm-70085" role="article">
+<h3 class="article-card__title">Face‐to‐Face With Administrative Burdens: Design Simplification, Emotional Costs, and Procedural Outcomes in Digital Welfare Applications</h3><p class="article-card__authors" title="Fabian Hattke, Judith Hattke, David Hensel, Pamela Herd, Janne Kalucza, Donald Moynihan, Rick Vogel">Fabian Hattke, Judith Hattke, David Hensel, Pamela Herd, Janne Kalucza, Donald Moynihan, Rick Vogel</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70085" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70085" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70085" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70085" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70085">
+        Recent scholarship on administrative burden has increasingly focused on psychological costs, design interventions, and digital burdens. This study combines these interests and examines the psychological costs of negative emotions during administrative encounters at varying levels of digital maturity. Building on affective events theory and employing facial coding in a controlled experiment, the study demonstrates that negative emotions rise during bureaucratic encounters, with frustration resulting in more errors made by applicants. Simplifying the procedure through pre‐filled forms does not reduce negative emotional arousal; however, it enhances satisfaction with the procedure. Vulnerable citizens, as indicated by low education and foreign citizenship, benefit more from this informational integration than other groups, suggesting that procedural redesign can enhance the inclusiveness of public service delivery. Overall, the research advances both scholarly and practical understanding of the emotional dimension of administrative burdens from a process‐oriented perspective, highlighting the persistent challenge of reducing emotional costs to enhance citizen experiences.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padm-70087" role="article">
+<h3 class="article-card__title">Rethinking Top Public Management Through Relational Dynamics: A Systems‐Informed Study of Senior Executives</h3><p class="article-card__authors" title="Ximena Pizarro‐Bore, Javier Fuenzalida, Norma M. Riccucci, Constanza Faune">Ximena Pizarro‐Bore, Javier Fuenzalida, Norma M. Riccucci, Constanza Faune</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70087" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70087" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70087" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70087" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70087">
+        The complex nature of top public managerial work is widely acknowledged in theory but rarely examined empirically. Existing research has mostly analyzed bivariate relationships among core components of top managerial work in government, including managers' attributes, practices, outcomes, and contexts. Drawing on a systems‐based framework, we investigate how effective top managerial work unfolds as a complex relational practice. We analyze seven cases of long‐serving, distinguished Chilean senior executives through a comprehensive and process‐oriented lens, based on 27 semi‐structured interviews with the managers and members of their personal and professional networks. Our findings indicate how the relational dynamics in which senior public executives engage shape their managerial attributes and practices. Specifically, strategizing, motivation building, and technical expertise are best understood as emerging primarily through interactions within agencies and with external sociopolitical environments. These results qualify perspectives that explain senior public management effectiveness by overemphasizing executives' individual attributes and views, and underscore the need for personnel policies and governance environments that equip managers with the capacities called for by a systems approach to top public management.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padm-70077" role="article">
+<h3 class="article-card__title">Does Gender Budgeting Improve Women's Well‐Being, Equality, and Empowerment?</h3><p class="article-card__authors" title="Marjorie De la Cruz, Milena I. Neshkova, Yoon‐Jung Choi">Marjorie De la Cruz, Milena I. Neshkova, Yoon‐Jung Choi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70077" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70077" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70077" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70077" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70077">
+        The United Nations' fifth Sustainable Development Goal calls for gender equality and empowerment. Gender budgeting (GB) has been proposed as a potential mechanism to reduce gender disparities. This is a novel approach to budgeting that considers the impact of public spending on women and other underrepresented groups. Despite its growing popularity, spreading to over 80 countries since its launch in the 1980s, the effectiveness of GB remains less understood. This study tests whether GB has led to tangible improvements in women's well‐being, equality, and empowerment. We use an event study research design with staggered adoption to analyze data across 47 countries from 2000 to 2023. Our analyses of average and heterogeneous treatment effects reveal short‐ and long‐term impacts; notably, we find significant reductions in maternal mortality ratios and adolescent birth rates, as well as improvements in women's political empowerment.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padm-70086" role="article">
+<h3 class="article-card__title">Negotiating Presence: The Dynamics of Passive Representation Among Ultra‐Orthodox Women in Public Organizations</h3><p class="article-card__authors" title="Maayan Davidovitz, Rachel Gali Cinamon">Maayan Davidovitz, Rachel Gali Cinamon</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70086" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70086" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70086" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70086" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70086">
+        Studies in representative bureaucracy have focused on whether passive representation translates into active representation. We shift this analytical lens by conceptualizing passive representation not as a static demographic condition or a preliminary stage, but as a dynamic organizational process. Drawing on 15 in‐depth interviews and a focus group with 14 ultra‐Orthodox women serving in mid‐ and senior‐level public positions in Israel, we examine how passive representation is enacted, negotiated, and gradually institutionalized in male‐dominated settings. Findings show how women's underrepresentation structures their entry and advancement through informal expectations and gendered networks, and how women “negotiate presence” by building legitimacy through heightened professionalism, creative networking in the face of gender segregation, and strategic engagement with supportive leaders. Through mentoring and gate‐opening practices, our participants created ripple effects that increased access for others over time. We argue that passive representation is a relational and evolving mechanism shaped by role interpretations and organizational constraints, reshaping access and participation even without formal policy changes.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="17485983">
+<div class="row">
+<div class="col-10">
+<h2>Regulation &amp; Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-17485983">
+</div><article class="article-card" id="10-1111-rego-70197" role="article">
+<h3 class="article-card__title">Civil Servants' Compliance with Conflict‐of‐Interest Regulation: Evidence from a List Experiment</h3><p class="article-card__authors" title="Don S. Lee, Minsung Michael Kang, Soonae Park">Don S. Lee, Minsung Michael Kang, Soonae Park</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70197" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70197" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70197" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70197" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70197">
+        While regulatory governance scholarship has paid significant attention to the normative importance of ethics reform in government, empirical evidence on compliance remains scant. Drawing on insights from the social value activation model and behavioral ethics, this study examines civil servants' compliance propensity under conflict‐of‐interest regulation. Specifically, we examine how a legitimate ethics reform is associated with the voluntary compliance of two legally treated groups: those with policy implementation duties and those with frequent stakeholder engagement. The results of our list experiment with a representative sample of South Korean civil servants ( n = 1977) show that both target groups exhibit higher estimated compliance propensity with the second provision of the Act, restricted and prohibited actions, but that only policy implementation duties are associated with higher compliance propensity with the first provision, reporting and disclosure obligations. Our findings suggest that ethics reform compliance is shaped not only by formal rules and deterrence, but also by administrative role exposure, perceived legitimacy, and the value‐based dimension of civil servants.
+    </div>
+</article>
+<article class="article-card" id="10-1111-rego-70202" role="article">
+<h3 class="article-card__title">The Rational Design of Space Agreements: How Bilateralism Shapes Powerful States' Design Preferences</h3><p class="article-card__authors" title="Jean‐Frédéric Morin, Philippe Evoy, Cynthia Couette">Jean‐Frédéric Morin, Philippe Evoy, Cynthia Couette</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70202" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70202" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70202" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70202" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70202">
+        The global governance of outer space relies heavily on international agreements, yet the institutional forms of these agreements remain underexplored. This article introduces a new dataset on various design features of 952 space agreements, offering the first large‐N overview of institutional design in space governance. Building on rational design theory, this article analyzes how these design features interact with one another and with negotiation structures. Our results reveal systematic trade‐offs and suggest that power asymmetry has contrasting effects depending on the context: Powerful states tend to favor greater delegation, precision, and enforcement in bilateral agreements, while often resisting them in multilateral settings. These findings underscore the importance of accounting for both power dynamics and bilateralism, two contextual factors often overlooked in rational design theory. By making the dataset publicly available, the article seeks to foster further research on the causes and consequences of institutional variation in space governance and to advance comparative institutionalist scholarship across issue‐areas of global governance.
+    </div>
+</article>
+<article class="article-card" id="10-1111-rego-70200" role="article">
+<h3 class="article-card__title">Legal Corruption in the Government: An Experimental Study on the Role of Civil Servants' Political Ideology</h3><p class="article-card__authors" title="Kee Hoon Chung, Don S. Lee, Soonae Park">Kee Hoon Chung, Don S. Lee, Soonae Park</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70200" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70200" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70200" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70200" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70200">
+        Legal corruption, also known as institutional corruption, has become prevalent in the public sector, but empirical research on this subject is still at a nascent stage. Given its potentially detrimental impact on the perceived level of organizational capacity among internal members, understanding civil servants' views of legal corruption is essential. We contribute to this literature a discussion of civil servants' assessment of legal corruption in the government and evidence from a survey experiment with more than 2000 South Korean civil servants. The results of our analysis suggest that civil servants evaluate the degree of legal corruption in the government through their political lens, that is, their political ideology. Specifically, they tend to be more critical when the government is ruled by a chief executive and party that have different political views from their own, compared to when it is governed by those with the same political views. The implications of this study are clear: the central role of political views and policy preferences in understanding perceptions of legal corruption in the public sector.
+    </div>
+</article>
+<article class="article-card" id="10-1111-rego-70203" role="article">
+<h3 class="article-card__title">Legislative Financial Asset Disclosure, Firm Motivations, and Macroeconomic Outcomes in the US States</h3><p class="article-card__authors" title="Justin H. Kirkland, Patrick E. Shea">Justin H. Kirkland, Patrick E. Shea</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70203" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70203" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70203" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70203" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70203">
+        Financial asset disclosure laws are widely implemented to combat conflicts of interest among policymakers, yet their economic impact remains poorly understood. This study provides the first comprehensive analysis of how these transparency measures affect macroeconomic outcomes across the 50 US states. We theorize that these disclosure and recusal laws could have divergent impacts on macroeconomic performance: they might enhance economic outcomes by curtailing the exploitation of political connections by business firms, or conversely, they could impede economic growth by altering firm behavior and deterring business leaders from seeking public office, thereby potentially reducing the pool of economically savvy policymakers. Using new data on state‐level disclosure policies, we find that asset disclosure laws are associated with a worsening macroeconomic environment in states. To uncover the mechanisms driving these counterintuitive results, we conduct two pre‐registered survey experiments with 2000 small business owners. Our experimental evidence suggests that stringent disclosure requirements deter business investment and expansion. This research has implications for legislative challenges for legislative design, transparency, and economic policy.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted"><a href="/privacy-notice">Privacy Notice</a></small>
+</div>
+</footer>
+
+</html>
