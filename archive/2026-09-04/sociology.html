@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Sociology</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<link href="./assets/vendor/css/inter-fonts.css" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script src="./assets/vendor/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/vendor/js/sortable-1.15.0.min.js"></script>
+<script src="./assets/vendor/js/bootstrap-5.3.3.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link href="./assets/vendor/css/bootstrap-5.3.3.min.css" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · September 4, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-09-04/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-09-04/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-04/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-04/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-09-04/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap active" href="/archive/2026-09-04/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-09-04/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-09-04/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-04/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-04/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-09-04/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00031224">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00031224" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00031224" style="max-width: 300px;" title="American Sociological Review">
+                            American Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03600572">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03600572" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03600572" style="max-width: 300px;" title="Annual Review of Sociology">
+                            Annual Review of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00491241">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00491241" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00491241" style="max-width: 300px;" title="Sociological Methods &amp; Research">
+                            Sociological Methods &amp; Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00029602">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00029602" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00029602" style="max-width: 300px;" title="American Journal of Sociology">
+                            American Journal of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00987921">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00987921" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00987921" style="max-width: 300px;" title="Population and Development Review">
+                            Population and Development Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="07352751">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-07352751" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-07352751" style="max-width: 300px;" title="Sociological Theory">
+                            Sociological Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00811750">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00811750" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00811750" style="max-width: 300px;" title="Sociological Methodology">
+                            Sociological Methodology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="23306696">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-23306696" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-23306696" style="max-width: 300px;" title="Sociological Science">
+                            Sociological Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00703370">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00703370" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00703370" style="max-width: 300px;" title="Demography">
+                            Demography
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00377732">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00377732" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00377732" style="max-width: 300px;" title="Social Forces">
+                            Social Forces
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00323292">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00323292" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00323292" style="max-width: 300px;" title="Politics &amp; Society">
+                            Politics &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="02667215">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-02667215" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-02667215" style="max-width: 300px;" title="European Sociological Review">
+                            European Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14742837">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14742837" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14742837" style="max-width: 300px;" title="Social Movement Studies">
+                            Social Movement Studies
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="00029602">
+<div class="row">
+<div class="col-10">
+<h2>American Journal of Sociology</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00029602">
+</div><article class="article-card" id="10-1086-743819" role="article">
+<h3 class="article-card__title">From Suites to Streets: Professional Expertise and the Organizational Pursuit of Social and Systemic Integration​</h3><p class="article-card__authors" title="Christof Brandtner, Krystal Laryea">Christof Brandtner, Krystal Laryea</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/743819" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/743819" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1086-743934" role="article">
+<h3 class="article-card__title">Depth Sociology</h3><p class="article-card__authors" title="Mustafa Emirbayer, William R. Earnest">Mustafa Emirbayer, William R. Earnest</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/743934" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/743934" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00377732">
+<div class="row">
+<div class="col-10">
+<h2>Social Forces</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-00377732" data-bs-toggle="collapse" type="button">
+              +1
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00377732"><article class="article-card" id="10-1093-sf-soag131" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Correction to: Does stringent climate policy decouple economic growth from greenhouse gas emissions?</h3><p class="article-card__authors" title=""></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag131" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag131" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1093-sf-soag125" role="article">
+<h3 class="article-card__title">Context disadvantage and residential mobility from early life into adulthood: impacts on socio-economic outcomes</h3><p class="article-card__authors" title="Sergi Vidal, Maël Lecoursonnais, Riccardo Valente, Maria Brandén">Sergi Vidal, Maël Lecoursonnais, Riccardo Valente, Maria Brandén</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag125" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag125" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag125" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag125" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag125">
+        Individuals’ socio-economic trajectories are shaped by both persistence and change in their residential environments, making it essential to examine how the socio-spatial dynamics of context disadvantage and residential mobility interact over the life course. While prior research has often studied these factors separately and within specific life stages, less is known about their compound effects and their interrelatedness across childhood and adulthood. This study addresses this gap by investigating how exposure to residential contexts and residential mobility from birth influences socio-economic outcomes in early adulthood. Using Swedish longitudinal register data, we analyze residential trajectories and their association with economic and occupational (dis) advantage among individuals born between 1990 and 1993. Our findings show that mobility magnifies the associations between context exposure and socio-economic outcomes. Prolonged exposure to disadvantaged areas is most harmful when it coincides with moving, consistent with a compound penalty of instability and resource-poor environments. Second, moves in childhood are generally detrimental, while adult moves are opportunity-enhancing unless they occur in disadvantaged contexts, where the mobility premium levels off. Third, exiting disadvantaged contexts is associated with higher attainment than remaining persistently exposed, indicating that later socio-spatial trajectories can attenuate earlier disadvantage. These findings underscore the importance of considering both residential context and mobility across the life course for understanding—and interrupting—the reproduction of socio-economic inequality.
+    </div>
+</article>
+<article class="article-card" id="10-1093-sf-soag122" role="article">
+<h3 class="article-card__title">One overworking breadwinner or two earners? Family economic standard of living by breadwinner arrangement, 1960 to 2018–2022</h3><p class="article-card__authors" title="Andrew Taeho Kim">Andrew Taeho Kim</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag122" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag122" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag122" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag122" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag122">
+        Has the rise of rewards to long and inflexible work schedules altered the household-level economic viability of gendered divisions of paid work within marriage? This paper examines whether household arrangements centered on an overworking single breadwinner have become increasingly competitive, in terms of family economic standard of living, with non-overworking dual-breadwinner households. As prior research documents increasing rewards to overwork, particularly in professional and managerial occupations, overworking single-breadwinner families may have become economically competitive with dual-breadwinner households in which neither partner overworks. Using decennial Census and American Community Survey data from the Integrated Public Use Microdata Series covering 1960 to 2018–2022, we compare breadwinner arrangements across the income distribution and decompose changes in family income into changes in men’s earnings, women’s earnings, and non-labor income. Results show that overworking male- and female-breadwinner families experienced substantial relative gains at the top of the income distribution. Decomposition analyses indicate that these gains were driven primarily by accelerated earnings growth among overworking single breadwinners rather than earnings stagnation among dual earners. Although dual-breadwinner families with overworking breadwinners remain the most advantaged group, the gap between them and overworking single-breadwinner families narrowed substantially by 2018–2022. These findings suggest that labor market reward structures associated with long and inflexible work schedules may reshape family-level economic incentives in ways that reinforce gendered divisions of paid work, particularly among affluent families.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00323292">
+<div class="row">
+<div class="col-10">
+<h2>Politics &amp; Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00323292">
+</div><article class="article-card" id="10-1177-00323292261476881" role="article">
+<h3 class="article-card__title">Separating the Militants from the Moderates: Brazilian Industry and the Far-Right Bolsonarista Movement</h3><p class="article-card__authors" title="Lucas Sorzano de Azambuja">Lucas Sorzano de Azambuja</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00323292261476881" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00323292261476881" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00323292261476881" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00323292261476881" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00323292261476881">
+        Why do some capitalists in the Global South come to firmly support far-right movements while others do not? This article explores this question by examining divisions among Brazilian industry leaders over the right-wing government of Jair Bolsonaro, from 2019 to 2023. Drawing on fieldwork and interviews with leaders in Brazil's main industrial association, the Federation of Industries of the State of São Paulo (FIESP), this article argues that distinct relations to the state and varying degrees of economic precarity led FIESP leaders to either remain staunch supporters of Bolsonaro's government or grow critical. Leaders in medium-sized firms from shrinking domestic manufacturing sectors decried their exclusion from policymaking under previous administrations and became some of Bolsonaro's most ardent backers. In contrast, while initially supportive of Bolsonarismo , many leaders from more competitive, internationalized sectors dominated by large firms grew critical of Bolsonaro, particularly following his chaotic response to the COVID-19 pandemic. These moderate leaders recognized the structural power they leverage over state actors, while prioritizing gradual reform and a stable political environment. In this way, different relations to state actors led to a politics of moderation or militance. The article concludes by arguing how the political rationalities tying capital to the state shape intraclass cleavages and business’ response to emergent far-right movements.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="02667215">
+<div class="row">
+<div class="col-10">
+<h2>European Sociological Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-02667215">
+</div><article class="article-card" id="10-1093-esr-jcag030" role="article">
+<h3 class="article-card__title">Estimating the influence of learning disabilities on educational attainment: a sibling comparison analysis with a gender perspective</h3><p class="article-card__authors" title="Jinho Kim, Keun Young Kwon">Jinho Kim, Keun Young Kwon</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-esr-jcag030" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-esr-jcag030" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/esr/jcag030" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/esr/jcag030" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-esr-jcag030">
+        This study investigated the longitudinal relationship between learning disabilities (LD) in adolescence and educational attainment, as well as the underlying mechanisms behind this relationship. Using a sibling sample from the National Longitudinal Study of Adolescent to Adult Health (N = 1,710), this study employed sibling fixed effects models to account for unobserved family-level characteristics such as genes and early childhood family and social context. Sobel mediation analyses were performed on a gender-stratified sample to investigate the following mechanisms: educational aspirations and expectations, educational effort, and school-based relationships. Sibling fixed effects estimates revealed that LD in adolescence was negatively associated with years of schooling completed in adulthood (b = −0.494, P &amp;lt; 0.01). Gender-stratified models showed that only the association for girls was statistically significant (b = −0.689, P &amp;lt; 0.05). Among girls, this association was partially explained by a combination of educational aspirations and expectations, educational effort, and school-based relationships, with educational aspirations and expectations being the most salient mechanism. These findings highlight that LD is not only an individual cognitive designation but also a socially mediated experience with long-term educational consequences, especially for girls. Policymakers and practitioners may consider developing and implementing interventions that address both educational and social challenges faced by girls with LD.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14742837">
+<div class="row">
+<div class="col-10">
+<h2>Social Movement Studies</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14742837">
+</div><article class="article-card" id="10-1080-14742837-2026-2728592" role="article">
+<h3 class="article-card__title">With God on Our Side: Religion, Social Movements, and Social Change (De Gruyter Contemporary Social Sciences)</h3><p class="article-card__authors" title="Asia Leofreddi">Asia Leofreddi</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/14742837.2026.2728592" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/14742837.2026.2728592" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-14742837-2026-2728591" role="article">
+<h3 class="article-card__title">American freethought: the history of a social movement 1794–1948</h3><p class="article-card__authors" title="Ghulam Shabbir">Ghulam Shabbir</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/14742837.2026.2728591" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/14742837.2026.2728591" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-14742837-2026-2728595" role="article">
+<h3 class="article-card__title">Scorecards, not sit-ins: repertoires of alignment as rivals to contentious tactics in social movements</h3><p class="article-card__authors" title="Apoorva Ghosh, Mary Bernstein">Apoorva Ghosh, Mary Bernstein</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/14742837.2026.2728595" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/14742837.2026.2728595" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-14742837-2026-2728587" role="article">
+<h3 class="article-card__title">Power and protest in Central and Eastern Europe (Palgrave Studies in European Political Sociology)</h3><p class="article-card__authors" title="Daniel Mikecz">Daniel Mikecz</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/14742837.2026.2728587" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/14742837.2026.2728587" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-14742837-2026-2728586" role="article">
+<h3 class="article-card__title">Farmer power: the 2020-21 movement, the state and agricultural reforms in India</h3><p class="article-card__authors" title="Ritika Khatri">Ritika Khatri</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/14742837.2026.2728586" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/14742837.2026.2728586" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted"><a href="/privacy-notice">Privacy Notice</a></small>
+</div>
+</footer>
+
+</html>

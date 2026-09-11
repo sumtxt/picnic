@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Communication Studies</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<link href="./assets/vendor/css/inter-fonts.css" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script src="./assets/vendor/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/vendor/js/sortable-1.15.0.min.js"></script>
+<script src="./assets/vendor/js/bootstrap-5.3.3.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link href="./assets/vendor/css/bootstrap-5.3.3.min.css" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · September 4, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-09-04/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-09-04/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-04/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-04/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-09-04/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-09-04/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-09-04/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-09-04/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-04/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-04/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-09-04/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="19312458">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19312458" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19312458" style="max-width: 300px;" title="Communication Methods and Measures">
+                            Communication Methods and Measures
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10584609">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10584609" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10584609" style="max-width: 300px;" title="Political Communication">
+                            Political Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00219916">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00219916" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00219916" style="max-width: 300px;" title="Journal of Communication">
+                            Journal of Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10836101">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10836101" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10836101" style="max-width: 300px;" title="Journal of Computer-Mediated Communication">
+                            Journal of Computer-Mediated Communication
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19401612">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19401612" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19401612" style="max-width: 300px;" title="International Journal of Press-Politics">
+                            International Journal of Press-Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="20563051">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-20563051" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-20563051" style="max-width: 300px;" title="Social Media + Society">
+                            Social Media + Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="21670811">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-21670811" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-21670811" style="max-width: 300px;" title="Digital Journalism">
+                            Digital Journalism
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14614448">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14614448" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14614448" style="max-width: 300px;" title="New Media &amp; Society">
+                            New Media &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00936502">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00936502" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00936502" style="max-width: 300px;" title="Communication Research">
+                            Communication Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19442866">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19442866" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19442866" style="max-width: 300px;" title="Policy and Internet">
+                            Policy and Internet
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="19312458">
+<div class="row">
+<div class="col-10">
+<h2>Communication Methods and Measures</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-19312458">
+</div><article class="article-card" id="10-1080-19312458-2026-2714769" role="article">
+<h3 class="article-card__title">Beyond beyond standardization: studying robustness of empirical claims based on topic modeling through multiverse analysis</h3><p class="article-card__authors" title="Paul Balluff, Christina Viehmann, Maximilian Linde, Yannik Peters, Jun Sun, Chung-Hong Chan">Paul Balluff, Christina Viehmann, Maximilian Linde, Yannik Peters, Jun Sun, Chung-Hong Chan</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/19312458.2026.2714769" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/19312458.2026.2714769" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="10584609">
+<div class="row">
+<div class="col-10">
+<h2>Political Communication</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10584609">
+</div><article class="article-card" id="10-1080-10584609-2026-2717428" role="article">
+<h3 class="article-card__title">From #StayWoke to “Culture Wars”: How Social Justice Discourse is Separately and Synergistically Politicized on Twitter and YouTube</h3><p class="article-card__authors" title="Sara Holland Levin, Rui Wang, Junwan Seo, Yi Yin Leong, Emma Bennett, Dongdong Yang, Zhuohui Yang, Matt Chen, Yini Zhang, Jiyoun Suk">Sara Holland Levin, Rui Wang, Junwan Seo, Yi Yin Leong, Emma Bennett, Dongdong Yang, Zhuohui Yang, Matt Chen, Yini Zhang, Jiyoun Suk</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/10584609.2026.2717428" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/10584609.2026.2717428" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-10584609-2026-2721665" role="article">
+<h3 class="article-card__title">Democratic Accountability in East Asia: A Comparative Experimental Study of Voter Responses to Norm Violations</h3><p class="article-card__authors" title="Woo Chang Kang, Sunkyoung Park, Osbern Huang, Koh Iwabuchi, Tetsuro Kobayashi">Woo Chang Kang, Sunkyoung Park, Osbern Huang, Koh Iwabuchi, Tetsuro Kobayashi</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/10584609.2026.2721665" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/10584609.2026.2721665" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00219916">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Communication</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00219916">
+</div><article class="article-card" id="10-1093-joc-jqag013" role="article">
+<h3 class="article-card__title">Do good chat groups make good neighbors? Continuity and change of norms in neighbor relations under digital co-presence</h3><p class="article-card__authors" title="Emilija Gagrčin, Olga Pasitselska">Emilija Gagrčin, Olga Pasitselska</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-joc-jqag013" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-joc-jqag013" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/joc/jqag013" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/joc/jqag013" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-joc-jqag013">
+        Based on interviews with urban residents in Germany and Israel, this study examines how residential instant messaging groups (e.g., WhatsApp, Telegram) reshape the norms of “good neighboring”: reciprocity, distance, and speaking out. Drawing on Blokland’s public familiarity framework and Rosenblum’s theorizing of neighborly norms, we ask how digital co-presence transforms the relational conditions of neighboring and how these norms are negotiated within residential chat groups. We show that messenger groups lower the threshold for mutual support but introduce tensions through persistent mutual awareness, which are thenresolved through norm negotiation. Extending the public familiarity framework, we identify a complementary axis of performativity–discretion that manifests through norm negotiation. Residents calibrate between engagement and restraint, enacting “good enough” neighboring within the double-bounded constraints of a building and a chat group. We contribute to research on digitally mediated neighborhood communication by showing how urban dwellers achieve pragmatic coexistence through calibrated visibility.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="10836101">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Computer-Mediated Communication</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10836101">
+</div><article class="article-card" id="10-1093-jcmc-zmag016" role="article">
+<h3 class="article-card__title">Context, script, cue: understanding human–AI intimate relationships</h3><p class="article-card__authors" title="Fan Yang, Meiling Du, Ningxin Li, Qing Yan">Fan Yang, Meiling Du, Ningxin Li, Qing Yan</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jcmc-zmag016" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jcmc-zmag016" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jcmc/zmag016" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jcmc/zmag016" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jcmc-zmag016">
+        The integration of artificial intelligence (AI) into the intimate sphere of human relationships presents a profound challenge to traditional understanding of intimacy, necessitating a critical examination of this technology’s extension into a domain that has always been viewed as deeply human. Through in-depth semi-structured interviews (N = 23), this study examines how human–AI intimate relationships develop in Chinese society at the intersection of traditions and modernization. A three-pronged Context-Script-Cue (CSC) framework emerges, capturing how users navigate emotional investment alongside the artificial nature of AI. By empirically examining how users engage in human–AI intimate relationships, this study offers the new CSC framework for understanding the development of human–AI intimate relationships.
+    </div>
+</article>
+<article class="article-card" id="10-1093-jcmc-zmag019" role="article">
+<h3 class="article-card__title">A comparative test of the protection motivation theory: active and passive privacy protection in Brazil, Germany, the United States, and Vietnam</h3><p class="article-card__authors" title="Yannic Meier, Laurent H Wang, Nicole C Krämer, Miriam J Metzger">Yannic Meier, Laurent H Wang, Nicole C Krämer, Miriam J Metzger</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jcmc-zmag019" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jcmc-zmag019" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jcmc/zmag019" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jcmc/zmag019" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jcmc-zmag019">
+        Online companies surveil users around the world for commercial purposes. We advance protection motivation theory (PMT), by categorizing user responses to surveillance as either active or passive (i.e., self-inhibition) privacy protection behavior, integrating privacy literacy overconfidence, and exploring privacy resignation as a moderator. Finally, we adopt a comparative lens by investigating protection behavior in four national contexts: Brazil, Germany, the United States, and Vietnam. Results of an online survey (Ntotal = 2,092) show that perceiving surveillance as privacy threat was not consistently associated with active protection behavior. Rather, self-inhibition was a more likely response to surveillance which may have detrimental consequences for both individuals and societies. Across countries, perceived effectiveness of active protection positively relates to both forms of protection while active protection does not prevent self-inhibition. Interestingly, privacy resignation may not always impede protection. In summary, not all aspects of PMT are generalizable when using a culturally diverse sample.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="20563051">
+<div class="row">
+<div class="col-10">
+<h2>Social Media + Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-20563051">
+</div><article class="article-card" id="10-1177-20563051261474691" role="article">
+<h3 class="article-card__title">Humilitainment 2.0: Platformed Crime Entertainment and Digital Carcerality on YouTube</h3><p class="article-card__authors" title="Krysten Stein">Krysten Stein</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261474691" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261474691" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261474691" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261474691" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261474691">
+        Reality-based crime television has long shaped public understandings of policing, crime, and punishment by turning law enforcement encounters into consumable spectacle. As these narratives migrate into engagement-driven platform infrastructures, where recommendation systems and interactive features reshape how policing media is packaged, encountered, and monetized, their cultural impact is reconfigured. This article examines COPSTV, the official YouTube continuation of COPS , as platformed crime entertainment structured for visibility and circulation. Drawing on a thematic analysis of 200 highly viewed COPSTV videos, I identify three interrelated patterns: the packaging of policing encounters for visibility through sensationalized titles, rapid escalation, and spectacle-oriented narrative sequencing; recurring representations that glorify law enforcement, individualize criminality, criminalize mental health crises, and normalize police violence; and the conversion of public humiliation into a platformed strategy of engagement. I argue that YouTube’s recommendation infrastructure may contribute to the amplification of punitive narratives by increasing the visibility of highly engaging policing content, positioning viewers for participatory judgment while crowding out structural critique. Situating COPSTV within scholarship on platform governance, media convergence, and digital carcerality, the article shows how platform dynamics render coercion and degradation highly visible, clickable, and economically self-reinforcing.
+    </div>
+</article>
+<article class="article-card" id="10-1177-20563051261480944" role="article">
+<h3 class="article-card__title">Antecedents of Disclosure: What Transparency Measures Social Media Users in the United States Want From Paid Political Influencers</h3><p class="article-card__authors" title="Martin J. Riedl, Benjamin D. Horne, Matthew J. A. Craig, Michael R. Kotowski, Catherine A. Luther">Martin J. Riedl, Benjamin D. Horne, Matthew J. A. Craig, Michael R. Kotowski, Catherine A. Luther</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261480944" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261480944" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261480944" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261480944" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261480944">
+        At the heels of the 2024 U.S. presidential election, public attention turned to the role social media influencers played in Donald J. Trump’s decisive win. In the United States, unlike influencers promoting commercial brands, political influencers – that is, social media influencers who associate themselves with political causes – are not required to disclose whether they got paid in exchange for promoting a political organization, party, or campaign. Through a survey of U.S. social media users ( n = 906), this study explores people’s attitudes toward paid political influencer disclosure. We find that political partisanship impacts support for disclosure: being more conservative is connected to lessened support for disclosure, yet disclosure is of strong bipartisan concern regardless. Our study documents that social media users who care for authenticity – a core currency in influencer ecosystems running on parasocial relationships – also exhibit higher support for disclosure. Yet, at the same time, caveating this empirical relationship between authenticity and disclosure, we also found that those who consumed more political influencer content exhibited lower support for disclosure, pinpointing the normalization of a digital ecology replete with sponsored content. Our study has implications for the broader political communication ecology: As transparency for paid political influencer activities emerges as a topic of public concern, platforms and regulators should advance efforts that provide disclosure about paid political influencer activities to social media users.
+    </div>
+</article>
+<article class="article-card" id="10-1177-20563051261479988" role="article">
+<h3 class="article-card__title">Social Robots and the Dialectics of Presence and Absence</h3><p class="article-card__authors" title="Autumn Edwards, Chad Edwards, Bryan Abendschein">Autumn Edwards, Chad Edwards, Bryan Abendschein</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261479988" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261479988" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261479988" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261479988" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261479988">
+        Social robots function as embodied social media, structuring interaction by simultaneously acting as social agents and mediating technologies. This study examines how 103 young adult participants engaged with zoomorphic social robots in initial encounters, revealing dialectical tensions between presence and absence, connection and disconnection, and realism and artificiality. Drawing from relational dialectics theory (RDT) and semiotics, we frame social robots within a plural communication ontology—operating both as communicative partners and as structuring media that regulate relational expectations. Findings indicate that while social robots facilitate engagement, their enacted affordances also constrain interaction, exposing the limits of artificial presence. Like social media platforms, these robots curate sociality, fostering immersion while highlighting mediation. By conceptualizing social robots as communicative infrastructures, this study advances research on human–machine communication and technological mediation, illustrating how social robots shape social connection through structured engagement and interactive constraints.
+    </div>
+</article>
+<article class="article-card" id="10-1177-20563051261478877" role="article">
+<h3 class="article-card__title">“Turns Out My Paternal Grandmother has 16% Native Blood”: Racialized DNA, Race Destabilization, and Digital Race-(re)making on Social Media</h3><p class="article-card__authors" title="Yukun Yang, Meredith D. Clark">Yukun Yang, Meredith D. Clark</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-20563051261478877" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-20563051261478877" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/20563051261478877" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/20563051261478877" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-20563051261478877">
+        This study explores an online phenomenon that we conceptualize as “digital race (re)-making.” In the context of genetic ancestry test discourses, we found digital race (re)-making a sequential four-stage race-making process where users (a) authenticate their previously identified racial identity, (b) destabilize the previous race by incorporating DNA test results, (c) negotiate potential conflict between their previous racial identity and the DNA-inferred race, and (d) utilize social media to affirm and contest their negotiation. Employing multi-round discourse analysis on 466 self-disclosing narratives on the subreddit r/23andMe, we explore the semiotics, strategies, and signifiers that users deployed to discursively disrupt their previously identified racial identity and to create and compose their newly constructed racial identity under the premise of genetic race. By surfacing such a new online racial formation process, we argue that digital platforms actively shape the ways race is re-constructed, re-contested, and re-configured. We also discuss how such a process repudiates the classical identity formation model and how it extends racial socialization theory to the digital enclaves, and how such self-discovery comes with emotional cost.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="21670811">
+<div class="row">
+<div class="col-10">
+<h2>Digital Journalism</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-21670811">
+</div><article class="article-card" id="10-1080-21670811-2026-2723426" role="article">
+<h3 class="article-card__title">No Easy Fix to Countering AI-Generated Visual Disinformation: The (in)Effectiveness of AI-Labels, Fact-Check Labels and Community Notes</h3><p class="article-card__authors" title="Teresa Weikmann, Marina Tulin, Michael Hameleers, Claes de Vreese">Teresa Weikmann, Marina Tulin, Michael Hameleers, Claes de Vreese</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/21670811.2026.2723426" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/21670811.2026.2723426" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-21670811-2026-2725691" role="article">
+<h3 class="article-card__title">Double Adaptation: Negotiating Closeness and Managing Boundaries in Journalist–Politician Relations</h3><p class="article-card__authors" title="Marína Urbániková, Lenka Waschková Císařová, Iveta Jansová, Melanie Haberl, Folker Hanusch, Sophie Lecheler">Marína Urbániková, Lenka Waschková Císařová, Iveta Jansová, Melanie Haberl, Folker Hanusch, Sophie Lecheler</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/21670811.2026.2725691" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/21670811.2026.2725691" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-21670811-2026-2725694" role="article">
+<h3 class="article-card__title">The Evolution of Mainstream Media Clickbait on WeChat (2015–2024): A Longitudinal Analysis of Issue Distribution, Intermedia Homogenization, and Engagement Efficacy</h3><p class="article-card__authors" title="Jinjin Zhou, Jingjun Wang, Ye Wu">Jinjin Zhou, Jingjun Wang, Ye Wu</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/21670811.2026.2725694" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/21670811.2026.2725694" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14614448">
+<div class="row">
+<div class="col-10">
+<h2>New Media &amp; Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14614448">
+</div><article class="article-card" id="10-1177-14614448261476830" role="article">
+<h3 class="article-card__title">The year is a dropdown menu: Platformed provenance and the viral afterlives of AI-generated retro music</h3><p class="article-card__authors" title="Matilde Catanese">Matilde Catanese</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261476830" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261476830" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261476830" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261476830" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261476830">
+        This article examines how generative AI media becomes believable and shareable when it is packaged as a rediscovered archive and distributed through commercial platforms. Drawing on multi-sited digital ethnography, targeted platform walkthroughs, and cross-platform trace analysis of a viral “lost song” circulating in Italy in 2025, I show how listeners in this case mobilized sonic cues and platform metadata, including release dates and credits, as practical evidence. I use metadata realism to describe everyday reliance on database fields as documentary testimony, and provenance play for situated practices of verification and narration through which people negotiate synthetic pasts. After public debunking, circulation continued through humorous and artistic reframings, while verification itself became part of the artifact’s social life. The analysis foregrounds platformed provenance and considers what the case implies for synthetic media governance and content credentials.
+    </div>
+</article>
+<article class="article-card" id="10-1177-14614448261477892" role="article">
+<h3 class="article-card__title">Ambivalent algorithms, fragile connectedness: How algorithm awareness facets shape responsiveness and insensitivity on TikTok</h3><p class="article-card__authors" title="Dragoș M. Obreja">Dragoș M. Obreja</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261477892" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261477892" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261477892" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261477892" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261477892">
+        This study examines how distinct facets of algorithm awareness are associated with perceived algorithm responsiveness (PAR), perceived algorithm insensitivity (PAI), and social connectedness on TikTok. I draw on the algorithm responsiveness process and also treat algorithm awareness as four distinct dimensions (content filtering, automated decision‑making, human–algorithm interplay (HAI), ethical concerns) to examine how each dimension is differentially associated with PAR and PAI and, in turn, with feelings of inclusion and belonging. Using survey data from 305 TikTok users and structural equation modeling, I show that user‑agency‑oriented dimensions, particularly filtering and HAI, are indirectly associated with connectedness via higher responsiveness and lower insensitivity. By contrast, automation operates as an ambivalent structure: it boosts responsiveness yet is negatively associated with connectedness, marking a boundary condition for personalization. Platforms should pair automation disclosures with clearer user recourse, traceable feedback, and human review in high-stakes contexts.
+    </div>
+</article>
+<article class="article-card" id="10-1177-14614448261477944" role="article">
+<h3 class="article-card__title">News for connection, status and belonging: Exploring the social currency of local news</h3><p class="article-card__authors" title="Jee Young Lee, Sora Park, Janet Fulton">Jee Young Lee, Sora Park, Janet Fulton</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-14614448261477944" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-14614448261477944" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/14614448261477944" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/14614448261477944" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-14614448261477944">
+        This paper explores the perception of social currency as a distinct value within local news consumption among audiences. Social currency refers to the value individuals derive from engaging with and sharing news content within their social networks, allowing them to connect, express identity and signal awareness. Drawing on a large-scale mixed-methods study of local news audiences in Australia (survey: n = 7919; interviews and focus groups: n = 84), this study operationalised key dimensions of social currency using factor analysis. The findings confirm that social currency is a separate and measurable construct, distinct from traditional news motivations. It is significantly higher among younger people, men, urban residents and those from culturally and linguistically diverse backgrounds, reflecting how news consumption intersects with social interaction, identity expression and symbolic practices of everyday life.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00936502">
+<div class="row">
+<div class="col-10">
+<h2>Communication Research</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00936502">
+</div><article class="article-card" id="10-1177-00936502261480401" role="article">
+<h3 class="article-card__title">Sex, Romance, or Recreation? An Experiment Testing the Effects of Cannabis Brand-generated Social Media Ads on College Students’ Expectancies and Intentions to Use Cannabis Prior to Sex</h3><p class="article-card__authors" title="Jessica Fitts Willoughby, Stacey J. T. Hust, Leticia Couto, Jiayu Li, Soojung Kang">Jessica Fitts Willoughby, Stacey J. T. Hust, Leticia Couto, Jiayu Li, Soojung Kang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00936502261480401" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00936502261480401" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00936502261480401" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00936502261480401" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00936502261480401">
+        Sexual and romantic scripts are used to market cannabis products, now legal for adult-use in several U.S. states. We conducted an online experiment ( N = 747) examining the impact of viewing brand-generated social media posts promoting cannabis that included sexual, romantic, and non-sexual non-romantic recreational scripts among college students in Washington state. Increased perceptions that ads suggested cannabis enhances sex were associated with higher sex-related cannabis expectancies. Among men, wishful identification was associated with lower sexual risk expectancies among those who viewed sexual scripts and a greater likelihood of intending to use cannabis before sex among those who viewed sexual or romantic scripts. Among women, perceiving that ads suggested cannabis enhances sex was associated with a greater likelihood of intending to use cannabis before sex, whereas perceiving that ads suggested cannabis impacts sexual consent was associated with a lower likelihood of intending to use cannabis before sex. Additionally, wishful identification among women was associated with a greater likelihood of intending to use cannabis before sex. Findings highlight associations between perceptions of brand-generated social media posts, expectancies, and intentions to use cannabis before sex among college students and identify mechanisms through which effects may occur.
+    </div>
+</article>
+<article class="article-card" id="10-1177-00936502261478981" role="article">
+<h3 class="article-card__title">Experimental Research on Stereotype Expression in Freely Generated Language: A Systematic Literature Review</h3><p class="article-card__authors" title="Kim T. Beenen, Camiel J. Beukeboom, Christian Burgers, Pia Sommerauer">Kim T. Beenen, Camiel J. Beukeboom, Christian Burgers, Pia Sommerauer</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00936502261478981" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00936502261478981" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00936502261478981" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00936502261478981" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00936502261478981">
+        Social stereotypes spread through biased language. Experiments in which participants freely generate language allow researchers to causally test how stereotypes affect language use and capture multiple linguistic variables simultaneously, offering high ecological validity. Despite this potential, it remains unclear how and to which extent this paradigm has been used to study linguistic biases. To address this gap, we conducted a systematic literature review ( k = 106 experiments) and found that most freely generated language experiments examined only one linguistic variable, leaving the interplay between linguistic variables largely underexplored. To advance our understanding of stereotype expression in everyday language, we recommend experiments to measure multiple linguistic variables simultaneously and in relation to each other. This knowledge is needed to address harmful stereotype communication in the real world through automated detection tools, communication interventions, and the fine-tuning of Large Language Models.
+    </div>
+</article>
+<article class="article-card" id="10-1177-00936502261480405" role="article">
+<h3 class="article-card__title">Investigating Conditional Macro-Level Media Effects Over a Long-Term: How Crisis Periods Moderate the Effects of Suicide Coverage on Suicide Rate Change (1861–2007)</h3><p class="article-card__authors" title="Christina Viehmann, Stefan Geiß, Manina Biermayer, Oliver Quiring, Florian Arendt">Christina Viehmann, Stefan Geiß, Manina Biermayer, Oliver Quiring, Florian Arendt</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00936502261480405" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00936502261480405" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00936502261480405" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00936502261480405" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00936502261480405">
+        How does media shape society over decades, and does its effect vary depending on the societal atmosphere or zeitgeist ? While theoretically important, there is a lack of systematic empirical evidence on conditional long-term macro-level media effects. We propose a broader framework to study such effects and demonstrate its applicability for the “Werther effect” in the UK. More specifically, we investigate whether media coverage of suicides in a newspaper of record is linked to suicide rates and whether this link changes during societal crises. For this, we combine suicide data with a large-scale automated content analysis of crisis and suicide reporting in The Times over a century (1861-2007). Our analysis shows that increased suicide reporting is associated with higher suicide rates, but only during crisis periods. The results are consistent with a conditional Werther effect and may offer one piece of the larger puzzle of long-term macro-level media influences on society.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted"><a href="/privacy-notice">Privacy Notice</a></small>
+</div>
+</footer>
+
+</html>
