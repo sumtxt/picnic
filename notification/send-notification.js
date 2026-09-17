@@ -113,7 +113,7 @@ function generatePlainText(htmlBody) {
   const options = {
     wordwrap: 80
   };
-  
+
   return convert(htmlBody, options);
 }
 
@@ -121,7 +121,7 @@ function generatePlainText(htmlBody) {
  * Send email via Resend API
  */
 async function sendEmail(subject, htmlBody) {
-  
+
   textBody = generatePlainText(htmlBody);
 
   const emailData = {
@@ -139,7 +139,7 @@ async function sendEmail(subject, htmlBody) {
         'Content-Type': 'application/json'
       }
     });
-    
+
     console.log('Email sent successfully:', response.data);
     return true;
   } catch (error) {
@@ -207,7 +207,7 @@ async function main() {
 
     // Generate email content
     const htmlBody = generateEmailHtml(templateData);
-    const subject = `[Paper Picnic] New Baskets from ${templateData.formatted_date}`;
+    const subject = `[Paper Picnic] Everything Politics from ${templateData.formatted_date}`;
 
     // Send email
     const success = await sendEmail(subject, htmlBody);

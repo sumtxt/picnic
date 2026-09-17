@@ -168,7 +168,7 @@ export class WeeklyDigestWorkflow extends WorkflowEntrypoint {
         const journalMap = buildJournalMap(journalsData)
         const subgroupMap = buildSubgroupMap(osfSubjects)
         const osfIdToSubgroup = buildOsfIdToSubgroup(osfSubjects)
-        const subject = `[Paper Picnic] New Baskets from ${formatDate(issueKey)}`
+        const subject = `[Paper Picnic] Melting Pot from ${formatDate(issueKey)}`
 
         const ids = batch.map(s => s.id)
         const placeholders = ids.map(() => '?').join(',')
