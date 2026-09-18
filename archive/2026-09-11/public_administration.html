@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Public Administration</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<link href="./assets/vendor/css/inter-fonts.css" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script src="./assets/vendor/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/vendor/js/sortable-1.15.0.min.js"></script>
+<script src="./assets/vendor/js/bootstrap-5.3.3.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link href="./assets/vendor/css/bootstrap-5.3.3.min.css" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · September 11, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-09-11/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-09-11/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-11/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-11/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-09-11/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-09-11/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-09-11/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-09-11/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-11/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-09-11/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-09-11/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="15206688">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15206688" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15206688" style="max-width: 300px;" title="Journal of Policy Analysis and Management">
+                            Journal of Policy Analysis and Management
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10531858">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10531858" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10531858" style="max-width: 300px;" title="Journal of Public Administration Research and Theory">
+                            Journal of Public Administration Research and Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333352">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333352" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333352" style="max-width: 300px;" title="Public Administration Review">
+                            Public Administration Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14494035">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14494035" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14494035" style="max-width: 300px;" title="Policy and Society">
+                            Policy and Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13501763">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13501763" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13501763" style="max-width: 300px;" title="Journal of European Public Policy">
+                            Journal of European Public Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0190292X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0190292X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0190292X" style="max-width: 300px;" title="Policy Studies Journal">
+                            Policy Studies Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333298">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333298" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333298" style="max-width: 300px;" title="Public Administration">
+                            Public Administration
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03055736">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03055736" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03055736" style="max-width: 300px;" title="Policy and Politics">
+                            Policy and Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09521895">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09521895" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09521895" style="max-width: 300px;" title="Governance">
+                            Governance
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17485983">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17485983" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17485983" style="max-width: 300px;" title="Regulation &amp; Governance">
+                            Regulation &amp; Governance
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="10531858">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Public Administration Research and Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10531858">
+</div><article class="article-card" id="10-1093-jopart-muag028" role="article">
+<h3 class="article-card__title">A Model of Agency Behavior in Participatory Budgeting: A Resource Dependence Perspective</h3><p class="article-card__authors" title="Seunghyun Kim">Seunghyun Kim</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopart-muag028" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopart-muag028" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopart/muag028" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopart/muag028" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopart-muag028">
+        Based on resource dependence theory, this article theorizes why government agencies adopt citizen proposals in participatory budgeting. Agencies depend on the executive budget office and the legislature for budget approval, which makes them face uncertainty in securing budgets from these political principals. In this context, agencies can adopt citizen proposals to present their requests as reflecting citizen demands, thereby increasing the probability of approval. Building on this logic, this study argues that the greater the uncertainty agencies face in their dependencies on principals, the more likely they are to depend on proposals. This argument is tested using multilevel mixed-effects logistic regression based on citizen proposals (N = 3,609) submitted through Korea’s national participatory budgeting initiative from 2020 through 2023. The results show that agencies with less financial support from the legislature or those with smaller budgets are more likely to adopt proposals, as they face greater uncertainty due to unstable budgetary flows or fewer response options to manage resource instability. Agencies are also more likely to adopt proposals when they previously secured greater funding through proposal adoption, but this effect weakens for larger-budget agencies or those receiving greater legislative support. These findings emphasize the strategic nature of proposal adoption and the role of resource dependence in agency responses to proposals.
+    </div>
+</article>
+<article class="article-card" id="10-1093-jopart-muag029" role="article">
+<h3 class="article-card__title">Institutional Conversion and Digital Transformation in Local Governments: A Longitudinal Analysis of Trajectories</h3><p class="article-card__authors" title="Adalmir de Oliveira Gomes">Adalmir de Oliveira Gomes</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopart-muag029" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopart-muag029" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopart/muag029" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopart/muag029" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopart-muag029">
+        This article asks a central question in digital government research: why do local governments operating under similar institutional conditions follow sharply different digital transformation trajectories over time? Drawing on theories of gradual institutional change, the study conceptualizes digital transformation not as a discrete adoption outcome, but as a process of institutional conversion through which technological capacity is translated into sustained digital service provision. Information governance is theorized as the key conditioning mechanism linking technological resources to durable organizational outcomes. The analysis combines longitudinal panel models, fixed-effects estimators, and trajectory-based clustering using a panel of all Brazilian municipalities (MUNIC/IBGE; N = 5,569) across seven waves between 2004 and 2024. Results show that increases in technological capacity are associated with subsequent gains in digital services, but these effects are gradual and conditional. Information governance significantly shapes how municipalities mobilize and stabilize technological resources over time, while interaction models reveal non-linear and diminishing returns consistent with institutional coordination limits. Trajectory analyses identify four distinct patterns of digital transformation, ranging from ‘institutionalized pioneers’ to ‘persistent stagnation’, demonstrating that digital development unfolds through path-dependent and institutionally anchored trajectories rather than through simple convergence. The article contributes to public administration research in three ways: provides rare longitudinal evidence on local digital transformation over two decades; integrates institutional change theory into digital government research by conceptualizing governance as a mechanism of institutional conversion; and advances a trajectory-based explanation of digital transformation that shifts attention from episodic technological adoption to cumulative institutional processes shaping long-run administrative performance.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333352">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333352">
+</div><article class="article-card" id="10-1111-puar-70197" role="article">
+<h3 class="article-card__title">Why Politicians Misbehave: A Systematic Review of How Attributes of Political Office Affect Moral Decision‐Making and Behavior</h3><p class="article-card__authors" title="Manon Koopman, Koen Migchelbrink, Leonie Heres">Manon Koopman, Koen Migchelbrink, Leonie Heres</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70197" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70197" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70197" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70197" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70197">
+        The moral decision‐making and behavior of politicians is influenced by the distinctive and characteristic attributes of political office. This literature review analyzes 80 articles from public administration, political science and related disciplines to systematically map these attributes and their underlying mechanisms. This study identifies six categories of attributes of political office that relate to moral decision‐making and behavior: political system design, political role, relations to societal actors, legal and regulatory measures, political cycle, and some general attributes such as the size of the political institution. Interestingly, existing research focuses mostly on unethical behavior, creating white spots in our understanding of how the attributes of political office shape individual and collective processes of moral decision‐making and behavior more generally. We conclude with an agenda for future research that advocates for more targeted research of the sociopsychological aspects that shape the moral decision‐making and behavior of politicians across their different roles.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70186" role="article">
+<h3 class="article-card__title">Restoring the Deformed Administrative State? Bureaucratic Repair After Illiberal Rule</h3><p class="article-card__authors" title="Michael W. Bauer, Daniel Kovarek, Bárbara Motta, Andrzej Schultz">Michael W. Bauer, Daniel Kovarek, Bárbara Motta, Andrzej Schultz</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70186" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70186" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70186" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70186" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70186">
+        While scholarship has documented how populist and authoritarian‐leaning executives deform bureaucratic institutions, post‐illiberal reconstruction has only begun to receive attention. This paper develops an exploratory framework distinguishing four repair strategies (neutralizing, rectifying, balancing, and democratic hardening) and two repair modes (formal‐institutional and normative‐capacity repair). Applying the heuristic to Poland, Brazil, and Hungary, we posit that the selection and limits of repair strategies follow the gap between the depth of illiberal entrenchment and the legal‐political capacity of successor governments to overcome veto players and enact rectifying reforms. Within the periods observed, formal‐institutional repair has outpaced the reconstruction of professional norms, expertise, and trust, and repair has produced layered administrative orders in which illiberal‐era instruments partly persist and thus remain available to future governments. Administrative repair is thus structurally asymmetric. Democratic successors can rebuild the administrative state, but they are unlikely to restore it to the status quo ante.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70193" role="article">
+<h3 class="article-card__title">Investor Orientation and Commitment in Outcomes‐Based Public Service Contracts</h3><p class="article-card__authors" title="Fernando D. Domingos, Antonio D. R. E. Caluz, Michael Gibson, Vinícius M. Magnani">Fernando D. Domingos, Antonio D. R. E. Caluz, Michael Gibson, Vinícius M. Magnani</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70193" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70193" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70193" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70193" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70193">
+        Outcomes‐based contracts (OBCs) organize public service delivery around measurable results, yet little is known about how different investors engage with these instruments. This article examines how investor orientation (social, financial, or dual‐purpose) shapes investor commitment in OBCs worldwide. Drawing on a global dataset of 338 contracts, we combine descriptive analyses, regression models, and qualitative interviews to investigate how investor orientation relates to investment scale. We hypothesize that OBCs involving socially oriented investors are associated with higher levels of investment than those involving financially or dual‐purpose investors. Consistent with this prediction, socially oriented investors consistently commit larger amounts, whereas financially oriented and dual‐purpose investors typically participate with smaller contributions. These patterns challenge a central premise of OBCs: that such instruments would mobilize significant mainstream private capital for public services. Interview evidence points to reputational risks, limited familiarity with local conditions, and outcome measurement complexity as key deterrents.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13501763">
+<div class="row">
+<div class="col-10">
+<h2>Journal of European Public Policy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13501763">
+</div><article class="article-card" id="10-1080-13501763-2026-2725075" role="article">
+<h3 class="article-card__title">Judicial conflicts on international law: how disagreements on EU and ECHR law align with broader divisions on the Supreme Court of Norway</h3><p class="article-card__authors" title="Olof Larsson, Johan Karlsson Schaffer, Jon Kåre Skiple">Olof Larsson, Johan Karlsson Schaffer, Jon Kåre Skiple</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2725075" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2725075" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-13501763-2026-2729119" role="article">
+<h3 class="article-card__title">Carbon pricing, green industrial policy, and the evolution of ideas in EU climate policy</h3><p class="article-card__authors" title="Niklas Kramer">Niklas Kramer</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2729119" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2729119" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0190292X">
+<div class="row">
+<div class="col-10">
+<h2>Policy Studies Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-0190292X" data-bs-toggle="collapse" type="button">
+              +1
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0190292X"><article class="article-card" id="10-1111-psj-70164" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Correction to “Disclosing Power Dynamics in Metropolitan Governance: An Analysis of Network Micro‐Mechanisms of Change in an Evolving Inter‐Municipal Network”</h3><p class="article-card__authors" title=""></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70164" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70164" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1111-psj-70153" role="article">
+<h3 class="article-card__title">Ethnoracial Characteristics and Police Abuse Within Mexico's Criminal Justice System</h3><p class="article-card__authors" title="Arturo Luna Cancino, Javier Reyes‐Martínez">Arturo Luna Cancino, Javier Reyes‐Martínez</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70153" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70153" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70153" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70153" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70153">
+        This study examines the association between ethnoracial characteristics (ethnoracial self‐identification, speaking an Indigenous language, and skin tone) and police abuse within Mexico's criminal justice system, drawing on street‐level bureaucracy frameworks. Using data from the 2021 National Survey of Persons Deprived of Liberty (ENPOL in Spanish), we analyze whether ethnoracial traits are conditionally associated with reported experiences of police abuse. Logistic regression models suggest that Afro‐Mexican or Afro‐descendant and Indigenous persons have higher odds of reporting abuse, supporting existing literature on discrimination and policing. Unexpectedly, speaking an Indigenous language and having darker skin tones were associated with lower reported abuse, suggesting a complex relationship that merits further examination. These results underscore the need to incorporate ethnoracial variables into the study of police behavior and public administration in Mexico, while informing public policies aimed at preventing and addressing police abuse to strengthen accountability within the criminal justice system.
+    </div>
+</article>
+<article class="article-card" id="10-1111-psj-70156" role="article">
+<h3 class="article-card__title">Evolving Contexts and Diverging Strategies: Federalism and the Politics of Immigrant Welfare Exclusion in the US</h3><p class="article-card__authors" title="Ping Xu, Ling Zhu, Sebastian Ege">Ping Xu, Ling Zhu, Sebastian Ege</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70156" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70156" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70156" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70156" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70156">
+        The intersection of immigration and welfare has taken a central stage in the politics of social policy and garnered increasing scholarly attention in welfare politics research. While prior research has examined how immigration affects welfare support and welfare generosity in the US, less is known about the determinants of immigrant‐related welfare policies. This paper investigates how state‐level policymakers shape immigrant welfare policies in response to changing social and economic state contexts across the U.S. states from 2000 to 2020. Using data from the Urban Institute's Welfare Rules Database, we create a policy index of welfare inclusion of immigrants to track policy variations across the American states from 2000 to 2020. We then employ panel data analyses to explore the determinants of state immigrant TANF policies. Our findings reveal diverging strategies of state legislatures: conservative state legislatures tend to be associated with more restrictive immigrant welfare policies than their liberal counterparts; moreover, conservative and liberal state legislatures respond to different types of state contexts in adjusting their immigrant welfare policies. Conservative state legislatures respond to rising poverty by enacting restrictive policies, whereas liberal state legislatures respond to declining levels of anti‐immigration sentiment by adopting more inclusive policies.
+    </div>
+</article>
+<article class="article-card" id="10-1111-psj-70160" role="article">
+<h3 class="article-card__title">Balancing Particularism and Universalism in Welfare Policy: Insights From China's Hukou Reform</h3><p class="article-card__authors" title="Liu Chen, Tom Christensen, Xufeng Zhu">Liu Chen, Tom Christensen, Xufeng Zhu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70160" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70160" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70160" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70160" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70160">
+        Welfare policies often combine particularistic and universalistic elements, yet we know less about how shifts in this balance shape public attitudes toward vulnerable low‐status groups. This article develops a three‐dimensional framework for analyzing welfare policy, distinguishing among welfare scope, welfare benefits, and inclusion criteria. We argue that public attitudes toward lower‐status groups are shaped by the combined signal about the welfare deservingness hierarchy generated by the configuration of particularistic and universalistic elements across these dimensions. Because policy design packages convey a broader normative stance about who belongs and who deserves, they can influence perceptions of groups that are not directly targeted by a policy change, lowering or raising their perceived deservingness. Using difference‐in‐differences and regression discontinuity methods, we analyze Weibo posts during China's two‐round hukou reform. We find that shifts toward more particularistic policy configurations lead to more negative attitudes toward low‐skilled migrant workers, whereas shifts toward more universalistic configurations yield more positive attitudes. Subgroup analyses yield suggestive patterns across local economic contexts and individual characteristics. These findings have broader implications for research on welfare policy systems and for reform efforts regarding social integration.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333298">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333298">
+</div><article class="article-card" id="10-1111-padm-70093" role="article">
+<h3 class="article-card__title">Policy Entrepreneurs and Policy Change When Politicians Are Absent: The Inclusion of Autistic Individuals in Armed Forces</h3><p class="article-card__authors" title="Ben Kizel, Nissim Cohen">Ben Kizel, Nissim Cohen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70093" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70093" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70093" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70093" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70093">
+        How do policy entrepreneurs change policy when politicians are not directly involved in the process? While public policy scholars have examined the conditions under which politicians refrain from direct engagement in policy design, they have paid less attention to the strategies policy entrepreneurs employ in the absence of political actors. Drawing on textual analysis and 30 in‐depth interviews with members of the “Roim Rachok” (“Looking Ahead”) program, which facilitates the inclusion of individuals on the autism spectrum in the Israel Defense Forces as a case study, we addressed this lacuna by exploring how policy entrepreneurs independently advance policy change. The findings suggest that the policy entrepreneurs operated through institutionalized collaborative networks. They also leveraged Israel's security challenges as a structured framework for promoting their new policy. In addition, they created an organizational infrastructure. Finally, they focused on establishing trust with the security organizations with whom they collaborated.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padm-70088" role="article">
+<h3 class="article-card__title">Strategies for Public Administration Research: Insights From the Scholarship of Christopher Hood</h3><p class="article-card__authors" title="Ruth Dixon, Rozana Himaz, Maia King, Barbara Maria Piotrowska">Ruth Dixon, Rozana Himaz, Maia King, Barbara Maria Piotrowska</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70088" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70088" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70088" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70088" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70088">
+        In an era of time constraints and publication pressures, scholars risk becoming entrenched in familiar approaches. Christopher Hood's public administration scholarship reminds us that excellence often arises from a broad exploration of ideas. This paper identifies three core elements of Hood's research practice. First, a deep skepticism toward dominant narratives, which often revealed hidden complexities. Second, careful selection of temporal frames: this often meant adopting remarkably long time‐horizons to reveal patterns in administrative and policy reform. Third, genuine interdisciplinarity. While firmly rooted in public administration, Hood drew on concepts, evidence, and methods from a wide range of disciplines. Analyzing how these three elements interacted in Hood's work, the paper reflects on how adopting aspects of his approach can help scholars produce work of lasting value. Hood's legacy is therefore not only a record of past achievement but also a practical guide to navigating the contemporary academic environment.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padm-70090" role="article">
+<h3 class="article-card__title">How Artificial Intelligence Facilitates Collaborative Governance? Research on Mechanisms and Multi‐Dimensional Effects Based on Triple Entities</h3><p class="article-card__authors" title="Zhuocheng Lu, Fei Fan, Zhennan Yang, Song Wang">Zhuocheng Lu, Fei Fan, Zhennan Yang, Song Wang</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70090" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70090" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70090" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70090" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70090">
+        Collaborative governance is becoming a practical imperative. At the same time, resolving complex public affairs could offer opportunities to overcome bottlenecks, while Artificial Intelligence (AI) could help. This study draws on polycentric governance theory and multilayer network theory to explain why collaborative governance could occur and how it could be influenced by AI, respectively. Mathematical deductions from both micro and macro perspectives are employed to reinforce this theoretical viewpoint. Using Chinese cities as a case study, the impact of AI on collaborative governance has been tested in practice, supported by benchmark regression and subsequent tests for endogeneity and robustness. Mechanism tests demonstrate AI's functions by advancing digital government, lifting corporate transparency, and improving public knowledge. Moreover, econometric evidence from difference‐in‐differences, threshold regressions, and spatial econometric models robustly addresses concerns about AI. This study offers a quantifiable multi‐stakeholder governance framework and actionable policy insights for China and the Global South.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padm-70089" role="article">
+<h3 class="article-card__title">How Were Governance Pathways Formed for Public Service Co‐Production? A Contingency Perspective</h3><p class="article-card__authors" title="Huanming Wang, Bing Ran">Huanming Wang, Bing Ran</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70089" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70089" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70089" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70089" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70089">
+        This study addresses the under‐theorized formation of specific co‐production arrangements by exploring governance pathway formation. Using 76 community regeneration projects in Shanghai, we identify a parsimonious two‐level typology: State‐led co‐production (comprising sub‐type A: state as operator and sub‐type B: non‐state as operator ) and Citizen‐led co‐production (comprising sub‐type C: volunteers as operator and sub‐type D: users as operator ). Findings reveal pathway emergence is contingent upon configurations of providers' capabilities, citizen empowerment, political leadership, and public service characteristics, reflecting logics associated with Neo‐Weberian State, New Public Management, and New Public Governance paradigms. The study shifts focus from static lists to dynamic governance pathways by proposing a configurational contingency framework that explains how governance logics are activated by specific contextual conditions.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="09521895">
+<div class="row">
+<div class="col-10">
+<h2>Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-09521895">
+</div><article class="article-card" id="10-1111-gove-70154" role="article">
+<h3 class="article-card__title">Dead Ends and Policy Change in Chinese Experimental Governance</h3><p class="article-card__authors" title="Vincent Brussee">Vincent Brussee</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-gove-70154" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-gove-70154" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/gove.70154" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/gove.70154" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-gove-70154">
+        Not all policy change is expansive, yet non‐expansive trajectories remain underexamined. This article introduces the concept of dead ends: a stage of the policy process in which initiatives cease to develop or be implemented in their existing form, structuring subsequent policy change such as rollback, redirection, or termination. To examine such trajectories, the article combines large‐scale analysis of 27,103 policy experiments announced in the People's Republic of China between 2013 and 2018 with qualitative case studies. The findings suggest that a substantial majority—up to 90%—of experiments reach dead ends. These dead ends are associated with leadership turnover, policy complexity, and misalignment with bureaucratic incentives and socio‐economic conditions. Altogether, the article provides new frameworks for understanding alternative directions of policy change. In doing so, it also sheds new light on the adaptive capacity and structural constraints of China's governance system.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="17485983">
+<div class="row">
+<div class="col-10">
+<h2>Regulation &amp; Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-17485983">
+</div><article class="article-card" id="10-1111-rego-70201" role="article">
+<h3 class="article-card__title">Systemic Imbalances in Integrity Management Systems: A Meso‐Level Framework From Four Corruption Scandals</h3><p class="article-card__authors" title="Georgios Kominis, Adina Dudau, Alvise Favotto, Denisse Rodriguez‐Olivari">Georgios Kominis, Adina Dudau, Alvise Favotto, Denisse Rodriguez‐Olivari</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70201" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70201" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70201" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70201" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70201">
+        Integrity management systems (IMSs) are increasingly promoted to embed ethical conduct, mitigate corruption risks, and strengthen organizational accountability. Yet empirical evidence on their effectiveness remains sparse and contradictory, offering little insight into how these systems operate in practice and why they often fail in heavily formalized organizational settings. This paper addresses that gap by developing a meso‐level framework for diagnosing systemic imbalances in IMSs. Drawing on systems theory and management control literature, we conceptualize IMSs as an integrity management package structured through four levers: belief, boundary, diagnostic, and interactive systems of control. We deploy this framework through an explanatory, multi‐case design spanning four major corruption scandals in infrastructure, defense, healthcare, and banking in the UK, Italy, Greece, and the Nordic–Baltic region, drawing on a triangulated dataset built through systematic web scraping. The cross‐case analysis shows that integrity failures are not explained simply by the absence of formal controls, but by recurring imbalances among control levers. Organizations tend to privilege boundary and diagnostic systems, such as rules, procedures, monitoring, and performance metrics, while under‐investing in belief and interactive systems that should enable ethical culture, dialogue, challenge, and learning. We theorize this imbalance as a compliance façade: formally robust but weakly embedded in organizational practice. The paper thereby reframes the compliance versus values debate in ethics scholarship, offering the first empirically grounded, cross‐sectoral model of how integrity is embedded, sustained, and undermined in organizations, with implications for redesigning IMSs across public, private, and hybrid settings.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted"><a href="/privacy-notice">Privacy Notice</a></small>
+</div>
+</footer>
+
+</html>
