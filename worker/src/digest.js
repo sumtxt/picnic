@@ -3,7 +3,7 @@ import Mustache from 'mustache'
 
 import digestTpl from '../templates/digest.mustache'
 
-const BATCH_SIZE = 50
+const BATCH_SIZE = 5
 const LIST_UNSUBSCRIBE = '<mailto:unsubscribe@paper-picnic.com?subject=unsubscribe&body=unsubscribe>'
 
 const DISCIPLINE_ORDER = [
