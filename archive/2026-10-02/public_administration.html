@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Public Administration</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<link href="./assets/vendor/css/inter-fonts.css" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script src="./assets/vendor/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/vendor/js/sortable-1.15.0.min.js"></script>
+<script src="./assets/vendor/js/bootstrap-5.3.3.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link href="./assets/vendor/css/bootstrap-5.3.3.min.css" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · October 2, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-10-02/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-10-02/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-02/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-02/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-10-02/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-10-02/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-10-02/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-10-02/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-02/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-02/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-10-02/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="15206688">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15206688" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15206688" style="max-width: 300px;" title="Journal of Policy Analysis and Management">
+                            Journal of Policy Analysis and Management
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10531858">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10531858" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10531858" style="max-width: 300px;" title="Journal of Public Administration Research and Theory">
+                            Journal of Public Administration Research and Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333352">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333352" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333352" style="max-width: 300px;" title="Public Administration Review">
+                            Public Administration Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14494035">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14494035" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14494035" style="max-width: 300px;" title="Policy and Society">
+                            Policy and Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13501763">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13501763" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13501763" style="max-width: 300px;" title="Journal of European Public Policy">
+                            Journal of European Public Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0190292X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0190292X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0190292X" style="max-width: 300px;" title="Policy Studies Journal">
+                            Policy Studies Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333298">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333298" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333298" style="max-width: 300px;" title="Public Administration">
+                            Public Administration
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03055736">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03055736" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03055736" style="max-width: 300px;" title="Policy and Politics">
+                            Policy and Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09521895">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09521895" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09521895" style="max-width: 300px;" title="Governance">
+                            Governance
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17485983">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17485983" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17485983" style="max-width: 300px;" title="Regulation &amp; Governance">
+                            Regulation &amp; Governance
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="15206688">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Policy Analysis and Management</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-15206688">
+</div><article class="article-card" id="10-1002-pam-70130" role="article">
+<h3 class="article-card__title">Labor Market Outcomes Under State Paid Family Leave: A Multistate Analysis</h3><p class="article-card__authors" title="Min Sun Park, Solomon W. Polachek">Min Sun Park, Solomon W. Polachek</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70130" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70130" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70130" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70130" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70130">
+        We estimate the labor market effects of state paid family leave (PFL) using CPS ASEC data from 1995 through 2024 and a cell‐level staggered difference‐in‐differences design. PFL raises young women's labor force participation by 2.25 percentage points. The gain is concentrated among women with an own child under age 5, for whom participation rises by 3.76 percentage points. Among young women overall, unconditional weekly hours rise by 0.54 h. Young fathers of children under age 5 show a 1.59 percentage point participation gain. The young women's participation result is robust to a placebo permutation test, to leaving out any single treated state, and to a pre‐policy balance check consistent with parallel pre‐trends.
+    </div>
+</article>
+<article class="article-card" id="10-1002-pam-70132" role="article">
+<h3 class="article-card__title">Forgive Us Our Sins—Experimental Evidence on Arrears Forgiveness and Bill Payment From Nairobi, Kenya</h3><p class="article-card__authors" title="David Fuente, Richard Mulwa, Mbutu Mwaura, Josiah Gitu, Joseph Cook">David Fuente, Richard Mulwa, Mbutu Mwaura, Josiah Gitu, Joseph Cook</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70132" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70132" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70132" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70132" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70132">
+        Energy and water utilities need financial resources to maintain existing infrastructure, increase capacity to meet growing demand, meet environmental regulations, and invest in climate resilience. Considerable attention has been paid to innovative means of financing the transition to universal access to water and sanitation services and the global transition to a clean energy future. This paper examines the foundation of utility finance—customer bill payment. We partner with Nairobi City Water and Sewerage Company to test the impact of an unconditional arrears forgiveness program on customer bill payment behavior. To our knowledge, this is the first study to experimentally test the impact of an arrears management program. We find that providing customers unconditional arrears forgiveness was not effective at improving customer bill payment and, in fact, made bill payment worse in the short run. Customers in our treatment group were less likely to make a payment towards their bill, less likely to pay their full bill on time, and accumulated more arrears over the 6 months following our intervention than untreated households. Our results suggest that one‐off debt amnesty may inadvertently reduce compliance, and that utilities should consider conditional or alternative assistance measures.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="10531858">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Public Administration Research and Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-10531858">
+</div><article class="article-card" id="10-1093-jopart-muag024" role="article">
+<h3 class="article-card__title">Generative Spaces: Collaboration, Learning and Innovation in a Regulatory Sandbox</h3><p class="article-card__authors" title="Carl Macrae, Christopher K Ansell">Carl Macrae, Christopher K Ansell</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jopart-muag024" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jopart-muag024" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jopart/muag024" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jopart/muag024" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jopart-muag024">
+        Public administrators are increasingly called upon to create “generative spaces” that foster emergent processes of collaboration, learning and innovation. This article presents an inductive and ethnographically grounded study of one relatively novel but increasingly popular generative space—a regulatory sandbox. A regulatory sandbox is a controlled and defined space and set of processes that are established by regulators to work with innovators to collaboratively explore, test and learn about early-stage products and innovations and understand emerging regulatory implications. Investigating a sandbox to explore the regulation of new artificial intelligence technologies conducted by a national healthcare regulator, we identify the organizing practices of the sandbox that make it “generative” of collaboration, learning and innovation. An inductive analysis identified three key organizing practices: providing distinct and varied social spaces separated from normal regulatory demands (protection); enabling participants to collaboratively examine innovations and iteratively develop new knowledge and regulation (adaptation); and supporting focused and immersive examination of innovations from a diverse range of perspectives (participation). A theoretically-driven secondary analysis suggests that generative spaces can be understood as liminal experiences that foster detachment, equivalence and reconstruction.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333352">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333352">
+</div><article class="article-card" id="10-1111-puar-70205" role="article">
+<h3 class="article-card__title">Skills, Not Just Will: Experimental Evidence From Uganda on Transparency in Public Procurement</h3><p class="article-card__authors" title="Mark T. Buntaine, Alex Bagabo, Paul Bukuluki, Brigham Daniels, Gerald Padde Auku">Mark T. Buntaine, Alex Bagabo, Paul Bukuluki, Brigham Daniels, Gerald Padde Auku</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70205" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70205" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70205" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70205" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70205">
+        Governments are usually the largest purchasers of goods and services, creating significant opportunities for corruption. We study whether offering training and technical assistance to procurement officials in 50 Ugandan districts prompted them to publish procurement actions on an online public portal, as legally required. Among districts that received the training and technical assistance program, we randomized whether procurement officials received information in advance about their eligibility to earn a public award for adherence to these transparency standards. We use national administrative data across multiple financial years and 134 district governments to evaluate impacts. The training and technical assistance program increased the number and value of procurement actions uploaded several‐fold, while award eligibility did not have similarly large effects. These results suggest that motivation problems may be overemphasized in the fight against corruption. Building capacity in accounting and transparency could provide effective guardrails against corruption.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70201" role="article">
+<h3 class="article-card__title">Artificial Intelligence, Bureaucratic Discretion, and Democratic Administration</h3><p class="article-card__authors" title="L. Jason Anastasopoulos">L. Jason Anastasopoulos</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70201" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70201" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70201" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70201" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70201">
+        Since the start of the COVID ‐19 pandemic, many countries have been using artificial intelligence ( AI ) to replace civil service personnel. We argue that this practice undermines core democratic values. Using the public values framework, we identify four clusters of values that are threatened when bureaucratic discretion is transferred to algorithms: accountability, fairness and equity, individual consideration, and reason‐giving. Each of these values is incompatible with how algorithms render decisions. Because algorithms produce outputs based on statistical regularities, they diffuse responsibility across multiple parties, fail to make accurate predictions about anomalous cases, and attenuate citizens' claims to individualized consideration. Thus, this article frames AI adoption as a constitutional question about which decisions can be automated, and which should remain under human control because they implicate democratic values. We propose a centaur model in which AI supports rather than replaces human officials, which can preserve efficiency while protecting democratic governance.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70210" role="article">
+<h3 class="article-card__title">Public Management of Deregulated Systems: Challenges and Opportunities in the Public Management of Retail Energy Markets</h3><p class="article-card__authors" title="Noah Dormady, Jenya Kahn‐Lang, Yiseon Choi, Yufan Ji, Samantha Fox, Alberto Lamadrid, Matthew Hoyt">Noah Dormady, Jenya Kahn‐Lang, Yiseon Choi, Yufan Ji, Samantha Fox, Alberto Lamadrid, Matthew Hoyt</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70210" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70210" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70210" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70210" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70210">
+        Many critical infrastructure services operate within quasi‐regulated (i.e., “deregulated”) markets. Public managers face a unique set of challenges and opportunities in the administration and oversight of these markets. Administrative and regulatory challenges exist because public managers are required to balance an open and competitive marketplace while confronting multiple market failures (e.g., consumer inattention, imperfect competition) alongside organizational, management, and legal and regulatory enforcement challenges. There are real‐world consequences of administrative choices on economic (in)efficiency and consumer equity. This paper provides public managers with a comprehensive review of the public management challenges and opportunities associated with managing deregulated retail electricity markets. It then provides a review of empirical research and an empirical example for one category of these challenges—consumer equity. The paper concludes with a multi‐disciplinary discussion of the role of public managers in deregulated marketplaces and public policy options to address both equity and efficiency challenges.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70218" role="article">
+<h3 class="article-card__title">Reply to Kettl: Beyond Bureaucracy: Why AI Demands a Fourth Way in Public Administration</h3><p class="article-card__authors" title="Jack Baldwin, Tina Nabatchi">Jack Baldwin, Tina Nabatchi</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70218" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70218" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70218" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70218" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70218">
+        Kettl argues public administration faces a crisis rooted in widening gaps between scholars and practitioners and between the field's core ideas and current governance issues. We identify a critical example: artificial intelligence (AI) adoption in government. AI fundamentally transforms public organizations, redistributing tasks and discretion between humans and algorithms, embedding instrumental rationality into administrative processes, and reconfiguring authority structures. These developments challenge three longstanding pillars of public administration: bureaucratic neutrality, the politics‐administration dichotomy, and democratic governance. We argue that any proposed “Fourth Way” must center democratic resilience and technological stewardship, incorporating algorithmic transparency requirements and participatory governance structures that preserve public—and especially democratic—values.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70214" role="article">
+<h3 class="article-card__title">Artificial Intelligence in Policing and Perceived Legitimacy: Does Gender Representation Make a Difference?</h3><p class="article-card__authors" title="Canyu Gao, Norma M. Riccucci">Canyu Gao, Norma M. Riccucci</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70214" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70214" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70214" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70214" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70214">
+        As artificial intelligence (AI) increasingly transforms public administration, understanding its impact on perceived legitimacy becomes paramount, particularly, in high‐stakes areas such as policing. While existing research offers mixed evidence on whether government AI use enhances or undermines citizens' perceptions of fairness and trust, the conditions moderating these effects remain underexplored. Drawing on representative bureaucracy theory, this study uses a survey experiment to investigate how gender representation moderates the effect of AI use on citizens' perceived fairness and trust in domestic violence units (DVUs). Results show that female representation positively moderates the legitimacy impact of a DVU's AI use; whereas AI use decreases female respondents' perceived fairness and trust in male‐dominated DVUs, these negative effects disappear in female‐dominated DVUs. Our findings identify representation as a key context shaping citizens' responses to government AI use, extending representative bureaucracy theory by demonstrating its indirect symbolic effects.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70207" role="article">
+<h3 class="article-card__title">The Right‐Wing Idea Factory: From Traditionalism to Trumpism. By Donald F.Kettl, New York: Oxford University Press, 2026. 248 pp. (hardback). ISBN: 978‐0‐19‐777829‐6</h3><p class="article-card__authors" title="Alasdair Roberts">Alasdair Roberts</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70207" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70207" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1111-puar-70199" role="article">
+<h3 class="article-card__title">Citizens' Expectations vs. Recruitment Signals: Are Public Administrations Trying to Attract the Ideal Public Servant?</h3><p class="article-card__authors" title="Melissa Satzger Grøn, Dominik Vogel">Melissa Satzger Grøn, Dominik Vogel</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70199" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70199" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70199" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70199" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70199">
+        Job advertisements play a crucial role in attracting applicants, yet little is known about how closely they reflect the values citizens expect from public servants. Drawing on signaling theory and prior research on citizens' normative expectations of ideal public servants, this study employs a large language model to analyze 1825 job advertisements from health and transportation departments across seven U.S. states. Compared to the values citizens associate with ideal public servants in previous research, job advertisements predominantly emphasize values, such as expertise and dedication, while undersignaling relational values like serviceability, responsiveness, and honesty. Our findings suggest a misalignment between the values signaled in recruitment practices and those citizens associate with the ideal public servant. By adopting a citizen‐driven perspective, this study prompts scholars and public managers to question recruitment practices that may underemphasize values citizens prioritize in public servants, potentially limiting public administrations' ability to attract qualified candidates.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70216" role="article">
+<h3 class="article-card__title">Reply to Kettl: Great Workplaces, Public Employee Legitimacy and the Fourth Way</h3><p class="article-card__authors" title="Leisha DeHart‐Davis">Leisha DeHart‐Davis</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70216" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70216" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70216" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70216" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70216">
+        In Public Administration and the Crisis of American Democracy, Don Kettl asks why some federal agencies are great places to work while others are not, pointing to the persistent gap between NASA and the Department of Homeland Security. This essay argues that the answer may turn on how the legitimate role of public employees in democratic governance is construed. Drawing on three interpretive frames—bureaucracy, democracy, and pragmatism—it examines 2024 employee survey responses at NASA and DHS that map onto these frames. DHS appears dominated by the bureaucracy frame, positioning employees as implementers whose voice is risky and expertise underused. NASA blends all three frames, treating employees as contributors, stewards, and problem solvers. These frames offer a partial explanation for Kettl's puzzle and a conceptual tool for his “fourth way”: great government workplaces are built when public servants are recognized as legitimate contributors to democratic governance, not just cogs in a bureaucratic wheel.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13501763">
+<div class="row">
+<div class="col-10">
+<h2>Journal of European Public Policy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13501763">
+</div><article class="article-card" id="10-1080-13501763-2026-2739425" role="article">
+<h3 class="article-card__title">Does perspective-getting reduce bureaucrats’ preferential treatment of mobile EU workers? Experimental evidence from four European countries</h3><p class="article-card__authors" title="Anita Manatschal, Valon Hasanaj, Xavier Fernández i Marín, Christian Adam, Orlane Jadeau, Jana Gómez Díaz, Oliver James, Carolin Rapp">Anita Manatschal, Valon Hasanaj, Xavier Fernández i Marín, Christian Adam, Orlane Jadeau, Jana Gómez Díaz, Oliver James, Carolin Rapp</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2739425" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2739425" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-13501763-2026-2737691" role="article">
+<h3 class="article-card__title">Attributes, abstractions, and combinations: a new taxonomy for studying how parties invoke social groups</h3><p class="article-card__authors" title="Hauke Licht, Leonce Röth">Hauke Licht, Leonce Röth</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2737691" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2737691" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0190292X">
+<div class="row">
+<div class="col-10">
+<h2>Policy Studies Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-0190292X" data-bs-toggle="collapse" type="button">
+              +1
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0190292X"><article class="article-card" id="10-1111-psj-70162" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Correction to “Supply‐Side Policy Feedback”</h3><p class="article-card__authors" title=""></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70162" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70162" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1111-psj-70168" role="article">
+<h3 class="article-card__title">From the Margins: Potential Coalitions in Centralized, High‐Capacity States</h3><p class="article-card__authors" title="Sreeja Nair, Yuhao Ba, Mohnish Kedia">Sreeja Nair, Yuhao Ba, Mohnish Kedia</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70168" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70168" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70168" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70168" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70168">
+        The early stages of coalition formation remain an understudied area, particularly in centralized, high‐capacity political systems. Examining actor dynamics at this formative stage can reveal how coalitions form and how limited pluralism constrains their development. This study examines how potential coalition members emerge, and what shapes their prospects for consolidation in this institutional context. We study sustainability efforts in Singapore‐ a centralized polity with a history of state‐led environmental governance and a recent rise of sustainability nonprofits. Drawing on interviews with 39 nonprofits, we examine evidence of early stages of coalition formation outside of the state‐led coalition within Singapore's sustainability subsystem. Our findings show that both subsystem structure and actor attributes constrain potential coalitions from forming, owing to limited resource support and venues to formally participate in the coalition and coordinate with peers and the dominant state‐led coalition. Uncertainty in positions and learning orientation of other actors foster caution and complacency, entrenching weak horizontal ties. Additionally, crises can open brief windows for coordination, but these can close as routines and hierarchies reassert themselves. This study advances our understanding of coalition formation dynamics in centralized, high‐capacity, and limited pluralism contexts where contestation often remains limited and subtle.
+    </div>
+</article>
+<article class="article-card" id="10-1111-psj-70158" role="article">
+<h3 class="article-card__title">Beyond Evidence: How Framing Shapes Public Health Policies During Health Crises</h3><p class="article-card__authors" title="Antoine Claude Lemor, Eric Montpetit">Antoine Claude Lemor, Eric Montpetit</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70158" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70158" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70158" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70158" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70158">
+        Does the level of evidence that accompanies policy action depend on how a problem is framed, and on who frames it? This article examines these questions in the context of health crises. Bridging sociological and equivalence framing theories, it treats frames as preexisting interpretive schemes shared within communities of actors, whose downstream influence depends on the information available. Using a comprehensive textual database of COVID‐19 press conferences held in Quebec, where political decision‐makers held greater authority, and in Sweden, where scientists enjoyed more autonomy, the study combines natural language processing, OLS regressions, and Granger causality tests to analyze how frames and disclosed evidence were articulated with suppression and mitigation policies. Findings show that in Quebec, framing the pandemic as an imminent danger was associated with far‐reaching suppression measures even at low levels of disclosed evidence, while the moderate frame's association with mitigation strengthened as evidence increased. In Sweden, no relationship between framing and suppression policies appeared in public communications; framing instead operated jointly with evidence, the dangerous frame being associated with fewer mitigation references mainly at high levels of disclosed evidence. These results suggest that the relevant question is not how much evidence policy action requires, but by whom that evidence is required, and under what conditions. The evidentiary threshold attached to a frame appears to be a property of the community that carries it, with direct implications for how democratic institutions allocate influence between accountability and expertise.
+    </div>
+</article>
+<article class="article-card" id="10-1111-psj-70166" role="article">
+<h3 class="article-card__title">Problem and Solution Framing in Senate Tweets: Scaling Expert Interpretation With Machine Learning</h3><p class="article-card__authors" title="Michelle M. Buehlmann, Misha Melnyk, Mitchell Dolny, Joshua D. Elkind, Alexander Michael Tjhin, Saisha Chebium, Blake VanBerlo, Annelise Russell, Jesse Hoey">Michelle M. Buehlmann, Misha Melnyk, Mitchell Dolny, Joshua D. Elkind, Alexander Michael Tjhin, Saisha Chebium, Blake VanBerlo, Annelise Russell, Jesse Hoey</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70166" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70166" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70166" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70166" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70166">
+        Central to theories of agenda setting is the distinction between problems and solutions. Kingdon's multiple streams framework argues these processes are rhetorical and have distinct logics and incentives, yet empirical research struggles to measure them separately in digital, elite communication. Legislators bridge the multiple streams through their representational styles and legislative behavior, yet we lack scalable tools for identifying when elites frame issues as problems and when they promote solutions. This research note introduces a machine learning approach for classifying elite communication according to this core agenda‐setting distinction. We develop and validate a supervised model for 1.68 million tweets from U.S. Senators that categorizes messages into problem and solution frames, demonstrating that the problem/solution distinction can be reliably automated. This methodological research note establishes that the distinction is empirically measurable at scale and offers a validated, dataset‐specific measurement approach and theoretical foundation for classifying senatorial Twitter communication as problems or solutions.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333298">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333298">
+</div><article class="article-card" id="10-1111-padm-70099" role="article">
+<h3 class="article-card__title">A Replication of “Your Money, Your Life, or Your Freedom? A Discrete Choice Experiment on Trade‐Offs During a Public Health Crisis”</h3><p class="article-card__authors" title="Binzizi Dong, Chung‐An Chen, Soojin Kim, Chih‐Wei Hsieh">Binzizi Dong, Chung‐An Chen, Soojin Kim, Chih‐Wei Hsieh</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70099" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70099" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70099" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70099" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70099">
+        A prior experiment conducted in Italy examined how individuals navigate trade‐offs among money, life, and freedom during government‐mandated lockdowns. This study replicates that experiment across three Confucian societies: Shanghai (China), Singapore, and Taipei (Taiwan). The findings indicate that, in the aggregate sample, the preference pattern of “money &gt; life &gt; freedom” mirrors that reported in the original study. However, when analyzed separately, residents of Taipei show stronger preferences for income and freedom than their counterparts in Singapore and Shanghai. Conversely, Singaporeans demonstrate heightened concern regarding the loss of life. In addition to replicating previous findings, this study contributes to the field of comparative public administration by highlighting the importance of considering contextual nuances in the formulation of crisis‐management practices by public managers.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padm-70098" role="article">
+<h3 class="article-card__title">The 150‐Year‐Old Hybrid Organization: A Historical View on Municipally Owned Corporations ( MOC ) in Sweden</h3><p class="article-card__authors" title="Anna Thomasson, Olof Hallonsten">Anna Thomasson, Olof Hallonsten</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padm-70098" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padm-70098" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padm.70098" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padm.70098" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padm-70098">
+        This article presents a 150‐year longitudinal analysis of the development of municipally owned corporations (MOCs) in Sweden, tracing their emergence in the mid‐nineteenth century, their expansion during the growth of the welfare state, and their transformation in the era of market‐oriented public sector reform. While MOCs are commonly discussed in relation to New Public Management (NPM) and contemporary forms of hybrid governance, this perspective overlooks their much longer historical trajectory. Drawing on three major Swedish government inquiries (1924, 1965, and 1982), complemented by secondary historical sources, we examine how MOCs have evolved across changing political, economic, and administrative contexts. The article conceptualizes MOCs as constitutional hybrids, organizations that combine elements of public authority and corporate governance by design, and employs insights from institutional theory and historical institutionalism to analyze their long‐term development. The findings identify three historical phases characterized by changing functions, governance rationales, and institutional expectations. Across these periods, MOCs were repeatedly reinterpreted and adapted to new circumstances while maintaining their basic organizational form. The study contributes to the literature on hybridity by demonstrating that hybridity should be understood not merely as a contemporary consequence of public sector reform, but as a historically evolving institutional condition. We argue that the enduring presence of MOCs reflects the adaptive capacity of hybrid organizational forms, whose flexibility allows them to accommodate shifting demands for efficiency, legitimacy, accountability, and public value. By historicizing hybridity, the article offers a new perspective on institutional resilience, and the long‐term evolution of public governance.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="03055736">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-03055736">
+</div><article class="article-card" id="10-1332-03055736y2026d000000104" role="article">
+<h3 class="article-card__title">How expert bureaucrats survive illiberal regimes through renegotiating expertise bargains</h3><p class="article-card__authors" title="Katarina Staronova, Michal Sedlačko">Katarina Staronova, Michal Sedlačko</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1332-03055736y2026d000000104" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1332-03055736y2026d000000104" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1332/03055736y2026d000000104" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1332/03055736y2026d000000104" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1332-03055736y2026d000000104">
+        This article examines how expert bureaucrats renegotiate their ‘expertise bargains’ under conditions of democratic backsliding and illiberal governance. Focusing on Slovakia following the election of a populist radical right government in 2023, it investigates the individual and collective strategies adopted by expert bureaucrats in response to growing political pressure, challenges to expertise, and attempts to strengthen political control over the bureaucracy. The article builds on the proposition that expert bureaucrats do not merely react to political change, but proactively adapt their strategies in anticipation of shifting political conditions. Conceptually, it distinguishes between a strong form of survival, in which bureaucrats preserve autonomy and influence in policy making, and a weak form of survival, centred on institutional continuity and professional existence rather than policy impact. To analyse these dynamics, the article develops a framework structured around three dimensions of expertise bargaining: anticipatory strategies, collective strategies, and value dilemmas. It argues that anticipatory strategies serve not only to maintain legitimacy and relevance, but also to bridge political polarization within unstable patronage systems. The article further shows how collective strategies moderate more extreme individual responses, reducing both voluntary exits and overt resistance in favour of weaker but more sustainable forms of survival. At the same time, value dilemmas between individual and collective strategies shape how bureaucrats navigate competing identities as political loyalist, expert bureaucrat, and engaged citizen.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted"><a href="/privacy-notice">Privacy Notice</a></small>
+</div>
+</footer>
+
+</html>

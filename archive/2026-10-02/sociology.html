@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Sociology</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<link href="./assets/vendor/css/inter-fonts.css" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script src="./assets/vendor/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/vendor/js/sortable-1.15.0.min.js"></script>
+<script src="./assets/vendor/js/bootstrap-5.3.3.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link href="./assets/vendor/css/bootstrap-5.3.3.min.css" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · October 2, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-10-02/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-10-02/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-02/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-02/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-10-02/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap active" href="/archive/2026-10-02/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-10-02/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-10-02/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-02/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-02/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-10-02/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00031224">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00031224" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00031224" style="max-width: 300px;" title="American Sociological Review">
+                            American Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03600572">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03600572" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03600572" style="max-width: 300px;" title="Annual Review of Sociology">
+                            Annual Review of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00491241">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00491241" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00491241" style="max-width: 300px;" title="Sociological Methods &amp; Research">
+                            Sociological Methods &amp; Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00029602">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00029602" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00029602" style="max-width: 300px;" title="American Journal of Sociology">
+                            American Journal of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00987921">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00987921" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00987921" style="max-width: 300px;" title="Population and Development Review">
+                            Population and Development Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="07352751">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-07352751" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-07352751" style="max-width: 300px;" title="Sociological Theory">
+                            Sociological Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00811750">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00811750" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00811750" style="max-width: 300px;" title="Sociological Methodology">
+                            Sociological Methodology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="23306696">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-23306696" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-23306696" style="max-width: 300px;" title="Sociological Science">
+                            Sociological Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00703370">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00703370" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00703370" style="max-width: 300px;" title="Demography">
+                            Demography
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00377732">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00377732" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00377732" style="max-width: 300px;" title="Social Forces">
+                            Social Forces
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00323292">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00323292" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00323292" style="max-width: 300px;" title="Politics &amp; Society">
+                            Politics &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="02667215">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-02667215" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-02667215" style="max-width: 300px;" title="European Sociological Review">
+                            European Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14742837">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14742837" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14742837" style="max-width: 300px;" title="Social Movement Studies">
+                            Social Movement Studies
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="00031224">
+<div class="row">
+<div class="col-10">
+<h2>American Sociological Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00031224">
+</div><article class="article-card" id="10-1177-00031224261480143" role="article">
+<h3 class="article-card__title">The Production of Inequality in High-Risk Pregnancy</h3><p class="article-card__authors" title="Anna Claire Church">Anna Claire Church</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00031224261480143" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00031224261480143" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00031224261480143" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00031224261480143" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00031224261480143">
+        How do socioeconomically advantaged individuals maintain their health advantage? Prior work shows how high socioeconomic status (SES) individuals secure advantages in areas such as housing or the labor market and provides longstanding evidence of health inequalities across SES. However, we have a more limited understanding of the mechanisms behind how high-SES individuals leverage structural advantage to improve their own health. This article draws on in-depth interviews with people diagnosed with gestational diabetes mellitus (GDM), a high-risk pregnancy condition that requires an intensive treatment regimen over a short timeframe, to reveal how socioeconomic advantage translates into health advantage. Socioeconomic advantage creates inequalities in health through multiple pathways, including excess financial resources that can be used to acquire health-relevant resources and access to flexible time to dedicate toward strict GDM management. Socioeconomically advantaged participants can thus respond to a diagnosis with GDM more quickly and efficiently than can disadvantaged participants. The divergent approaches to managing GDM that I uncover support advantaged individuals’ hyper-compliance with treatment guidelines, what I call going “above and beyond,” that translate into qualitatively different interactions with healthcare professionals than those of low-SES individuals, compounding structural (dis)advantage. Explicating the mechanisms through which high-SES individuals maintain health advantage identifies new directions for studying the production of inequality.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00491241">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Methods &amp; Research</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00491241">
+</div><article class="article-card" id="10-1177-00491241261490850" role="article">
+<h3 class="article-card__title">A Replication Framework for Observational Research: From Specification Restriction to Specification Expansion</h3><p class="article-card__authors" title="Jonathan Ben-Menachem, Ari Galper, Nic Fishman">Jonathan Ben-Menachem, Ari Galper, Nic Fishman</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00491241261490850" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00491241261490850" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00491241261490850" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00491241261490850" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00491241261490850">
+        Sociology has remained relatively insulated from debates about the “replication crisis.” Heeding calls to consider replication more deeply, we introduce a distinction between two types of research reforms that have emerged in the wake of the crisis: specification-restricting and specification-expanding reforms. Specification restriction is often promoted as a way to increase the repeatability of research findings by controlling false positives. We argue that this statistical justification is less compelling in observational contexts—where the assumptions licensing false-positive control are harder to sustain and rigid ex ante analytical commitments can instead enshrine fragile specifications—than in experimental contexts. We further argue that apparently low replication rates do not necessarily imply a high prevalence of false positive findings. Instead, we propose a replication framework centered on specification-expanding reforms, stronger incentives for confirmatory research, and meta-analysis. This approach equips sociologists to assess the repeatability of findings and build a more cumulative discipline.
+    </div>
+</article>
+<article class="article-card" id="10-1177-00491241261491679" role="article">
+<h3 class="article-card__title">The Cognitive Housework Inventory: Developing Survey Questions to Measure the Division of Cognitive Housework</h3><p class="article-card__authors" title="Jaclyn S. Wong, Jason Radford">Jaclyn S. Wong, Jason Radford</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00491241261491679" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00491241261491679" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00491241261491679" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00491241261491679" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00491241261491679">
+        Housework is unequally shared in different-gender couples, leading to negative consequences for women and lowering couples’ relationship quality. Although qualitative research identifies cognitive housework as an important type of household labor, we lack validated measures of cognitive housework to use in survey settings, barring quantitative research on its division in broader populations and its effects on household members. We use an open-ended survey and cognitive interviews to develop the Cognitive Housework Inventory (CHI), a seven-item survey instrument to measure the division of cognitive housework among partnered individuals. We then validate the CHI using data from an online survey, along with pairwise correlations, exploratory factor analysis, and bivariate analyses by gender. Regression analyses estimating its associations with stress, burnout, and relationship satisfaction demonstrate how to use the CHI in empirical settings. Results indicate the CHI is a valid and parsimonious instrument that can be incorporated into larger surveys to ultimately generate additional quantitative data on the distribution of housework.
+    </div>
+</article>
+<article class="article-card" id="10-1177-00491241261492189" role="article">
+<h3 class="article-card__title">Dynamics of Local Clustering in Temporal Social Networks</h3><p class="article-card__authors" title="Cheng Wang, Omar Lizardo, David S. Hachen">Cheng Wang, Omar Lizardo, David S. Hachen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00491241261492189" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00491241261492189" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00491241261492189" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00491241261492189" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00491241261492189">
+        While the local clustering coefficient is central to network analysis, it is typically treated as a static property. We introduce delta clustering to quantify changes in an individual's local clustering across adjacent time points in undirected networks. To address structural constraints, we develop a density-based decomposition expressing clustering as a weighted combination of subgraph-specific densities, clarifying how ego-network size and composition bound clustering change. We identify six triadic components distinguishing reconfiguration among persisting contacts from the integration and loss of ties. Using high-resolution university communication networks, we estimate fixed effects models accounting for network size interactions. Variation in delta clustering is driven primarily by density changes among persisting contacts, followed by the integration of new contacts, with magnitudes conditioned by ego-network size and baseline density. We further demonstrate the measure's explanatory power by linking daily clustering changes to individual behavioral outcomes. These results establish delta clustering as a size-aware, temporally grounded measure of local structural change in dynamic social networks.
+    </div>
+</article>
+<article class="article-card" id="10-1177-00491241261492203" role="article">
+<h3 class="article-card__title">How Model Choice and Memory Shape Preference Consistency in Large Language Models</h3><p class="article-card__authors" title="Yick Chung">Yick Chung</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00491241261492203" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00491241261492203" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00491241261492203" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00491241261492203" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00491241261492203">
+        When a language model answers a sequence of questions, researchers report the model and temperature but rarely what or how it was told about its own earlier answers. I show that this underreported setting behaves as a mode effect. Testing four large language model (LLM) families with revealed preference theory (GARP) across moral, economic, and social tasks ( N = 5,926 ), I find that how prior choices re-enter the prompt, the memory condition , moves the share of internally consistent subjects by up to 48 percentage points, mostly where that share starts lowest. Memory also influences which preferences the models express and, in a silicon-sampling extension, it brings the answers closer to the human distribution. Nonetheless, gains in consistency and surface fidelity do not necessarily translate into representativeness: a consistent, human-looking model may not represent any human population. For LLMs as social-science instruments, this study offers promise, caution, and a method for testing the stability of sequential outputs.
+    </div>
+</article>
+<article class="article-card" id="10-1177-00491241261492217" role="article">
+<h3 class="article-card__title">Prediction-Based Adaptive Designs for Reducing Wave Nonresponse Rates and Bias in Panel Surveys</h3><p class="article-card__authors" title="John Collins, Saskia Bartholomäus, Tobias Gummer, Bernd Weiß, Christoph Kern">John Collins, Saskia Bartholomäus, Tobias Gummer, Bernd Weiß, Christoph Kern</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00491241261492217" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00491241261492217" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00491241261492217" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00491241261492217" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00491241261492217">
+        Machine learning (ML)-based nonresponse prediction in panel surveys enables selective interventions. However, the optimal use of ML predictions in Adaptive Survey Design (ASD) remains uncertain. We propose a method that integrates field experiment results on incentives, questionnaire length, and questionnaire content with ML-based propensity models to simulate ASD strategies ex-post with minimal assumptions. Using German panel data, we show that treating 15 percent of panelists, selected through ML-based predictions and R-indicator analysis, with increased cash incentives or a survey module on the respondents’ preferred topic can reduce nonresponse rates by up to 2 percentage points. These strategies also reduced bias in selected variables. We present our method as a framework for survey researchers to evaluate the expected outcomes of multiple ASD regimes simultaneously in a realistic setting. The framework helps identify both the criteria for allocating treatments to specific participant groups and the most effective modifications to the survey protocol.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00029602">
+<div class="row">
+<div class="col-10">
+<h2>American Journal of Sociology</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00029602">
+</div><article class="article-card" id="10-1086-744185" role="article">
+<h3 class="article-card__title">A Farewell to Public Religion? Retheorizing and Assessing the Public Relevance of Religion</h3><p class="article-card__authors" title="Damon Mayrl, Gary J. Adler, Jr., Jonathan S. Coley, Rebecca Sager, Elise Wolff, John P. Miller">Damon Mayrl, Gary J. Adler, Jr., Jonathan S. Coley, Rebecca Sager, Elise Wolff, John P. Miller</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/744185" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/744185" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00987921">
+<div class="row">
+<div class="col-10">
+<h2>Population and Development Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-00987921" data-bs-toggle="collapse" type="button">
+              +2
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00987921"><article class="article-card" id="10-1111-padr-70094" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title">Issue Information</h3><p class="article-card__authors" title=""></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70094" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70094" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1111-padr-v52-3" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title"></h3><p class="article-card__authors" title=""></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.v52.3" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.v52.3" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1111-padr-70086" role="article">
+<h3 class="article-card__title">Early Access to Regular Employment and Long‐Term Immigrant Integration: Evidence from an Italian Amnesty Program</h3><p class="article-card__authors" title="Chiara Pronzato, Luca Mo Costabella, Simona Fiore">Chiara Pronzato, Luca Mo Costabella, Simona Fiore</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70086" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70086" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70086" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70086" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70086">
+        The early stages after arrival may play a crucial role in shaping immigrants’ long‐term integration trajectories. In this paper, we estimate the impact of obtaining regular employment within one year of arriving in Italy on the long‐term integration of immigrant individuals, approximately 10 years after arrival. A strong start in the host country is likely to play an important role in shaping long‐term integration outcomes and, ultimately, social cohesion. Despite a large literature on immigrant regularization, limited evidence exists on the causal impact of early access to regular employment on immigrants' long‐term social integration beyond labor market outcomes. To address this gap, we analyze a sample of immigrants from the Italian National Institute of Statistics (ISTAT) Social Condition and Integration of Foreign Citizens survey conducted in Italy in 2011–2012. Our impact estimates rely on an instrumental variable approach, leveraging a 2002 amnesty that increased the probability of obtaining a regular job depending on the time of arrival. We find that early engagement in regular employment has beneficial effects on various integration indicators, including trust in institutions, language proficiency, and cultural assimilation.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="07352751">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-07352751">
+</div><article class="article-card" id="10-1177-07352751261487413" role="article">
+<h3 class="article-card__title">The Ecological Class: Rethinking Hegemony through Indigenous Struggle and Settler Colonialism</h3><p class="article-card__authors" title="Kusha Sefat">Kusha Sefat</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-07352751261487413" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-07352751261487413" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/07352751261487413" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/07352751261487413" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-07352751261487413">
+        This article asks what kind of political subject is capable of confronting the ecological crisis. I argue that answering this question requires more than a new environmental politics. It demands a rethinking of hegemony. Engaging Latour and Schultz’s call for an “ecological class,” I show that their proposal fails to explain who can lead such a movement or who the antagonist is. Drawing on theories of hegemony and Indigenous studies, I illustrate that Indigenous peoples are uniquely positioned to perform this work against American settler colonialism. The latter is a national and global structure that shapes the ecological order on a planetary scale such that Indigenous self-liberation in the United States is linked to collective-liberation beyond. Through articulations that connect Indigenous struggles with workers, anti-racists, and feminists (mediated by land theft, speciesism, and heteropatriarchy, respectively), I develop a nonanthropocentric theory of hegemony adequate to the age of ecological crisis.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00811750">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Methodology</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00811750">
+</div><article class="article-card" id="10-1177-00811750261484940" role="article">
+<h3 class="article-card__title">When Can We Use Two-Way Fixed Effects (TWFE)? A Comparison of TWFE and Novel Dynamic Difference-in-Differences Estimators</h3><p class="article-card__authors" title="Tobias Rüttenauer, Ozan Aksoy">Tobias Rüttenauer, Ozan Aksoy</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-00811750261484940" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-00811750261484940" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/00811750261484940" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/00811750261484940" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-00811750261484940">
+        The conventional two-way fixed effects (TWFE) estimator has come under increasing scrutiny in settings with staggered treatment adoption. Recent research shows that TWFE can be biased when treatment effects vary across time or groups, prompting the development of several alternative dynamic difference-in-differences (DiD) estimators. Yet for applied researchers, it often remains unclear when TWFE is biased, what the newer estimators solve, and what limitations they all have. The authors provide an accessible overview of this literature and compare conventional TWFE with five dynamic DiD estimators using Monte Carlo simulations. The simulations consider realistic scenarios with time- and group-varying treatment effects, anticipation effects, and violations of parallel trends. The results show that much of the bias in TWFE reflects functional-form misspecification: when treatment effects are modeled in event time, TWFE performs well under time heterogeneity, with only modest bias in later posttreatment periods when strong group-specific heterogeneity is present. None of the new estimators is universally superior, and all involve trade-offs, with some being more robust to anticipation effects and others less sensitive to deviations from parallel trends. The authors illustrate these findings in an application on the motherhood earnings penalty using UK panel data, in which the dynamic treatment profiles are broadly similar across estimators despite some differences in long-run effects. The authors conclude that applied researchers should carefully consider potential effect heterogeneity and model it appropriately, whatever estimator they use. The authors also challenge the presumption that TWFE should invariably be abandoned in favor of newer DiD estimators.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00377732">
+<div class="row">
+<div class="col-10">
+<h2>Social Forces</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00377732">
+</div><article class="article-card" id="10-1093-sf-soag146" role="article">
+<h3 class="article-card__title">Neighborhood change and Black-White segregation: 2000–2020</h3><p class="article-card__authors" title="John R Logan, Liangdi Xu">John R Logan, Liangdi Xu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag146" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag146" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag146" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag146" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag146">
+        This study examines the relationship between neighborhood racial change and metropolitan segregation in 2000–2020. The most surprising finding is that the principal source of declining Black-White segregation has not been Black growth in White neighborhoods. Instead, it is a phenomenon that has not been noticed up to now—a substantial Black exodus from Black neighborhoods. The same kinds of neighborhoods where Black newcomers were increasingly concentrated in older, poorer sections of central cities in the 1920–1970 decades are now hollowing out, as residents find new opportunities elsewhere. We show that White exit from predominantly White neighborhoods is also an important source of segregation decline. At the same time, however, many predominantly Black neighborhoods have growing Black populations, pushing segregation upwards. This pattern was described as “succession” in early studies of central cities, but it is now likely to be found in suburban neighborhoods with newer housing, a smaller Black population share, and higher socioeconomic status compared to other Black neighborhoods. These and other findings shed new light on why segregation is declining and also why it is so persistent.
+    </div>
+</article>
+<article class="article-card" id="10-1093-sf-soag129" role="article">
+<h3 class="article-card__title">Review of “Privileged Brotherhoods: Becoming Men at Elite All-Boys Schools”</h3><p class="article-card__authors" title="Tristan Bridges">Tristan Bridges</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag129" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag129" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1093-sf-soag139" role="article">
+<h3 class="article-card__title">Review of “Island Time: Theory Groups and the Social Production of Scientific Knowledge”</h3><p class="article-card__authors" title="Keith Sawyer">Keith Sawyer</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag139" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag139" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1093-sf-soag142" role="article">
+<h3 class="article-card__title">On legacy persistence: historical KKK organizations and racial exclusion in American sundown towns</h3><p class="article-card__authors" title="Kunyuan Qiao, Ashley V Reichelmann, Matthew O Hunt">Kunyuan Qiao, Ashley V Reichelmann, Matthew O Hunt</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag142" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag142" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag142" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag142" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag142">
+        Why do some communities perpetuate historical patterns of racial exclusion while others abandon them? We examine American sundown towns, communities that from the 1890s through the 1960s barred people of color from remaining within their borders after sunset. We argue that Second Wave Ku Klux Klan (KKK) organizations, active from 1915 through the 1940s, institutionalized and enforced this exclusion, embedding it in local structures. These structures imprinted White adolescents with negative racial attitudes toward Black people, and imprinted individuals subsequently engaged in residential sorting, remaining in or relocating to sundown towns with a strong KKK presence while avoiding those without such a history. Second Wave Klan prevalence therefore predicts the racial attitudes of White residents in historical sundown towns today. We find support for our hypotheses in a sample of more than 600 White respondents surveyed in historical sundown towns. We advance research on place-based racial legacies by showing that historical organized enforcement helps explain why legacies persist unevenly across communities and that this persistence operates through two individual-level mechanisms: attitudinal imprinting and residential sorting.
+    </div>
+</article>
+<article class="article-card" id="10-1093-sf-soag145" role="article">
+<h3 class="article-card__title">Life and debt in rural America</h3><p class="article-card__authors" title="Matthew M Brooks, Paromita Sanyal">Matthew M Brooks, Paromita Sanyal</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag145" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag145" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag145" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag145" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag145">
+        Sociology’s growing focus on household debt and wealth has overlooked a potentially salient axis of inequality: rural–urban disparities in the United States. Key facets of rural life indicate a disadvantage (e.g., higher poverty rates, lack of mainstream financial institutions) and a simultaneous advantage (e.g., predominantly White populations, lower cost of living). To address evidence gaps on rural–urban disparities in debt and wealth, we use Consumer Expenditure Survey data to (1) estimate rural–urban disparities in multiple kinds of household debt and wealth, (2) examine what may be driving these disparities, and (3) assess whether these disparities also vary by race. Our findings show that place is an important axis of US financial inequality. Compared to urban households, rural households consistently have less credit card, student loan, and mortgage principal debt, but they also have less retirement and liquid savings, and their homes are worth less. These differences largely persist above controls, suggesting that rurality shapes financial outcomes in ways not fully explained by income dynamics and population composition. Racial variations in debt and wealth are also pronounced within rural areas, mirroring national patterns. We offer careful interpretations of our findings in order to gauge the financial and material wellbeing of rural households, which is needed in a time of growing rural–urban economic and social divides.
+    </div>
+</article>
+<article class="article-card" id="10-1093-sf-soag143" role="article">
+<h3 class="article-card__title">Generational imprinting: how political events shape cohorts</h3><p class="article-card__authors" title="Turgut Keskintürk">Turgut Keskintürk</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-sf-soag143" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-sf-soag143" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/sf/soag143" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/sf/soag143" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-sf-soag143">
+        Contemporary narratives of generational politics propose that formative experiences produce shared political opinions across an age cohort. In this article, I advance a theory of cohortization to challenge that view, arguing that large–scale political events produce differentiation within cohorts as much as differentiation between them. I investigate the implications of this framework through the killing of George Floyd and the subsequent Black Lives Matter protests in 2020, analyzing attitudes toward law enforcement among non-Hispanic White Americans from 2016 to 2024. Using survey data from Cooperative Congressional Election Study, American National Election Study, and the Nationscape, I show that younger and older cohorts diverged after the event, but this differentiation was driven exclusively by young Democrats and Independents. The end result was not a unified generation, but one internally divided along party lines. This finding qualifies theories of generational politics, emphasizing that formative experiences may intensify existing political divisions within cohorts.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="02667215">
+<div class="row">
+<div class="col-10">
+<h2>European Sociological Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-02667215">
+</div><article class="article-card" id="10-1093-esr-jcag032" role="article">
+<h3 class="article-card__title">Geographic proximity to grandparents and mothers’ paid work after childbirth</h3><p class="article-card__authors" title="Lonneke van den Berg, Pilar Gonalons-Pons">Lonneke van den Berg, Pilar Gonalons-Pons</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-esr-jcag032" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-esr-jcag032" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/esr/jcag032" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/esr/jcag032" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-esr-jcag032">
+        Grandparents often provide childcare, which can help foster mothers’ labour market participation. Most studies on this topic compare mothers who use grandparental care with those who do not, but this approach faces endogeneity issues: mothers’ labour force participation may itself drive the use of grandparental care. In this study we leverage data on geographic distance as a measure of potential grandparental availability to provide childcare, instead of actual use of grandparental care. Using longitudinal register data from Statistics Netherlands, we analyse how geographic proximity to grandparents shapes mothers’ labour market trajectories after first birth. We use individual fixed-effects models and propensity score matching to compare observationally equivalent women who differ only in geographic distance to their child’s grandmother. Our findings suggest that proximity to grandmothers increases mothers’ post-birth employment, with a small effect size for partnered mothers and a substantial effect size for single mothers. Our study also underscores the importance of evaluating endogeneity and heterogeneity when assessing the impact of grandparental availability on maternal employment.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted"><a href="/privacy-notice">Privacy Notice</a></small>
+</div>
+</footer>
+
+</html>
