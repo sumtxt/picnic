@@ -29,17 +29,25 @@ ENABLE_AI_FILTER = True        # Set to False to skip OpenRouter classification 
 ENABLE_OPENALEX_FILTER = True  # Set to False to skip OpenAlex domain filtering
 
 # OpenRouter Configuration
-OPENROUTER_API_BASE = "https://openrouter.ai/api/v1"
-OPENROUTER_MODEL = "openai/gpt-4o-mini"
+OPENROUTER_MODEL = "openai/gpt-6-luna-decisions"  # decision model: uses the Decisions API, not chat
 OPENROUTER_TIMEOUT = 30  # seconds
 OPENROUTER_RETRY_BACKOFF = 5  # seconds
 
-# OpenAI System Prompt (ported from parameters/prompts.R)
-PROMPT_SOCSCI_CLASSIFIER = (
-    "You are given a content from a new issue of a multidisciplinary scientific journal. "
-    "Respond 'Yes' if the content is a research article in any social science discipline "
-    "and 'No' otherwise."
-)
+# Decisions API question: a "choice" between "Yes" and "No". The article is sent as
+# `state`; the model returns the chosen option (plus probabilities) instead of text.
+SOCSCI_QUESTION_NAME = "social_science_research"
+SOCSCI_QUESTION = {
+    "type": "choice",
+    "instructions": (
+        "You are given a content from a new issue of a multidisciplinary "
+        "scientific journal. Is the content a research article in any social "
+        "science discipline?"
+    ),
+    "criteria": {
+        "Yes": "The content is a research article in a social science discipline.",
+        "No": "Anything else.",
+    },
+}
 
 # Filter Codes
 FILTER_PASS = 0           # Article passes all filters
