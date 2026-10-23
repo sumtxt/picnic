@@ -1,4 +1,4 @@
-# Paper Picnic 2.2
+# Paper Picnic 2.3
 
 A weekly basket with the latest published research in political science. On Fridays, we query the Crossref API for new research articles that appeared in the previous 7 days across many journals in political science and adjacent fields. [paper-picnic.com/](https://paper-picnic.com/)
 
@@ -128,7 +128,7 @@ The crawler ([main.py](main.py)) runs two parallel workflows:
    - **Nature**: Keeps only articles with `/s` in URL
    - **Science**: Keeps only articles with abstracts ≥200 chars
    - **OpenAlex**: Removes articles whose domain isn't "Social Sciences"
-   - **AI** (optional): Uses GPT-4o-mini to classify social science relevance
+   - **AI** (optional): Uses GPT-6 Luna Decisions to classify social science relevance
 6. Outputs to [output/publications.json](output/publications.json)
 
 ### 2. OSF Preprints Crawl

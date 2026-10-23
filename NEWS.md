@@ -1,5 +1,9 @@
 # picnic
 
+### Version 2.3.0 (2026-10-23)
+
+* Introduced gpt-6-luna-decisions for deprecating gpt-4o-mini 
+
 ### Version 2.2.0 (2026-08-29)
 
 * Added new personalized email notifications
