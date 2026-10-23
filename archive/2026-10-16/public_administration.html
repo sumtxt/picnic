@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Public Administration</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<link href="./assets/vendor/css/inter-fonts.css" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script src="./assets/vendor/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/vendor/js/sortable-1.15.0.min.js"></script>
+<script src="./assets/vendor/js/bootstrap-5.3.3.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link href="./assets/vendor/css/bootstrap-5.3.3.min.css" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · October 16, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-10-16/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-10-16/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-16/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-16/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-10-16/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-10-16/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-10-16/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-10-16/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-16/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-16/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-10-16/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="15206688">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15206688" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15206688" style="max-width: 300px;" title="Journal of Policy Analysis and Management">
+                            Journal of Policy Analysis and Management
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="10531858">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-10531858" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-10531858" style="max-width: 300px;" title="Journal of Public Administration Research and Theory">
+                            Journal of Public Administration Research and Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333352">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333352" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333352" style="max-width: 300px;" title="Public Administration Review">
+                            Public Administration Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14494035">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14494035" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14494035" style="max-width: 300px;" title="Policy and Society">
+                            Policy and Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13501763">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13501763" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13501763" style="max-width: 300px;" title="Journal of European Public Policy">
+                            Journal of European Public Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0190292X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0190292X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0190292X" style="max-width: 300px;" title="Policy Studies Journal">
+                            Policy Studies Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00333298">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00333298" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00333298" style="max-width: 300px;" title="Public Administration">
+                            Public Administration
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03055736">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03055736" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03055736" style="max-width: 300px;" title="Policy and Politics">
+                            Policy and Politics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="09521895">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-09521895" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-09521895" style="max-width: 300px;" title="Governance">
+                            Governance
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17485983">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17485983" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17485983" style="max-width: 300px;" title="Regulation &amp; Governance">
+                            Regulation &amp; Governance
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="15206688">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Policy Analysis and Management</h2>
+<p></p>
+</div>
+<div class="col-2">
+<div class="float-end">
+<span data-bs-placement="bottom" data-bs-toggle="tooltip" title="Number of less relevant items hidden. Click to show.">
+<button aria-controls="collapseExample" aria-expanded="false" class="btn btn-secondary btn-sm" data-bs-target="#collapse-15206688" data-bs-toggle="collapse" type="button">
+              +1
+            </button>
+</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-15206688"><article class="article-card" id="10-1002-pam-v46-1" role="article">
+<div class="article-card__header mb-2">
+<small class="text-muted"> Generic title: Not a research article </small>
+</div>
+<h3 class="article-card__title"></h3><p class="article-card__authors" title=""></p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.v46.1" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.v46.1" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div><article class="article-card" id="10-1002-pam-70136" role="article">
+<h3 class="article-card__title">Returns to Caring? Health and Well‐Being Effects of Subsidized Long‐Term Care</h3><p class="article-card__authors" title="Joan Costa‐Font, Sergi Jiménez‐Martín, Cristina Vilaplana‐Prieto">Joan Costa‐Font, Sergi Jiménez‐Martín, Cristina Vilaplana‐Prieto</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70136" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70136" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70136" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70136" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70136">
+        We estimate the health and well‐being effects of subsidized access to long‐term care (LTC). Our analysis exploits the staggered implementation of Spain's 2007 System of Autonomy and Care for Dependent People (SAAD), which expanded publicly funded and universal LTC subsidies and supports, as well as its subsequent reform. Using two decades of administrative and survey data and leveraging exogenous regional and individual‐level variation in program exposure, we find that access to SAAD benefits reduces the care receiver's depressive symptoms by approximately 10 percentage points, increases its survival probability by 2.6–3 percentage points, and raises its life satisfaction by 0.24–0.50 scale points. Cost‐effectiveness estimates indicate that the implied cost per quality‐adjusted life year (QALY) gained lies below commonly accepted efficiency thresholds for public health spending in Europe. These findings document sizeable health returns and efficiency gains from publicly subsidized LTC provision.
+    </div>
+</article>
+<article class="article-card" id="10-1002-pam-70134" role="article">
+<h3 class="article-card__title">Means‐Tested Public Transportation Subsidies: Causal Evidence and Implications</h3><p class="article-card__authors" title="Seoyoon Ahn, Matthew Freedman, David Phillips, Atheendar Venkataramani">Seoyoon Ahn, Matthew Freedman, David Phillips, Atheendar Venkataramani</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1002-pam-70134" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1002-pam-70134" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1002/pam.70134" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1002/pam.70134" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1002-pam-70134">
+        This paper evaluates the effects of a novel and large‐scale program in King County, Washington, that provides fare‐free public transportation to individuals with low incomes. Using both experimental and quasi‐experimental methods together with rich administrative and survey data, we find that providing free transit has very limited effects on mobility or downstream outcomes related to health and well‐being. We examine possible explanations for the modest effects, which contrast with findings from prior research. Our results suggest that changes in the external environment post‐COVID‐19 pandemic, including changes in norms around fare evasion, reduced the price elasticity of demand for travel by transit among individuals with low incomes.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00333352">
+<div class="row">
+<div class="col-10">
+<h2>Public Administration Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00333352">
+</div><article class="article-card" id="10-1111-puar-70215" role="article">
+<h3 class="article-card__title">Reply to Kettl: Public Administration and the Shifting Competing Forces of Accountability</h3><p class="article-card__authors" title="Charles Wise">Charles Wise</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70215" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70215" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70215" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70215" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70215">
+        The accountability context for how public administrators operate has shifted markedly and has become much more volatile. This shift has placed new and some conflicting demands on public administrators to demonstrate their accountability to various competing governmental actors and has complicated policy and program implementation. The changed context, its causes, and the resultant challenges are analyzed and discussed. Questions are presented for public administration research to help public administrators deal with the challenges.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70224" role="article">
+<h3 class="article-card__title">Public Interest Capacity: The Case of Direct File</h3><p class="article-card__authors" title="Donald Moynihan, Pam Herd, Xiaoyang Xu">Donald Moynihan, Pam Herd, Xiaoyang Xu</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70224" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70224" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70224" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70224" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70224">
+        This article describes the conditions for creating and undermining public interest capacity, that is, the ability of the state to generate public goods with widely distributed benefits. The creation and elimination of Direct File, a free, online public tax reporting system in the United States, offers an instrumental case. The creation of Direct File depended upon political commitment sufficient to overcome private interests: both the traditional dependence on private contractors to produce digital products, and the opposition of the private tax preparation industry which saw Direct File as a competitor. Political will was not enough: creating internal capacity in the form of skilled government tech teams who could build a quality digital product was also necessary. But without this political commitment in the Trump administration, which instead pursued downsizing and was receptive to the tax preparation industry arguments, both Direct File and the team that built it were eliminated.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70217" role="article">
+<h3 class="article-card__title">Reply to Kettl: The Field of Public Administration in America and an Unpreparedness of Its Own Making?</h3><p class="article-card__authors" title="Kim Moloney">Kim Moloney</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70217" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70217" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70217" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70217" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70217">
+        This Reply suggests the sub‐field of U.S.‐specific public administration is under‐prepared to address democratic deconsolidation given its multi‐decade distance from the disciplines of comparative politics and political economy and from the sub‐fields of comparative and development public administration. The narrowness of what is understand as “good” public administration by U.S.‐based scholars has largely excluded cross‐disciplinary and non‐U.S. intellectual histories which, if understood, would have deepened sub‐field intellectual depth and breadth but also, better prepared the sub‐field for America's current administrative state. This Reply suggests the value of drawing upon post‐WWII administration‐linked trends in other disciplines and upon links between administration and prior democratic deconsolidations (the U.S. is not unique). This includes the sub‐field's historical reluctance to research existential insecurity, intolerance (beyond social inequity), the role of democratic restraint, the role of crisis (or lack of) in democratic deconsolidation, and theories of democracy‐to‐autocracy and autocracy‐to‐democracy.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70220" role="article">
+<h3 class="article-card__title">Governing Reserves: Managerial Discretion and Government Creditworthiness</h3><p class="article-card__authors" title="Sharon N. Kioko, Temirlan T. Moldogaziev">Sharon N. Kioko, Temirlan T. Moldogaziev</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70220" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70220" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70220" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70220" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70220">
+        A government's ability to generate surpluses and build reserves reflects prudent financial management, with the accumulation of reserves signaling sound budgeting practices. Reserves are essential for sound fiscal governance during economic downturns, and managerial discretion over these resources is crucial to minimizing disruptions in service delivery. While the counter‐cyclical benefits of formal reserves are well documented, less attention has been paid to the discretion managers retain over reserves. Using credit ratings as a proxy for creditworthiness, we find that managerial discretion over accumulated resources enhances fiscal flexibility and strengthens creditworthiness; however, the presence of formal reserves alone does not improve credit ratings. Our study contributes to an emerging literature exploring whether better financial reporting can help us understand the critical balance between management flexibility and accountability mechanisms in public‐sector organizations.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70226" role="article">
+<h3 class="article-card__title">Promises, Threats, and Norms: A Mixed Methods Study on Bureaucratic Support for Public Participation</h3><p class="article-card__authors" title="Jesse W. Campbell, Oscar Radyan Danar, Sanjay K. Pandey">Jesse W. Campbell, Oscar Radyan Danar, Sanjay K. Pandey</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70226" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70226" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70226" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70226" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70226">
+        Public participation can enhance policy quality and democratic legitimacy but may threaten bureaucratic control. We hypothesize that bureaucratic support for participation is higher when policies are less complex and participants are broadly representative. Using a mixed‐methods design involving Indonesian local public servants, we pursue complementarity by combining a 2 × 2 vignette‐based survey experiment with a Gioia analysis of qualitative reflections to explain the experimental results and further illuminate how bureaucrats evaluate participation. The experiment shows that participant representativeness significantly increases support, whereas policy complexity has no statistically significant effect. Integrating the experimental and qualitative data through joint displays reveals that bureaucrats rejecting participation frequently cite participant‐related risks, whereas supporters emphasize instrumental, procedural, and implementation benefits. Normative values, such as citizens' rights and democratic principles, are acknowledged regardless of bureaucrats' overall support. We conclude that bureaucratic support for public participation reflects how officials balance its promises, threats, and normative foundations.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70223" role="article">
+<h3 class="article-card__title">Between the Lines: Decoding Signaling Differences in Public and Private Sector Job Advertisements</h3><p class="article-card__authors" title="Nico Gießmann, Nicolas Drathschmidt">Nico Gießmann, Nicolas Drathschmidt</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70223" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70223" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70223" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70223" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70223">
+        To compete in the “war for talent,” public sector employers must demonstrate advantages over private employers. While public service motivation (PSM) predicts sector preference, scholars disagree on whether public employers (can) effectively signal PSM in job advertisements. Consequently, this article examines how public and private job advertisements differ in language. We collected 5000 advertisements from both sectors and performed natural language processing (NLP) and qualitative content analysis. Both sectors use specialized language that can narrow the applicant pool. PSM signals appear more often in the public sector, but affective motives are rarely communicated; instead, self‐sacrifice is framed as a legal obligation. Public sector advertisements adopt a rational tone instead of explaining purpose and societal value. Legally mandated, saturated signals may be perceived as low‐cost and ineffective. The findings explain the mixed results concerning PSM signaling and underscore the gap between theory and practice in PSM‐related recruitment efforts.
+    </div>
+</article>
+<article class="article-card" id="10-1111-puar-70231" role="article">
+<h3 class="article-card__title">Steering and Setting Free: Insights From a 20‐Year Retrospective Case Study of a Security and Justice Organization's Digital Transformation</h3><p class="article-card__authors" title="Friso Selten, Dorus van Loo, Bram Klievink">Friso Selten, Dorus van Loo, Bram Klievink</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-puar-70231" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-puar-70231" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/puar.70231" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/puar.70231" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-puar-70231">
+        Advances in digital technologies are expected to fundamentally change how organizations operate and create value. Empirical studies show that public organizations face difficulties organizing and sustaining this digital transformation. To better understand these challenges, this study examines the organizational mechanisms underlying digital transformation in a public organization over the past 20 years. Our findings show that this transformation was primarily enabled by an emergent change approach, with influential planned changes occurring only occasionally. We identify the organizational mechanisms underlying both types of change and analyze their interdependence. Our findings suggest that both emergent and planned change approaches may be needed to enable digital transformation in public organizations effectively, but that combining them is complex in practice.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="14494035">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Society</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-14494035">
+</div><article class="article-card" id="10-1093-polsoc-puag021" role="article">
+<h3 class="article-card__title">Governing knowledge through program architecture: strategic valorization, infrastructural integration, and the autonomy-steering settlement in Horizon Europe after 2027</h3><p class="article-card__authors" title="Olena Cherniavska">Olena Cherniavska</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-polsoc-puag021" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-polsoc-puag021" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/polsoc/puag021" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/polsoc/puag021" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-polsoc-puag021">
+        European research framework programs have long governed knowledge through architecture rather than through funding instruments alone. The proposed post-2027 reconfiguration of Horizon Europe is therefore interpreted as a recalibration of an established knowledge-governance architecture. The article conceptualizes program architecture as the formal-organizational configuration of a public program: the arrangement of pillars, domains, budgetary couplings, coordination mechanisms, eligibility rules, steering devices, valorization pathways, and accountability routines through which authority, participation, and access to resources are structured. This definition positions program architecture as a meso-level mechanism of policy steering between individual instruments and broader governance regimes. Drawing on qualitative document analysis and cross-temporal comparison of Horizon Europe 2021–2027 and the proposed 2028–2034 framework, the article identifies five interrelated shifts. First, the proposed Pillar II “Competitiveness and Society” more closely links societal relevance to strategic, industrial, and technological priorities. Second, ERA and widening move from horizontal and partly compensatory support toward infrastructural integration. Third, dispersed innovation support is consolidated into a strategically governed valorization pipeline connecting co-creation, industry-academia alignment, standardization, scale-up, strategic technologies, and sovereignty. Fourth, budgetary coupling with competitiveness-oriented investment structures anchors strategic selectivity. Fifth, performance steering is strengthened through high-visibility initiatives, milestones, and accountability routines that make program results more traceable to political priorities. The article shows how program architecture filters societal relevance, inclusion, and valorization without formally abolishing scientific autonomy. It thereby explains how public programs steer knowledge by structuring the routes through which research becomes fundable, visible, valorizable, and politically relevant.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="13501763">
+<div class="row">
+<div class="col-10">
+<h2>Journal of European Public Policy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-13501763">
+</div><article class="article-card" id="10-1080-13501763-2026-2746014" role="article">
+<h3 class="article-card__title">Political trust and inheritance taxation: evidence from four studies</h3><p class="article-card__authors" title="Daniel Devine, Carmen van Alebeek">Daniel Devine, Carmen van Alebeek</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2746014" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2746014" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-13501763-2026-2739423" role="article">
+<h3 class="article-card__title">National, partisan or ideological biases? How EU officials' characteristics can influence infringement proceeding outcomes</h3><p class="article-card__authors" title="Jan Menzner, Johannes Lattmann">Jan Menzner, Johannes Lattmann</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2739423" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2739423" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-13501763-2026-2746008" role="article">
+<h3 class="article-card__title">The return of the ‘positive state’? Capacity-building for the protection of critical national infrastructures across Europe</h3><p class="article-card__authors" title="Andreas Kruck, Lorenz Sommer">Andreas Kruck, Lorenz Sommer</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2746008" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2746008" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-13501763-2026-2746006" role="article">
+<h3 class="article-card__title">Do citizens reward democratic norm enforcement? Experimental evidence on EU backsliding disputes</h3><p class="article-card__authors" title="Kata Moravecz">Kata Moravecz</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2746006" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2746006" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1080-13501763-2026-2746012" role="article">
+<h3 class="article-card__title">Not just mirror images: how political trust and distrust relate to public service experiences</h3><p class="article-card__authors" title="Matthijs Gillissen, Silke Goubin, Lisanne de Blok">Matthijs Gillissen, Silke Goubin, Lisanne de Blok</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1080/13501763.2026.2746012" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1080/13501763.2026.2746012" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="0190292X">
+<div class="row">
+<div class="col-10">
+<h2>Policy Studies Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-0190292X">
+</div><article class="article-card" id="10-1111-psj-70169" role="article">
+<h3 class="article-card__title">Policy Agendas in Coalition Agreements: The Enduring Influence of Policy Inheritance</h3><p class="article-card__authors" title="Gerard Breeman, Amnon Cavari, Jens Jungblut, Ilana Shpaizman, Arco Timmermans, Jon Bøe Valgermo">Gerard Breeman, Amnon Cavari, Jens Jungblut, Ilana Shpaizman, Arco Timmermans, Jon Bøe Valgermo</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-psj-70169" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-psj-70169" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/psj.70169" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/psj.70169" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-psj-70169">
+        New governments frequently inherit issues from their predecessors, and as a result, various policy problems tend to remain on the agenda for many years. Previous research examining the role of policy inheritance has focused mainly on the agenda during a government's term in office. These studies find that because governments must first contend with the problems they inherit, there is considerably less room for new issues to emerge on the agenda. This study seeks to examine the idea of policy inheritance through the lens of coalition agreements. Coalition agreements, a feature of multiparty governments, are drafted shortly after elections and reflect the outcome of the political struggle. For this reason, one can expect that coalition agreements contain mostly issues that parties regard as important. By implication, changes in the coalition agreements' issue agenda would be a function of the political change produced by the electoral cycle, rather than of inheritance. Analyzing coalition agreements in three countries—Israel, the Netherlands, and Norway—across 42 elections, we find no evidence for this assumption. Agendas in coalition agreements do not vary with changes in the party composition of the coalition, changes in the ideological distance between parties, or changes in the party holding the office of Prime Minister. This indicates that even when new coalition governments are preparing for their term in office, inheritance remains the primary driver of agenda‐setting.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="03055736">
+<div class="row">
+<div class="col-10">
+<h2>Policy and Politics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-03055736">
+</div><article class="article-card" id="10-1332-03055736y2026d000000105" role="article">
+<h3 class="article-card__title">How experiential knowledge becomes evidence in lawmaking through consultations with incarcerated people</h3><p class="article-card__authors" title="Kati Rantala, Maija Helminen, Mika Simonen, Susanna Lundell">Kati Rantala, Maija Helminen, Mika Simonen, Susanna Lundell</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1332-03055736y2026d000000105" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1332-03055736y2026d000000105" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1332/03055736y2026d000000105" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1332/03055736y2026d000000105" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1332-03055736y2026d000000105">
+        Experiential knowledge, grounded in lived experience, is increasingly recognized as an important source of evidence in policy making and legislative drafting. Yet questions remain about how knowledge derived from consultations with affected individuals can legitimately inform broader lawmaking. This article examines how experiential knowledge from targeted consultations with incarcerated individuals is transformed into context-specific legislative knowledge through the interplay of propositional system knowledge, procedural knowledge of navigating the prison system, and implicit analogical reasoning. Drawing on consultation memoranda and a draft Bill produced during the reform of the Finnish Imprisonment Act, we analyse consultations concerning incarcerated individuals’ use of communication technologies to manage essential practical matters beyond prison under conditions of administrative burden. We first construct a narrative from the consultees’ propositional and procedural experiential knowledge and then examine how this knowledge was incorporated into legislative arguments alongside official expert knowledge. Our analysis shows that the draft Bill employed implicit analogical reasoning to transform procedural knowledge of navigating the prison system into propositional claims applicable to broader prison populations sharing similar contexts, institutional routines, and practical needs. By demonstrating how analogical reasoning links propositional and procedural knowledge to generate context-specific generalizations, the article offers a novel conceptual framework for understanding how experiential knowledge can become legitimate evidence in lawmaking. We suggest that this approach is applicable to other institutional settings characterized by standardized living conditions, shared procedures, and common systems of navigation.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="17485983">
+<div class="row">
+<div class="col-10">
+<h2>Regulation &amp; Governance</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-17485983">
+</div><article class="article-card" id="10-1111-rego-70212" role="article">
+<h3 class="article-card__title">Executive Aggrandizement: Understanding the Silent Erosion of Democratic Constraints</h3><p class="article-card__authors" title="Emre Toros">Emre Toros</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70212" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70212" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70212" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70212" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70212">
+        Studies of executive aggrandizement face a double measurement problem. Measures of aggrandizement may include institutions that constitute liberal democracy, while broad composites may treat substantively different executive practices as interchangeable. This article develops a measurement‐oriented classification that reduces direct overlap with the V‐Dem Liberal Democracy Index and compares distinct practices under common analytical rules. Using V‐Dem v15 data and a common sample of 17,404 country‐years across 179 countries from 1901 to 2024, country‐ and year‐fixed‐effects models estimate conditional within‐country associations for five lagged practices. Patronal‐distributive allocation, judicial purges, and personalist/mobilizational legitimation are negatively associated with liberal democracy. Executive corruption is consistently imprecise, whereas politicized administrative appointments are negative only in some specifications. Item‐level, restricted‐period, timing, and first‐difference analyses document practice heterogeneity but also show exceptional persistence; negative future‐lead estimates prevent a causal or sequential reading. The primary contribution is a bounded measurement and modeling strategy that preserves comparability while reducing, rather than claiming to eliminate, outcome overlap. Its linked theoretical contribution is a practice‐family account of executive aggrandizement: politically coordinated practices may coexist and remain interdependent without becoming interchangeable indicators or stages in a common causal sequence.
+    </div>
+</article>
+<article class="article-card" id="10-1111-rego-70205" role="article">
+<h3 class="article-card__title">Independent Agencies, Regulation‐Compliant Citizens? Evidence From a Survey Experiment on Vaccine Authorization in the EU</h3><p class="article-card__authors" title="Benjamin Leidorf‐Tidå, Saar Alon‐Barkat, Madalina Busuioc, Thijs de Boer">Benjamin Leidorf‐Tidå, Saar Alon‐Barkat, Madalina Busuioc, Thijs de Boer</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70205" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70205" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70205" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70205" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70205">
+        The effectiveness of regulatory policy in many areas is contingent on citizens adhering to the scientific advice of regulatory bodies. This in turn depends on whether they perceive this advice as credible . One of the biggest threats to regulatory credibility is the concern that regulatory policy can be tainted by short‐term political interests. Consequently, regulation literature points to agency independence as a crucial resource to securing regulatory credibility, which in turn fosters citizen compliance. We test this assumption both observationally and experimentally in the case of the European Medicines Agency's (EMA) risk assessment for the first COVID‐19 vaccine—a prime example of reliance on credibility in regulation under conditions of controversy and concerns over political interference. We conducted a pre‐registered survey experiment with 4000 EU citizens from four countries timed shortly after the vaccine's approval and before its mass distribution. The results provide partial support that independence is beneficial to regulatory credibility and by extension, to regulatory compliance. Citizens who perceive the EMA as more independent found its risk assessment to be more credible and were more willing to take the vaccine. However, our experimental evidence is less conclusive. Thus, while independence might not in and of itself be a “silver bullet” to ensure regulatory credibility and compliance, it does play an important role, and its real‐life substantive significance would scale up considerably at population levels.
+    </div>
+</article>
+<article class="article-card" id="10-1111-rego-70214" role="article">
+<h3 class="article-card__title">Linkage as Leverage: OECD Accession as an Informal and Indirect Graduation Mechanism in the International Climate Regime</h3><p class="article-card__authors" title="Klaus Dingwerth, Anna Kurth">Klaus Dingwerth, Anna Kurth</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70214" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70214" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70214" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70214" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70214">
+        As global power is shifting, international institutions face a challenge: established powers will often request that rising powers no longer continue to benefit from their status as “developing countries”. Yet only a few institutions have formal rules in place to organize this transition. As a result, tracing the informal pathways through which change occurs becomes relevant. In this article, we study one such mechanism in the international climate regime. In that regime, the so‐called Annex I countries agreed “to take the lead” in reducing greenhouse gas emissions while developing countries remained exempt from a similar obligation. Because Annex I was hard to amend, the regime has frequently been said to lack a graduation mechanism. Yet, once we take the interaction between the United Nations Framework Convention on Climate Change (UNFCCC) and its broader institutional environment into account, the process of acceding to the Organization for Economic Co‐operation and Development (OECD) comes into view as an indirect and informal graduation mechanism. We examine the effects and limitations of this mechanism in relation to the accession processes of Mexico (1994), South Korea (1996), and Chile (2010). Our analysis leads to two main results. First, we show that a graduation mechanism based on “linkage as leverage” existed. Second, we sketch three distinct causal pathways that lead to different degrees of graduation in each case. Overall, our study suggests that graduation based on “linkage as leverage” depends on three conditions. First, states needed to activate the mechanism in each case. Second, domestic support was required to sustain graduation. And third, major emitters had to develop an interest in joining a club organization that could exercise leverage.
+    </div>
+</article>
+<article class="article-card" id="10-1111-rego-70211" role="article">
+<h3 class="article-card__title">From Judicial Regulation to Judicial Governance: Locating the Courts on the Map of Social Ordering</h3><p class="article-card__authors" title="Thomas Coendet">Thomas Coendet</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70211" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70211" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70211" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70211" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70211">
+        Courts have long been recognized as venues of social control and policymaking. The rise of regulatory capitalism suggests reconsidering the judiciary in regulatory terms, notably through work that casts courts as regulators. This article argues, however, that styling courts as regulators is both analytically and normatively deficient: it obscures the distinctive function of courts and their contribution to social ordering. At the same time, judicial decision‐making plainly exhibits a regulatory dimension. Yet rather than stretching the concept of regulation, this article proposes to capture this dimension through governance theory. On this theoretical foundation, the article outlines a model of judicial governance that elucidates how social ordering emerges from adjudication and how it unfolds over time. In particular, the model highlights the implications of judicial decision‐making for private ordering and draws attention to processes of intermediation through lawyers, media, and advanced digital technologies. It thus opens a set of analytically structured research questions and complements them with a methodological framework to orient future work on judicial governance.
+    </div>
+</article>
+<article class="article-card" id="10-1111-rego-70215" role="article">
+<h3 class="article-card__title">Imagining the Invisible: Judicial Epistemology, Carceral Regulation, and the Liberal State</h3><p class="article-card__authors" title="Netanel Dagan, Adiel Zimran">Netanel Dagan, Adiel Zimran</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70215" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70215" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70215" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70215" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70215">
+        In many systems judges exercise judicial review over prison officials' decisions. However, judges are often symbolically, institutionally, and practically distant from prison realities. In the current paper, we explore how judges negotiate their limited epistemological awareness of prison through the lens of epistemic injustice. Drawing on interviews with 17 (retired) Israeli Supreme Court justices regarding their prison administrative review decisions, we identify three epistemic gaps: first, the prison's heterotopic nature; second, the tension between commitment to liberty and authorizing the “pains of imprisonment” at sentencing; and third, the division of labor between sentencing and prison phases. The findings suggest that judges bridge these epistemological gaps through three imaginaries: (a) “ epistemic distancing ”; (b) “ epistemic assimilation ”; and (c) “ parallel epistemology ”. These epistemic imaginaries allow judges to compensate for their experiential absence but also structure their judicial oversight, shaping how courts administratively regulate imprisonment without fully confronting its lived realities. The findings show how judicial imaginaries of prison are shaped through top‐down narrative constructions rather than bottom‐up experiential encounters and include self‐produced “epistemic estrangement” from the prison world. We further examine the implications of these epistemic blind spots, demonstrating how they enable the legitimization of carceral power while obscuring and marginalizing the lived experiences of incarcerated individuals.
+    </div>
+</article>
+<article class="article-card" id="10-1111-rego-70216" role="article">
+<h3 class="article-card__title">Economic Governance and Institutional Design</h3><p class="article-card__authors" title="Jens Prüfer">Jens Prüfer</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-rego-70216" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-rego-70216" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/rego.70216" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/rego.70216" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-rego-70216">
+        How should institutions be designed to achieve compliance with behavioral rules, including laws, social norms, religious rules, or cultural traditions? This conceptual paper introduces a typology of economic governance institutions and explains how it can be used both by policy makers, administrators, and researchers in all social sciences to improve rule compliance. It explains how effective and efficient institutions can be identified for a given economic governance problem. The framework is built on the microeconomic foundations of economic governance theory, and its applicability extends to any compliance problem that can be formalized as a social dilemma or coordination game. The concepts are applied to two cases: how to create trust in cloud computing technologies, and how to implement data sharing of user‐generated information on data‐driven markets.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted"><a href="/privacy-notice">Privacy Notice</a></small>
+</div>
+</footer>
+
+</html>

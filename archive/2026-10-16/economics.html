@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Economics</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<link href="./assets/vendor/css/inter-fonts.css" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script src="./assets/vendor/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/vendor/js/sortable-1.15.0.min.js"></script>
+<script src="./assets/vendor/js/bootstrap-5.3.3.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link href="./assets/vendor/css/bootstrap-5.3.3.min.css" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · October 16, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-10-16/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-10-16/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-16/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-16/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap active" href="/archive/2026-10-16/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-10-16/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-10-16/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-10-16/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-16/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-10-16/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-10-16/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00335533">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00335533" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00335533" style="max-width: 300px;" title="Quarterly Journal of Economics">
+                            Quarterly Journal of Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00028282">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00028282" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00028282" style="max-width: 300px;" title="American Economic Review">
+                            American Economic Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00223808">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00223808" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00223808" style="max-width: 300px;" title="Journal of Political Economy">
+                            Journal of Political Economy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00129682">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00129682" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00129682" style="max-width: 300px;" title="Econometrica">
+                            Econometrica
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00220515">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00220515" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00220515" style="max-width: 300px;" title="Journal of Economic Literature">
+                            Journal of Economic Literature
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00346527">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00346527" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00346527" style="max-width: 300px;" title="Review of Economic Studies">
+                            Review of Economic Studies
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19411383">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19411383" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19411383" style="max-width: 300px;" title="Annual Review of Economics">
+                            Annual Review of Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="08953309">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-08953309" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-08953309" style="max-width: 300px;" title="Journal of Economic Perspectives">
+                            Journal of Economic Perspectives
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="2640205X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-2640205X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-2640205X" style="max-width: 300px;" title="AER: Insights">
+                            AER: Insights
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19457782">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19457782" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19457782" style="max-width: 300px;" title="AEJ: Applied Economics">
+                            AEJ: Applied Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00346535">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00346535" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00346535" style="max-width: 300px;" title="Review of Economics and Statistics">
+                            Review of Economics and Statistics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19457731">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19457731" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19457731" style="max-width: 300px;" title="AEJ: Economic Policy">
+                            AEJ: Economic Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03044076">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03044076" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03044076" style="max-width: 300px;" title="Journal of Econometrics">
+                            Journal of Econometrics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="15424766">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-15424766" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-15424766" style="max-width: 300px;" title="Journal of the European Economic Association">
+                            Journal of the European Economic Association
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0734306X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0734306X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0734306X" style="max-width: 300px;" title="Journal of Labor Economics">
+                            Journal of Labor Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="0022166X">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-0022166X" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-0022166X" style="max-width: 300px;" title="Journal of Human Resources">
+                            Journal of Human Resources
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="17597323">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-17597323" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-17597323" style="max-width: 300px;" title="Quantitative Economics">
+                            Quantitative Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00472727">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00472727" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00472727" style="max-width: 300px;" title="Journal of Public Economics">
+                            Journal of Public Economics
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="02664658">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-02664658" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-02664658" style="max-width: 300px;" title="Economic Policy">
+                            Economic Policy
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="13684221">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-13684221" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-13684221" style="max-width: 300px;" title="Econometrics Journal">
+                            Econometrics Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00130133">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00130133" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00130133" style="max-width: 300px;" title="Economic Journal">
+                            Economic Journal
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="19457669">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-19457669" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-19457669" style="max-width: 300px;" title="AEJ: Microeconomics">
+                            AEJ: Microeconomics
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="00223808">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Political Economy</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00223808">
+</div><article class="article-card" id="10-1086-744482" role="article">
+<h3 class="article-card__title">Buying Data from Consumers: The Impact of Monitoring in U.S. Auto Insurance</h3><p class="article-card__authors" title="Yizhou Jin, Shoshana Vasserman">Yizhou Jin, Shoshana Vasserman</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/744482" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/744482" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1086-744485" role="article">
+<h3 class="article-card__title">Firm Heterogeneity and the Impact of Immigration: Evidence from German Establishments</h3><p class="article-card__authors" title="Agostina Brinatti, Nicolas Morales">Agostina Brinatti, Nicolas Morales</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/744485" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/744485" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1086-744504" role="article">
+<h3 class="article-card__title">Closing Ranks: Organized Labor and Immigration</h3><p class="article-card__authors" title="Carlo Medici">Carlo Medici</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/744504" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/744504" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1086-744505" role="article">
+<h3 class="article-card__title">A Theory of Economic Coercion and Fragmentation</h3><p class="article-card__authors" title="Christopher Clayton, Matteo Maggiori, Jesse Schreger">Christopher Clayton, Matteo Maggiori, Jesse Schreger</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1086/744505" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1086/744505" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00346527">
+<div class="row">
+<div class="col-10">
+<h2>Review of Economic Studies</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00346527">
+</div><article class="article-card" id="10-1093-restud-rdag113" role="article">
+<h3 class="article-card__title">Quality Regulation and Competition: Evidence from Pharmaceutical Markets</h3><p class="article-card__authors" title="Juan Pablo Atal, José Ignacio Cuesta, Morten Sæthre">Juan Pablo Atal, José Ignacio Cuesta, Morten Sæthre</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-restud-rdag113" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-restud-rdag113" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/restud/rdag113" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/restud/rdag113" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-restud-rdag113">
+        Quality regulation seeks to ensure quality and foster competition by reducing vertical differentiation, but it may also have adverse effects on market structure. We study this trade-off in the context of pharmaceutical bioequivalence, which is the primary quality standard for generic drugs. By exploiting the introduction of bioequivalence in Chile, we find that stronger regulation reduced the number of drugs in the market by 18% and increased average paid prices by 13%. We estimate a model of drug entry, certification, and demand to study how drug quality, aversion to generics, and certification costs shape the equilibrium effects of quality regulation. We find that quality regulation increased demand for generic drugs by resolving asymmetric information and reducing aversion to unbranded generics, which induced the entry of high-quality drugs in place of low-quality drugs. Consumer welfare increased despite higher prices and a lower number of firms. We compare minimum quality standards with alternative designs of quality regulation, including quality disclosure.
+    </div>
+</article>
+<article class="article-card" id="10-1093-restud-rdag112" role="article">
+<h3 class="article-card__title">The Direct and Indirect Effects of Online Job Search Advice</h3><p class="article-card__authors" title="Steffen Altmann, Anita M Glenny, Robert Mahlstedt, Alexander Sebald">Steffen Altmann, Anita M Glenny, Robert Mahlstedt, Alexander Sebald</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-restud-rdag112" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-restud-rdag112" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/restud/rdag112" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/restud/rdag112" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-restud-rdag112">
+        We study how online job search advice affects job search behavior and labor market outcomes of unemployed workers. In a large-scale field experiment embedded in the online platform of the Danish public employment service, we provide job seekers with vacancy information and occupational recommendations. Using a two-stage randomized design with regionally varying treatment intensities, we examine both direct effects of advice and treatment spillovers. We find that advice significantly increases employment and earnings when provided to a limited share of job seekers. As treatment intensity rises, these effects diminish and eventually disappear. The decline is driven by negative spillovers among treated job seekers, consistent with increased congestion in the occupations toward which job seekers redirect their search. Spillover effects on untreated job seekers are heterogeneous and depend on how advice alters occupation-specific competition in local labor markets.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="03044076">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Econometrics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-03044076">
+</div><article class="article-card" id="10-1016-j-jeconom-2026-106346" role="article">
+<h3 class="article-card__title">Feasible GLS for time series regression</h3><p class="article-card__authors" title="Pierre Perron, Emilio González-Coya">Pierre Perron, Emilio González-Coya</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.jeconom.2026.106346" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.jeconom.2026.106346" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="15424766">
+<div class="row">
+<div class="col-10">
+<h2>Journal of the European Economic Association</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-15424766">
+</div><article class="article-card" id="10-1093-jeea-jvag064" role="article">
+<h3 class="article-card__title">Trade, Human Capital, and Income Risk,</h3><p class="article-card__authors" title="Liuchun Deng, Pravin Krishna, Mine Z Senses, Jens Stegmaier">Liuchun Deng, Pravin Krishna, Mine Z Senses, Jens Stegmaier</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jeea-jvag064" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jeea-jvag064" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jeea/jvag064" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jeea/jvag064" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jeea-jvag064">
+        In this paper, we study the causal relationship between trade exposure and individual income risk, with emphasis on the role of human capital. We use a rich worker-level longitudinal dataset from Germany spanning the period 1976-2012, and find industry trade exposure to be causally related to income risk: Imports increase risk and exports decrease risk in an economically significant manner. Importantly, there is a complex interplay between human capital and the linkage between trade and risk: On average, individuals with higher levels of industry- or occupation-specific human capital experience lower risk. However, an increase in industry net imports increases risk more for workers with higher levels of industry tenure. Although net imports are also associated with declines in the mean income of these workers, the estimated effect on income levels is economically small. Our welfare framework, which jointly considers both mean income and income risk, shows that the welfare consequences of trade exposure are quantitatively dominated by the risk channel.
+    </div>
+</article>
+<article class="article-card" id="10-1093-jeea-jvag063" role="article">
+<h3 class="article-card__title">Conflict or Compromise? Theory and Evidence from Africa and Asia</h3><p class="article-card__authors" title="Rogerio Santarrosa">Rogerio Santarrosa</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-jeea-jvag063" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-jeea-jvag063" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/jeea/jvag063" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/jeea/jvag063" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-jeea-jvag063">
+        Civil wars are a recurring phenomenon undermining development in weak states. Faced with the possibility of costly conflict, why don’t leaders share power? I investigate the role of an unexplored commitment problem, both theoretically and empirically. The model features a leader who can appease challengers by sharing power, but doing so increases their effectiveness at launching a rebellion. I show that commitment worsens as the opposition becomes stronger, and derive testable non-monotonic implications of group strength on power-sharing and conflict. As challengers become stronger, the likelihood of inclusion (positive transfers) increases up to a threshold, beyond which the leader prefers to exclude an opposing group and face conflict. I test the model using data on politically relevant ethnic groups in Africa and Asia, their access to executive power, and on armed organizations that claim to represent them. I use within-country variation in population share to proxy for group strength. The empirical findings strongly accord with the predictions of the theory. I then structurally estimate the model parameters and explore policy-relevant counterfactuals, including the effects of democratization, changes in military capacity, financial aid, sanctions, and quotas.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00472727">
+<div class="row">
+<div class="col-10">
+<h2>Journal of Public Economics</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00472727">
+</div><article class="article-card" id="10-1016-j-jpubeco-2026-105801" role="article">
+<h3 class="article-card__title">Morality and climate policy attitudes</h3><p class="article-card__authors" title="Lasse S. Stötzer, Florian Zimmermann">Lasse S. Stötzer, Florian Zimmermann</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.jpubeco.2026.105801" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.jpubeco.2026.105801" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1016-j-jpubeco-2026-105800" role="article">
+<h3 class="article-card__title">Why do people migrate irregularly? Evidence from a lab-in-the-field experiment in West Africa</h3><p class="article-card__authors" title="Tijan L. Bah, Catia Batista">Tijan L. Bah, Catia Batista</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.jpubeco.2026.105800" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.jpubeco.2026.105800" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+<article class="article-card" id="10-1016-j-jpubeco-2026-105798" role="article">
+<h3 class="article-card__title">Too little too late? Nationwide carbon trading in China</h3><p class="article-card__authors" title="Shuang Zhang, Douglas Almond">Shuang Zhang, Douglas Almond</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1016/j.jpubeco.2026.105798" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1016/j.jpubeco.2026.105798" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00130133">
+<div class="row">
+<div class="col-10">
+<h2>Economic Journal</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00130133">
+</div><article class="article-card" id="10-1093-ej-ueag130" role="article">
+<h3 class="article-card__title">Immigration and the Slope of the Labour Demand Curve: The Role of Firm Heterogeneity in a Model of Regional Labour Markets</h3><p class="article-card__authors" title="Andrea Ariu, Tobias Müuller, Tuan Nguyen">Andrea Ariu, Tobias Müuller, Tuan Nguyen</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1093-ej-ueag130" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1093-ej-ueag130" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1093/ej/ueag130" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1093/ej/ueag130" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1093-ej-ueag130">
+        In this paper, we provide new explanations for the puzzling findings that migrants do not decrease natives’ wages and that skilled immigration can increase them. We develop a model with regional labour markets and heterogeneous firms in which workers of different skill levels are imperfect substitutes, but for a given skill level, natives and migrants are perfect substitutes within a firm. In this setting, a skilled labour supply shock due to immigration induces skill-intensive firms to expand. These across-firm reallocations reduce the within-firm substitution between skilled and unskilled workers, thus limiting relative wage adjustments. When this mechanism is coupled with human capital externalities that are skill-neutral at the firm level but skill-biased on aggregate, the same skilled immigration shock can increase absolute and relative skilled wages. These two mechanisms are quantitatively important: the negative impact of immigration on natives’ wages is reduced by at least one-third when the across-firm reallocation mechanism is at work, and human-capital externalities can revert the sign of this relation.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted"><a href="/privacy-notice">Privacy Notice</a></small>
+</div>
+</footer>
+
+</html>
