@@ -1,13 +1,14 @@
 /**
- * Unit tests for extractBlock / parseSelections / parseAuthResults in src/parse.js
+ * Unit tests for extractBlock / parseSelections / parseAuthResults in src/subscriptions/
  *
- * Run with: node --test tests/parser.test.mjs
+ * Run with: node --test tests/subscriptions.test.mjs
  * (from the worker/ directory)
  */
 
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { extractBlock, parseAuthResults, parseSelections, stripTags } from '../src/parse.js'
+import { extractBlock, parseSelections, stripTags } from '../src/subscriptions/selections.js'
+import { parseAuthResults } from '../src/subscriptions/sender-checks.js'
 
 // ---- known ID sets used in all parseSelections tests ----
 const journalIds = new Set(['19312458', '10584609', '00219916'])

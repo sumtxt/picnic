@@ -3,14 +3,15 @@ import Mustache from 'mustache'
 import PostalMime from 'postal-mime'
 import { createMimeMessage } from 'mimetext'
 
-import { extractBlock, parseAuthResults, parseSelections, stripTags } from './parse.js'
-import { UNIVERSITY_DOMAINS } from './university-domains.js'
+import { extractBlock, parseSelections, stripTags } from './selections.js'
+import { emailDomain, isAutoSubmitted, isUniversityEmail, parseAuthResults } from './sender-checks.js'
+import { deleteSubscriber, upsertSubscriber } from './store.js'
 
-import replySubscribedTpl from '../templates/reply-subscribed.mustache'
-import replyUnsubscribedTpl from '../templates/reply-unsubscribed.mustache'
-import replyHelpTpl from '../templates/reply-help.mustache'
-import replyNonUniversityTpl from '../templates/reply-nonuniversity.mustache'
-import replyTryAgainTpl from '../templates/reply-tryagain.mustache'
+import replySubscribedTpl from '../../templates/replies/subscribed.mustache'
+import replyUnsubscribedTpl from '../../templates/replies/unsubscribed.mustache'
+import replyHelpTpl from '../../templates/replies/help.mustache'
+import replyNonUniversityTpl from '../../templates/replies/nonuniversity.mustache'
+import replyTryAgainTpl from '../../templates/replies/tryagain.mustache'
 
 const SUBSCRIBE_ADDRESS = 'subscribe@paper-picnic.com'
 const UNSUBSCRIBE_ADDRESS = 'unsubscribe@paper-picnic.com'
@@ -19,51 +20,6 @@ const UNSUBSCRIBE_ADDRESS = 'unsubscribe@paper-picnic.com'
 // header it prepends. If this is wrong, EVERY message is rejected — the mismatch
 // is logged with the observed id so it is a one-line fix.
 const CF_AUTHSERV_ID = 'mx.cloudflare.net'
-
-// The domain is whatever follows the final '@'. Requires a non-empty local part,
-// so a degenerate '@ucl.ac.uk' yields '' rather than a valid-looking domain.
-function emailDomain(email) {
-  const at = email.lastIndexOf('@')
-  return at > 0 ? email.slice(at + 1).toLowerCase() : ''
-}
-
-// Matches the domain itself or any subdomain of it (e.g., departmental subdomains)
-function isUniversityEmail(email) {
-  const domain = emailDomain(email)
-  if (!domain) return false
-  let suffix = domain
-  while (true) {
-    if (UNIVERSITY_DOMAINS.has(suffix)) return true
-    const dot = suffix.indexOf('.')
-    if (dot === -1) return false
-    suffix = suffix.slice(dot + 1)
-  }
-}
-
-// RFC 3834: never auto-reply to auto-generated mail, or our reply and the other
-// side's autoresponder ping-pong indefinitely.
-function isAutoSubmitted(message) {
-  if (!message.from) return true // null envelope sender — a bounce
-
-  const autoSubmitted = message.headers.get('Auto-Submitted')
-  if (autoSubmitted && autoSubmitted.trim().toLowerCase() !== 'no') return true
-
-  if (message.headers.get('X-Auto-Response-Suppress')) return true
-
-  // Mailing-list traffic: a reply would go to the whole list.
-  if (message.headers.get('List-Id') || message.headers.get('List-Unsubscribe')) return true
-
-  const precedence = (message.headers.get('Precedence') || '').trim().toLowerCase()
-  if (['bulk', 'list', 'junk', 'auto_reply'].includes(precedence)) return true
-
-  // Older/vendor autoresponder markers predating RFC 3834
-  if (message.headers.get('X-Autoreply')) return true
-  if (message.headers.get('X-Autoreply-From')) return true
-  if (message.headers.get('X-Autorespond')) return true
-
-  const deliveredTo = (message.headers.get('Delivered-To') || '').trim().toLowerCase()
-  return deliveredTo === 'autoresponder'
-}
 
 async function sendReply(message, subject, body) {
   const msg = createMimeMessage()
@@ -86,66 +42,6 @@ async function sendReply(message, subject, body) {
   msg.addMessage({ contentType: 'text/plain', data: body })
 
   await message.reply(new EmailMessage(message.to, message.from, msg.asRaw()))
-}
-
-async function upsertSubscriber(email, journals, osf, env) {
-  const row = await env.DB.prepare(
-    `INSERT INTO subscribers (id, email, created_at) VALUES (?, ?, ?)
-     ON CONFLICT(email) DO UPDATE SET email = excluded.email
-     RETURNING id`
-  ).bind(crypto.randomUUID(), email, new Date().toISOString()).first()
-
-  const id = row.id
-
-  const stmts = [
-    env.DB.prepare('DELETE FROM journal_preferences WHERE subscriber_id = ?').bind(id),
-    env.DB.prepare('DELETE FROM preprint_preferences WHERE subscriber_id = ?').bind(id),
-  ]
-  for (const jid of new Set(journals)) {
-    stmts.push(env.DB.prepare('INSERT INTO journal_preferences (subscriber_id, journal_id) VALUES (?, ?)').bind(id, jid))
-  }
-  for (const cat of new Set(osf)) {
-    stmts.push(env.DB.prepare('INSERT INTO preprint_preferences (subscriber_id, osf_category) VALUES (?, ?)').bind(id, cat))
-  }
-
-  await env.DB.batch(stmts)
-}
-
-async function deletePlunkContact(email, env) {
-  const listResp = await fetch(`https://next-api.useplunk.com/contacts?search=${encodeURIComponent(email)}`, {
-    headers: { 'Authorization': `Bearer ${env.PLUNK_SECRET_KEY}` },
-  })
-  if (!listResp.ok) {
-    console.error('Plunk contact lookup failed:', listResp.status, listResp.statusText)
-    return
-  }
-
-  const { data } = await listResp.json()
-  const contact = (data ?? []).find(c => c.email?.toLowerCase() === email.toLowerCase())
-  if (!contact) return
-
-  const delResp = await fetch(`https://next-api.useplunk.com/contacts/${contact.id}`, {
-    method: 'DELETE',
-    headers: { 'Authorization': `Bearer ${env.PLUNK_SECRET_KEY}` },
-  })
-  if (!delResp.ok) {
-    console.error('Plunk contact delete failed:', delResp.status, delResp.statusText)
-  }
-}
-
-async function deleteSubscriber(email, env) {
-  const sub = await env.DB.prepare(
-    'SELECT id FROM subscribers WHERE email = ?'
-  ).bind(email).first()
-  if (!sub) return false
-
-  await env.DB.batch([
-    env.DB.prepare('DELETE FROM journal_preferences WHERE subscriber_id = ?').bind(sub.id),
-    env.DB.prepare('DELETE FROM preprint_preferences WHERE subscriber_id = ?').bind(sub.id),
-    env.DB.prepare('DELETE FROM subscribers WHERE id = ?').bind(sub.id),
-  ])
-  await deletePlunkContact(email, env)
-  return true
 }
 
 export async function handleEmail(message, env) {

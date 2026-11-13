@@ -1,5 +1,12 @@
-export { WeeklyDigestWorkflow } from './digest.js'
-import { handleEmail } from './email-handler.js'
+// Entry point for the Paper Picnic worker. Each Cloudflare event type is routed
+// to the feature that owns it:
+//   email     → subscriptions/  (subscribe@ / unsubscribe@ inbound mail)
+//   scheduled → digest/         (see wrangler.toml [triggers])
+// The weekly digest itself runs as a Cloudflare Workflow (digest/workflow.js),
+// triggered from GitHub Actions after the crawl has pushed fresh data to KV.
+
+export { WeeklyDigestWorkflow } from './digest/workflow.js'
+import { handleEmail } from './subscriptions/handler.js'
 
 export default {
   fetch() {
