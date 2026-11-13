@@ -1,4 +1,4 @@
-# Paper Picnic 2.3
+# Paper Picnic 2.4
 
 A weekly basket with the latest published research in political science. On Fridays, we query the Crossref API for new research articles that appeared in the previous 7 days across many journals in political science and adjacent fields. [paper-picnic.com/](https://paper-picnic.com/)
 

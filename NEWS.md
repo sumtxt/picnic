@@ -1,5 +1,9 @@
 # picnic
 
+### Version 2.4.0 (2026-11-13)
+
+* Cloudflare is now using Queues to send personalized email notifications. 
+
 ### Version 2.3.0 (2026-10-23)
 
 * Introduced gpt-6-luna-decisions for deprecating gpt-4o-mini 
