@@ -10,6 +10,15 @@ type = "Text"
 globs = ["**/*.mustache"]
 fallthrough = true
 
+# Crons start GitHub Actions workflows; the cron → workflow mapping, and why
+# each time was chosen, is in src/schedule/jobs.js. Keep both lists in sync.
+[triggers]
+crons = ["0 3 * * 5", "0 16 * * 4"]
+
+# GH_DISPATCH_TOKEN is a secret: wrangler secret put GH_DISPATCH_TOKEN
+[vars]
+GITHUB_REPO = "sumtxt/picnic"
+
 [[kv_namespaces]]
 binding = "KV"
 id = "251ea2af13fe4735b58ba29e2c195d29"

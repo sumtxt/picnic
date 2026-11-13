@@ -142,6 +142,7 @@ The crawler ([main.py](main.py)) runs two parallel workflows:
 ### 3. Statistics & Automation
 
 - **Stats**: Counts articles per journal, updates [output/stats.csv](output/stats.csv)
+- **Schedule**: the Crawl workflow (Fridays 03:00 UTC) are started by Cloudflare Cron Triggers in the worker ([worker/src/schedule/jobs.js](worker/src/schedule/jobs.js)). GitHub Action is was unreliably late. The worker needs a fine-grained GitHub token limited to this repository with "Actions: write": `cd worker && npx wrangler secret put GH_DISPATCH_TOKEN`.
 - **GitHub Actions** (triggered after the Crawl workflow completes):
   - [Update Website](.github/workflows/update_website.yml) syncs outputs to `gh-pages`
   - [Archive Snapshot](.github/workflows/archive_snapshot.yml) saves the published edition to `gh-pages`'s `archive/` (see [scripts/archive_snapshot.py](scripts/archive_snapshot.py))

@@ -1,19 +1,43 @@
 name: Crawl
 
+# Started every Friday by the Cloudflare Worker's cron trigger
 on:
    workflow_dispatch:
-   schedule:
-     - cron: "33 2 * * 5"
+     inputs:
+       force:
+         description: "Crawl even if it is not Friday or output/ is already from today"
+         type: boolean
+         default: false
+
+# At most one crawl at a time.
+concurrency:
+  group: crawl
+  cancel-in-progress: false
 
 jobs:
   crawl:
     runs-on: ubuntu-latest
     steps:
+      - name: Stop if today is not Friday
+        if: ${{ !inputs.force }}
+        run: |
+          if [ "$(date -u +%u)" != "5" ]; then
+            exit 1
+          fi
+
       - name: Check out repository
         uses: actions/checkout@v7
         with:
           path: main_folder
           ref: main
+
+      - name: Stop if today's crawl is already done
+        if: ${{ !inputs.force }}
+        working-directory: ./main_folder
+        run: |
+          if [ "$(jq -r .update output/publications.json)" = "$(date -u +%F)" ]; then
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
