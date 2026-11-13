@@ -147,7 +147,7 @@ The crawler ([main.py](main.py)) runs two parallel workflows:
   - [Update Website](.github/workflows/update_website.yml) syncs outputs to `gh-pages`
   - [Archive Snapshot](.github/workflows/archive_snapshot.yml) saves the published edition to `gh-pages`'s `archive/` (see [scripts/archive_snapshot.py](scripts/archive_snapshot.py))
   - [Send Notification](.github/workflows/send-notification.yml) sends the classic email notification via Resend.com
-  - [Push to Cloudflare](.github/workflows/push-to-cloudflare.yml) syncs data to the personalized email notification worker and triggers it
+  - [Push to Cloudflare](.github/workflows/push-to-cloudflare.yml) syncs data to the personalized email notification worker; its digest cron (every 15 minutes on Fridays) then queues one message per subscriber and sends the emails in batches of 5
 
 Behavior is configurable via [src/config.py](src/config.py) (crawl window, memory updates, filter toggles, etc.)
 

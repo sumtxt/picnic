@@ -10,10 +10,10 @@ type = "Text"
 globs = ["**/*.mustache"]
 fallthrough = true
 
-# Crons start GitHub Actions workflows; the cron → workflow mapping, and why
-# each time was chosen, is in src/schedule/jobs.js. Keep both lists in sync.
+# Must match DIGEST_CRON in src/digest/enqueue.js plus the keys of CRON_JOBS in
+# src/schedule/jobs.js. The Free plan allows 5 crons per account.
 [triggers]
-crons = ["0 3 * * 5", "0 16 * * 4"]
+crons = ["*/15 * * * 5", "0 3 * * 5", "0 16 * * 4"]
 
 # GH_DISPATCH_TOKEN is a secret: wrangler secret put GH_DISPATCH_TOKEN
 [vars]
@@ -28,10 +28,17 @@ binding = "DB"
 database_name = "picnic-subscribers"
 database_id = "f8f0e2ce-9b1c-4f32-8408-2e3baf9c2929"
 
-[[workflows]]
-binding = "WEEKLY_DIGEST"
-name = "weekly-digest"
-class_name = "WeeklyDigestWorkflow"
+[[queues.producers]]
+binding = "DIGEST_QUEUE"
+queue = "picnic-digest"
+
+[[queues.consumers]]
+queue = "picnic-digest"
+max_batch_size = 5
+max_batch_timeout = 5
+max_concurrency = 1
+max_retries = 3
+dead_letter_queue = "picnic-digest-failed"
 
 [observability]
 enabled = true

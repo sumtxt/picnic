@@ -10,6 +10,7 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { dispatchWorkflow } from '../src/schedule/dispatch.js'
 import { CRON_JOBS } from '../src/schedule/jobs.js'
+import { DIGEST_CRON } from '../src/digest/enqueue.js'
 
 const env = { GITHUB_REPO: 'owner/repo', GH_DISPATCH_TOKEN: 'tok' }
 const json = (body, status = 200) => new Response(JSON.stringify(body), { status })
@@ -54,12 +55,12 @@ test('dispatchWorkflow: throws on a failed dispatch, sent only once', async () =
   assert.equal(calls.filter(c => c.method === 'POST').length, 1)
 })
 
-test('CRON_JOBS: matches wrangler.toml [triggers] crons', () => {
+test('wrangler.toml [triggers] crons: CRON_JOBS plus DIGEST_CRON', () => {
   const toml = readFileSync(new URL('../wrangler.toml', import.meta.url), 'utf8')
   const line = /^crons\s*=\s*\[(.*)\]/m.exec(toml)
   assert.ok(line, 'no crons = [...] line in wrangler.toml')
   const crons = [...line[1].matchAll(/"([^"]+)"/g)].map(m => m[1])
-  assert.deepEqual(crons.sort(), Object.keys(CRON_JOBS).sort())
+  assert.deepEqual(crons.sort(), [...Object.keys(CRON_JOBS), DIGEST_CRON].sort())
 })
 
 test('CRON_JOBS: every workflow file exists and allows workflow_dispatch', () => {

@@ -24,7 +24,7 @@ jobs:
         working-directory: worker
         run: npm ci
 
-      - name: Push data to KV and trigger weekly digest
+      - name: Push data to KV
         working-directory: worker
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -34,4 +34,5 @@ jobs:
           ./node_modules/.bin/wrangler kv key put --remote --binding=KV preprints     --path=../output/preprints.json
           ./node_modules/.bin/wrangler kv key put --remote --binding=KV journals      --path=../parameters/journals.json
           ./node_modules/.bin/wrangler kv key put --remote --binding=KV osf_subjects  --path=../parameters/osf_subjects.json
-          ./node_modules/.bin/wrangler workflows trigger weekly-digest
+          # Written last: the digest cron starts once `issue` holds today's date.
+          ./node_modules/.bin/wrangler kv key put --remote --binding=KV issue "$(jq -r .update ../output/publications.json)"
