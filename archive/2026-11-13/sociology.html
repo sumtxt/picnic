@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A weekly basket with the latest published research in political science." name="description"/>
+<meta content="Moritz Marbach" name="author"/>
+<title>Paper Picnic 🧺: Sociology</title>
+<!-- FOUC Prevention: Set theme before styles load -->
+<script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+<link href="./assets/vendor/css/inter-fonts.css" rel="stylesheet"/>
+<link href="/assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/assets/icons/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/assets/icons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/assets/icons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="/assets/icons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<script src="./assets/vendor/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/vendor/js/sortable-1.15.0.min.js"></script>
+<script src="./assets/vendor/js/bootstrap-5.3.3.bundle.min.js"></script>
+<script src="./assets/js/storage.js"></script>
+<script src="./assets/js/custom.js"></script>
+<link href="./assets/vendor/css/bootstrap-5.3.3.min.css" rel="stylesheet"/>
+<link href="./assets/css/custom.css" rel="stylesheet"/>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+</body>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</symbol>
+<symbol id="moon-stars" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</symbol>
+<symbol id="sun" viewbox="0 0 16 16">
+<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</symbol>
+</svg>
+<div class="secondary-nav-bar" style="background: #f59e0b !important; color: #1a1a1a !important;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div>
+    📦 Archived edition · November 13, 2026 · You are viewing a past issue.
+    <a href="https://www.paper-picnic.com/" style="color: #1a1a1a; font-weight: 600; text-decoration: underline;">Go to current →</a>
+</div>
+<button aria-label="Toggle theme" class="btn btn-link p-0" id="bd-theme" style="color: var(--color-text-primary);" type="button">
+<svg class="bi theme-icon-active" fill="currentColor" height="16" width="16">
+<use href="#circle-half"></use>
+</svg>
+</button></div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/archive/2026-11-13/">Paper Picnic 🧺</a>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="politicsDropdown" role="button">
+                        Politics
+                    </a>
+<ul aria-labelledby="politicsDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-11-13/political_science">Political Science</a></li>
+<li><a class="dropdown-item" href="/archive/2026-11-13/public_administration">Public Administration</a></li>
+<li><a class="dropdown-item" href="/archive/2026-11-13/international_relations">International Relations</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-11-13/economics">
+                        Economics
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap active" href="/archive/2026-11-13/sociology">
+                        Sociology
+                    </a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-nowrap" href="/archive/2026-11-13/multidisciplinary">
+                        Multidisciplinary
+                    </a>
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        More
+                    </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li><a class="dropdown-item" href="/archive/2026-11-13/migration_studies">Migration Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-11-13/communication_studies">Communication Studies</a></li>
+<li><a class="dropdown-item" href="/archive/2026-11-13/environmental_studies">Environmental Studies</a></li>
+<li><hr class="dropdown-divider"/></li>
+<li><a class="dropdown-item" href="/archive/2026-11-13/working_papers">
+<div>🔥 Working Papers</div>
+<small class="text-muted">SocArXiv/OSF Preprints</small>
+</a></li>
+</ul>
+</li>
+</ul>
+<ul class="navbar-nav ms-auto mb-2 mb-md-0 align-items-center"><li class="nav-item">
+<a aria-controls="settingsOffcanvas" class="nav-link text-nowrap" data-bs-toggle="offcanvas" href="#settingsOffcanvas" role="button">
+                        ⚙️ Customize
+                    </a>
+</li><li class="nav-item">
+<a aria-disabled="true" class="nav-link text-nowrap" style="pointer-events: none; opacity: 0.5; cursor: default;" tabindex="-1">
+                        📨 Notifications
+                    </a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="filter-banner" id="filter-banner" style="display: none;">
+<div class="container-fluid d-flex justify-content-between align-items-center">
+<div class="filter-banner-text">
+<span id="filter-banner-icon">🔍</span>
+<span id="filter-banner-message">Filters active</span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<a class="filter-banner-link" data-bs-toggle="offcanvas" href="#settingsOffcanvas">Edit filters</a>
+<button aria-label="Dismiss banner" class="filter-banner-dismiss" id="filter-banner-dismiss">×</button>
+</div>
+</div>
+</div>
+<!-- 7 * 24 * 60 * 60  =  -->
+<!-- 1 * 24 * 60 * 60  =  -->
+<div aria-labelledby="settingsOffcanvasLabel" class="offcanvas offcanvas-end" data-bs-backdrop="false" data-bs-scroll="true" id="settingsOffcanvas" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="settingsOffcanvasLabel">Customize</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="row mb-4 g-3">
+<div class="col-12">
+<div class="settings-item">
+<div class="form-check form-switch flex-grow-1">
+<input class="form-check-input" id="global-expand-abstracts" type="checkbox"/>
+<label class="form-check-label" for="global-expand-abstracts">📖 Expand abstracts</label>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<h6>Journals</h6>
+<div class="row g-2 mt-2" id="journal-settings-list">
+<div class="col-12 mb-2 draggable-item" data-id="00031224">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00031224" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00031224" style="max-width: 300px;" title="American Sociological Review">
+                            American Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="03600572">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-03600572" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-03600572" style="max-width: 300px;" title="Annual Review of Sociology">
+                            Annual Review of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00491241">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00491241" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00491241" style="max-width: 300px;" title="Sociological Methods &amp; Research">
+                            Sociological Methods &amp; Research
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00029602">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00029602" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00029602" style="max-width: 300px;" title="American Journal of Sociology">
+                            American Journal of Sociology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00987921">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00987921" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00987921" style="max-width: 300px;" title="Population and Development Review">
+                            Population and Development Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="07352751">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-07352751" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-07352751" style="max-width: 300px;" title="Sociological Theory">
+                            Sociological Theory
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00811750">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00811750" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00811750" style="max-width: 300px;" title="Sociological Methodology">
+                            Sociological Methodology
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="23306696">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-23306696" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-23306696" style="max-width: 300px;" title="Sociological Science">
+                            Sociological Science
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00703370">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00703370" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00703370" style="max-width: 300px;" title="Demography">
+                            Demography
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00377732">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00377732" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00377732" style="max-width: 300px;" title="Social Forces">
+                            Social Forces
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="00323292">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-00323292" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-00323292" style="max-width: 300px;" title="Politics &amp; Society">
+                            Politics &amp; Society
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="02667215">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-02667215" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-02667215" style="max-width: 300px;" title="European Sociological Review">
+                            European Sociological Review
+                        </label>
+</div>
+</div>
+</div>
+<div class="col-12 mb-2 draggable-item" data-id="14742837">
+<div class="journal-setting-item">
+<div class="drag-handle me-3 text-muted" style="cursor: grab;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="9" cy="5" r="1"></circle>
+<circle cx="9" cy="12" r="1"></circle>
+<circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle>
+<circle cx="15" cy="12" r="1"></circle>
+<circle cx="15" cy="19" r="1"></circle>
+</svg>
+</div>
+<div class="form-check form-switch flex-grow-1">
+<input checked="" class="form-check-input journal-visibility" id="switch-14742837" type="checkbox"/>
+<label class="form-check-label text-truncate" for="switch-14742837" style="max-width: 300px;" title="Social Movement Studies">
+                            Social Movement Studies
+                        </label>
+</div>
+</div>
+</div>
+</div>
+<div class="row mb-4 g-3">
+<div class="col-12">
+<button class="btn w-100 settings-item justify-content-start border-0" id="reset-to-default" style="text-align: left; color: inherit;" type="button">
+<span class="me-2">🔄</span> Reset to default
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="container mt-5" id="articles-view">
+<p></p>
+<div class="container mt-4" id="00987921">
+<div class="row">
+<div class="col-10">
+<h2>Population and Development Review</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00987921">
+</div><article class="article-card" id="10-1111-padr-70103" role="article">
+<h3 class="article-card__title">Joint Land Titling and the Marital Bond in Southwestern Uganda</h3><p class="article-card__authors" title="Michelle Poulin, Rachael S. Pierotti">Michelle Poulin, Rachael S. Pierotti</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70103" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70103" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70103" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70103" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70103">
+        When a randomized intervention in southwestern Uganda offered fully subsidized land titles to agricultural households, the majority of husbands chose to add their wives’ names to the title, a striking result given the persistent gender asymmetry in land ownership across Africa. This study investigates the social dynamics underlying that result, asking: What does a joint land title mean for couples in practice, and do women benefit as intended? We draw on fieldwork observations, conversational interviews with selected couples, and interviews with community leaders. Our findings indicate that women's marital bargaining power increases, consistent with household bargaining models. Critically, we identify an additional channel: a joint title symbolizes a husband's commitment to his spouse and marriage. This symbolic dimension is crucial, as women's property rights are threatened under marital insecurity. Joint titling thus shapes marital dynamics not only by strengthening women's bargaining power but also by encouraging what we term “cooperative power”—a fortified marital bond that inspires investment in the marriage. By applying ethnographic approaches to numerical outcomes, the study shows how qualitative inquiry complements survey research in examining the meanings, motivations, and social logics underlying observed demographic and economic behaviors, offering insight into family processes in contemporary Africa.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padr-70104" role="article">
+<h3 class="article-card__title">Parental Migration During Childhood and Later‐Life Major Depressive Disorder</h3><p class="article-card__authors" title="Emma Labovitz, Emma Banchoff">Emma Labovitz, Emma Banchoff</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70104" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70104" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70104" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70104" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70104">
+        The rise of migration in many communities across the Global South raises questions about its consequences for the children of migrants. Previous studies have primarily examined the immediate impact of parental migration on children's well‐being, while its cumulative effects across the life course remain largely unknown. Drawing on retrospective life histories, prospective monthly residency data, and novel diagnostic measures of mental disorders from the longitudinal Chitwan Valley Family Study in Nepal, this study examines the relationship between parental migration during childhood and later‐life onset of major depressive disorder (MDD). Results indicate that parental migration during childhood is associated with a reduced risk of developing MDD across the life course, although this benefit is exclusive to the younger cohort. These findings suggest that in a context where migration is prolific, parental migration may serve as a protective force against adverse mental health outcomes in later adolescence and adulthood, thus revealing a potential source of long‐term inequality in high out‐migration countries such as Nepal.
+    </div>
+</article>
+<article class="article-card" id="10-1111-padr-70101" role="article">
+<h3 class="article-card__title">Assessing the Quality of the Family Interrelationship Variable in Classificatory Kinship Populations</h3><p class="article-card__authors" title="Aurélien Dasré">Aurélien Dasré</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1111-padr-70101" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1111-padr-70101" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1111/padr.70101" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1111/padr.70101" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1111-padr-70101">
+        The family interrelationship variable is widely used to study household structure, child fostering, and intergenerational support. Yet its measurement validity has not been assessed in populations with classificatory kinship systems—prevalent across most of sub‐Saharan Africa—where kinship terminology groups relatives by generation rather than by direct biological link. This study provides the first empirical assessment of this variable in a West African classificatory context. Using genealogical data from the SLAM (Suivi Longitudinal au Mali ‐ Longitudinal survey in Mali) survey in rural Mali, linked at the individual level to the 2009 national census, we compare census‐reported relationships to the household head with genealogically reconstructed ties among the Bwa, who follow a classificatory terminology. The results reveal systematic and directional discrepancies: nephews, nieces, and stepchildren are frequently reported as biological children of the household head. These findings highlight how the imposition of Western nuclear‐family categories in classificatory kinship settings produces nonrandom biases, leading to inflated counts of household head's children and underestimation of extended family ties.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="07352751">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Theory</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-07352751">
+</div><article class="article-card" id="10-1177-07352751261499293" role="article">
+<h3 class="article-card__title">A Durkheimian Theory Against Empire: Central Australian Festivals and the Making of the Modern World</h3><p class="article-card__authors" title="Romulo Lelis">Romulo Lelis</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-07352751261499293" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-07352751261499293" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/07352751261499293" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/07352751261499293" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-07352751261499293">
+        It has long been assumed that Durkheimian sociology helped create a sharp distinction between traditional and modern societies, rooted in a Eurocentric bias that treats the latter as a break with the former. However, a close examination of Durkheim’s work may challenge this assumption. Through an in-depth analysis of Durkheim’s posthumously published lectures alongside Les Formes Élémentaires de la Vie Religieuse , this article shows how Durkheim applied the model he developed for studying Aboriginal Australians to a counter-imperial reevaluation of European history. In examining Durkheim’s writings on the genesis of private property in Ancient Rome, the Crusades in the Middle Ages, the French Revolution, and the role of mythological truths in the Modern Era, the article advances a Durkheimian theory against empire, an approach that examines modern society through a theoretical lens drawn from studying Indigenous societies.
+    </div>
+</article>
+<article class="article-card" id="10-1177-07352751261498208" role="article">
+<h3 class="article-card__title">Palestinian Sumud: Toward a Southern Theory of Unsettled Times</h3><p class="article-card__authors" title="Fauzia Husain">Fauzia Husain</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1177-07352751261498208" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1177-07352751261498208" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1177/07352751261498208" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1177/07352751261498208" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1177-07352751261498208">
+        Prominent sociological theories of action treat stability as the default and disruption as episodic. Yet for many marginalized communities, unsettledness is endemic. I intervene by “making strange,” a two-pronged strategy that shifts theory’s vantage point to destabilize what the center has naturalized. The first move examines the temporal occlusions that give extant theories of action their appearance of universality. The second centers Palestinian sumud (steadfastness) and Southern and postcolonial approaches to remake theories of action and time. Where extant accounts anticipate hysteresis, sumud reveals an ongoing effort to contest a temporal order designed to fragment and deplete. Because time is not a neutral medium for experience, habitus emerges as a vehicle for temporal intervention rather than merely a repository of accumulated dispositions. The result is a decolonial theory of action in which colonial power structures time without fully determining it.
+    </div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="23306696">
+<div class="row">
+<div class="col-10">
+<h2>Sociological Science</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-23306696">
+</div><article class="article-card" id="10-15195-v13-a54" role="article">
+<h3 class="article-card__title">Distinct but Proximate: The Residential Segregation of Black Americans by Nativity</h3><p class="article-card__authors" title="Samuel Kye, Nunnally Zou">Samuel Kye, Nunnally Zou</p>
+<div class="article-card__actions">
+<button aria-label="Abstract not available" class="btn btn-secondary btn-sm" disabled="" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.15195/v13.a54" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.15195/v13.a54" type="button">
+            BibTeX
+        </button>
+</div>
+</article>
+</div>
+</div>
+</div>
+<p></p>
+<div class="container mt-4" id="00703370">
+<div class="row">
+<div class="col-10">
+<h2>Demography</h2>
+<p></p>
+</div>
+<div class="col-2">
+</div>
+</div>
+<div class="row">
+<div class="col-12 ps-4">
+<div class="collapse" id="collapse-00703370">
+</div><article class="article-card" id="10-1215-00703370-12901523" role="article">
+<h3 class="article-card__title">Net Migration By Age: The Flow-Difference Approach for Estimation and Forecasting</h3><p class="article-card__authors" title="Hana Ševčíková, James Raymer, Adrian E. Raftery">Hana Ševčíková, James Raymer, Adrian E. Raftery</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12901523" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12901523" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12901523" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12901523" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12901523">
+        Highlights We present the flow-difference method to disaggregate total net migration by age. It models the age-specific flows of in-migration and out-migration to derive age-specific net migration, even in the absence of data on such flows. We show that the resulting net migration predictions are greatly improved over existing methods that model only the net migration totals.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12908491" role="article">
+<h3 class="article-card__title">The Early Origins of Biological Aging: Maternal Income, Education, and DNA Methylation Patterns at Ages 9–15</h3><p class="article-card__authors" title="Beza Taddess">Beza Taddess</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12908491" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12908491" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12908491" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12908491" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12908491">
+        Highlights Maternal income at birth predicts children's epigenetic aging more strongly than later income. Children of college-educated mothers show lower epigenetic age acceleration at ages 9 and 15. Socioeconomic gaps differ by epigenetic clock: PhenoAge attenuates, Dunedin-PACE holds, and GrimAge grows by 15. Girls with faster epigenetic aging at age 9 experience menarche earlier. Higher GrimAge at age 9 predicts slower height growth between 9 and 15.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12908775" role="article">
+<h3 class="article-card__title">When It Rains: The Dual Impact of Rainfall on Child Survival in Rural Senegal</h3><p class="article-card__authors" title="Hamidou Diallo, Anne-Sophie Robilliard">Hamidou Diallo, Anne-Sophie Robilliard</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12908775" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12908775" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12908775" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12908775" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12908775">
+        Highlights We analyze how rainfall anomalies affect child survival in semiarid rural Senegal. The study uses 50,000 child records over four decades from the Niakhar HDSS, the oldest in Africa. Past rain shortfalls raise child mortality while current rainfall shocks matter less. Rainfall seasonality shapes children’s vulnerability to rainfall anomalies. Food scarcity and disease exposure jointly drive these mortality effects.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12908899" role="article">
+<h3 class="article-card__title">Racial Inequalities in Health and Social Policy: Examining the Relationship Between Medicaid Spending and Self-assessed Health Among Poor Single Mothers</h3><p class="article-card__authors" title="Amie Bostic">Amie Bostic</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12908899" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12908899" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12908899" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12908899" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12908899">
+        Highlights Greater average state Medicaid spending is associated with better self-rated health for poor single mothers. This relationship is stronger for poor, Black single mothers than poor, White or Latina single mothers. Spending variation by state generates substantial spatial inequalities in health. States with larger Black populations spend less, creating a mismatch between effectiveness and implementation.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12902176" role="article">
+<h3 class="article-card__title">Racial Disparities in Infant Drug Testing: A Research Note</h3><p class="article-card__authors" title="Mallory Dreyer, Cydney M. McGuire, Jennifer M. Silva, Kosali Simon, Coady Wing, Engy Ziedan">Mallory Dreyer, Cydney M. McGuire, Jennifer M. Silva, Kosali Simon, Coady Wing, Engy Ziedan</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12902176" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12902176" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12902176" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12902176" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12902176">
+        Highlights Black infants were tested for drug exposure at more than twice the rate of White infants. Among those tested, both groups had similar positive rates—approximately 20%. Clinical risk factors explain only 38% of the racial disparity in testing rates. The remaining 61% may reflect differential treatment or unmeasured clinician observations. These findings raise concerns about fairness and trust in clinical decision-making.
+    </div>
+</article>
+<article class="article-card" id="10-1215-00703370-12916203" role="article">
+<h3 class="article-card__title">Citizenship and Immigrant Longevity: Evidence From U.S. Census–Linked Social Security Administration Death Records</h3><p class="article-card__authors" title="Jiaxin Shi, Jason M. Fletcher">Jiaxin Shi, Jason M. Fletcher</p>
+<div class="article-card__actions">
+<button aria-controls="abstract-10-1215-00703370-12916203" aria-expanded="false" aria-label="Toggle abstract" class="btn btn-secondary btn-sm" data-bs-target="#abstract-10-1215-00703370-12916203" data-bs-toggle="collapse" type="button">
+            Abstract
+        </button>
+<a aria-label="Open full text in new tab" class="btn btn-secondary btn-sm" href="https://doi.org/10.1215/00703370-12916203" rel="noopener noreferrer" target="_blank">
+            Full text
+        </a>
+<button aria-label="Get BibTeX citation" class="btn btn-secondary btn-sm btn-bibtex" data-doi="https://doi.org/10.1215/00703370-12916203" type="button">
+            BibTeX
+        </button>
+</div>
+<div class="article-card__abstract collapse collapse-article" id="abstract-10-1215-00703370-12916203">
+        Highlights We link full-count 1920–1940 U.S. censuses to death records to study citizenship and longevity. Immigrant men who were citizens by 1930 lived 7.6 months longer than those without first papers. Sons whose fathers were citizens by 1920 lived 4.1 months longer than sons of noncitizens. Earlier naturalization is associated with greater longevity gains in both generations. Adjusting for fathers’ SES and sons’ early-adult SES reduces the fathers’ citizenship effect.
+    </div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto">
+<div class="mt-auto py-3 text-center">
+<small class="text-muted"><a href="/privacy-notice">Privacy Notice</a></small>
+</div>
+</footer>
+
+</html>
