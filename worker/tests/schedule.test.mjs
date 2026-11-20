@@ -69,3 +69,9 @@ test('CRON_JOBS: every workflow file exists and allows workflow_dispatch', () =>
     assert.ok(readFileSync(path, 'utf8').includes('workflow_dispatch'), `${workflow} must allow workflow_dispatch`)
   }
 })
+
+test('crons name the day of the week (Cloudflare numbers days from 1 = Sunday)', () => {
+  for (const cron of [...Object.keys(CRON_JOBS), DIGEST_CRON]) {
+    assert.match(cron.split(' ')[4], /^[A-Z]{3}$/, `${cron}: use SUN-SAT, not numbers`)
+  }
+})

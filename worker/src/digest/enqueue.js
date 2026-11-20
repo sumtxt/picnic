@@ -2,7 +2,7 @@
 // 15 minutes on Fridays and acts once per issue, as soon as the KV key `issue`
 // (written last by push-to-cloudflare.yml) holds today's date.
 
-export const DIGEST_CRON = '*/15 * * * 5'
+export const DIGEST_CRON = '*/15 * * * FRI'
 
 export async function enqueueDigest(env) {
   const issueKey = await env.KV.get('issue')

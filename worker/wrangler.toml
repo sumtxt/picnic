@@ -13,7 +13,7 @@ fallthrough = true
 # Must match DIGEST_CRON in src/digest/enqueue.js plus the keys of CRON_JOBS in
 # src/schedule/jobs.js. The Free plan allows 5 crons per account.
 [triggers]
-crons = ["*/15 * * * 5", "0 3 * * 5", "0 16 * * 4"]
+crons = ["*/15 * * * FRI", "0 3 * * FRI", "0 16 * * THU"]
 
 # GH_DISPATCH_TOKEN is a secret: wrangler secret put GH_DISPATCH_TOKEN
 [vars]
